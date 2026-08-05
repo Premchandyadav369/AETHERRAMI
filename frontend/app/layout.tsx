@@ -63,10 +63,10 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           </div>
           <div className="text-left">
             <span className="font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400 text-sm">
-              AETHER-RAMI
+              AETHER PLATFORM
             </span>
             <span className="ml-2 px-1.5 py-0.5 rounded text-[9px] font-bold bg-cyan-950 text-cyan-400 border border-cyan-700/50">
-              V10 OMEGA
+              ENTERPRISE
             </span>
           </div>
         </button>

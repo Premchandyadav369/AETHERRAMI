@@ -14,8 +14,8 @@ logger = logging.getLogger("aether-rami-backend")
 
 def create_app() -> FastAPI:
     app = FastAPI(
-        title="AETHER-RAMI V10 Omega API Platform",
-        description="Investor-grade AI-powered drug discovery, protein intelligence, and human digital twin operating system",
+        title="Aether API Platform",
+        description="Enterprise AI-powered drug discovery, protein intelligence, and human digital twin operating system",
         version="10.0.0",
         docs_url="/docs",
         redoc_url="/redoc"
@@ -37,7 +37,7 @@ def create_app() -> FastAPI:
     async def root():
         return {
             "status": "online",
-            "model": "AETHER-RAMI V10 Omega",
+            "model": "Aether Platform",
             "capabilities": [
                 "Precision Medicine Engine",
                 "Multi-Omics Foundation Model",
@@ -59,7 +59,7 @@ def create_app() -> FastAPI:
         
     @app.on_event("startup")
     async def startup_event():
-        logger.info("Initializing AETHER-RAMI V10 Omega research engine and retrieval indexes...")
+        logger.info("Initializing Aether Platform research engine and retrieval indexes...")
         # Models are loaded inside inference services on-demand or at startup
         
     return app
