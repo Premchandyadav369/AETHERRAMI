@@ -1,4 +1,4 @@
-name: AETHER-RAMI V10 OMEGA CI Pipeline
+name: Aether Platform CI Pipeline
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
     - name: Install RDKit, PyTorch, & PyG
       run: |
         python -m pip install --upgrade pip
-        pip install torch==2.1.2 --extra-index-url https://download.pytorch.org/whl/cpu
+        pip install torch --extra-index-url https://download.pytorch.org/whl/cpu
         pip install torch-geometric
         pip install rdkit-pypi joblib scikit-learn numpy scipy pandas tqdm
 
