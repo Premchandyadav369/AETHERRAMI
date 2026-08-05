@@ -3,7 +3,7 @@
 import React from 'react';
 import {
   Activity, Zap, FlaskConical, Microscope, Layers, Cpu, Database, ShieldCheck,
-  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command
+  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network
 } from 'lucide-react';
 import { GeistSans } from 'geist/font/sans';
 import { Space_Grotesk, IBM_Plex_Mono } from 'next/font/google';
@@ -26,23 +26,50 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   );
 }
 
-const SIDEBAR_ITEMS: { key: SectionTab; label: string; desc: string; icon: any }[] = [
-  { key: 'dictionary', label: 'Drug Dictionary', desc: 'Enterprise Drug Knowledge', icon: BookOpen },
-  { key: 'executive', label: 'Executive Dashboard', desc: 'System & GPU Health', icon: Activity },
-  { key: 'workspace', label: 'Discovery Pipeline', desc: '8-Stage Workflow', icon: Zap },
-  { key: 'generator', label: 'De Novo Generator', desc: 'SMILES & SELFIES VAE', icon: FlaskConical },
-  { key: 'proteins', label: 'Protein Explorer', desc: 'PDB 3D & Pocket Detection', icon: Microscope },
-  { key: 'docking', label: 'Docking Studio', desc: 'Vina / GNINA / DiffDock', icon: Layers },
-  { key: 'dynamics', label: 'Molecular Dynamics', desc: 'RMSD & OpenMM Trajectory', icon: Activity },
-  { key: 'models', label: 'AI Model Zoo', desc: 'GATv2 / GIN / Cross-Attn', icon: Cpu },
-  { key: 'datasets', label: 'Dataset Manager', desc: 'ChEMBL & BindingDB Data', icon: Database },
-  { key: 'ranking', label: 'Candidate Ranking', desc: 'Top 100 / 20 / 10 Leads', icon: ShieldCheck },
-  { key: 'chemspace', label: 'Chemical Space', desc: 'UMAP & t-SNE Embeddings', icon: BarChart3 },
-  { key: 'admet', label: 'ADMET & Toxicity', desc: 'MPO Radar & PAINS Rules', icon: Heart },
-  { key: 'explain', label: 'Explainability & SHAP', desc: 'Attribution & Correlation', icon: Zap },
-  { key: 'report', label: 'Research Reports', desc: 'Interactive HTML & PDF', icon: FileText },
-  { key: 'experiments', label: 'Experiment Tracker', desc: 'V8 vs V9 vs V10 Comparison', icon: Activity },
-  { key: 'settings', label: 'Settings & Controls', desc: 'Precision & Random Seeds', icon: Settings }
+type SidebarCategory = 'Overview' | 'Knowledge & Data' | 'Molecular Engineering' | 'Analytics & Inference' | 'Management';
+
+const SIDEBAR_CATEGORIES: { category: SidebarCategory; items: { key: SectionTab; label: string; desc: string; icon: any }[] }[] = [
+  {
+    category: 'Overview',
+    items: [
+      { key: 'executive', label: 'Executive Dashboard', desc: 'System & GPU Health', icon: Home },
+      { key: 'workspace', label: 'Discovery Pipeline', desc: '8-Stage Workflow', icon: Network },
+    ]
+  },
+  {
+    category: 'Knowledge & Data',
+    items: [
+      { key: 'dictionary', label: 'Drug Dictionary', desc: 'Enterprise Drug Knowledge', icon: BookOpen },
+      { key: 'datasets', label: 'Dataset Manager', desc: 'ChEMBL & BindingDB Data', icon: Database },
+      { key: 'chemspace', label: 'Chemical Space', desc: 'UMAP & t-SNE Embeddings', icon: BarChart3 },
+    ]
+  },
+  {
+    category: 'Molecular Engineering',
+    items: [
+      { key: 'generator', label: 'De Novo Generator', desc: 'SMILES & SELFIES VAE', icon: FlaskConical },
+      { key: 'proteins', label: 'Protein Explorer', desc: 'PDB 3D & Pocket Detection', icon: Microscope },
+      { key: 'docking', label: 'Docking Studio', desc: 'Vina / GNINA / DiffDock', icon: Layers },
+      { key: 'dynamics', label: 'Molecular Dynamics', desc: 'RMSD & OpenMM Trajectory', icon: Wind },
+    ]
+  },
+  {
+    category: 'Analytics & Inference',
+    items: [
+      { key: 'models', label: 'Model Registry', desc: 'GATv2 / GIN / Cross-Attn', icon: Cpu },
+      { key: 'ranking', label: 'Candidate Ranking', desc: 'Top 100 / 20 / 10 Leads', icon: ShieldCheck },
+      { key: 'admet', label: 'ADMET & Toxicity', desc: 'MPO Radar & PAINS Rules', icon: Heart },
+      { key: 'explain', label: 'Explainability & SHAP', desc: 'Attribution & Correlation', icon: Zap },
+    ]
+  },
+  {
+    category: 'Management',
+    items: [
+      { key: 'experiments', label: 'Experiment Tracker', desc: 'V8 vs V9 vs V10 Comparison', icon: Beaker },
+      { key: 'report', label: 'Research Reports', desc: 'Interactive HTML & PDF', icon: FileText },
+      { key: 'settings', label: 'Settings & Controls', desc: 'Precision & Random Seeds', icon: Settings }
+    ]
+  }
 ];
 
 function RootLayoutInner({ children }: { children: React.ReactNode }) {
@@ -92,7 +119,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
             className="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-cyan-500 to-indigo-600 font-bold text-xs text-slate-950 hover:opacity-90 transition-all shadow-[0_0_15px_rgba(0,229,255,0.3)] flex items-center gap-1.5"
           >
             <Bot className="w-3.5 h-3.5 fill-current" />
-            <span>AI Copilot</span>
+            <span>Research Assistant</span>
           </button>
         </div>
       </header>
@@ -100,33 +127,36 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
       {/* Main Container */}
       <div className="flex flex-1 relative z-10">
         {/* Left Sidebar */}
-        <aside className="glass-panel border-r border-slate-800/80 w-16 md:w-60 flex flex-col py-3 px-2 gap-1 sticky top-14 h-[calc(100vh-56px)] z-30 overflow-y-auto bg-slate-950/80">
-          <div className="hidden md:block text-[10px] font-mono font-bold text-slate-500 uppercase tracking-wider px-2 mb-1">
-            Workstation Modules
-          </div>
-
-          {SIDEBAR_ITEMS.map(({ key, label, desc, icon: Icon }) => {
-            const isActive = activeTab === key;
-            return (
-              <button
-                key={key}
-                onClick={() => setActiveTab(key)}
-                className={`w-full flex items-center gap-3 p-2 rounded-xl transition-all text-left group ${
-                  isActive
-                    ? 'bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 shadow-[0_0_15px_rgba(0,229,255,0.1)]'
-                    : 'text-slate-400 hover:bg-slate-900 hover:text-white border border-transparent'
-                }`}
-              >
-                <div className={`p-2 rounded-lg flex items-center justify-center shrink-0 ${isActive ? 'bg-cyan-950 text-cyan-400 border border-cyan-500/40' : 'bg-slate-900 text-slate-400'}`}>
-                  <Icon className="w-4 h-4" />
-                </div>
-                <div className="hidden md:flex flex-col overflow-hidden">
-                  <span className="font-bold text-xs truncate leading-snug">{label}</span>
-                  <span className="text-[10px] text-slate-500 font-mono truncate">{desc}</span>
-                </div>
-              </button>
-            );
-          })}
+        <aside className="glass-panel border-r border-slate-800/80 w-16 md:w-64 flex flex-col py-3 px-2 gap-4 sticky top-14 h-[calc(100vh-56px)] z-30 overflow-y-auto bg-slate-950/80">
+          {SIDEBAR_CATEGORIES.map((group, groupIdx) => (
+            <div key={groupIdx} className="flex flex-col gap-1">
+              <div className="hidden md:block text-[10px] font-mono font-bold text-slate-500 uppercase tracking-wider px-2 mb-1">
+                {group.category}
+              </div>
+              {group.items.map(({ key, label, desc, icon: Icon }) => {
+                const isActive = activeTab === key;
+                return (
+                  <button
+                    key={key}
+                    onClick={() => setActiveTab(key)}
+                    className={`w-full flex items-center gap-3 p-2 rounded-xl transition-all text-left group ${
+                      isActive
+                        ? 'bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 shadow-[0_0_15px_rgba(0,229,255,0.1)]'
+                        : 'text-slate-400 hover:bg-slate-900 hover:text-white border border-transparent'
+                    }`}
+                  >
+                    <div className={`p-2 rounded-lg flex items-center justify-center shrink-0 ${isActive ? 'bg-cyan-950 text-cyan-400 border border-cyan-500/40' : 'bg-slate-900 text-slate-400'}`}>
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <div className="hidden md:flex flex-col overflow-hidden">
+                      <span className="font-bold text-xs truncate leading-snug">{label}</span>
+                      <span className="text-[10px] text-slate-500 font-mono truncate">{desc}</span>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          ))}
         </aside>
 
         <main className="flex-1 overflow-y-auto p-4 md:p-6 relative">

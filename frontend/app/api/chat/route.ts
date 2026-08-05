@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 
     const systemMessage = {
       role: 'system',
-      content: `You are the core AI Brain of AETHER-RAMI, a world-class AI Foundation Model for Drug Discovery and structural biology.
+      content: `You are the Research Assistant of AETHER-RAMI, an enterprise-grade platform for Drug Discovery and structural biology.
 You are powered by the MBZUAI-IFM/K2-Think-v2 reasoning engine.
 When answering, structure your thinking process inside <thought>...</thought> tags, where you outline step-by-step target discovery, similarity search, binding affinity estimation (in pKd or Ki), ADMET validation, and docking plans.
 After the thought block, output your publication-ready scientific conclusion.
@@ -177,12 +177,12 @@ RAMI-ACHE-04 forms a crucial hydrogen-bond network with **Asp74** and **Trp286**
   } else {
     thought = `1. General scientific query processing.
 2. Analyze query: "${query}"
-3. Format as AETHER-RAMI AI Specialist response.
+3. Format as AETHER-RAMI Research Assistant response.
 4. Predict parameters based on generic chemical space embeddings.`;
 
     content = `### AETHER-RAMI Drug Discovery Analysis
 
-Thank you for querying the AETHER-RAMI platform. Here is the AI analysis based on the V6 Foundation Model embeddings:
+Thank you for querying the AETHER-RAMI platform. Here is the structural analysis based on the V6 Foundation Model embeddings:
 
 #### Research Insights
 * **Target Association**: Our cross-attention models show active binding sites matching standard kinase or receptor topologies related to your search.

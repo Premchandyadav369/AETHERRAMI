@@ -18,7 +18,7 @@ export default function PipelineWorkspace() {
     { id: 0, title: '1. Dataset Selection', icon: Database, desc: 'BindingDB / ChEMBL 34 / PDBbind 2024 filtering' },
     { id: 1, title: '2. Protein Target', icon: Microscope, desc: 'PDB pocket detection & AlphaFold3 alignment' },
     { id: 2, title: '3. Molecule Generation', icon: FlaskConical, desc: 'ProtCond-VAE & SELFIES fragment expansion' },
-    { id: 3, title: '4. AI Prediction', icon: Zap, desc: 'GATv2 + ExtraTrees affinity & ADMET scoring' },
+    { id: 3, title: '4. Predictive Inference', icon: Zap, desc: 'GATv2 + ExtraTrees affinity & ADMET scoring' },
     { id: 4, title: '5. 3D Docking', icon: Layers, desc: 'AutoDock Vina & GNINA consensus grid calculation' },
     { id: 5, title: '6. Molecular Dynamics', icon: Activity, desc: '100ns OpenMM explicit solvent trajectory' },
     { id: 6, title: '7. Free Energy (MM-PBSA)', icon: Cpu, desc: 'Solvation binding free energy calculation' },
@@ -54,7 +54,7 @@ export default function PipelineWorkspace() {
             <span>End-to-End Drug Discovery Pipeline</span>
           </h2>
           <p className="text-xs text-slate-400 font-mono mt-0.5">
-            8-Stage Autonomous Workflow (Dataset → Protein → Gen → AI → Docking → MD → Free Energy → Ranking)
+            8-Stage Autonomous Workflow (Dataset → Protein → Gen → Inference → Docking → MD → Free Energy → Ranking)
           </p>
         </div>
 

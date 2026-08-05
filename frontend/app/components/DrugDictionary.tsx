@@ -59,7 +59,7 @@ export default function DrugDictionary() {
         {results && results.results && (
           <div className="space-y-4">
             <h3 className="text-sm font-bold text-slate-300 font-mono border-b border-slate-800 pb-2">
-              Results for "{results.query}"
+              Results for &quot;{results.query}&quot;
             </h3>
             {results.results.map((res: any, idx: number) => (
               <div key={idx} className="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-indigo-500/50 transition-colors">

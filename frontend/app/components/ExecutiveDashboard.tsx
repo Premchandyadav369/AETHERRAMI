@@ -58,7 +58,7 @@ export default function ExecutiveDashboard() {
               className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-cyan-500/40 text-cyan-300 font-bold text-xs transition-all flex items-center gap-2"
             >
               <Sparkles className="w-4 h-4 text-cyan-400" />
-              <span>AI Copilot</span>
+              <span>Research Assistant</span>
             </button>
           </div>
         </div>

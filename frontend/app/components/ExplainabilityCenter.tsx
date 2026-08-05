@@ -11,7 +11,7 @@ export default function ExplainabilityCenter() {
         <div>
           <h2 className="text-xl font-black text-white flex items-center gap-2">
             <Zap className="w-5 h-5 text-cyan-400" />
-            <span>Explainable AI & SHAP Attribution Center</span>
+            <span>Feature Explainability & SHAP Attribution Center</span>
           </h2>
           <p className="text-xs text-slate-400 font-mono mt-0.5">
             TreeSHAP feature attributions, cross-attention heatmap matrices & per-atom chemical importance
