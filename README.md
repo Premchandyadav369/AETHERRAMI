@@ -1,6 +1,6 @@
 # Aether Platform: Enterprise AI Drug Discovery Platform
 
-[![Platform Version](https://img.shields.io/badge/Aether-Platform-00E5FF?style=for-the-badge&logo=pytorch)](https://github.com/Premchandyadav369/AETHERRAMI)
+[![Platform Version](https://img.shields.io/badge/Aether-Platform-10.0.0-00E5FF?style=for-the-badge&logo=pytorch)](https://github.com/Premchandyadav369/AETHERRAMI)
 [![Backend](https://img.shields.io/badge/Backend-FastAPI%20%2B%20PyTorch-10B981?style=for-the-badge&logo=fastapi)](https://github.com/Premchandyadav369/AETHERRAMI)
 [![Frontend](https://img.shields.io/badge/Frontend-Next.js%2014%20%2B%20TailwindCSS-8B5CF6?style=for-the-badge&logo=nextdotjs)](https://github.com/Premchandyadav369/AETHERRAMI)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
@@ -13,67 +13,97 @@ It combines multi-target conditional generative AI, 3D WebGL protein visualizati
 
 ## 🌟 Key Workstation Modules
 
-1. **Executive Dashboard**: System health, 8x NVIDIA H100 GPU cluster gauges, screened compound metrics, and live compute job queue.
-2. **Drug Discovery Workspace**: 8-stage pipeline visualization (`Dataset` → `Protein` → `Molecule Gen` → `AI Prediction` → `Docking` → `MD` → `Free Energy` → `Lead Ranking`) with live execution logs.
-3. **De Novo Molecule Generator**: ProtCond-VAE & SELFIES latent sampling, SMILES/SELFIES editor, 2D chemical structure SVG renderer, and real-time descriptor calculations.
-4. **Protein Explorer**: Interactive 3D PDB structure viewer (`1M17`, `1HCK`, `1HVR`, `4EY7`, `1UWH`, `3FU2`), pocket detection, gatekeeper residue highlighting, and AlphaFold3 pLDDT confidence scores.
-5. **Docking Studio**: 3D binding pose visualization, consensus scoring across AutoDock Vina, GNINA CNN, and DiffDock, binding energy breakdown (ΔG in kcal/mol), and H-bond contact maps.
-6. **Molecular Dynamics Dashboard**: OpenMM 8.1 100ns explicit solvent trajectories, RMSD, RMSF, Radius of Gyration (Rg), and MM-PBSA solvation free energy plots.
-7. **AI Models Center & Model Zoo**: Auto-indexes trained models (`GATv2`, `GIN`, `Cross-Attention`, `ProtCond-VAE`, `ExtraTrees`, `LightGBM`, `XGBoost`, `CatBoost`), ROC-AUC/F1/MCC metrics, and checkpoint downloads.
-8. **Dataset Manager**: Searchable dataset catalog (BindingDB 2024, ChEMBL 34, PDBbind 2024), drag-and-drop uploader, class balance analysis, and data cleaning logs.
-9. **Candidate Ranking**: Top-100 leads, Top-20 preclinical candidates, Top-10 laboratory-priority molecules with sortable tables, filters, and one-click CSV export.
-10. **Chemical Space Explorer**: High-dimensional UMAP and t-SNE 2D projections of 2048-bit GraphCL foundation embeddings (`foundation_embeddings.npy`) and scaffold clusters.
-11. **ADMET & Toxicity Center**: Multi-parameter optimization (MPO) radar plots, Lipinski Rule of 5, Veber, PAINS, hERG, DILI, AMES, and BBB permeability checks.
+1. **Executive Dashboard**: System health, GPU cluster gauges, screened compound metrics, and live compute job queue.
+2. **Drug Discovery Workspace**: 8-stage pipeline visualization with live execution logs.
+3. **De Novo Molecule Generator**: Advanced latent sampling, SMILES/SELFIES editor, 2D chemical structure renderer, and real-time descriptor calculations.
+4. **Protein Explorer**: Interactive 3D PDB structure viewer, pocket detection, gatekeeper residue highlighting, and AlphaFold3 pLDDT confidence scores.
+5. **Docking Studio**: 3D binding pose visualization, consensus scoring across multiple frameworks, binding energy breakdown, and H-bond contact maps.
+6. **Molecular Dynamics Dashboard**: Explicit solvent trajectories, RMSD, RMSF, Radius of Gyration (Rg), and MM-PBSA solvation free energy plots.
+7. **AI Models Center**: Auto-indexes trained models, detailed metrics (ROC-AUC, F1, MCC), and checkpoint downloads.
+8. **Dataset Manager**: Searchable dataset catalog, drag-and-drop uploader, and data cleaning logs.
+9. **Candidate Ranking**: Top-100 leads, preclinical candidates, laboratory-priority molecules with sortable tables and export capabilities.
+10. **Chemical Space Explorer**: High-dimensional UMAP and t-SNE 2D projections of foundation embeddings.
+11. **ADMET & Toxicity Center**: Multi-parameter optimization (MPO) radar plots, Rule of 5, and extensive safety/toxicity checks.
 12. **Explainability & SHAP Center**: TreeSHAP feature attributions, cross-attention heatmap matrix, and atom/residue contribution maps.
-13. **Research & Laboratory Report Generator**: In-app rendering of `publication_report.html` (12.8 MB indexed document), PDF/Word exports, and commercial synthesis availability checks.
-14. **Experiment Manager & Version Tracker**: Benchmark comparator tracking performance improvements across V8, V9, V10, and V11 runs.
-15. **Settings & Hardware Monitor**: PyTorch GPU tensor precision selection (FP16/BF16/FP32), random reproducibility seeds, and user experience mode toggles.
+13. **Research & Laboratory Report Generator**: Automated report generation, exports, and commercial synthesis availability checks.
 
 ---
 
-## ⚡ Interactive Platform Features
+## 📊 Results & Benchmarks
 
-- **Dual Experience Modes**:
-  - **Beginner Guided Mode**: Simplified target-to-lead wizard flow with plain-English scientific explanations.
-  - **Expert Mode**: Full parameter control over sampling temperatures, docking exhaustiveness, and ML hyperparameters.
-- **AI Research Copilot**: Floating assistant supporting natural language queries (*"Show top 10 EGFR candidates with high QED"*).
-- **Command Palette (`Ctrl+K`)**: Instant global navigation across modules, proteins, datasets, and SMILES structures.
-- **Real Artifact Auto-Indexing**: Automatically indexes generated artifacts in `public/v10/` (`denovo_leads_by_target.json`, `1m17.pdb`, `roc_curves.png`, `v10_dashboard.png`, etc.).
+The Aether Platform achieves state-of-the-art performance across multiple pharmacological benchmarks. The results and metrics are continuously tracked and versioned. Below are key visualizations from our recent V10 execution:
+
+### Model Performance Benchmarking
+Our ensemble models outperform standard baselines significantly, as demonstrated in our benchmarking suite.
+
+![Benchmark V10](./aetherramiresultsv10/benchmark_v10.png)
+
+### Multi-Parameter Optimization (MPO)
+The platform ensures that generated candidates hit the optimal sweet spot for ADMET profiles, visualizing trade-offs via MPO radar plots.
+
+![MPO Radar](./aetherramiresultsv10/mpo_radar.png)
+
+### Binding Attention Scores
+Interpretability is built-in. Cross-attention mechanisms highlight critical atom-to-residue interactions for target specificity.
+
+![Binding Attention Scores](./aetherramiresultsv10/binding_attention_scores.png)
 
 ---
 
-## 🚀 Quick Start Guide
+## 🚀 Deployment Guide (End-to-End)
 
-### 1. Prerequisites
-- **Node.js**: v18.0.0 or later
-- **Python**: v3.10 or later
-- **npm** or **yarn**
+Aether Platform is built with a modern decoupled architecture, allowing independent scaling of the frontend application and the compute-intensive backend services.
 
-### 2. Frontend Installation & Startup
-```bash
-# Navigate to frontend directory
-cd frontend
+### Frontend Deployment (Vercel)
 
-# Install dependencies
-npm install
+The Next.js 14 frontend is optimized for serverless edge deployment, making Vercel the ideal hosting provider.
 
-# Run dev server
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+1. **Prerequisites**: Ensure your project is pushed to a Git repository (GitHub, GitLab, or Bitbucket).
+2. **Import Project**: Log in to [Vercel](https://vercel.com/) and click "Add New..." -> "Project". Import your repository.
+3. **Configure Project**:
+   - **Framework Preset**: Next.js
+   - **Root Directory**: `frontend`
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `.next`
+4. **Environment Variables**:
+   - Set `NEXT_PUBLIC_BACKEND_URL` to the production URL of your backend service (e.g., `https://api.aether-platform.example.com`).
+5. **Deploy**: Click "Deploy". Vercel will automatically build and distribute the frontend globally.
 
-### 3. Backend FastApi Server (Optional)
-```bash
-# Navigate to backend directory
-cd backend
+### Backend Deployment (AWS / Render / Docker)
 
-# Install dependencies
-pip install -r requirements.txt
+The FastAPI backend requires Python 3.12 and dependencies like PyTorch. It can be deployed using Docker for consistent environments.
 
-# Launch FastAPI server
-python -m uvicorn main:app --reload --port 8000
-```
-API Documentation will be available at [http://localhost:8000/docs](http://localhost:8000/docs).
+#### Option A: Deploying with Docker Compose (Single Instance/VM)
+Ideal for standard EC2 instances or virtual private servers.
+1. Ensure Docker and Docker Compose are installed on your server.
+2. Clone the repository and navigate to the project root.
+3. Run the following command:
+   ```bash
+   docker-compose up --build -d
+   ```
+4. Configure a reverse proxy (like Nginx) to route external traffic to `http://localhost:8000` and handle SSL termination.
+
+#### Option B: Deploying on Render (Managed Container Service)
+1. In the Render dashboard, create a new "Web Service".
+2. Connect your repository.
+3. Select "Docker" as the runtime.
+4. Set the **Root Directory** to `.` (the repository root).
+5. Ensure the `Dockerfile` path is specified as `backend/Dockerfile` if Render prompts for it, or use a customized `render.yaml`.
+6. Set Environment Variables as needed (e.g., `PYTHONPATH=/app`).
+7. Deploy the service.
+
+#### Option C: AWS ECS / EKS (Enterprise Scale)
+For high availability and GPU support:
+1. Build and push the backend Docker image to AWS ECR:
+   ```bash
+   docker build -t aether-backend -f backend/Dockerfile .
+   aws ecr get-login-password | docker login --username AWS --password-stdin <your-ecr-uri>
+   docker tag aether-backend <your-ecr-uri>:latest
+   docker push <your-ecr-uri>:latest
+   ```
+2. Create an ECS Task Definition referencing the ECR image. Allocate appropriate CPU/Memory (and GPU if using AWS Inferentia or NVIDIA instances).
+3. Deploy the task as an ECS Service behind an Application Load Balancer.
+4. Map the frontend's `NEXT_PUBLIC_BACKEND_URL` to the Load Balancer's domain.
 
 ---
 
@@ -81,18 +111,17 @@ API Documentation will be available at [http://localhost:8000/docs](http://local
 
 ```
 AETHERRAMI/
-├── aetherramiresultsv10/     # Raw pipeline execution outputs (PDBs, PNGs, CSVs, PKLs, PTs)
-├── backend/                  # FastAPI inference services, vector search, research engine
-│   ├── api/endpoints.py      # REST API routes
+├── aetherramiresultsv10/     # Raw pipeline execution outputs (PDBs, PNGs, CSVs, PTs)
+├── backend/                  # FastAPI inference services, AI research engine
+│   ├── api/                  # REST API endpoints & middleware
+│   ├── models/               # PyTorch model definitions
+│   ├── services/             # Core business logic and model inference
 │   └── main.py               # FastAPI application entry point
 ├── frontend/                 # Next.js 14 Web Application
 │   ├── app/                  # App Router pages and workstation components
-│   │   ├── components/       # 15 Workstation modules + 3D Viewers + Copilot
-│   │   ├── lib/api.ts        # Unified API & local artifact hydration client
-│   │   ├── globals.css       # Glassmorphism, cybernetic design system
-│   │   └── page.tsx          # Main application router
-│   └── public/v10/           # Indexed static artifacts & PDB structures
-└── README.md                 # Platform documentation
+│   ├── public/               # Static assets
+│   └── package.json          # Node dependencies
+└── docker-compose.yml        # Multi-container orchestration
 ```
 
 ---
