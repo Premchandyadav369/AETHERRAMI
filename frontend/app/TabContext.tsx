@@ -17,7 +17,8 @@ export type SectionTab =
   | 'explain'
   | 'report'
   | 'experiments'
-  | 'settings';
+  | 'settings'
+  | 'dictionary';
 
 export type UserMode = 'beginner' | 'expert';
 

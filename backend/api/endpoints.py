@@ -266,3 +266,7 @@ async def leaderboard():
         {"rank": 4, "model": "GraphDTA", "auc": 0.876, "f1": 0.795, "mcc": 0.589, "status": "Baseline"},
         {"rank": 5, "model": "D-SCRIPT", "auc": 0.865, "f1": 0.781, "mcc": 0.564, "status": "Baseline"}
     ]
+
+@router.get("/drug-dictionary", summary="Drug and docking knowledge dictionary")
+async def drug_dictionary_endpoint(query: str = Query(..., example="EGFR")):
+    return research_engine.global_intelligence(query)

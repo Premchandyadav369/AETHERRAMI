@@ -1,6 +1,6 @@
 // Unified API Client and Real Result Hydration Service for AETHER-RAMI V10
 
-export const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000/v1';
+export const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "/backend";
 
 export interface MoleculeCandidate {
   id: string;
@@ -207,6 +207,31 @@ export async function generateDeNovoMolecules(proteinTarget: string, disease?: s
       { smiles: 'CN1CCC2=C(C1)C=C(C=C2)OC', qed: 0.79, solubility: 'High', toxicity_risk: 'Low' },
       { smiles: 'CCN(CC)CCNC(=O)C1=CC=C(N)C=C1', qed: 0.91, solubility: 'High', toxicity_risk: 'Medium' },
       { smiles: 'CC(=O)NC1=CC=C(O)C=C1', qed: 0.84, solubility: 'High', toxicity_risk: 'Low' }
+    ]
+  };
+}
+
+export async function fetchDrugDictionary(query: string) {
+  try {
+    const res = await fetch(`${BACKEND_URL}/drug-dictionary?query=${encodeURIComponent(query)}`);
+    if (res.ok) {
+      return await res.json();
+    }
+  } catch (e) {
+    console.warn('Failed to fetch from real drug dictionary endpoint:', e);
+  }
+  // Fallback
+  return {
+    query,
+    sources_queried: ['Local Offline Index'],
+    results: [
+      {
+        source: 'AETHER Knowledge Graph',
+        type: 'Simulated Target Data',
+        id: 'SIM-001',
+        title: `Simulated record for ${query}`,
+        relevance: 0.85
+      }
     ]
   };
 }

@@ -17,6 +17,7 @@ import ExplainabilityCenter from './components/ExplainabilityCenter';
 import ReportGenerator from './components/ReportGenerator';
 import ExperimentManager from './components/ExperimentManager';
 import SettingsPage from './components/SettingsPage';
+import DrugDictionary from './components/DrugDictionary';
 import AICopilot from './components/AICopilot';
 import CommandPalette from './components/CommandPalette';
 import { Sparkles, Command, HelpCircle, Bot, Zap, ArrowRight } from 'lucide-react';
@@ -100,6 +101,7 @@ export default function MainPage() {
       {activeTab === 'report' && <ReportGenerator />}
       {activeTab === 'experiments' && <ExperimentManager />}
       {activeTab === 'settings' && <SettingsPage />}
+      {activeTab === 'dictionary' && <DrugDictionary />}
 
       {/* Modals & Overlays */}
       <AICopilot />

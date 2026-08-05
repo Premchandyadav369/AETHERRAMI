@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { GeistSans } from 'geist/font/sans';
 import { Space_Grotesk, IBM_Plex_Mono } from 'next/font/google';
+import { BookOpen } from 'lucide-react';
 import { TabProvider, useTab, SectionTab } from './TabContext';
 import './globals.css';
 
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 }
 
 const SIDEBAR_ITEMS: { key: SectionTab; label: string; desc: string; icon: any }[] = [
+  { key: 'dictionary', label: 'Drug Dictionary', desc: 'Enterprise Drug Knowledge', icon: BookOpen },
   { key: 'executive', label: 'Executive Dashboard', desc: 'System & GPU Health', icon: Activity },
   { key: 'workspace', label: 'Discovery Pipeline', desc: '8-Stage Workflow', icon: Zap },
   { key: 'generator', label: 'De Novo Generator', desc: 'SMILES & SELFIES VAE', icon: FlaskConical },
