@@ -26,7 +26,7 @@ export default function CommandPalette() {
     { id: '4', title: 'Protein Structure Explorer & PDB Viewer', category: 'Module', tab: 'proteins', icon: Microscope },
     { id: '5', title: 'Docking Studio (Vina / GNINA / DiffDock)', category: 'Module', tab: 'docking', icon: Layers },
     { id: '6', title: 'Molecular Dynamics (RMSD / RMSF / Trajectory)', category: 'Module', tab: 'dynamics', icon: Activity },
-    { id: '7', title: 'AI Model Zoo (GATv2, GIN, Cross-Attention, VAE)', category: 'Module', tab: 'models', icon: Cpu },
+    { id: '7', title: 'Model Registry (GATv2, GIN, Cross-Attention, VAE)', category: 'Module', tab: 'models', icon: Cpu },
     { id: '8', title: 'Dataset Manager & Preprocessing Status', category: 'Module', tab: 'datasets', icon: Database },
     { id: '9', title: 'Candidate Ranking (Top-100 / Top-20 / Top-10)', category: 'Module', tab: 'ranking', icon: ShieldCheck },
     { id: '10', title: 'Chemical Space Explorer (UMAP / t-SNE)', category: 'Module', tab: 'chemspace', icon: BarChart3 },
@@ -113,7 +113,7 @@ export default function CommandPalette() {
             className="flex items-center gap-1 text-cyan-400 hover:underline"
           >
             <Bot className="w-3 h-3" />
-            <span>Ask AI Copilot</span>
+            <span>Ask Research Assistant</span>
           </button>
         </div>
       </div>

@@ -18,7 +18,7 @@ import ReportGenerator from './components/ReportGenerator';
 import ExperimentManager from './components/ExperimentManager';
 import SettingsPage from './components/SettingsPage';
 import DrugDictionary from './components/DrugDictionary';
-import AICopilot from './components/AICopilot';
+import ResearchAssistant from './components/ResearchAssistant';
 import CommandPalette from './components/CommandPalette';
 import { Sparkles, Command, HelpCircle, Bot, Zap, ArrowRight } from 'lucide-react';
 
@@ -60,7 +60,7 @@ export default function MainPage() {
             className="px-3 py-1 rounded-lg bg-gradient-to-r from-cyan-500 to-indigo-600 font-bold text-slate-950 flex items-center gap-1.5 text-[11px] shadow-[0_0_12px_rgba(0,229,255,0.2)]"
           >
             <Bot className="w-3.5 h-3.5 fill-current" />
-            <span>AI Copilot</span>
+            <span>Research Assistant</span>
           </button>
         </div>
       </div>
@@ -104,7 +104,7 @@ export default function MainPage() {
       {activeTab === 'dictionary' && <DrugDictionary />}
 
       {/* Modals & Overlays */}
-      <AICopilot />
+      <ResearchAssistant />
       <CommandPalette />
     </div>
   );

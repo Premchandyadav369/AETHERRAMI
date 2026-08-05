@@ -4,10 +4,10 @@ import React, { useState } from 'react';
 import { Bot, Send, Sparkles, X, Terminal, Cpu, CheckCircle2, ChevronRight, Zap, HelpCircle } from 'lucide-react';
 import { useTab } from '../TabContext';
 
-export default function AICopilot() {
+export default function ResearchAssistant() {
   const { isCopilotOpen, setIsCopilotOpen, setActiveTab } = useTab();
-  const [messages, setMessages] = useState<Array<{ sender: 'user' | 'ai'; text: string; actionTab?: any }>>([
-    { sender: 'ai', text: 'Hello Dr. Yadav! I am your AETHER-RAMI AI Drug Discovery Copilot. Ask me about target candidates, SHAP explanations, docking scores, or ADMET optimizations.' }
+  const [messages, setMessages] = useState<Array<{ sender: 'user' | 'assistant'; text: string; actionTab?: any }>>([
+    { sender: 'assistant', text: 'Hello Dr. Yadav! I am your AETHER-RAMI Research Assistant. Ask me about target candidates, SHAP explanations, docking scores, or ADMET optimizations.' }
   ]);
   const [input, setInput] = useState('');
 
@@ -28,7 +28,7 @@ export default function AICopilot() {
     setMessages(prev => [...prev, { sender: 'user', text: query }]);
     if (!textToSend) setInput('');
 
-    // Generate intelligent AI response based on query
+    // Generate intelligent response based on query
     setTimeout(() => {
       let reply = 'Analyzing computational results...';
       let targetTab = null;
@@ -51,14 +51,14 @@ export default function AICopilot() {
         targetTab = 'workspace';
       }
 
-      setMessages(prev => [...prev, { sender: 'ai', text: reply, actionTab: targetTab }]);
+      setMessages(prev => [...prev, { sender: 'assistant', text: reply, actionTab: targetTab }]);
     }, 600);
   };
 
   return (
     <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
       <div className="w-full max-w-2xl rounded-2xl glass-panel border border-cyan-500/30 shadow-[0_0_50px_rgba(0,229,255,0.2)] flex flex-col h-[600px] overflow-hidden">
-        {/* Copilot Header */}
+        {/* Assistant Header */}
         <div className="flex items-center justify-between px-5 py-3.5 bg-slate-950/90 border-b border-slate-800">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-indigo-600 flex items-center justify-center shadow-[0_0_12px_rgba(0,229,255,0.4)]">
@@ -66,9 +66,9 @@ export default function AICopilot() {
             </div>
             <div>
               <h3 className="font-bold text-sm text-white flex items-center gap-2">
-                <span>AETHER AI Research Copilot</span>
+                <span>AETHER Research Assistant</span>
                 <span className="px-1.5 py-0.5 rounded text-[9px] font-mono bg-cyan-950 text-cyan-400 border border-cyan-800">
-                  GPT-4 / Claude Agent
+                  Analytics Agent
                 </span>
               </h3>
               <p className="text-[10px] font-mono text-slate-400">Natural language query engine for drug discovery</p>
@@ -129,7 +129,7 @@ export default function AICopilot() {
                 )}
               </div>
               <span className="text-[9px] font-mono text-slate-500 mt-1">
-                {m.sender === 'user' ? 'You' : 'AETHER Copilot'}
+                {m.sender === 'user' ? 'You' : 'AETHER Assistant'}
               </span>
             </div>
           ))}
@@ -142,7 +142,7 @@ export default function AICopilot() {
             value={input}
             onChange={e => setInput(e.target.value)}
             onKeyDown={e => e.key === 'Enter' && handleSend()}
-            placeholder="Ask AI Copilot (e.g. 'Show top 10 EGFR candidates with high QED')..."
+            placeholder="Ask Research Assistant (e.g. 'Show top 10 EGFR candidates with high QED')..."
             className="flex-1 px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700/80 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 font-mono"
           />
           <button
