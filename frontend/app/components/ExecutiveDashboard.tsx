@@ -31,7 +31,7 @@ export default function ExecutiveDashboard() {
           <div>
             <div className="flex items-center gap-2 mb-2">
               <span className="px-2.5 py-0.5 rounded-full bg-cyan-950 text-cyan-400 border border-cyan-800 text-[10px] font-mono font-bold">
-                AETHER-RAMI V10.0 OMEGA PLATFORM
+                AETHER PLATFORM
               </span>
               <span className="px-2.5 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800 text-[10px] font-mono font-bold">
                 SYSTEM ONLINE

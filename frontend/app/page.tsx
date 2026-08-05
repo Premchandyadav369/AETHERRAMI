@@ -31,7 +31,7 @@ export default function MainPage() {
         <div className="flex items-center gap-3">
           <span className="font-bold text-white flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-            <span>AETHER-RAMI V10 OMEGA</span>
+            <span>AETHER PLATFORM</span>
           </span>
           <span className="text-slate-600">|</span>
           <span className="text-slate-400">Mode: <strong className="text-cyan-400 uppercase">{userMode}</strong></span>
