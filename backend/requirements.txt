@@ -9,3 +9,4 @@ faiss-cpu>=1.7.4
 python-multipart>=0.0.9
 python-dotenv>=1.0.0
 rdkit>=2022.9.5
+psutil>=5.9.0

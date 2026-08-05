@@ -3,6 +3,10 @@ import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from backend.api.endpoints import router as api_router
+from backend.api.middleware import AuditLoggingMiddleware
+import psutil
+import time
+import os
 
 # Configure logging
 logging.basicConfig(
@@ -21,6 +25,9 @@ def create_app() -> FastAPI:
         redoc_url="/redoc"
     )
     
+    # Enterprise Audit Middleware
+    app.add_middleware(AuditLoggingMiddleware)
+
     # CORS Configuration
     app.add_middleware(
         CORSMiddleware,
@@ -33,6 +40,27 @@ def create_app() -> FastAPI:
     # Include endpoints router
     app.include_router(api_router, prefix="/v1")
     
+    # Platform start time for uptime calculation
+    platform_start_time = time.time()
+
+    @app.get("/v1/enterprise/metrics", summary="Enterprise cluster health and metrics")
+    async def enterprise_metrics():
+        uptime = time.time() - platform_start_time
+        process = psutil.Process(os.getpid())
+        memory_info = process.memory_info()
+
+        return {
+            "status": "healthy",
+            "uptime_seconds": uptime,
+            "system_metrics": {
+                "cpu_percent": psutil.cpu_percent(),
+                "memory_usage_mb": memory_info.rss / (1024 * 1024),
+                "active_threads": process.num_threads()
+            },
+            "tenant_status": "operational",
+            "active_nodes": 1
+        }
+
     @app.get("/")
     async def root():
         return {
