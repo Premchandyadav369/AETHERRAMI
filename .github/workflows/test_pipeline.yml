@@ -30,7 +30,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install torch --extra-index-url https://download.pytorch.org/whl/cpu
         pip install torch-geometric
-        pip install rdkit-pypi joblib scikit-learn numpy scipy pandas tqdm
+        pip install rdkit joblib scikit-learn numpy scipy pandas tqdm
 
     - name: Run Smoke Test on Pipeline Ingestion
       run: |
