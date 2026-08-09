@@ -77,3 +77,4 @@ Commit 76 : layout(ui): update RootLayout header with AETHER-RAMI V10 OMEGA bran
 Commit 77 : layout(ui): add live FastAPI backend status indicator pill in top header (2026-08-09 16:00:47)
 Commit 78 : layout(ui): add Command Palette quick trigger button (Ctrl+K) in header (2026-08-09 16:00:48)
 Commit 79 : layout(ui): add Research Assistant CTA button in top header (2026-08-09 16:00:49)
+Commit 80 : layout(ui): restructure left sidebar into 5 streamlined research station items (2026-08-09 16:00:50)
