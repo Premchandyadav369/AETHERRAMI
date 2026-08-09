@@ -38,3 +38,4 @@ Commit 37 : feat(context): implement activeRunVersion state tracking for V10 exe
 Commit 38 : feat(context): add userMode state toggle for Beginner Guided vs. Expert Mode (2026-08-09 16:00:19)
 Commit 39 : feat(context): add isCommandPaletteOpen modal state trigger (2026-08-09 16:00:19)
 Commit 40 : feat(context): add isCopilotOpen drawer state trigger (2026-08-09 16:00:20)
+Commit 41 : feat(context): export custom useTab hook with non-null context validation (2026-08-09 16:00:21)
