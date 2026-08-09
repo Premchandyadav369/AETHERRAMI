@@ -442,3 +442,4 @@ Commit 113 : build(release): complete master README.md and finalize AETHER-RAMI 
 [2026-08-09 16:08:37] Commit #59: feat(vae): refactor state management in TabContext provider [batch 2 #59]
 [2026-08-09 16:08:38] Commit #60: feat(gnn): optimize tensor memory layout and cache alignment [batch 2 #60]
 [2026-08-09 16:08:39] Commit #61: refactor(core): refactor edge feature normalization in GATv2 layers [batch 2 #61]
+[2026-08-09 16:08:39] Commit #62: feat(transformer): add validation rules for canonical SMILES strings [batch 2 #62]
