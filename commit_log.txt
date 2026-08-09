@@ -67,3 +67,4 @@ Commit 66 : feat(ui): add CSV dataset export utility for generated de novo candi
 Commit 67 : feat(ui): add Inspect Lead action connecting generated compounds directly to BindingPredictor (2026-08-09 16:00:40)
 Commit 68 : feat(ui): create ResultsCenter component for V10 empirical execution browsing (2026-08-09 16:00:41)
 Commit 69 : feat(ui): add summary cards for ROC-AUC (0.942), F1 (0.898), MCC (0.812), and RMSE (0.421) (2026-08-09 16:00:41)
+Commit 70 : feat(ui): implement visual asset selector for benchmark plots, MPO radar, and SHAP summaries (2026-08-09 16:00:42)
