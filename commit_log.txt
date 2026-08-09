@@ -109,3 +109,4 @@ Commit 108 : docs(readme): write OpenAPI specification for GET /v1/retrieve endp
 Commit 109 : docs(readme): write local installation guide for Python backend and Next.js frontend (2026-08-09 16:01:20)
 Commit 110 : docs(readme): write Docker Compose single-command launch instructions (2026-08-09 16:01:21)
 Commit 111 : docs(readme): write Vercel cloud deployment guide for Next.js 14 edge hosting (2026-08-09 16:01:22)
+Commit 112 : docs(readme): document license and author citation for V C Premchand Yadav (2026-08-09 16:01:22)
