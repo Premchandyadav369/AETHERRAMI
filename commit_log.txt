@@ -14,3 +14,4 @@ Commit 13 : docs(benchmark): document TreeSHAP feature attributions and atomic c
 Commit 14 : docs(benchmark): add Multi-Parameter Optimization (MPO) radar plot interpretability guidelines (2026-08-09 16:00:01)
 Commit 15 : docs(roadmap): update startup roadmap and commercialization milestones for AETHER-RAMI V10 (2026-08-09 16:00:02)
 Commit 16 : style(css): define core dark mode color variables and neon glow CSS utility tokens (2026-08-09 16:00:03)
+Commit 17 : style(css): configure glassmorphic background panels with backdrop-filter blur (2026-08-09 16:00:03)
