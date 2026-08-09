@@ -33,3 +33,4 @@ Commit 32 : feat(context): initialize TabProvider state for active station routi
 Commit 33 : feat(context): add selectedProtein state binding for PDB 3D structure viewer (2026-08-09 16:00:15)
 Commit 34 : feat(context): add smilesInput state for global chemical compound selection (2026-08-09 16:00:16)
 Commit 35 : feat(context): implement bookmark toggling logic for saving top lead candidates (2026-08-09 16:00:16)
+Commit 36 : feat(context): add global KeyboardListener for Command Palette shortcut (Ctrl+K) (2026-08-09 16:00:17)
