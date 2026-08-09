@@ -30,3 +30,4 @@ Commit 29 : style(css): add backdrop-blur fallbacks for legacy browser compatibi
 Commit 30 : style(css): finalize CSS design system tokens in globals.css (2026-08-09 16:00:13)
 Commit 31 : feat(context): define SectionTab union type for 5 primary research stations (2026-08-09 16:00:14)
 Commit 32 : feat(context): initialize TabProvider state for active station routing (2026-08-09 16:00:14)
+Commit 33 : feat(context): add selectedProtein state binding for PDB 3D structure viewer (2026-08-09 16:00:15)
