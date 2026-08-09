@@ -1,2 +1,3 @@
 Commit 1 : docs(arch): update high-level GNN & transformer cross-attention system architecture diagram (2026-08-09 15:59:50)
 Commit 2 : docs(specs): refine database schema reference for model_registry and active_learning_feedback (2026-08-09 15:59:51)
+Commit 3 : docs(api): document POST /v1/predict schema for binding affinity and ADMET extraction (2026-08-09 15:59:52)
