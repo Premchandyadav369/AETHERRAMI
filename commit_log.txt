@@ -56,3 +56,4 @@ Commit 55 : feat(ui): implement 3D WebGL protein backbone canvas renderer with a
 Commit 56 : feat(ui): add render mode toggle for Ribbon, Ball & Stick, and Spacefill spheres (2026-08-09 16:00:32)
 Commit 57 : feat(ui): add color scheme toggle for Secondary Structure, pLDDT, and Chains (2026-08-09 16:00:32)
 Commit 58 : feat(ui): add active binding cavity pocket highlight indicator on 3D canvas (2026-08-09 16:00:33)
+Commit 59 : feat(ui): display structure metadata for diffraction resolution, method, and organism (2026-08-09 16:00:34)
