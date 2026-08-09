@@ -365,3 +365,4 @@ Commit 113 : build(release): complete master README.md and finalize AETHER-RAMI 
 [2026-08-09 16:08:01] Commit #13: refactor(services): refactor active learning feedback database queries [batch 2 #13]
 [2026-08-09 16:08:01] Commit #240: feat(gnn): optimize tensor memory layout and cache alignment [cycle #240]
 [2026-08-09 16:08:02] Commit #14: feat(vae): add rate-limiting middleware for backend ingress [batch 2 #14]
+[2026-08-09 16:08:02] Commit #241: refactor(core): refactor edge feature normalization in GATv2 layers [cycle #241]
