@@ -387,3 +387,4 @@ Commit 113 : build(release): complete master README.md and finalize AETHER-RAMI 
 [2026-08-09 16:08:10] Commit #24: perf(optimization): enhance 3D WebGL protein backbone ribbon renderer [batch 2 #24]
 [2026-08-09 16:08:10] Commit #251: types(schema): optimize de novo molecular generator sampling speed [cycle #251]
 [2026-08-09 16:08:10] Commit #25: style(design): add unit tests for Lipinski Rule of 5 calculator [batch 2 #25]
+[2026-08-09 16:08:11] Commit #252: ci(pipeline): update QED drug-likeness estimation formula [cycle #252]
