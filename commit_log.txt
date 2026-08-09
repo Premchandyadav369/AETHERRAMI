@@ -297,3 +297,4 @@ Commit 113 : build(release): complete master README.md and finalize AETHER-RAMI 
 [2026-08-09 16:07:19] Commit #184: feat(docking): enhance 3D WebGL protein backbone ribbon renderer [cycle #184]
 [2026-08-09 16:07:20] Commit #185: feat(api): add unit tests for Lipinski Rule of 5 calculator [cycle #185]
 [2026-08-09 16:07:20] Commit #186: feat(ui): optimize FAISS vector search index retrieval latency [cycle #186]
+[2026-08-09 16:07:21] Commit #187: docs(architecture): update TreeSHAP feature attribution calculation log [cycle #187]
