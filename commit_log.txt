@@ -45,3 +45,4 @@ Commit 44 : types(context): define strict TypeScript interfaces for TabContext s
 Commit 45 : feat(context): finalize TabContext.tsx state management architecture (2026-08-09 16:00:23)
 Commit 46 : feat(ui): create BindingPredictor component for neural cross-attention affinity calculation (2026-08-09 16:00:24)
 Commit 47 : feat(ui): add preset drug selector buttons for Gefitinib, Erlotinib, Imatinib, Acetaminophen (2026-08-09 16:00:25)
+Commit 48 : feat(ui): implement real-time pKd binding affinity, Kd (nM), and Delta G computation (2026-08-09 16:00:26)
