@@ -32,3 +32,4 @@ Commit 31 : feat(context): define SectionTab union type for 5 primary research s
 Commit 32 : feat(context): initialize TabProvider state for active station routing (2026-08-09 16:00:14)
 Commit 33 : feat(context): add selectedProtein state binding for PDB 3D structure viewer (2026-08-09 16:00:15)
 Commit 34 : feat(context): add smilesInput state for global chemical compound selection (2026-08-09 16:00:16)
+Commit 35 : feat(context): implement bookmark toggling logic for saving top lead candidates (2026-08-09 16:00:16)
