@@ -95,3 +95,4 @@ Commit 94 : docs(readme): add high-level ASCII architectural block diagram for G
 Commit 95 : docs(readme): detail 5 key scientific innovations (EGNNs, Cross-Attention, MPO, FAISS, WebGL PDB) (2026-08-09 16:01:08)
 Commit 96 : docs(readme): add empirical V10 performance benchmarking comparison table (2026-08-09 16:01:08)
 Commit 97 : docs(readme): document state-of-the-art metrics (ROC-AUC: 0.942, F1: 0.898, MCC: 0.812) (2026-08-09 16:01:09)
+Commit 98 : docs(readme): embed Model Performance Benchmarking plot from ./aetherramiresultsv10/benchmark_v10.png (2026-08-09 16:01:10)
