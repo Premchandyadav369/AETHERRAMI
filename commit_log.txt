@@ -327,3 +327,4 @@ Commit 113 : build(release): complete master README.md and finalize AETHER-RAMI 
 [2026-08-09 16:07:42] Commit #214: feat(docking): add rate-limiting middleware for backend ingress [cycle #214]
 [2026-08-09 16:07:43] Commit #215: feat(api): enhance PAINS toxicity alert filtering algorithms [cycle #215]
 [2026-08-09 16:07:43] Commit #216: feat(ui): optimize Docker container build layers and caching [cycle #216]
+[2026-08-09 16:07:44] Commit #217: docs(architecture): update synthetic accessibility (SA) scoring heuristics [cycle #217]
