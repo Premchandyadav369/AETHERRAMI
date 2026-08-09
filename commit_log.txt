@@ -62,3 +62,4 @@ Commit 61 : feat(ui): create DeNovoStudio component for targeted VAE molecular g
 Commit 62 : feat(ui): add target protein selection dropdown for EGFR, CDK2, BRAF, HIV1_PR, AChE (2026-08-09 16:00:36)
 Commit 63 : feat(ui): add batch size and QED threshold configuration controls (2026-08-09 16:00:37)
 Commit 64 : feat(ui): implement VAE latent space sampling simulation returning candidate SMILES & SELFIES (2026-08-09 16:00:37)
+Commit 65 : feat(ui): add Synthetic Accessibility (SA Score) and drug-likeness metrics to generated leads (2026-08-09 16:00:38)
