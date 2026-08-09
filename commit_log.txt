@@ -11,3 +11,4 @@ Commit 10 : docs(deploy): add AWS ECS/EKS deployment steps with ECR image pushin
 Commit 11 : docs(benchmark): document V10 execution metrics and quantitative ROC-AUC baseline comparisons (2026-08-09 15:59:58)
 Commit 12 : docs(benchmark): add target-by-target metrics breakdown for EGFR, CDK2, BRAF, HIV1-PR, and AChE (2026-08-09 15:59:59)
 Commit 13 : docs(benchmark): document TreeSHAP feature attributions and atomic contribution mapping (2026-08-09 16:00:00)
+Commit 14 : docs(benchmark): add Multi-Parameter Optimization (MPO) radar plot interpretability guidelines (2026-08-09 16:00:01)
