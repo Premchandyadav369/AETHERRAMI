@@ -3,22 +3,12 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 export type SectionTab = 
-  | 'executive'
-  | 'workspace'
+  | 'predictor'
+  | 'explorer'
   | 'generator'
-  | 'proteins'
-  | 'docking'
-  | 'dynamics'
-  | 'models'
-  | 'datasets'
-  | 'ranking'
-  | 'chemspace'
-  | 'admet'
-  | 'explain'
-  | 'report'
-  | 'experiments'
-  | 'settings'
-  | 'dictionary';
+  | 'results'
+  | 'assistant'
+  | 'settings';
 
 export type UserMode = 'beginner' | 'expert';
 
@@ -44,7 +34,7 @@ interface TabContextType {
 const TabContext = createContext<TabContextType | undefined>(undefined);
 
 export function TabProvider({ children }: { children: React.ReactNode }) {
-  const [activeTab, setActiveTab] = useState<SectionTab>('executive');
+  const [activeTab, setActiveTab] = useState<SectionTab>('predictor');
   const [userMode, setUserMode] = useState<UserMode>('expert');
   const [selectedProtein, setSelectedProtein] = useState<string>('1M17');
   const [smilesInput, setSmilesInput] = useState<string>('CC1=C(C=C(C=C1)NC2=NC=CC(=N2)C3=CN=CC=C3)NC(=O)C4=CC=C(C=C4)CN5CCN(C)CC5');
