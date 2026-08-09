@@ -90,3 +90,4 @@ Commit 89 : perf(ui): optimize bundle size and first-load JS asset size (2026-08
 Commit 90 : feat(ui): finalize UI revamp across all 5 research stations (2026-08-09 16:01:03)
 Commit 91 : docs(readme): add publication-grade header badges for version, backend, frontend, and license (2026-08-09 16:01:04)
 Commit 92 : docs(readme): write Executive Summary detailing revolutionary AI drug discovery paradigm (2026-08-09 16:01:05)
+Commit 93 : docs(readme): explain reduction of lead optimization timelines from 3-5 years to weeks (2026-08-09 16:01:06)
