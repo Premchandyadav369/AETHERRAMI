@@ -35,3 +35,4 @@ Commit 34 : feat(context): add smilesInput state for global chemical compound se
 Commit 35 : feat(context): implement bookmark toggling logic for saving top lead candidates (2026-08-09 16:00:16)
 Commit 36 : feat(context): add global KeyboardListener for Command Palette shortcut (Ctrl+K) (2026-08-09 16:00:17)
 Commit 37 : feat(context): implement activeRunVersion state tracking for V10 execution context (2026-08-09 16:00:18)
+Commit 38 : feat(context): add userMode state toggle for Beginner Guided vs. Expert Mode (2026-08-09 16:00:19)
