@@ -99,3 +99,4 @@ Commit 98 : docs(readme): embed Model Performance Benchmarking plot from ./aethe
 Commit 99 : docs(readme): embed Multi-Parameter Optimization (MPO) Radar plot from ./aetherramiresultsv10/mpo_radar.png (2026-08-09 16:01:11)
 Commit 100 : docs(readme): embed Binding Attention Residue Scores plot from ./aetherramiresultsv10/binding_attention_scores.png (2026-08-09 16:01:12)
 Commit 101 : docs(readme): embed TreeSHAP Feature Attributions plot from ./aetherramiresultsv10/shap_summary.png (2026-08-09 16:01:13)
+Commit 102 : docs(readme): embed t-SNE Chemical Space Projection plot from ./aetherramiresultsv10/tsne_chemical_space.png (2026-08-09 16:01:14)
