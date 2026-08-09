@@ -6,3 +6,4 @@ Commit 5 : docs(api): document POST /v1/generate endpoint for conditional molecu
 Commit 6 : docs(mlops): outline active learning feedback loops and automated model promotion thresholds (2026-08-09 15:59:54)
 Commit 7 : docs(security): document OAuth2 JWT authentication and Redis rate-limiting ingress safeguards (2026-08-09 15:59:55)
 Commit 8 : docs(deploy): detail Docker Compose single-instance container orchestration configuration (2026-08-09 15:59:56)
+Commit 9 : docs(deploy): add Render managed container deployment guide and environment variable configuration (2026-08-09 15:59:57)
