@@ -102,3 +102,4 @@ Commit 101 : docs(readme): embed TreeSHAP Feature Attributions plot from ./aethe
 Commit 102 : docs(readme): embed t-SNE Chemical Space Projection plot from ./aetherramiresultsv10/tsne_chemical_space.png (2026-08-09 16:01:14)
 Commit 103 : docs(readme): embed Calibration Curves & Reliability Diagrams plot from ./aetherramiresultsv10/calibration_curves.png (2026-08-09 16:01:15)
 Commit 104 : docs(readme): document complete repository inventory and data artifacts in ./aetherramiresultsv10/ (2026-08-09 16:01:16)
+Commit 105 : docs(readme): document 5 Web Workstation research station capabilities and workflow (2026-08-09 16:01:17)
