@@ -63,3 +63,4 @@ Commit 62 : feat(ui): add target protein selection dropdown for EGFR, CDK2, BRAF
 Commit 63 : feat(ui): add batch size and QED threshold configuration controls (2026-08-09 16:00:37)
 Commit 64 : feat(ui): implement VAE latent space sampling simulation returning candidate SMILES & SELFIES (2026-08-09 16:00:37)
 Commit 65 : feat(ui): add Synthetic Accessibility (SA Score) and drug-likeness metrics to generated leads (2026-08-09 16:00:38)
+Commit 66 : feat(ui): add CSV dataset export utility for generated de novo candidate leads (2026-08-09 16:00:39)
