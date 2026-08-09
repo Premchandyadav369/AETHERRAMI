@@ -3,3 +3,4 @@ Commit 2 : docs(specs): refine database schema reference for model_registry and 
 Commit 3 : docs(api): document POST /v1/predict schema for binding affinity and ADMET extraction (2026-08-09 15:59:52)
 Commit 4 : docs(api): document GET /v1/retrieve schema for FAISS dual vector similarity search (2026-08-09 15:59:53)
 Commit 5 : docs(api): document POST /v1/generate endpoint for conditional molecular VAE sampling (2026-08-09 15:59:54)
+Commit 6 : docs(mlops): outline active learning feedback loops and automated model promotion thresholds (2026-08-09 15:59:54)
