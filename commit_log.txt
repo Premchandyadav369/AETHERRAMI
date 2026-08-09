@@ -432,3 +432,4 @@ Commit 113 : build(release): complete master README.md and finalize AETHER-RAMI 
 [2026-08-09 16:08:29] Commit #49: feat(docking): enhance glassmorphism panel border opacity tokens [batch 2 #49]
 [2026-08-09 16:08:30] Commit #50: feat(api): add error handling for invalid PDB coordinate files [batch 2 #50]
 [2026-08-09 16:08:31] Commit #51: feat(ui): optimize de novo molecular generator sampling speed [batch 2 #51]
+[2026-08-09 16:08:31] Commit #52: docs(architecture): update QED drug-likeness estimation formula [batch 2 #52]
