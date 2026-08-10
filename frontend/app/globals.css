@@ -2,144 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --aether-primary: #00E5FF;
-    --aether-secondary: #6EE7B7;
-    --aether-accent: #8B5CF6;
-    --aether-danger: #FF4D6D;
-    --aether-bg: #050816;
-  }
-
-  body {
-    background-color: #050816;
-    color: #e2e8f0;
-    font-family: var(--font-geist-sans), system-ui, sans-serif;
-    overflow-x: hidden;
-  }
-
-  @media (max-width: 768px) {
-    body { cursor: auto; }
-  }
-
-  h1, h2, h3, h4 {
-    font-family: var(--font-space-grotesk), system-ui, sans-serif;
-  }
-
-  .font-scientific, .scientific-num {
-    font-family: var(--font-ibm-plex-mono), monospace;
-  }
+:root {
+  --background: #050716;
+  --foreground: #f8fafc;
+  --aurora-cyan: #00f0ff;
+  --cyber-emerald: #10b981;
+  --neon-violet: #a855f7;
+  --sunset-rose: #f43f5e;
+  --radiant-amber: #f59e0b;
 }
 
-/* Glassmorphism */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphic Panel Styles */
 .glass-panel {
-  background: rgba(8, 17, 33, 0.75);
+  background: rgba(11, 15, 42, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(26, 39, 68, 0.8);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(0, 229, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-.glass-panel:hover {
-  border-color: rgba(0, 229, 255, 0.25);
-}
-
-.glass-panel-interactive {
-  background: rgba(8, 17, 33, 0.85);
+.glass-panel-vibrant {
+  background: linear-gradient(135deg, rgba(11, 15, 42, 0.85) 0%, rgba(20, 25, 60, 0.85) 100%);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 229, 255, 0.12);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  box-shadow: 0 10px 40px -10px rgba(0, 240, 255, 0.15);
 }
 
-.glass-panel-interactive:hover {
-  border-color: rgba(0, 229, 255, 0.35);
-  box-shadow: 0 0 30px rgba(0, 229, 255, 0.08);
-  transform: translateY(-1px);
+.glass-panel-rose {
+  background: linear-gradient(135deg, rgba(15, 10, 30, 0.85) 0%, rgba(35, 15, 35, 0.85) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  box-shadow: 0 10px 40px -10px rgba(244, 63, 94, 0.15);
 }
 
-/* Magnetic attraction target */
-.magnetic-target {
-  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+.glass-panel-emerald {
+  background: linear-gradient(135deg, rgba(6, 20, 25, 0.85) 0%, rgba(10, 35, 30, 0.85) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  box-shadow: 0 10px 40px -10px rgba(16, 185, 129, 0.15);
 }
 
-/* Scrollbars */
-::-webkit-scrollbar { width: 5px; height: 5px; }
-::-webkit-scrollbar-track { background: #050816; }
-::-webkit-scrollbar-thumb { background: #1a2744; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #00E5FF; }
-
-/* Neon borders */
-.neon-border-cyan {
-  border: 1px solid rgba(0, 229, 255, 0.4);
-  box-shadow: 0 0 12px rgba(0, 229, 255, 0.15);
-}
-
-.neon-border-purple {
-  border: 1px solid rgba(139, 92, 246, 0.4);
-  box-shadow: 0 0 12px rgba(139, 92, 246, 0.15);
-}
-
-/* Ambient */
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.8; }
-}
-
-.ambient-glow { animation: pulse-glow 8s ease-in-out infinite; }
-
-@keyframes dash {
-  0% { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: -230; }
-}
-
-/* Scientific grid background */
+/* Scientific Grid Background */
 .scientific-grid {
-  background-image:
-    linear-gradient(rgba(0, 229, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 229, 255, 0.025) 1px, transparent 1px);
-  background-size: 48px 48px;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
-/* Bond lines on hover */
-.bond-hover::after {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  border: 1px solid transparent;
-  transition: border-color 0.2s;
-  pointer-events: none;
+/* Glowing Accent Animations */
+@keyframes ambientGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.08); }
 }
 
-.bond-hover:hover::after {
-  border-color: rgba(0, 229, 255, 0.5);
+.ambient-glow {
+  animation: ambientGlow 8s ease-in-out infinite;
 }
 
-/* Pipeline flow */
-@keyframes flow-particle {
-  0% { offset-distance: 0%; opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { offset-distance: 100%; opacity: 0; }
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
 
-
-
-/* Status badges */
-.badge-live {
-  background: rgba(34, 197, 94, 0.12);
-  border: 1px solid rgba(34, 197, 94, 0.3);
-  color: #6EE7B7;
+::-webkit-scrollbar-track {
+  background: #050716;
 }
 
-.badge-quantum {
-  background: rgba(139, 92, 246, 0.12);
-  border: 1px solid rgba(139, 92, 246, 0.3);
-  color: #a78bfa;
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
 }
 
-.badge-api {
-  background: rgba(0, 229, 255, 0.1);
-  border: 1px solid rgba(0, 229, 255, 0.25);
-  color: #00E5FF;
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
 }

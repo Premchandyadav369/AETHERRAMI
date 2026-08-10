@@ -164,7 +164,7 @@ export default function PipelineWorkspace() {
 
           <div className="flex items-center justify-end gap-3 pt-2 border-t border-slate-800">
             <button
-              onClick={() => setActiveTab('ranking')}
+              onClick={() => setActiveTab('predictor')}
               className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-cyan-800 text-xs font-mono font-bold flex items-center gap-1.5"
             >
               <span>View Generated Leads</span>

@@ -3,7 +3,6 @@
 import React from 'react';
 import { Activity, Cpu, Zap, Database, ShieldCheck, Heart, Sparkles, ArrowUpRight, TrendingUp, Layers, CheckCircle2, AlertTriangle, FileText, Play } from 'lucide-react';
 import { useTab } from '../TabContext';
-import { V10_VISUALIZATIONS } from '../lib/api';
 
 export default function ExecutiveDashboard() {
   const { setActiveTab, setIsCopilotOpen, userMode } = useTab();
@@ -47,7 +46,7 @@ export default function ExecutiveDashboard() {
 
           <div className="flex items-center gap-3">
             <button
-              onClick={() => setActiveTab('workspace')}
+              onClick={() => setActiveTab('predictor')}
               className="px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 font-bold text-xs text-slate-950 hover:opacity-90 transition-all shadow-[0_0_20px_rgba(0,229,255,0.3)] flex items-center gap-2"
             >
               <Play className="w-4 h-4 fill-current" />
@@ -96,7 +95,7 @@ export default function ExecutiveDashboard() {
               <p className="text-[10px] font-mono text-slate-400">Integrated output from multi-target pipeline execution</p>
             </div>
             <button
-              onClick={() => setActiveTab('ranking')}
+              onClick={() => setActiveTab('predictor')}
               className="text-xs font-mono text-cyan-400 hover:underline flex items-center gap-1"
             >
               <span>View Top Leads</span>
@@ -110,7 +109,6 @@ export default function ExecutiveDashboard() {
               alt="V10 Master Dashboard"
               className="w-full h-auto object-cover rounded-xl transition-transform duration-500 group-hover:scale-[1.01]"
               onError={(e) => {
-                // Fallback placeholder if image not loaded
                 (e.target as HTMLElement).style.display = 'none';
               }}
             />
