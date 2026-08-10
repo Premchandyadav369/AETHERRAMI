@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Search, Command, X, ArrowRight, ShieldCheck, Zap, Microscope, Activity, Heart, Cpu, FileText, Settings, Database, FlaskConical, Layers, BarChart3, Bot } from 'lucide-react';
+import { Search, Zap, Microscope, Network, Heart, Database, FlaskConical, BarChart3, Bot, Settings } from 'lucide-react';
 import { useTab, SectionTab } from '../TabContext';
 
 interface PaletteItem {
@@ -10,111 +10,86 @@ interface PaletteItem {
   category: string;
   tab: SectionTab;
   icon: any;
-  shortcut?: string;
 }
 
 export default function CommandPalette() {
-  const { isCommandPaletteOpen, setIsCommandPaletteOpen, setActiveTab, setIsCopilotOpen } = useTab();
+  const { isCommandPaletteOpen, setIsCommandPaletteOpen, setActiveTab } = useTab();
   const [query, setQuery] = useState('');
 
-  if (!isCommandPaletteOpen) return null;
-
   const items: PaletteItem[] = [
-    { id: '1', title: 'Executive Dashboard & System Metrics', category: 'Module', tab: 'executive', icon: Activity },
-    { id: '2', title: 'Drug Discovery Pipeline Workspace', category: 'Module', tab: 'workspace', icon: Zap },
-    { id: '3', title: 'De Novo Molecule Generator (SMILES/SELFIES)', category: 'Module', tab: 'generator', icon: FlaskConical },
-    { id: '4', title: 'Protein Structure Explorer & PDB Viewer', category: 'Module', tab: 'proteins', icon: Microscope },
-    { id: '5', title: 'Docking Studio (Vina / GNINA / DiffDock)', category: 'Module', tab: 'docking', icon: Layers },
-    { id: '6', title: 'Molecular Dynamics (RMSD / RMSF / Trajectory)', category: 'Module', tab: 'dynamics', icon: Activity },
-    { id: '7', title: 'Model Registry (GATv2, GIN, Cross-Attention, VAE)', category: 'Module', tab: 'models', icon: Cpu },
-    { id: '8', title: 'Dataset Manager & Preprocessing Status', category: 'Module', tab: 'datasets', icon: Database },
-    { id: '9', title: 'Candidate Ranking (Top-100 / Top-20 / Top-10)', category: 'Module', tab: 'ranking', icon: ShieldCheck },
-    { id: '10', title: 'Chemical Space Explorer (UMAP / t-SNE)', category: 'Module', tab: 'chemspace', icon: BarChart3 },
-    { id: '11', title: 'ADMET & Toxicity Radar Center', category: 'Module', tab: 'admet', icon: Heart },
-    { id: '12', title: 'Explainability & SHAP Attribution Center', category: 'Module', tab: 'explain', icon: Zap },
-    { id: '13', title: 'Publication & Lab Report Generator', category: 'Module', tab: 'report', icon: FileText },
-    { id: '14', title: 'Experiment Manager & Run Tracker (V8-V11)', category: 'Module', tab: 'experiments', icon: Activity },
-    { id: '15', title: 'Hardware & System Settings', category: 'Module', tab: 'settings', icon: Settings }
+    { id: '1', title: 'Precision Binding Affinity & ADMET Predictor', category: 'Molecular Engineering', tab: 'predictor', icon: Zap },
+    { id: '2', title: 'RCSB PDB 3D WebGL Structural Explorer', category: 'Structural Intelligence', tab: 'explorer', icon: Microscope },
+    { id: '3', title: 'n8n-Inspired Workflow Automation Studio', category: 'Pipeline Automation', tab: 'workflow', icon: Network },
+    { id: '4', title: 'Digital Human Twin & Organ-on-a-Chip PK/PD', category: 'Pharmacokinetics', tab: 'digitaltwin', icon: Heart },
+    { id: '5', title: 'Multi-Omics Target & Disease Intelligence', category: 'Target Discovery', tab: 'multiomics', icon: Database },
+    { id: '6', title: 'De Novo Targeted Molecular Designer', category: 'Generative AI', tab: 'generator', icon: FlaskConical },
+    { id: '7', title: 'V10 Empirical Benchmark Evidence Browser', category: 'Analytics & Evidence', tab: 'results', icon: BarChart3 },
+    { id: '8', title: 'AI Scientific Research Assistant', category: 'AI Copilot', tab: 'assistant', icon: Bot },
+    { id: '9', title: 'System Configuration & Controls', category: 'Management', tab: 'settings', icon: Settings },
   ];
 
-  const filtered = items.filter(item => 
-    item.title.toLowerCase().includes(query.toLowerCase()) || 
+  const filteredItems = items.filter(item =>
+    item.title.toLowerCase().includes(query.toLowerCase()) ||
     item.category.toLowerCase().includes(query.toLowerCase())
   );
 
-  const handleSelect = (item: PaletteItem) => {
-    setActiveTab(item.tab);
+  const handleSelect = (tab: SectionTab) => {
+    setActiveTab(tab);
     setIsCommandPaletteOpen(false);
+    setQuery('');
   };
 
+  if (!isCommandPaletteOpen) return null;
+
   return (
-    <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-start justify-center pt-20 p-4">
-      <div className="w-full max-w-xl rounded-2xl glass-panel border border-cyan-500/30 shadow-[0_0_50px_rgba(0,229,255,0.25)] flex flex-col overflow-hidden">
-        {/* Search Bar */}
-        <div className="flex items-center gap-3 px-4 py-3.5 bg-slate-950/90 border-b border-slate-800">
-          <Search className="w-5 h-5 text-cyan-400" />
+    <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 bg-slate-950/80 backdrop-blur-md p-4">
+      <div className="w-full max-w-2xl glass-panel border border-cyan-500/30 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+        <div className="flex items-center px-4 border-b border-slate-800 bg-slate-950/90">
+          <Search className="w-4 h-4 text-cyan-400 mr-3 shrink-0" />
           <input
             type="text"
             value={query}
-            onChange={e => setQuery(e.target.value)}
-            placeholder="Type a command or search modules, proteins, SMILES, datasets..."
-            className="flex-1 bg-transparent text-white placeholder-slate-500 text-xs font-mono focus:outline-none"
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Type a station name or quick command (e.g., Workflow, Digital Twin, PDB, ADMET)..."
+            className="w-full py-4 bg-transparent text-white font-mono text-xs focus:outline-none placeholder-slate-500"
             autoFocus
           />
-          <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-800 text-slate-400 border border-slate-700">
-            ESC
-          </span>
-          <button onClick={() => setIsCommandPaletteOpen(false)} className="text-slate-400 hover:text-white">
-            <X className="w-4 h-4" />
-          </button>
-        </div>
-
-        {/* Command List */}
-        <div className="max-h-80 overflow-y-auto p-2 flex flex-col gap-1 font-mono text-xs">
-          {filtered.map(item => {
-            const Icon = item.icon;
-            return (
-              <button
-                key={item.id}
-                onClick={() => handleSelect(item)}
-                className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-cyan-950/60 hover:border-cyan-500/30 border border-transparent text-slate-300 hover:text-cyan-300 transition-all group"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="p-1.5 rounded-lg bg-slate-900 group-hover:bg-cyan-900 group-hover:text-cyan-300 text-slate-400">
-                    <Icon className="w-4 h-4" />
-                  </div>
-                  <div className="flex flex-col text-left">
-                    <span className="font-bold text-xs">{item.title}</span>
-                    <span className="text-[10px] text-slate-500">{item.category}</span>
-                  </div>
-                </div>
-                <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" />
-              </button>
-            );
-          })}
-
-          {filtered.length === 0 && (
-            <div className="py-8 text-center text-slate-500 text-xs">
-              No matching modules or queries found.
-            </div>
-          )}
-        </div>
-
-        {/* Footer */}
-        <div className="px-4 py-2 bg-slate-950/90 border-t border-slate-800/80 flex items-center justify-between text-[10px] font-mono text-slate-500">
-          <div className="flex items-center gap-2">
-            <span>Press <kbd className="px-1 py-0.5 rounded bg-slate-800 text-slate-300">↑</kbd> <kbd className="px-1 py-0.5 rounded bg-slate-800 text-slate-300">↓</kbd> to navigate</span>
-          </div>
           <button
-            onClick={() => {
-              setIsCommandPaletteOpen(false);
-              setIsCopilotOpen(true);
-            }}
-            className="flex items-center gap-1 text-cyan-400 hover:underline"
+            onClick={() => setIsCommandPaletteOpen(false)}
+            className="text-xs text-slate-500 hover:text-slate-300 font-mono px-2 py-1 rounded bg-slate-900 border border-slate-800"
           >
-            <Bot className="w-3 h-3" />
-            <span>Ask Research Assistant</span>
+            ESC
           </button>
+        </div>
+
+        <div className="max-h-80 overflow-y-auto p-2 flex flex-col gap-1">
+          {filteredItems.length === 0 ? (
+            <div className="p-8 text-center text-xs font-mono text-slate-500">
+              No matching research stations found.
+            </div>
+          ) : (
+            filteredItems.map(item => {
+              const Icon = item.icon;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleSelect(item.tab)}
+                  className="w-full p-3 rounded-xl hover:bg-cyan-500/15 border border-transparent hover:border-cyan-500/30 text-left transition-all flex items-center justify-between group"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-slate-900 text-cyan-400 group-hover:bg-cyan-950 border border-slate-800">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="font-bold text-xs text-slate-200 group-hover:text-cyan-300 block">{item.title}</span>
+                      <span className="text-[10px] text-slate-500 font-mono">{item.category}</span>
+                    </div>
+                  </div>
+                  <span className="text-[10px] text-slate-500 font-mono group-hover:text-cyan-400">Navigate &rarr;</span>
+                </button>
+              );
+            })
+          )}
         </div>
       </div>
     </div>

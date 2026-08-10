@@ -26,12 +26,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 }
 
 const RESEARCH_STATIONS: { key: SectionTab; label: string; desc: string; icon: any; category: string }[] = [
-  { key: 'predictor', label: 'Binding Affinity Predictor', desc: 'Cross-Attention & ADMET Profiling', icon: Zap, category: 'Molecular Engineering' },
-  { key: 'explorer', label: 'PDB & PubChem Explorer', desc: 'Live 3D WebGL Structure Viewer', icon: Microscope, category: 'Structural Intelligence' },
-  { key: 'generator', label: 'De Novo Designer', desc: 'SMILES/SELFIES Generative VAE', icon: FlaskConical, category: 'Generative AI' },
-  { key: 'results', label: 'V10 Empirical Benchmarks', desc: 'ROC, TreeSHAP, MPO Data Explorer', icon: BarChart3, category: 'Analytics & Evidence' },
+  { key: 'predictor', label: 'Binding Affinity & ADMET', desc: 'Live PubChem & Cross-Attention', icon: Zap, category: 'Molecular Engineering' },
+  { key: 'explorer', label: 'RCSB PDB 3D Explorer', desc: 'Live WebGL Coordinate Viewer', icon: Microscope, category: 'Structural Intelligence' },
+  { key: 'workflow', label: 'n8n Workflow Automation', desc: 'Node-Graph Discovery Flow', icon: Network, category: 'Pipeline Automation' },
+  { key: 'digitaltwin', label: 'Digital Human Twin', desc: 'PK/PD Organ-on-a-Chip Telemetry', icon: Heart, category: 'Pharmacokinetics' },
+  { key: 'multiomics', label: 'Multi-Omics Intelligence', desc: 'ChEMBL & Disease Network Mapping', icon: Database, category: 'Target Discovery' },
+  { key: 'generator', label: 'De Novo Designer', desc: 'Targeted SMILES/SELFIES VAE', icon: FlaskConical, category: 'Generative AI' },
+  { key: 'results', label: 'V10 Benchmark Evidence', desc: 'ROC, TreeSHAP & MPO Data Explorer', icon: BarChart3, category: 'Analytics & Evidence' },
   { key: 'assistant', label: 'Research Assistant', desc: 'Domain-Trained Scientific Agent', icon: Bot, category: 'AI Copilot' },
-  { key: 'settings', label: 'System Configuration', desc: 'Seeds, Precision & Hardware', icon: Settings, category: 'Management' },
+  { key: 'settings', label: 'System Controls', desc: 'Hardware Precision & Seeds', icon: Settings, category: 'Management' },
 ];
 
 function RootLayoutInner({ children }: { children: React.ReactNode }) {
@@ -57,7 +60,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
               AETHER-RAMI
             </span>
             <span className="ml-2 px-1.5 py-0.5 rounded text-[9px] font-bold bg-cyan-950 text-cyan-400 border border-cyan-700/50">
-              V10 OMEGA
+              ENTERPRISE CAPSTONE
             </span>
           </div>
         </button>
@@ -65,7 +68,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
         <div className="flex items-center gap-2">
           <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 font-mono text-[10px]">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>FastAPI & Real APIs Active</span>
+            <span>RCSB & PubChem REST APIs Live</span>
           </div>
 
           <button

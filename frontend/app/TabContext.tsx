@@ -5,6 +5,9 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 export type SectionTab = 
   | 'predictor'
   | 'explorer'
+  | 'workflow'
+  | 'digitaltwin'
+  | 'multiomics'
   | 'generator'
   | 'results'
   | 'assistant'
@@ -37,7 +40,7 @@ export function TabProvider({ children }: { children: React.ReactNode }) {
   const [activeTab, setActiveTab] = useState<SectionTab>('predictor');
   const [userMode, setUserMode] = useState<UserMode>('expert');
   const [selectedProtein, setSelectedProtein] = useState<string>('1M17');
-  const [smilesInput, setSmilesInput] = useState<string>('CC1=C(C=C(C=C1)NC2=NC=CC(=N2)C3=CN=CC=C3)NC(=O)C4=CC=C(C=C4)CN5CCN(C)CC5');
+  const [smilesInput, setSmilesInput] = useState<string>('COC1=C(C=C2C(=C1)N=CN=C2NC3=CC(=C(C=C3)F)Cl)OCCCN4CCOCC4');
   const [bookmarks, setBookmarks] = useState<string[]>(['CC(=O)NC1=CC=C(O)C=C1', 'CN1CCC2=C(C1)C=C(C=C2)OC']);
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState<boolean>(false);
   const [isCopilotOpen, setIsCopilotOpen] = useState<boolean>(false);
