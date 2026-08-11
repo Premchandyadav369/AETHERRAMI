@@ -4,6 +4,9 @@ import React from 'react';
 import { useTab } from './TabContext';
 import BindingPredictor from './components/BindingPredictor';
 import PdbExplorer from './components/PdbExplorer';
+import AlphaFoldStudio from './components/AlphaFoldStudio';
+import CovalentStudio from './components/CovalentStudio';
+import ProtacStudio from './components/ProtacStudio';
 import DrugLabStudio from './components/DrugLabStudio';
 import WorkflowStudio from './components/WorkflowStudio';
 import DigitalTwinStudio from './components/DigitalTwinStudio';
@@ -22,6 +25,9 @@ export default function MainPage() {
       {/* Active Workstation Router */}
       {activeTab === 'predictor' && <BindingPredictor />}
       {activeTab === 'explorer' && <PdbExplorer />}
+      {activeTab === 'alphafold' && <AlphaFoldStudio />}
+      {activeTab === 'covalent' && <CovalentStudio />}
+      {activeTab === 'protac' && <ProtacStudio />}
       {activeTab === 'druglab' && <DrugLabStudio />}
       {activeTab === 'workflow' && <WorkflowStudio />}
       {activeTab === 'digitaltwin' && <DigitalTwinStudio />}

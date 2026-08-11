@@ -3,7 +3,7 @@
 import React from 'react';
 import {
   Activity, Zap, FlaskConical, Microscope, Layers, Cpu, Database, ShieldCheck,
-  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network, Atom
+  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network, Atom, Flame
 } from 'lucide-react';
 import { GeistSans } from 'geist/font/sans';
 import { Space_Grotesk, IBM_Plex_Mono } from 'next/font/google';
@@ -28,10 +28,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 const RESEARCH_STATIONS: { key: SectionTab; label: string; desc: string; icon: any; color: string }[] = [
   { key: 'predictor', label: 'Binding Affinity & ADMET', desc: 'Live PubChem & Cross-Attention', icon: Zap, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
   { key: 'explorer', label: 'RCSB PDB 3D Explorer', desc: 'Live WebGL Coordinate Viewer', icon: Microscope, color: 'text-purple-400 border-purple-500/40 bg-purple-950/60' },
-  { key: 'druglab', label: 'Virtual Drug Discovery Lab', desc: 'DFT Quantum & MD Simulation', icon: Beaker, color: 'text-rose-400 border-rose-500/40 bg-rose-950/60' },
-  { key: 'workflow', label: 'n8n Workflow Studio', desc: 'Node-Graph Automation Flow', icon: Network, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
-  { key: 'digitaltwin', label: 'Digital Human Twin', desc: 'PK/PD Organ-on-a-Chip Telemetry', icon: Heart, color: 'text-rose-400 border-rose-500/40 bg-rose-950/60' },
-  { key: 'multiomics', label: 'Multi-Omics Catalog', desc: 'ChEMBL & Disease Target Mapping', icon: Database, color: 'text-amber-400 border-amber-500/40 bg-amber-950/60' },
+  { key: 'alphafold', label: 'AlphaFold-3 Structure AI', desc: 'pLDDT & PAES Error Scoring', icon: Microscope, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
+  { key: 'covalent', label: 'Covalent Warhead Designer', desc: 'Nucleophilic Adduct Rates', icon: Flame, color: 'text-rose-400 border-rose-500/40 bg-rose-950/60' },
+  { key: 'protac', label: 'PROTAC Degrader Studio', desc: 'Ternary Complex Degradation', icon: Layers, color: 'text-indigo-400 border-indigo-500/40 bg-indigo-950/60' },
+  { key: 'druglab', label: 'Virtual Drug Discovery Lab', desc: 'DFT Quantum & MD Simulation', icon: Beaker, color: 'text-pink-400 border-pink-500/40 bg-pink-950/60' },
+  { key: 'workflow', label: 'n8n Workflow Studio', desc: 'Node-Graph Automation Flow', icon: Network, color: 'text-teal-400 border-teal-500/40 bg-teal-950/60' },
+  { key: 'digitaltwin', label: 'Digital Human Twin', desc: 'PK/PD Organ-on-a-Chip Telemetry', icon: Heart, color: 'text-amber-400 border-amber-500/40 bg-amber-950/60' },
+  { key: 'multiomics', label: 'Multi-Omics Catalog', desc: 'ChEMBL & Disease Target Mapping', icon: Database, color: 'text-blue-400 border-blue-500/40 bg-blue-950/60' },
   { key: 'generator', label: 'De Novo Designer', desc: 'Targeted SMILES/SELFIES VAE', icon: FlaskConical, color: 'text-indigo-400 border-indigo-500/40 bg-indigo-950/60' },
   { key: 'results', label: 'V10 Evidence Center', desc: 'ROC, TreeSHAP & MPO Data', icon: BarChart3, color: 'text-teal-400 border-teal-500/40 bg-teal-950/60' },
   { key: 'assistant', label: 'Research Assistant', desc: 'Domain Copilot Agent', icon: Bot, color: 'text-pink-400 border-pink-500/40 bg-pink-950/60' },
