@@ -2,8 +2,12 @@ import os
 import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.api.endpoints import router as api_router
-from backend.api.middleware import AuditLoggingMiddleware
+try:
+    from api.endpoints import router as api_router
+    from api.middleware import AuditLoggingMiddleware
+except ImportError:
+    from backend.api.endpoints import router as api_router
+    from backend.api.middleware import AuditLoggingMiddleware
 import psutil
 import time
 import os

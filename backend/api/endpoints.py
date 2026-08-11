@@ -1,9 +1,14 @@
 from fastapi import APIRouter, HTTPException, Query, BackgroundTasks
 from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any
-from backend.services.inference import inference_service
-from backend.services.vector_search import vector_search_service
-from backend.services.research_engine import research_engine
+try:
+    from services.inference import inference_service
+    from services.vector_search import vector_search_service
+    from services.research_engine import research_engine
+except ImportError:
+    from backend.services.inference import inference_service
+    from backend.services.vector_search import vector_search_service
+    from backend.services.research_engine import research_engine
 
 router = APIRouter()
 
