@@ -16,6 +16,15 @@ const ibmPlexMono = IBM_Plex_Mono({ weight: ['400', '500', '600', '700'], subset
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable}`}>
+      <head>
+        <title>artery | bioScript OS - AI Biopharmaceutical Platform</title>
+        <meta name="description" content="Enterprise AI Computational Biopharmaceutical & Genetic Testing Workstation" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="theme-color" content="#050716" />
+        <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+        <link rel="apple-touch-icon" href="/icon.svg" />
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body className={`${GeistSans.className} bg-[#050716] text-slate-100 min-h-screen flex flex-col relative`}>
         <TabProvider>
           <RootLayoutInner>{children}</RootLayoutInner>
@@ -123,8 +132,11 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
       {/* Header */}
       <header className="glass-panel-bioscript border-b border-amber-500/20 sticky top-0 w-full h-16 flex items-center justify-between px-6 z-40 bg-slate-950/90 backdrop-blur-xl">
         <button className="flex items-center gap-3 text-left" onClick={() => setActiveTab('epigenetic')}>
-          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-amber-400 via-rose-500 to-purple-600 flex items-center justify-center font-black text-slate-950 text-base shadow-[0_0_20px_rgba(245,158,11,0.5)]">
-            A
+          {/* Responsive Brand Icon */}
+          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-amber-400 via-rose-500 to-purple-600 p-0.5 shadow-[0_0_20px_rgba(245,158,11,0.5)]">
+            <div className="w-full h-full rounded-full bg-slate-950 flex items-center justify-center">
+              <img src="/icon.svg" alt="artery bioScript" className="w-6 h-6" />
+            </div>
           </div>
           <div>
             <span className="font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-rose-300 to-cyan-400 text-base">

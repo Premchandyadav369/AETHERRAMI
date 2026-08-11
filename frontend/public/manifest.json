@@ -1,0 +1,17 @@
+{
+  "name": "artery | bioScript OS",
+  "short_name": "bioScript",
+  "description": "Enterprise AI Computational Biopharmaceutical & Genetic Testing Workstation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050716",
+  "theme_color": "#050716",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
