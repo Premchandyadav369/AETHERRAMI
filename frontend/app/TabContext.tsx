@@ -13,15 +13,25 @@ export type SectionTab =
   | 'digitaltwin'
   | 'multiomics'
   | 'generator'
+  | 'rbac'
   | 'results'
   | 'assistant'
   | 'settings';
+
+export type UserRole = 
+  | 'Principal Investigator (PI)'
+  | 'Lead Medicinal Chemist'
+  | 'Bioinformatics Specialist'
+  | 'Lab Technician'
+  | 'Auditor / Guest';
 
 export type UserMode = 'beginner' | 'expert';
 
 interface TabContextType {
   activeTab: SectionTab;
   setActiveTab: (tab: SectionTab) => void;
+  currentRole: UserRole;
+  setCurrentRole: (role: UserRole) => void;
   userMode: UserMode;
   setUserMode: (mode: UserMode) => void;
   selectedProtein: string;
@@ -42,6 +52,7 @@ const TabContext = createContext<TabContextType | undefined>(undefined);
 
 export function TabProvider({ children }: { children: React.ReactNode }) {
   const [activeTab, setActiveTab] = useState<SectionTab>('predictor');
+  const [currentRole, setCurrentRole] = useState<UserRole>('Principal Investigator (PI)');
   const [userMode, setUserMode] = useState<UserMode>('expert');
   const [selectedProtein, setSelectedProtein] = useState<string>('1M17');
   const [smilesInput, setSmilesInput] = useState<string>('COC1=C(C=C2C(=C1)N=CN=C2NC3=CC(=C(C=C3)F)Cl)OCCCN4CCOCC4');
@@ -71,6 +82,8 @@ export function TabProvider({ children }: { children: React.ReactNode }) {
     <TabContext.Provider value={{ 
       activeTab, 
       setActiveTab, 
+      currentRole,
+      setCurrentRole,
       userMode, 
       setUserMode, 
       selectedProtein, 

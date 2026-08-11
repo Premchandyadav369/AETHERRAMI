@@ -12,6 +12,7 @@ import WorkflowStudio from './components/WorkflowStudio';
 import DigitalTwinStudio from './components/DigitalTwinStudio';
 import MultiOmicsExplorer from './components/MultiOmicsExplorer';
 import DeNovoStudio from './components/DeNovoStudio';
+import RbacStudio from './components/RbacStudio';
 import ResultsCenter from './components/ResultsCenter';
 import AssistantChat from './components/AssistantChat';
 import SettingsPage from './components/SettingsPage';
@@ -33,6 +34,7 @@ export default function MainPage() {
       {activeTab === 'digitaltwin' && <DigitalTwinStudio />}
       {activeTab === 'multiomics' && <MultiOmicsExplorer />}
       {activeTab === 'generator' && <DeNovoStudio />}
+      {activeTab === 'rbac' && <RbacStudio />}
       {activeTab === 'results' && <ResultsCenter />}
       {activeTab === 'assistant' && <AssistantChat />}
       {activeTab === 'settings' && <SettingsPage />}

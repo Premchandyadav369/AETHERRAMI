@@ -3,7 +3,7 @@
 import React from 'react';
 import {
   Activity, Zap, FlaskConical, Microscope, Layers, Cpu, Database, ShieldCheck,
-  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network, Atom, Flame
+  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network, Atom, Flame, Users
 } from 'lucide-react';
 import { GeistSans } from 'geist/font/sans';
 import { Space_Grotesk, IBM_Plex_Mono } from 'next/font/google';
@@ -36,13 +36,14 @@ const RESEARCH_STATIONS: { key: SectionTab; label: string; desc: string; icon: a
   { key: 'digitaltwin', label: 'Digital Human Twin', desc: 'PK/PD Organ-on-a-Chip Telemetry', icon: Heart, color: 'text-amber-400 border-amber-500/40 bg-amber-950/60' },
   { key: 'multiomics', label: 'Multi-Omics Catalog', desc: 'ChEMBL & Disease Target Mapping', icon: Database, color: 'text-blue-400 border-blue-500/40 bg-blue-950/60' },
   { key: 'generator', label: 'De Novo Designer', desc: 'Targeted SMILES/SELFIES VAE', icon: FlaskConical, color: 'text-indigo-400 border-indigo-500/40 bg-indigo-950/60' },
+  { key: 'rbac', label: 'RBAC Security Governance', desc: 'Role Permissions & Audit Logs', icon: ShieldCheck, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
   { key: 'results', label: 'V10 Evidence Center', desc: 'ROC, TreeSHAP & MPO Data', icon: BarChart3, color: 'text-teal-400 border-teal-500/40 bg-teal-950/60' },
   { key: 'assistant', label: 'Research Assistant', desc: 'Domain Copilot Agent', icon: Bot, color: 'text-pink-400 border-pink-500/40 bg-pink-950/60' },
   { key: 'settings', label: 'System Controls', desc: 'Hardware & Seeds', icon: Settings, color: 'text-slate-400 border-slate-500/40 bg-slate-900/60' },
 ];
 
 function RootLayoutInner({ children }: { children: React.ReactNode }) {
-  const { activeTab, setActiveTab, setIsCommandPaletteOpen, setIsCopilotOpen } = useTab();
+  const { activeTab, setActiveTab, currentRole, setIsCommandPaletteOpen, setIsCopilotOpen } = useTab();
 
   return (
     <>
@@ -71,10 +72,14 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
         </button>
 
         <div className="flex items-center gap-2">
-          <div className="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/70 border border-emerald-500/40 text-emerald-300 font-mono text-[10px] shadow-[0_0_10px_rgba(16,185,129,0.2)]">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>RCSB & PubChem REST APIs Active</span>
-          </div>
+          {/* Active RBAC Role Indicator */}
+          <button
+            onClick={() => setActiveTab('rbac')}
+            className="px-2.5 py-1 rounded-full bg-slate-900 hover:bg-slate-800 border border-cyan-500/40 text-cyan-300 font-mono text-[10px] flex items-center gap-1.5 transition-colors"
+          >
+            <ShieldCheck className="w-3 h-3 text-cyan-400" />
+            <span className="font-bold">{currentRole}</span>
+          </button>
 
           <button
             onClick={() => setIsCommandPaletteOpen(true)}

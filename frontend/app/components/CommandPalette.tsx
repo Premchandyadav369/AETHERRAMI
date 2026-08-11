@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Search, Zap, Microscope, Beaker, Network, Heart, Database, FlaskConical, BarChart3, Bot, Settings, Flame, Layers } from 'lucide-react';
+import { Search, Zap, Microscope, Beaker, Network, Heart, Database, FlaskConical, BarChart3, Bot, Settings, Flame, Layers, ShieldCheck } from 'lucide-react';
 import { useTab, SectionTab } from '../TabContext';
 
 interface PaletteItem {
@@ -27,9 +27,10 @@ export default function CommandPalette() {
     { id: '8', title: 'Digital Human Twin & Organ-on-a-Chip PK/PD', category: 'Pharmacokinetics', tab: 'digitaltwin', icon: Heart },
     { id: '9', title: 'Multi-Omics Target & Disease Intelligence', category: 'Target Discovery', tab: 'multiomics', icon: Database },
     { id: '10', title: 'De Novo Targeted Molecular Designer', category: 'Generative AI', tab: 'generator', icon: FlaskConical },
-    { id: '11', title: 'V10 Empirical Benchmark Evidence Browser', category: 'Analytics & Evidence', tab: 'results', icon: BarChart3 },
-    { id: '12', title: 'AI Scientific Research Assistant', category: 'AI Copilot', tab: 'assistant', icon: Bot },
-    { id: '13', title: 'System Configuration & Controls', category: 'Management', tab: 'settings', icon: Settings },
+    { id: '11', title: 'Enterprise Role-Based Access Control (RBAC)', category: 'Security Governance', tab: 'rbac', icon: ShieldCheck },
+    { id: '12', title: 'V10 Empirical Benchmark Evidence Browser', category: 'Analytics & Evidence', tab: 'results', icon: BarChart3 },
+    { id: '13', title: 'AI Scientific Research Assistant', category: 'AI Copilot', tab: 'assistant', icon: Bot },
+    { id: '14', title: 'System Configuration & Controls', category: 'Management', tab: 'settings', icon: Settings },
   ];
 
   const filteredItems = items.filter(item =>
@@ -54,7 +55,7 @@ export default function CommandPalette() {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Type a station name (e.g., AlphaFold, Covalent, PROTAC, Drug Lab, Workflow, PDB)..."
+            placeholder="Type a station name (e.g., RBAC, Security, AlphaFold, Drug Lab, Workflow)..."
             className="w-full py-4 bg-transparent text-white font-mono text-xs focus:outline-none placeholder-slate-500"
             autoFocus
           />
