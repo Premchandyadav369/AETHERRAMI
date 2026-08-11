@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import {
   Activity, Zap, FlaskConical, Microscope, Layers, Cpu, Database, ShieldCheck,
-  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network, Atom, Flame, Users, Key, Code, BookOpen, ChevronDown, ChevronRight
+  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network, Atom, Flame, Users, Key, Code, BookOpen, ChevronDown, ChevronRight, Play, Pause, Volume2, VolumeX
 } from 'lucide-react';
 import { GeistSans } from 'geist/font/sans';
 import { Space_Grotesk, IBM_Plex_Mono } from 'next/font/google';
@@ -32,6 +32,14 @@ interface StationGroup {
 }
 
 const STATION_GROUPS: StationGroup[] = [
+  {
+    groupName: 'Epigenetics & Genomic Testing',
+    groupIcon: Sparkles,
+    items: [
+      { key: 'epigenetic', label: 'Biological Age & Horvath Clock', desc: 'DNA Methylation Telemetry', icon: Sparkles, color: 'text-amber-400 border-amber-500/40 bg-amber-950/60' },
+      { key: 'genomerisk', label: 'Whole-Genome Polygenic Risk', desc: 'PRS Trait Snapshot & rsID', icon: Activity, color: 'text-rose-400 border-rose-500/40 bg-rose-950/60' },
+    ]
+  },
   {
     groupName: 'Structural & Molecular AI',
     groupIcon: Microscope,
@@ -92,6 +100,8 @@ const STATION_GROUPS: StationGroup[] = [
 function RootLayoutInner({ children }: { children: React.ReactNode }) {
   const { activeTab, setActiveTab, currentRole, setIsCommandPaletteOpen, setIsCopilotOpen } = useTab();
   const [collapsedGroups, setCollapsedGroups] = useState<{ [key: string]: boolean }>({});
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
 
   const toggleGroup = (groupName: string) => {
     setCollapsedGroups(prev => ({ ...prev, [groupName]: !prev[groupName] }));
@@ -101,50 +111,47 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
     <>
       {/* Background ambient glowing gradient orbs */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-0 left-1/4 w-[650px] h-[450px] bg-cyan-500/15 rounded-full blur-[130px] ambient-glow" />
-        <div className="absolute top-1/3 right-10 w-[550px] h-[400px] bg-purple-500/15 rounded-full blur-[120px] ambient-glow" style={{ animationDelay: '3s' }} />
-        <div className="absolute bottom-10 left-10 w-[500px] h-[350px] bg-rose-500/10 rounded-full blur-[110px] ambient-glow" style={{ animationDelay: '5s' }} />
+        <div className="absolute top-0 left-1/4 w-[650px] h-[450px] ambient-glow-amber rounded-full blur-[130px]" />
+        <div className="absolute top-1/3 right-10 w-[550px] h-[400px] ambient-glow-rose rounded-full blur-[120px]" />
         <div className="absolute inset-0 scientific-grid opacity-25" />
       </div>
 
-      {/* Header */}
-      <header className="glass-panel border-b border-slate-800/80 sticky top-0 w-full h-14 flex items-center justify-between px-4 z-40 bg-slate-950/90 backdrop-blur-xl">
-        <button className="flex items-center gap-3 text-left" onClick={() => setActiveTab('predictor')}>
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 via-purple-500 to-rose-500 flex items-center justify-center font-black text-slate-950 text-base shadow-[0_0_20px_rgba(0,240,255,0.5)]">
+      {/* Header - bioScript / Artery Aesthetic */}
+      <header className="glass-panel-bioscript border-b border-amber-500/20 sticky top-0 w-full h-16 flex items-center justify-between px-6 z-40 bg-slate-950/90 backdrop-blur-xl">
+        <button className="flex items-center gap-3 text-left" onClick={() => setActiveTab('epigenetic')}>
+          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-amber-400 via-rose-500 to-purple-600 flex items-center justify-center font-black text-slate-950 text-base shadow-[0_0_20px_rgba(245,158,11,0.5)]">
             A
           </div>
           <div>
-            <span className="font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-300 to-rose-400 text-sm">
-              AETHER-RAMI
+            <span className="font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-rose-300 to-cyan-400 text-base">
+              artery | bioScript
             </span>
-            <span className="ml-2 px-2 py-0.5 rounded-full text-[9px] font-bold bg-cyan-950 text-cyan-300 border border-cyan-500/50 shadow-[0_0_10px_rgba(0,240,255,0.2)]">
+            <span className="ml-2 px-2.5 py-0.5 rounded-full text-[9px] font-bold bg-amber-950 text-amber-300 border border-amber-500/50">
               V10 OMEGA
             </span>
           </div>
         </button>
 
-        <div className="flex items-center gap-2">
-          {/* Active RBAC Role Indicator */}
-          <button
-            onClick={() => setActiveTab('rbac')}
-            className="px-2.5 py-1 rounded-full bg-slate-900 hover:bg-slate-800 border border-cyan-500/40 text-cyan-300 font-mono text-[10px] flex items-center gap-1.5 transition-colors"
-          >
-            <ShieldCheck className="w-3 h-3 text-cyan-400" />
-            <span className="font-bold">{currentRole}</span>
-          </button>
+        <div className="flex items-center gap-3">
+          {/* User Profile Avatar - Benjamin Carter / Premchand Yadav */}
+          <div className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-slate-900 border border-amber-500/30">
+            <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-amber-400 to-rose-500 flex items-center justify-center text-slate-950 font-black text-xs">
+              PY
+            </div>
+            <span className="font-bold text-xs text-white hidden sm:inline">V C Premchand Yadav</span>
+          </div>
 
           <button
             onClick={() => setIsCommandPaletteOpen(true)}
-            className="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 text-xs flex items-center gap-1.5 transition-colors"
-            title="Command Palette (Ctrl+K)"
+            className="p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 text-xs flex items-center gap-1.5 transition-colors"
           >
-            <Command className="w-4 h-4 text-cyan-400" />
+            <Command className="w-4 h-4 text-amber-400" />
             <span className="hidden sm:inline font-mono text-[11px] text-slate-400">Ctrl+K</span>
           </button>
 
           <button
             onClick={() => setIsCopilotOpen(true)}
-            className="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-rose-500 font-bold text-xs text-slate-950 hover:opacity-90 transition-all shadow-[0_0_20px_rgba(168,85,247,0.4)] flex items-center gap-1.5"
+            className="px-4 py-2 rounded-full bg-gradient-to-r from-amber-400 via-rose-500 to-purple-600 font-bold text-xs text-slate-950 hover:opacity-90 transition-all shadow-[0_0_20px_rgba(245,158,11,0.4)] flex items-center gap-1.5"
           >
             <Bot className="w-3.5 h-3.5 fill-current" />
             <span>AI Copilot</span>
@@ -153,11 +160,11 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
       </header>
 
       {/* Main Layout Container */}
-      <div className="flex flex-1 relative z-10">
-        {/* Left Sidebar - Decluttered Grouped Architecture */}
-        <aside className="glass-panel border-r border-slate-800/80 w-16 md:w-64 flex flex-col py-4 px-2 gap-4 sticky top-14 h-[calc(100vh-56px)] z-30 overflow-y-auto bg-slate-950/80">
+      <div className="flex flex-1 relative z-10 pb-16">
+        {/* Left Sidebar */}
+        <aside className="glass-panel-bioscript border-r border-amber-500/20 w-16 md:w-64 flex flex-col py-4 px-2 gap-4 sticky top-16 h-[calc(100vh-64px)] z-30 overflow-y-auto bg-slate-950/80">
           <div className="hidden md:block text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider px-2">
-            ENTERPRISE HUBS (5)
+            ENTERPRISE HUBS ({STATION_GROUPS.length})
           </div>
 
           {STATION_GROUPS.map((group) => {
@@ -167,10 +174,10 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
               <div key={group.groupName} className="flex flex-col gap-1">
                 <button
                   onClick={() => toggleGroup(group.groupName)}
-                  className="hidden md:flex items-center justify-between px-2 py-1 text-[11px] font-mono font-bold text-cyan-400 hover:text-white uppercase tracking-wider transition-colors"
+                  className="hidden md:flex items-center justify-between px-2 py-1 text-[11px] font-mono font-bold text-amber-400 hover:text-white uppercase tracking-wider transition-colors"
                 >
                   <div className="flex items-center gap-1.5">
-                    <GroupIcon className="w-3.5 h-3.5 text-cyan-400" />
+                    <GroupIcon className="w-3.5 h-3.5 text-amber-400" />
                     <span>{group.groupName}</span>
                   </div>
                   {isCollapsed ? <ChevronRight className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
@@ -184,7 +191,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
                       onClick={() => setActiveTab(key)}
                       className={`w-full flex items-center gap-3 p-2 rounded-xl transition-all text-left group ${
                         isActive
-                          ? 'bg-slate-900/90 border border-cyan-500/50 text-white shadow-[0_0_20px_rgba(0,240,255,0.15)]'
+                          ? 'bg-slate-900/90 border border-amber-500/50 text-white shadow-[0_0_20px_rgba(245,158,11,0.2)]'
                           : 'text-slate-400 hover:bg-slate-900/50 hover:text-white border border-transparent'
                       }`}
                     >
@@ -206,6 +213,31 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
         <main className="flex-1 overflow-y-auto p-4 md:p-6 relative">
           {children}
         </main>
+      </div>
+
+      {/* Floating Media & Telemetry Control Bar (Matching User Reference Image) */}
+      <div className="fixed bottom-3 left-1/2 -translate-x-1/2 z-50 px-6 py-2.5 rounded-full glass-panel-bioscript border border-amber-500/30 shadow-2xl flex items-center gap-6 bg-slate-950/90 backdrop-blur-xl">
+        <button
+          onClick={() => setIsPlaying(!isPlaying)}
+          className="w-8 h-8 rounded-full bg-white text-slate-950 flex items-center justify-center hover:scale-105 transition-transform"
+        >
+          {isPlaying ? <Pause className="w-4 h-4 fill-current" /> : <Play className="w-4 h-4 fill-current ml-0.5" />}
+        </button>
+
+        <button
+          onClick={() => setIsMuted(!isMuted)}
+          className="w-8 h-8 rounded-full bg-slate-900 border border-slate-700 text-slate-300 flex items-center justify-center hover:bg-slate-800 transition-colors"
+        >
+          {isMuted ? <VolumeX className="w-4 h-4 text-rose-400" /> : <Volume2 className="w-4 h-4 text-amber-400" />}
+        </button>
+
+        <div className="w-64 md:w-96 h-1.5 bg-slate-800 rounded-full overflow-hidden relative">
+          <div className="h-full bg-gradient-to-r from-amber-400 via-rose-500 to-purple-500 rounded-full w-3/4 animate-pulse" />
+        </div>
+
+        <span className="text-[10px] font-mono text-amber-300 font-bold hidden sm:inline">
+          Live Telemetry Stream
+        </span>
       </div>
     </>
   );

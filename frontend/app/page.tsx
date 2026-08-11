@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { useTab } from './TabContext';
+import EpigeneticStudio from './components/EpigeneticStudio';
+import GenomeRiskStudio from './components/GenomeRiskStudio';
 import BindingPredictor from './components/BindingPredictor';
 import PdbExplorer from './components/PdbExplorer';
 import AlphaFoldStudio from './components/AlphaFoldStudio';
@@ -35,6 +37,8 @@ export default function MainPage() {
   return (
     <div className="flex flex-col gap-6 max-w-7xl mx-auto pb-16">
       {/* Active Workstation Router */}
+      {activeTab === 'epigenetic' && <EpigeneticStudio />}
+      {activeTab === 'genomerisk' && <GenomeRiskStudio />}
       {activeTab === 'predictor' && <BindingPredictor />}
       {activeTab === 'methodology' && <MethodologyStudio />}
       {activeTab === 'explorer' && <PdbExplorer />}

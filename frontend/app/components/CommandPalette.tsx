@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Search, Zap, Microscope, Beaker, Network, Heart, Database, FlaskConical, BarChart3, Bot, Settings, Flame, Layers, ShieldCheck, FileText, Activity, Key, BookOpen, Users } from 'lucide-react';
+import { Search, Zap, Microscope, Beaker, Network, Heart, Database, FlaskConical, BarChart3, Bot, Settings, Flame, Layers, ShieldCheck, FileText, Activity, Key, BookOpen, Users, Sparkles } from 'lucide-react';
 import { useTab, SectionTab } from '../TabContext';
 
 interface PaletteItem {
@@ -17,6 +17,8 @@ export default function CommandPalette() {
   const [query, setQuery] = useState('');
 
   const items: PaletteItem[] = [
+    { id: '0a', title: 'Epigenetic Biological Age & Horvath DNA Methylation Clock', category: 'Epigenetics & Genomic Testing', tab: 'epigenetic', icon: Sparkles },
+    { id: '0b', title: 'Whole-Genome Polygenic Risk Score (PRS) Snapshot', category: 'Epigenetics & Genomic Testing', tab: 'genomerisk', icon: Activity },
     { id: '1', title: 'Precision Binding Affinity & ADMET Predictor', category: 'Structural & Molecular AI', tab: 'predictor', icon: Zap },
     { id: '2', title: 'Scientific Methodology & Layman Explainer Guide', category: 'Evidence & AI Copilot', tab: 'methodology', icon: BookOpen },
     { id: '3', title: 'RCSB PDB 3D WebGL Structural Explorer', category: 'Structural & Molecular AI', tab: 'explorer', icon: Microscope },
@@ -59,14 +61,14 @@ export default function CommandPalette() {
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 bg-slate-950/80 backdrop-blur-md p-4">
-      <div className="w-full max-w-2xl glass-panel border border-cyan-500/30 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+      <div className="w-full max-w-2xl glass-panel-bioscript border border-amber-500/30 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
         <div className="flex items-center px-4 border-b border-slate-800 bg-slate-950/90">
-          <Search className="w-4 h-4 text-cyan-400 mr-3 shrink-0" />
+          <Search className="w-4 h-4 text-amber-400 mr-3 shrink-0" />
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search across all 25 research stations organized into 5 hubs..."
+            placeholder="Search across all 27 bioScript research stations..."
             className="w-full py-4 bg-transparent text-white font-mono text-xs focus:outline-none placeholder-slate-500"
             autoFocus
           />
@@ -90,18 +92,18 @@ export default function CommandPalette() {
                 <button
                   key={item.id}
                   onClick={() => handleSelect(item.tab)}
-                  className="w-full p-3 rounded-xl hover:bg-cyan-500/15 border border-transparent hover:border-cyan-500/30 text-left transition-all flex items-center justify-between group"
+                  className="w-full p-3 rounded-xl hover:bg-amber-500/15 border border-transparent hover:border-amber-500/30 text-left transition-all flex items-center justify-between group"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-slate-900 text-cyan-400 group-hover:bg-cyan-950 border border-slate-800">
+                    <div className="p-2 rounded-lg bg-slate-900 text-amber-400 group-hover:bg-amber-950 border border-slate-800">
                       <Icon className="w-4 h-4" />
                     </div>
                     <div>
-                      <span className="font-bold text-xs text-slate-200 group-hover:text-cyan-300 block">{item.title}</span>
+                      <span className="font-bold text-xs text-slate-200 group-hover:text-amber-300 block">{item.title}</span>
                       <span className="text-[10px] text-slate-500 font-mono">{item.category}</span>
                     </div>
                   </div>
-                  <span className="text-[10px] text-slate-500 font-mono group-hover:text-cyan-400">Navigate &rarr;</span>
+                  <span className="text-[10px] text-slate-500 font-mono group-hover:text-amber-400">Navigate &rarr;</span>
                 </button>
               );
             })

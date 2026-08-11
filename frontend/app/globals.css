@@ -5,83 +5,71 @@
 :root {
   --background: #050716;
   --foreground: #f8fafc;
-  --aurora-cyan: #00f0ff;
-  --cyber-emerald: #10b981;
-  --neon-violet: #a855f7;
-  --sunset-rose: #f43f5e;
-  --radiant-amber: #f59e0b;
+  --glass-bg: rgba(13, 15, 23, 0.85);
+  --glass-border: rgba(245, 158, 11, 0.2);
+  --amber-glow: rgba(245, 158, 11, 0.15);
+  --rose-glow: rgba(244, 63, 94, 0.15);
+  --cyan-glow: rgba(0, 240, 255, 0.15);
 }
 
 body {
-  background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--background);
+  font-feature-settings: "rlig" 1, "calt" 1;
   overflow-x: hidden;
 }
 
-/* Glassmorphic Panel Styles */
-.glass-panel {
-  background: rgba(11, 15, 42, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+/* Custom Glassmorphic Cards - bioScript / Artery Aesthetic */
+.glass-panel-bioscript {
+  background: linear-gradient(135deg, rgba(13, 15, 23, 0.9) 0%, rgba(20, 23, 36, 0.8) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-radius: 1.75rem;
 }
 
-.glass-panel-vibrant {
-  background: linear-gradient(135deg, rgba(11, 15, 42, 0.85) 0%, rgba(20, 25, 60, 0.85) 100%);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 240, 255, 0.2);
-  box-shadow: 0 10px 40px -10px rgba(0, 240, 255, 0.15);
+.glass-panel-warm {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(244, 63, 94, 0.08) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 1.5rem;
 }
 
 .glass-panel-rose {
-  background: linear-gradient(135deg, rgba(15, 10, 30, 0.85) 0%, rgba(35, 15, 35, 0.85) 100%);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(244, 63, 94, 0.25);
-  box-shadow: 0 10px 40px -10px rgba(244, 63, 94, 0.15);
+  background: linear-gradient(135deg, rgba(244, 63, 94, 0.12) 0%, rgba(168, 85, 247, 0.08) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  border-radius: 1.5rem;
 }
 
 .glass-panel-emerald {
-  background: linear-gradient(135deg, rgba(6, 20, 25, 0.85) 0%, rgba(10, 35, 30, 0.85) 100%);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(16, 185, 129, 0.25);
-  box-shadow: 0 10px 40px -10px rgba(16, 185, 129, 0.15);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(0, 240, 255, 0.08) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 1.5rem;
 }
 
-/* Scientific Grid Background */
+/* Ambient Glowing Orbs */
+.ambient-glow-amber {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
+  animation: pulseGlow 6s ease-in-out infinite alternate;
+}
+
+.ambient-glow-rose {
+  background: radial-gradient(circle, rgba(244, 63, 94, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+  animation: pulseGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(1) translateY(0px); opacity: 0.7; }
+  100% { transform: scale(1.1) translateY(-15px); opacity: 1; }
+}
+
+/* Scientific Grid Lines */
 .scientific-grid {
   background-size: 40px 40px;
   background-image: 
     linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-}
-
-/* Glowing Accent Animations */
-@keyframes ambientGlow {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.7; transform: scale(1.08); }
-}
-
-.ambient-glow {
-  animation: ambientGlow 8s ease-in-out infinite;
-}
-
-/* Custom Scrollbars */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #050716;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #1e293b;
-  border-radius: 9999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #334155;
 }

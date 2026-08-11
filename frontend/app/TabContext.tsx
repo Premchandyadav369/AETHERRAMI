@@ -4,6 +4,8 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 export type SectionTab = 
   | 'predictor'
+  | 'epigenetic'
+  | 'genomerisk'
   | 'explorer'
   | 'alphafold'
   | 'covalent'
@@ -62,7 +64,7 @@ interface TabContextType {
 const TabContext = createContext<TabContextType | undefined>(undefined);
 
 export function TabProvider({ children }: { children: React.ReactNode }) {
-  const [activeTab, setActiveTab] = useState<SectionTab>('predictor');
+  const [activeTab, setActiveTab] = useState<SectionTab>('epigenetic');
   const [currentRole, setCurrentRole] = useState<UserRole>('Principal Investigator (PI)');
   const [userMode, setUserMode] = useState<UserMode>('expert');
   const [selectedProtein, setSelectedProtein] = useState<string>('1M17');
