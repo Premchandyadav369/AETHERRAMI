@@ -1,9 +1,9 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Activity, Zap, FlaskConical, Microscope, Layers, Cpu, Database, ShieldCheck,
-  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network, Atom, Flame, Users, Key, Code, BookOpen
+  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network, Atom, Flame, Users, Key, Code, BookOpen, ChevronDown, ChevronRight
 } from 'lucide-react';
 import { GeistSans } from 'geist/font/sans';
 import { Space_Grotesk, IBM_Plex_Mono } from 'next/font/google';
@@ -25,33 +25,77 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   );
 }
 
-const RESEARCH_STATIONS: { key: SectionTab; label: string; desc: string; icon: any; color: string }[] = [
-  { key: 'predictor', label: 'Binding Affinity & ADMET', desc: 'Live PubChem & Cross-Attention', icon: Zap, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
-  { key: 'methodology', label: 'Methodology & Layman Explainer', desc: 'SOTA Baselines & Architecture', icon: BookOpen, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
-  { key: 'explorer', label: 'RCSB PDB 3D Explorer', desc: 'Live WebGL Coordinate Viewer', icon: Microscope, color: 'text-purple-400 border-purple-500/40 bg-purple-950/60' },
-  { key: 'alphafold', label: 'AlphaFold-3 Structure AI', desc: 'pLDDT & PAES Error Scoring', icon: Microscope, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
-  { key: 'covalent', label: 'Covalent Warhead Designer', desc: 'Nucleophilic Adduct Rates', icon: Flame, color: 'text-rose-400 border-rose-500/40 bg-rose-950/60' },
-  { key: 'protac', label: 'PROTAC Degrader Studio', desc: 'Ternary Complex Degradation', icon: Layers, color: 'text-indigo-400 border-indigo-500/40 bg-indigo-950/60' },
-  { key: 'druglab', label: 'Virtual Drug Discovery Lab', desc: 'DFT Quantum & MD Simulation', icon: Beaker, color: 'text-pink-400 border-pink-500/40 bg-pink-950/60' },
-  { key: 'workflow', label: 'n8n Workflow Studio', desc: 'Node-Graph Automation Flow', icon: Network, color: 'text-teal-400 border-teal-500/40 bg-teal-950/60' },
-  { key: 'digitaltwin', label: 'Digital Human Twin', desc: 'PK/PD Organ-on-a-Chip Telemetry', icon: Heart, color: 'text-amber-400 border-amber-500/40 bg-amber-950/60' },
-  { key: 'multiomics', label: 'Multi-Omics Catalog', desc: 'ChEMBL & Disease Target Mapping', icon: Database, color: 'text-blue-400 border-blue-500/40 bg-blue-950/60' },
-  { key: 'generator', label: 'De Novo Designer', desc: 'Targeted SMILES/SELFIES VAE', icon: FlaskConical, color: 'text-indigo-400 border-indigo-500/40 bg-indigo-950/60' },
-  { key: 'rbac', label: 'RBAC Security Governance', desc: 'Role Permissions & Audit Logs', icon: ShieldCheck, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
-  { key: 'apigateway', label: 'API Microservices Gateway', desc: 'OpenAPI 3.0 & GraphQL Spec', icon: Network, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
-  { key: 'ectd', label: 'FDA eCTD Dossier Generator', desc: 'IND/NDA Regulatory Packages', icon: FileText, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
-  { key: 'biomarker', label: 'Companion Diagnostics (CDx)', desc: 'Biomarker Stratification', icon: Activity, color: 'text-rose-400 border-rose-500/40 bg-rose-950/60' },
-  { key: 'pbpk', label: '14-Compartment PBPK Model', desc: 'Whole-Body Concentration AUC', icon: Heart, color: 'text-amber-400 border-amber-500/40 bg-amber-950/60' },
-  { key: 'adc', label: 'ADC & Biologics Studio', desc: 'mAb DAR & Payload Modeling', icon: Layers, color: 'text-indigo-400 border-indigo-500/40 bg-indigo-950/60' },
-  { key: 'ipvault', label: 'Cryptographic IP Vault', desc: 'SHA-256 Ledger Timestamping', icon: Key, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
-  { key: 'limseln', label: 'ELN & LIMS Inventory', desc: '-80°C Freezer & QR Tracking', icon: Database, color: 'text-teal-400 border-teal-500/40 bg-teal-950/60' },
-  { key: 'results', label: 'V10 Evidence Center', desc: 'ROC, TreeSHAP & MPO Data', icon: BarChart3, color: 'text-teal-400 border-teal-500/40 bg-teal-950/60' },
-  { key: 'assistant', label: 'Research Assistant', desc: 'Domain Copilot Agent', icon: Bot, color: 'text-pink-400 border-pink-500/40 bg-pink-950/60' },
-  { key: 'settings', label: 'System Controls', desc: 'Hardware & Seeds', icon: Settings, color: 'text-slate-400 border-slate-500/40 bg-slate-900/60' },
+interface StationGroup {
+  groupName: string;
+  groupIcon: any;
+  items: { key: SectionTab; label: string; desc: string; icon: any; color: string }[];
+}
+
+const STATION_GROUPS: StationGroup[] = [
+  {
+    groupName: 'Structural & Molecular AI',
+    groupIcon: Microscope,
+    items: [
+      { key: 'predictor', label: 'Binding Affinity & ADMET', desc: 'Live PubChem & Cross-Attention', icon: Zap, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
+      { key: 'explorer', label: 'RCSB PDB 3D Explorer', desc: 'Live WebGL Coordinate Viewer', icon: Microscope, color: 'text-purple-400 border-purple-500/40 bg-purple-950/60' },
+      { key: 'alphafold', label: 'AlphaFold-3 Structure AI', desc: 'pLDDT & PAES Error Scoring', icon: Microscope, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
+      { key: 'covalent', label: 'Covalent Warhead Designer', desc: 'Nucleophilic Adduct Rates', icon: Flame, color: 'text-rose-400 border-rose-500/40 bg-rose-950/60' },
+      { key: 'protac', label: 'PROTAC Degrader Studio', desc: 'Ternary Complex Degradation', icon: Layers, color: 'text-indigo-400 border-indigo-500/40 bg-indigo-950/60' },
+      { key: 'mutation', label: '3D Mutation Resistance Radar', desc: 'Active Site Mutation Folds', icon: ShieldCheck, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
+    ]
+  },
+  {
+    groupName: 'Virtual Drug Lab & Dynamics',
+    groupIcon: Beaker,
+    items: [
+      { key: 'druglab', label: 'Virtual Drug Discovery Lab', desc: 'DFT Quantum & MD Simulation', icon: Beaker, color: 'text-pink-400 border-pink-500/40 bg-pink-950/60' },
+      { key: 'solubility', label: 'Solubility & Excipient AI', desc: 'Lipid Formulation Optimizer', icon: Beaker, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
+      { key: 'pbpk', label: '14-Compartment PBPK Model', desc: 'Whole-Body Concentration AUC', icon: Heart, color: 'text-amber-400 border-amber-500/40 bg-amber-950/60' },
+      { key: 'digitaltwin', label: 'Digital Human Twin', desc: 'PK/PD Organ-on-a-Chip Telemetry', icon: Heart, color: 'text-amber-400 border-amber-500/40 bg-amber-950/60' },
+      { key: 'adc', label: 'ADC & Biologics Studio', desc: 'mAb DAR & Payload Modeling', icon: Layers, color: 'text-indigo-400 border-indigo-500/40 bg-indigo-950/60' },
+    ]
+  },
+  {
+    groupName: 'Translational & Clinical Hub',
+    groupIcon: Activity,
+    items: [
+      { key: 'multiomics', label: 'Multi-Omics Catalog', desc: 'ChEMBL & Disease Target Mapping', icon: Database, color: 'text-blue-400 border-blue-500/40 bg-blue-950/60' },
+      { key: 'biomarker', label: 'Companion Diagnostics (CDx)', desc: 'Biomarker Stratification', icon: Activity, color: 'text-rose-400 border-rose-500/40 bg-rose-950/60' },
+      { key: 'patientradar', label: 'Clinical Trial Patient Match', desc: 'ctDNA Patient Stratification', icon: Users, color: 'text-rose-400 border-rose-500/40 bg-rose-950/60' },
+      { key: 'generator', label: 'De Novo Designer', desc: 'Targeted SMILES/SELFIES VAE', icon: FlaskConical, color: 'text-indigo-400 border-indigo-500/40 bg-indigo-950/60' },
+      { key: 'ectd', label: 'FDA eCTD Dossier Generator', desc: 'IND/NDA Regulatory Packages', icon: FileText, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
+    ]
+  },
+  {
+    groupName: 'Automation & Security Governance',
+    groupIcon: ShieldCheck,
+    items: [
+      { key: 'workflow', label: 'n8n Workflow Studio', desc: 'Node-Graph Automation Flow', icon: Network, color: 'text-teal-400 border-teal-500/40 bg-teal-950/60' },
+      { key: 'rbac', label: 'RBAC Security Governance', desc: 'Role Permissions & Audit Logs', icon: ShieldCheck, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
+      { key: 'apigateway', label: 'API Microservices Gateway', desc: 'OpenAPI 3.0 & GraphQL Spec', icon: Network, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
+      { key: 'ipvault', label: 'Cryptographic IP Vault', desc: 'SHA-256 Ledger Timestamping', icon: Key, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
+      { key: 'limseln', label: 'ELN & LIMS Inventory', desc: '-80°C Freezer & QR Tracking', icon: Database, color: 'text-teal-400 border-teal-500/40 bg-teal-950/60' },
+    ]
+  },
+  {
+    groupName: 'Evidence & AI Copilot',
+    groupIcon: BookOpen,
+    items: [
+      { key: 'methodology', label: 'Methodology & Layman Guide', desc: 'SOTA Baselines & Architecture', icon: BookOpen, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
+      { key: 'results', label: 'V10 Evidence Center', desc: 'ROC, TreeSHAP & MPO Data', icon: BarChart3, color: 'text-teal-400 border-teal-500/40 bg-teal-950/60' },
+      { key: 'assistant', label: 'Research Assistant', desc: 'Domain Copilot Agent', icon: Bot, color: 'text-pink-400 border-pink-500/40 bg-pink-950/60' },
+      { key: 'settings', label: 'System Controls', desc: 'Hardware & Seeds', icon: Settings, color: 'text-slate-400 border-slate-500/40 bg-slate-900/60' },
+    ]
+  }
 ];
 
 function RootLayoutInner({ children }: { children: React.ReactNode }) {
   const { activeTab, setActiveTab, currentRole, setIsCommandPaletteOpen, setIsCopilotOpen } = useTab();
+  const [collapsedGroups, setCollapsedGroups] = useState<{ [key: string]: boolean }>({});
+
+  const toggleGroup = (groupName: string) => {
+    setCollapsedGroups(prev => ({ ...prev, [groupName]: !prev[groupName] }));
+  };
 
   return (
     <>
@@ -110,31 +154,51 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
 
       {/* Main Layout Container */}
       <div className="flex flex-1 relative z-10">
-        {/* Left Sidebar */}
-        <aside className="glass-panel border-r border-slate-800/80 w-16 md:w-64 flex flex-col py-4 px-2 gap-2 sticky top-14 h-[calc(100vh-56px)] z-30 overflow-y-auto bg-slate-950/80">
-          <div className="hidden md:block text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider px-2 mb-2">
-            RESEARCH STATIONS ({RESEARCH_STATIONS.length})
+        {/* Left Sidebar - Decluttered Grouped Architecture */}
+        <aside className="glass-panel border-r border-slate-800/80 w-16 md:w-64 flex flex-col py-4 px-2 gap-4 sticky top-14 h-[calc(100vh-56px)] z-30 overflow-y-auto bg-slate-950/80">
+          <div className="hidden md:block text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider px-2">
+            ENTERPRISE HUBS (5)
           </div>
-          {RESEARCH_STATIONS.map(({ key, label, desc, icon: Icon, color }) => {
-            const isActive = activeTab === key;
+
+          {STATION_GROUPS.map((group) => {
+            const GroupIcon = group.groupIcon;
+            const isCollapsed = collapsedGroups[group.groupName];
             return (
-              <button
-                key={key}
-                onClick={() => setActiveTab(key)}
-                className={`w-full flex items-center gap-3 p-2.5 rounded-xl transition-all text-left group ${
-                  isActive
-                    ? 'bg-slate-900/90 border border-cyan-500/50 text-white shadow-[0_0_20px_rgba(0,240,255,0.15)]'
-                    : 'text-slate-400 hover:bg-slate-900/50 hover:text-white border border-transparent'
-                }`}
-              >
-                <div className={`p-2 rounded-lg flex items-center justify-center shrink-0 border ${color}`}>
-                  <Icon className="w-4 h-4" />
-                </div>
-                <div className="hidden md:flex flex-col overflow-hidden">
-                  <span className="font-bold text-xs truncate leading-snug">{label}</span>
-                  <span className="text-[10px] text-slate-500 font-mono truncate">{desc}</span>
-                </div>
-              </button>
+              <div key={group.groupName} className="flex flex-col gap-1">
+                <button
+                  onClick={() => toggleGroup(group.groupName)}
+                  className="hidden md:flex items-center justify-between px-2 py-1 text-[11px] font-mono font-bold text-cyan-400 hover:text-white uppercase tracking-wider transition-colors"
+                >
+                  <div className="flex items-center gap-1.5">
+                    <GroupIcon className="w-3.5 h-3.5 text-cyan-400" />
+                    <span>{group.groupName}</span>
+                  </div>
+                  {isCollapsed ? <ChevronRight className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+                </button>
+
+                {!isCollapsed && group.items.map(({ key, label, desc, icon: Icon, color }) => {
+                  const isActive = activeTab === key;
+                  return (
+                    <button
+                      key={key}
+                      onClick={() => setActiveTab(key)}
+                      className={`w-full flex items-center gap-3 p-2 rounded-xl transition-all text-left group ${
+                        isActive
+                          ? 'bg-slate-900/90 border border-cyan-500/50 text-white shadow-[0_0_20px_rgba(0,240,255,0.15)]'
+                          : 'text-slate-400 hover:bg-slate-900/50 hover:text-white border border-transparent'
+                      }`}
+                    >
+                      <div className={`p-1.5 rounded-lg flex items-center justify-center shrink-0 border ${color}`}>
+                        <Icon className="w-3.5 h-3.5" />
+                      </div>
+                      <div className="hidden md:flex flex-col overflow-hidden">
+                        <span className="font-bold text-xs truncate leading-snug">{label}</span>
+                        <span className="text-[9px] text-slate-500 font-mono truncate">{desc}</span>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
             );
           })}
         </aside>
