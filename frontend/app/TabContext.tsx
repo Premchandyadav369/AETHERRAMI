@@ -14,6 +14,13 @@ export type SectionTab =
   | 'multiomics'
   | 'generator'
   | 'rbac'
+  | 'apigateway'
+  | 'ectd'
+  | 'biomarker'
+  | 'pbpk'
+  | 'adc'
+  | 'ipvault'
+  | 'limseln'
   | 'results'
   | 'assistant'
   | 'settings';

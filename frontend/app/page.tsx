@@ -13,6 +13,13 @@ import DigitalTwinStudio from './components/DigitalTwinStudio';
 import MultiOmicsExplorer from './components/MultiOmicsExplorer';
 import DeNovoStudio from './components/DeNovoStudio';
 import RbacStudio from './components/RbacStudio';
+import ApiGatewayStudio from './components/ApiGatewayStudio';
+import EctdDossierStudio from './components/EctdDossierStudio';
+import BiomarkerStudio from './components/BiomarkerStudio';
+import PbpkWholeBodyStudio from './components/PbpkWholeBodyStudio';
+import AdcStudio from './components/AdcStudio';
+import IpVaultStudio from './components/IpVaultStudio';
+import LimsElnStudio from './components/LimsElnStudio';
 import ResultsCenter from './components/ResultsCenter';
 import AssistantChat from './components/AssistantChat';
 import SettingsPage from './components/SettingsPage';
@@ -35,6 +42,13 @@ export default function MainPage() {
       {activeTab === 'multiomics' && <MultiOmicsExplorer />}
       {activeTab === 'generator' && <DeNovoStudio />}
       {activeTab === 'rbac' && <RbacStudio />}
+      {activeTab === 'apigateway' && <ApiGatewayStudio />}
+      {activeTab === 'ectd' && <EctdDossierStudio />}
+      {activeTab === 'biomarker' && <BiomarkerStudio />}
+      {activeTab === 'pbpk' && <PbpkWholeBodyStudio />}
+      {activeTab === 'adc' && <AdcStudio />}
+      {activeTab === 'ipvault' && <IpVaultStudio />}
+      {activeTab === 'limseln' && <LimsElnStudio />}
       {activeTab === 'results' && <ResultsCenter />}
       {activeTab === 'assistant' && <AssistantChat />}
       {activeTab === 'settings' && <SettingsPage />}

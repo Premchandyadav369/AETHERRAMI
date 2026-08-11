@@ -3,7 +3,7 @@
 import React from 'react';
 import {
   Activity, Zap, FlaskConical, Microscope, Layers, Cpu, Database, ShieldCheck,
-  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network, Atom, Flame, Users
+  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network, Atom, Flame, Users, Key, Code
 } from 'lucide-react';
 import { GeistSans } from 'geist/font/sans';
 import { Space_Grotesk, IBM_Plex_Mono } from 'next/font/google';
@@ -37,6 +37,13 @@ const RESEARCH_STATIONS: { key: SectionTab; label: string; desc: string; icon: a
   { key: 'multiomics', label: 'Multi-Omics Catalog', desc: 'ChEMBL & Disease Target Mapping', icon: Database, color: 'text-blue-400 border-blue-500/40 bg-blue-950/60' },
   { key: 'generator', label: 'De Novo Designer', desc: 'Targeted SMILES/SELFIES VAE', icon: FlaskConical, color: 'text-indigo-400 border-indigo-500/40 bg-indigo-950/60' },
   { key: 'rbac', label: 'RBAC Security Governance', desc: 'Role Permissions & Audit Logs', icon: ShieldCheck, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
+  { key: 'apigateway', label: 'API Microservices Gateway', desc: 'OpenAPI 3.0 & GraphQL Spec', icon: Network, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
+  { key: 'ectd', label: 'FDA eCTD Dossier Generator', desc: 'IND/NDA Regulatory Packages', icon: FileText, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
+  { key: 'biomarker', label: 'Companion Diagnostics (CDx)', desc: 'Biomarker Stratification', icon: Activity, color: 'text-rose-400 border-rose-500/40 bg-rose-950/60' },
+  { key: 'pbpk', label: '14-Compartment PBPK Model', desc: 'Whole-Body Concentration AUC', icon: Heart, color: 'text-amber-400 border-amber-500/40 bg-amber-950/60' },
+  { key: 'adc', label: 'ADC & Biologics Studio', desc: 'mAb DAR & Payload Modeling', icon: Layers, color: 'text-indigo-400 border-indigo-500/40 bg-indigo-950/60' },
+  { key: 'ipvault', label: 'Cryptographic IP Vault', desc: 'SHA-256 Ledger Timestamping', icon: Key, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
+  { key: 'limseln', label: 'ELN & LIMS Inventory', desc: '-80°C Freezer & QR Tracking', icon: Database, color: 'text-teal-400 border-teal-500/40 bg-teal-950/60' },
   { key: 'results', label: 'V10 Evidence Center', desc: 'ROC, TreeSHAP & MPO Data', icon: BarChart3, color: 'text-teal-400 border-teal-500/40 bg-teal-950/60' },
   { key: 'assistant', label: 'Research Assistant', desc: 'Domain Copilot Agent', icon: Bot, color: 'text-pink-400 border-pink-500/40 bg-pink-950/60' },
   { key: 'settings', label: 'System Controls', desc: 'Hardware & Seeds', icon: Settings, color: 'text-slate-400 border-slate-500/40 bg-slate-900/60' },
@@ -105,7 +112,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
         {/* Left Sidebar */}
         <aside className="glass-panel border-r border-slate-800/80 w-16 md:w-64 flex flex-col py-4 px-2 gap-2 sticky top-14 h-[calc(100vh-56px)] z-30 overflow-y-auto bg-slate-950/80">
           <div className="hidden md:block text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider px-2 mb-2">
-            RESEARCH STATIONS
+            RESEARCH STATIONS ({RESEARCH_STATIONS.length})
           </div>
           {RESEARCH_STATIONS.map(({ key, label, desc, icon: Icon, color }) => {
             const isActive = activeTab === key;
