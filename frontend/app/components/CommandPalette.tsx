@@ -23,10 +23,13 @@ export default function CommandPalette() {
     { id: '2', title: 'Scientific Methodology & Layman Explainer Guide', category: 'Evidence & AI Copilot', tab: 'methodology', icon: BookOpen },
     { id: '3', title: 'RCSB PDB 3D WebGL Structural Explorer', category: 'Structural & Molecular AI', tab: 'explorer', icon: Microscope },
     { id: '4', title: 'AlphaFold-3 & Cryo-EM Structure Intelligence', category: 'Structural & Molecular AI', tab: 'alphafold', icon: Microscope },
+    { id: '4b', title: 'Cryo-EM 3D Density Map Fitting & FSC Resolution Curve', category: 'Structural & Molecular AI', tab: 'cryoem', icon: Microscope },
     { id: '5', title: 'Covalent Inhibitor & Electrophilic Warhead Designer', category: 'Structural & Molecular AI', tab: 'covalent', icon: Flame },
     { id: '6', title: 'PROTAC & Molecular Glue Degrader Studio', category: 'Structural & Molecular AI', tab: 'protac', icon: Layers },
+    { id: '6b', title: 'RNA Targeted Small Molecule & Splice Modulator Studio', category: 'Structural & Molecular AI', tab: 'rna', icon: Network },
     { id: '7', title: '3D Active Site Mutation Resistance Radar', category: 'Structural & Molecular AI', tab: 'mutation', icon: ShieldCheck },
     { id: '8', title: 'Virtual Drug Discovery Laboratory Suite', category: 'Virtual Drug Lab & Dynamics', tab: 'druglab', icon: Beaker },
+    { id: '8b', title: 'Radiopharmaceutical Theranostic Ligand Studio (Lu-177/Ac-225)', category: 'Virtual Drug Lab & Dynamics', tab: 'radiochem', icon: Flame },
     { id: '9', title: 'AI Aqueous Solubility & Excipient Optimizer', category: 'Virtual Drug Lab & Dynamics', tab: 'solubility', icon: Beaker },
     { id: '10', title: '14-Compartment Whole-Body PBPK Model', category: 'Virtual Drug Lab & Dynamics', tab: 'pbpk', icon: Heart },
     { id: '11', title: 'Digital Human Twin & Organ-on-a-Chip PK/PD', category: 'Virtual Drug Lab & Dynamics', tab: 'digitaltwin', icon: Heart },
@@ -68,7 +71,7 @@ export default function CommandPalette() {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search across all 27 bioScript research stations..."
+            placeholder="Search across all 30 bioScript research stations..."
             className="w-full py-4 bg-transparent text-white font-mono text-xs focus:outline-none placeholder-slate-500"
             autoFocus
           />

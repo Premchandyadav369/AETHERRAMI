@@ -47,8 +47,10 @@ const STATION_GROUPS: StationGroup[] = [
       { key: 'predictor', label: 'Binding Affinity & ADMET', desc: 'Live PubChem & Cross-Attention', icon: Zap, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
       { key: 'explorer', label: 'RCSB PDB 3D Explorer', desc: 'Live WebGL Coordinate Viewer', icon: Microscope, color: 'text-purple-400 border-purple-500/40 bg-purple-950/60' },
       { key: 'alphafold', label: 'AlphaFold-3 Structure AI', desc: 'pLDDT & PAES Error Scoring', icon: Microscope, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
+      { key: 'cryoem', label: 'Cryo-EM 3D Map Fitting', desc: 'FSC Curve & B-factor Flex', icon: Microscope, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
       { key: 'covalent', label: 'Covalent Warhead Designer', desc: 'Nucleophilic Adduct Rates', icon: Flame, color: 'text-rose-400 border-rose-500/40 bg-rose-950/60' },
       { key: 'protac', label: 'PROTAC Degrader Studio', desc: 'Ternary Complex Degradation', icon: Layers, color: 'text-indigo-400 border-indigo-500/40 bg-indigo-950/60' },
+      { key: 'rna', label: 'RNA Targeted Ligand AI', desc: 'G-Quadruplex & Splice Switching', icon: Network, color: 'text-purple-400 border-purple-500/40 bg-purple-950/60' },
       { key: 'mutation', label: '3D Mutation Resistance Radar', desc: 'Active Site Mutation Folds', icon: ShieldCheck, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
     ]
   },
@@ -57,6 +59,7 @@ const STATION_GROUPS: StationGroup[] = [
     groupIcon: Beaker,
     items: [
       { key: 'druglab', label: 'Virtual Drug Discovery Lab', desc: 'DFT Quantum & MD Simulation', icon: Beaker, color: 'text-pink-400 border-pink-500/40 bg-pink-950/60' },
+      { key: 'radiochem', label: 'Radiopharmaceutical Theranostics', desc: 'Lu-177 & Ac-225 Chelator Design', icon: Flame, color: 'text-rose-400 border-rose-500/40 bg-rose-950/60' },
       { key: 'solubility', label: 'Solubility & Excipient AI', desc: 'Lipid Formulation Optimizer', icon: Beaker, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
       { key: 'pbpk', label: '14-Compartment PBPK Model', desc: 'Whole-Body Concentration AUC', icon: Heart, color: 'text-amber-400 border-amber-500/40 bg-amber-950/60' },
       { key: 'digitaltwin', label: 'Digital Human Twin', desc: 'PK/PD Organ-on-a-Chip Telemetry', icon: Heart, color: 'text-amber-400 border-amber-500/40 bg-amber-950/60' },

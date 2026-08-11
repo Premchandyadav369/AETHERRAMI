@@ -7,10 +7,13 @@ import GenomeRiskStudio from './components/GenomeRiskStudio';
 import BindingPredictor from './components/BindingPredictor';
 import PdbExplorer from './components/PdbExplorer';
 import AlphaFoldStudio from './components/AlphaFoldStudio';
+import CryoEmStudio from './components/CryoEmStudio';
 import CovalentStudio from './components/CovalentStudio';
 import ProtacStudio from './components/ProtacStudio';
+import RnaStudio from './components/RnaStudio';
 import MutationHeatmapStudio from './components/MutationHeatmapStudio';
 import DrugLabStudio from './components/DrugLabStudio';
+import RadiochemStudio from './components/RadiochemStudio';
 import SolubilityStudio from './components/SolubilityStudio';
 import PbpkWholeBodyStudio from './components/PbpkWholeBodyStudio';
 import DigitalTwinStudio from './components/DigitalTwinStudio';
@@ -43,10 +46,13 @@ export default function MainPage() {
       {activeTab === 'methodology' && <MethodologyStudio />}
       {activeTab === 'explorer' && <PdbExplorer />}
       {activeTab === 'alphafold' && <AlphaFoldStudio />}
+      {activeTab === 'cryoem' && <CryoEmStudio />}
       {activeTab === 'covalent' && <CovalentStudio />}
       {activeTab === 'protac' && <ProtacStudio />}
+      {activeTab === 'rna' && <RnaStudio />}
       {activeTab === 'mutation' && <MutationHeatmapStudio />}
       {activeTab === 'druglab' && <DrugLabStudio />}
+      {activeTab === 'radiochem' && <RadiochemStudio />}
       {activeTab === 'solubility' && <SolubilityStudio />}
       {activeTab === 'pbpk' && <PbpkWholeBodyStudio />}
       {activeTab === 'digitaltwin' && <DigitalTwinStudio />}
