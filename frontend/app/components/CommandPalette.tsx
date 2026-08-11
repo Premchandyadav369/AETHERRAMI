@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Search, Zap, Microscope, Network, Heart, Database, FlaskConical, BarChart3, Bot, Settings } from 'lucide-react';
+import { Search, Zap, Microscope, Beaker, Network, Heart, Database, FlaskConical, BarChart3, Bot, Settings } from 'lucide-react';
 import { useTab, SectionTab } from '../TabContext';
 
 interface PaletteItem {
@@ -19,13 +19,14 @@ export default function CommandPalette() {
   const items: PaletteItem[] = [
     { id: '1', title: 'Precision Binding Affinity & ADMET Predictor', category: 'Molecular Engineering', tab: 'predictor', icon: Zap },
     { id: '2', title: 'RCSB PDB 3D WebGL Structural Explorer', category: 'Structural Intelligence', tab: 'explorer', icon: Microscope },
-    { id: '3', title: 'n8n-Inspired Workflow Automation Studio', category: 'Pipeline Automation', tab: 'workflow', icon: Network },
-    { id: '4', title: 'Digital Human Twin & Organ-on-a-Chip PK/PD', category: 'Pharmacokinetics', tab: 'digitaltwin', icon: Heart },
-    { id: '5', title: 'Multi-Omics Target & Disease Intelligence', category: 'Target Discovery', tab: 'multiomics', icon: Database },
-    { id: '6', title: 'De Novo Targeted Molecular Designer', category: 'Generative AI', tab: 'generator', icon: FlaskConical },
-    { id: '7', title: 'V10 Empirical Benchmark Evidence Browser', category: 'Analytics & Evidence', tab: 'results', icon: BarChart3 },
-    { id: '8', title: 'AI Scientific Research Assistant', category: 'AI Copilot', tab: 'assistant', icon: Bot },
-    { id: '9', title: 'System Configuration & Controls', category: 'Management', tab: 'settings', icon: Settings },
+    { id: '3', title: 'Virtual Drug Discovery Laboratory Suite', category: 'Quantum Chemistry & MD', tab: 'druglab', icon: Beaker },
+    { id: '4', title: 'n8n-Inspired Workflow Automation Studio', category: 'Pipeline Automation', tab: 'workflow', icon: Network },
+    { id: '5', title: 'Digital Human Twin & Organ-on-a-Chip PK/PD', category: 'Pharmacokinetics', tab: 'digitaltwin', icon: Heart },
+    { id: '6', title: 'Multi-Omics Target & Disease Intelligence', category: 'Target Discovery', tab: 'multiomics', icon: Database },
+    { id: '7', title: 'De Novo Targeted Molecular Designer', category: 'Generative AI', tab: 'generator', icon: FlaskConical },
+    { id: '8', title: 'V10 Empirical Benchmark Evidence Browser', category: 'Analytics & Evidence', tab: 'results', icon: BarChart3 },
+    { id: '9', title: 'AI Scientific Research Assistant', category: 'AI Copilot', tab: 'assistant', icon: Bot },
+    { id: '10', title: 'System Configuration & Controls', category: 'Management', tab: 'settings', icon: Settings },
   ];
 
   const filteredItems = items.filter(item =>
@@ -50,7 +51,7 @@ export default function CommandPalette() {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Type a station name or quick command (e.g., Workflow, Digital Twin, PDB, ADMET)..."
+            placeholder="Type a station name or quick command (e.g., Drug Lab, Quantum, Workflow, PDB, ADMET)..."
             className="w-full py-4 bg-transparent text-white font-mono text-xs focus:outline-none placeholder-slate-500"
             autoFocus
           />

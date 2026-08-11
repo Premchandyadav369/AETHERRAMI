@@ -3,7 +3,7 @@
 import React from 'react';
 import {
   Activity, Zap, FlaskConical, Microscope, Layers, Cpu, Database, ShieldCheck,
-  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network
+  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network, Atom
 } from 'lucide-react';
 import { GeistSans } from 'geist/font/sans';
 import { Space_Grotesk, IBM_Plex_Mono } from 'next/font/google';
@@ -28,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 const RESEARCH_STATIONS: { key: SectionTab; label: string; desc: string; icon: any; color: string }[] = [
   { key: 'predictor', label: 'Binding Affinity & ADMET', desc: 'Live PubChem & Cross-Attention', icon: Zap, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
   { key: 'explorer', label: 'RCSB PDB 3D Explorer', desc: 'Live WebGL Coordinate Viewer', icon: Microscope, color: 'text-purple-400 border-purple-500/40 bg-purple-950/60' },
+  { key: 'druglab', label: 'Virtual Drug Discovery Lab', desc: 'DFT Quantum & MD Simulation', icon: Beaker, color: 'text-rose-400 border-rose-500/40 bg-rose-950/60' },
   { key: 'workflow', label: 'n8n Workflow Studio', desc: 'Node-Graph Automation Flow', icon: Network, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
   { key: 'digitaltwin', label: 'Digital Human Twin', desc: 'PK/PD Organ-on-a-Chip Telemetry', icon: Heart, color: 'text-rose-400 border-rose-500/40 bg-rose-950/60' },
   { key: 'multiomics', label: 'Multi-Omics Catalog', desc: 'ChEMBL & Disease Target Mapping', icon: Database, color: 'text-amber-400 border-amber-500/40 bg-amber-950/60' },

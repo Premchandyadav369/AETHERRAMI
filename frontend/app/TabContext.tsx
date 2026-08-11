@@ -5,6 +5,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 export type SectionTab = 
   | 'predictor'
   | 'explorer'
+  | 'druglab'
   | 'workflow'
   | 'digitaltwin'
   | 'multiomics'

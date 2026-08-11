@@ -4,6 +4,7 @@ import React from 'react';
 import { useTab } from './TabContext';
 import BindingPredictor from './components/BindingPredictor';
 import PdbExplorer from './components/PdbExplorer';
+import DrugLabStudio from './components/DrugLabStudio';
 import WorkflowStudio from './components/WorkflowStudio';
 import DigitalTwinStudio from './components/DigitalTwinStudio';
 import MultiOmicsExplorer from './components/MultiOmicsExplorer';
@@ -21,6 +22,7 @@ export default function MainPage() {
       {/* Active Workstation Router */}
       {activeTab === 'predictor' && <BindingPredictor />}
       {activeTab === 'explorer' && <PdbExplorer />}
+      {activeTab === 'druglab' && <DrugLabStudio />}
       {activeTab === 'workflow' && <WorkflowStudio />}
       {activeTab === 'digitaltwin' && <DigitalTwinStudio />}
       {activeTab === 'multiomics' && <MultiOmicsExplorer />}
