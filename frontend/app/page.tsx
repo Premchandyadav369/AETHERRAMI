@@ -23,8 +23,8 @@ import EctdDossierStudio from './components/EctdDossierStudio';
 import WorkflowStudio from './components/WorkflowStudio';
 import RbacStudio from './components/RbacStudio';
 import ApiGatewayStudio from './components/ApiGatewayStudio';
-import IpVaultStudio from './components/IpVaultStudio';
-import LimsElnStudio from './components/LimsElnStudio';
+import PatentPacketStudio from './components/PatentPacketStudio';
+import LimsSyncStudio from './components/LimsSyncStudio';
 import MethodologyStudio from './components/MethodologyStudio';
 import ResultsCenter from './components/ResultsCenter';
 import AssistantChat from './components/AssistantChat';
@@ -59,8 +59,8 @@ export default function MainPage() {
       {activeTab === 'workflow' && <WorkflowStudio />}
       {activeTab === 'rbac' && <RbacStudio />}
       {activeTab === 'apigateway' && <ApiGatewayStudio />}
-      {activeTab === 'ipvault' && <IpVaultStudio />}
-      {activeTab === 'limseln' && <LimsElnStudio />}
+      {activeTab === 'patentpacket' && <PatentPacketStudio />}
+      {activeTab === 'limssync' && <LimsSyncStudio />}
       {activeTab === 'results' && <ResultsCenter />}
       {activeTab === 'assistant' && <AssistantChat />}
       {activeTab === 'settings' && <SettingsPage />}

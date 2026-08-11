@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import {
   Activity, Zap, FlaskConical, Microscope, Layers, Cpu, Database, ShieldCheck,
-  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network, Atom, Flame, Users, Key, Code, BookOpen, ChevronDown, ChevronRight, Play, Pause, Volume2, VolumeX
+  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network, Atom, Flame, Users, Key, Code, BookOpen, ChevronDown, ChevronRight, Play, Pause, Volume2, VolumeX, Download, RefreshCw
 } from 'lucide-react';
 import { GeistSans } from 'geist/font/sans';
 import { Space_Grotesk, IBM_Plex_Mono } from 'next/font/google';
@@ -81,8 +81,8 @@ const STATION_GROUPS: StationGroup[] = [
       { key: 'workflow', label: 'n8n Workflow Studio', desc: 'Node-Graph Automation Flow', icon: Network, color: 'text-teal-400 border-teal-500/40 bg-teal-950/60' },
       { key: 'rbac', label: 'RBAC Security Governance', desc: 'Role Permissions & Audit Logs', icon: ShieldCheck, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
       { key: 'apigateway', label: 'API Microservices Gateway', desc: 'OpenAPI 3.0 & GraphQL Spec', icon: Network, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
-      { key: 'ipvault', label: 'Cryptographic IP Vault', desc: 'SHA-256 Ledger Timestamping', icon: Key, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
-      { key: 'limseln', label: 'ELN & LIMS Inventory', desc: '-80°C Freezer & QR Tracking', icon: Database, color: 'text-teal-400 border-teal-500/40 bg-teal-950/60' },
+      { key: 'patentpacket', label: 'Provisional Patent Packet', desc: '1-Click USPTO PTO/SB/16 Export', icon: FileText, color: 'text-amber-400 border-amber-500/40 bg-amber-950/60' },
+      { key: 'limssync', label: 'Benchling & LIMS Sync', desc: 'Enterprise Webhook Connector', icon: RefreshCw, color: 'text-teal-400 border-teal-500/40 bg-teal-950/60' },
     ]
   },
   {
@@ -116,7 +116,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
         <div className="absolute inset-0 scientific-grid opacity-25" />
       </div>
 
-      {/* Header - bioScript / Artery Aesthetic */}
+      {/* Header */}
       <header className="glass-panel-bioscript border-b border-amber-500/20 sticky top-0 w-full h-16 flex items-center justify-between px-6 z-40 bg-slate-950/90 backdrop-blur-xl">
         <button className="flex items-center gap-3 text-left" onClick={() => setActiveTab('epigenetic')}>
           <div className="w-9 h-9 rounded-full bg-gradient-to-br from-amber-400 via-rose-500 to-purple-600 flex items-center justify-center font-black text-slate-950 text-base shadow-[0_0_20px_rgba(245,158,11,0.5)]">
@@ -133,7 +133,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
         </button>
 
         <div className="flex items-center gap-3">
-          {/* User Profile Avatar - Benjamin Carter / Premchand Yadav */}
+          {/* User Profile Avatar - Premchand Yadav */}
           <div className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-slate-900 border border-amber-500/30">
             <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-amber-400 to-rose-500 flex items-center justify-center text-slate-950 font-black text-xs">
               PY
@@ -215,7 +215,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
         </main>
       </div>
 
-      {/* Floating Media & Telemetry Control Bar (Matching User Reference Image) */}
+      {/* Floating Media & Telemetry Control Bar */}
       <div className="fixed bottom-3 left-1/2 -translate-x-1/2 z-50 px-6 py-2.5 rounded-full glass-panel-bioscript border border-amber-500/30 shadow-2xl flex items-center gap-6 bg-slate-950/90 backdrop-blur-xl">
         <button
           onClick={() => setIsPlaying(!isPlaying)}

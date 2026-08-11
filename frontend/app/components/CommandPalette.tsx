@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Search, Zap, Microscope, Beaker, Network, Heart, Database, FlaskConical, BarChart3, Bot, Settings, Flame, Layers, ShieldCheck, FileText, Activity, Key, BookOpen, Users, Sparkles } from 'lucide-react';
+import { Search, Zap, Microscope, Beaker, Network, Heart, Database, FlaskConical, BarChart3, Bot, Settings, Flame, Layers, ShieldCheck, FileText, Activity, Key, BookOpen, Users, Sparkles, RefreshCw } from 'lucide-react';
 import { useTab, SectionTab } from '../TabContext';
 
 interface PaletteItem {
@@ -39,8 +39,8 @@ export default function CommandPalette() {
     { id: '18', title: 'n8n-Inspired Workflow Automation Studio', category: 'Automation & Governance', tab: 'workflow', icon: Network },
     { id: '19', title: 'Enterprise Role-Based Access Control (RBAC)', category: 'Automation & Governance', tab: 'rbac', icon: ShieldCheck },
     { id: '20', title: 'AI Microservices REST & GraphQL Gateway', category: 'Automation & Governance', tab: 'apigateway', icon: Network },
-    { id: '21', title: 'Cryptographic Blockchain IP Priority Vault', category: 'Automation & Governance', tab: 'ipvault', icon: Key },
-    { id: '22', title: 'Electronic Lab Notebook (ELN) & LIMS Inventory', category: 'Automation & Governance', tab: 'limseln', icon: Database },
+    { id: '21', title: '1-Click Provisional Patent Packet Generator (USPTO)', category: 'Automation & Governance', tab: 'patentpacket', icon: FileText },
+    { id: '22', title: 'Benchling & Enterprise LIMS Webhook Sync', category: 'Automation & Governance', tab: 'limssync', icon: RefreshCw },
     { id: '23', title: 'V10 Empirical Benchmark Evidence Browser', category: 'Evidence & AI Copilot', tab: 'results', icon: BarChart3 },
     { id: '24', title: 'AI Scientific Research Assistant', category: 'Evidence & AI Copilot', tab: 'assistant', icon: Bot },
     { id: '25', title: 'System Configuration & Controls', category: 'Evidence & AI Copilot', tab: 'settings', icon: Settings },
