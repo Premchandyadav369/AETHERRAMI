@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Search, Zap, Microscope, Beaker, Network, Heart, Database, FlaskConical, BarChart3, Bot, Settings, Flame, Layers, ShieldCheck, FileText, Activity, Key } from 'lucide-react';
+import { Search, Zap, Microscope, Beaker, Network, Heart, Database, FlaskConical, BarChart3, Bot, Settings, Flame, Layers, ShieldCheck, FileText, Activity, Key, BookOpen } from 'lucide-react';
 import { useTab, SectionTab } from '../TabContext';
 
 interface PaletteItem {
@@ -18,26 +18,27 @@ export default function CommandPalette() {
 
   const items: PaletteItem[] = [
     { id: '1', title: 'Precision Binding Affinity & ADMET Predictor', category: 'Molecular Engineering', tab: 'predictor', icon: Zap },
-    { id: '2', title: 'RCSB PDB 3D WebGL Structural Explorer', category: 'Structural Intelligence', tab: 'explorer', icon: Microscope },
-    { id: '3', title: 'AlphaFold-3 & Cryo-EM Structure Intelligence', category: 'Structural Intelligence', tab: 'alphafold', icon: Microscope },
-    { id: '4', title: 'Covalent Inhibitor & Electrophilic Warhead Designer', category: 'Covalent Chemistry', tab: 'covalent', icon: Flame },
-    { id: '5', title: 'PROTAC & Molecular Glue Degrader Studio', category: 'Targeted Degradation', tab: 'protac', icon: Layers },
-    { id: '6', title: 'Virtual Drug Discovery Laboratory Suite', category: 'Quantum Chemistry & MD', tab: 'druglab', icon: Beaker },
-    { id: '7', title: 'n8n-Inspired Workflow Automation Studio', category: 'Pipeline Automation', tab: 'workflow', icon: Network },
-    { id: '8', title: 'Digital Human Twin & Organ-on-a-Chip PK/PD', category: 'Pharmacokinetics', tab: 'digitaltwin', icon: Heart },
-    { id: '9', title: 'Multi-Omics Target & Disease Intelligence', category: 'Target Discovery', tab: 'multiomics', icon: Database },
-    { id: '10', title: 'De Novo Targeted Molecular Designer', category: 'Generative AI', tab: 'generator', icon: FlaskConical },
-    { id: '11', title: 'Enterprise Role-Based Access Control (RBAC)', category: 'Security Governance', tab: 'rbac', icon: ShieldCheck },
-    { id: '12', title: 'AI Microservices REST & GraphQL Gateway', category: 'API Integration', tab: 'apigateway', icon: Network },
-    { id: '13', title: 'Automated FDA IND/NDA eCTD Dossier Generator', category: 'Regulatory Compliance', tab: 'ectd', icon: FileText },
-    { id: '14', title: 'Clinical Biomarker & Companion Diagnostics (CDx)', category: 'Translational Medicine', tab: 'biomarker', icon: Activity },
-    { id: '15', title: '14-Compartment Whole-Body PBPK Model', category: 'Pharmacokinetics', tab: 'pbpk', icon: Heart },
-    { id: '16', title: 'Antibody-Drug Conjugate (ADC) & Biologics Studio', category: 'Biologics', tab: 'adc', icon: Layers },
-    { id: '17', title: 'Cryptographic Blockchain IP Priority Vault', category: 'IP Protection', tab: 'ipvault', icon: Key },
-    { id: '18', title: 'Electronic Lab Notebook (ELN) & LIMS Inventory', category: 'Lab Operations', tab: 'limseln', icon: Database },
-    { id: '19', title: 'V10 Empirical Benchmark Evidence Browser', category: 'Analytics & Evidence', tab: 'results', icon: BarChart3 },
-    { id: '20', title: 'AI Scientific Research Assistant', category: 'AI Copilot', tab: 'assistant', icon: Bot },
-    { id: '21', title: 'System Configuration & Controls', category: 'Management', tab: 'settings', icon: Settings },
+    { id: '2', title: 'Scientific Methodology & Layman Explainer Guide', category: 'Documentation & SOTA', tab: 'methodology', icon: BookOpen },
+    { id: '3', title: 'RCSB PDB 3D WebGL Structural Explorer', category: 'Structural Intelligence', tab: 'explorer', icon: Microscope },
+    { id: '4', title: 'AlphaFold-3 & Cryo-EM Structure Intelligence', category: 'Structural Intelligence', tab: 'alphafold', icon: Microscope },
+    { id: '5', title: 'Covalent Inhibitor & Electrophilic Warhead Designer', category: 'Covalent Chemistry', tab: 'covalent', icon: Flame },
+    { id: '6', title: 'PROTAC & Molecular Glue Degrader Studio', category: 'Targeted Degradation', tab: 'protac', icon: Layers },
+    { id: '7', title: 'Virtual Drug Discovery Laboratory Suite', category: 'Quantum Chemistry & MD', tab: 'druglab', icon: Beaker },
+    { id: '8', title: 'n8n-Inspired Workflow Automation Studio', category: 'Pipeline Automation', tab: 'workflow', icon: Network },
+    { id: '9', title: 'Digital Human Twin & Organ-on-a-Chip PK/PD', category: 'Pharmacokinetics', tab: 'digitaltwin', icon: Heart },
+    { id: '10', title: 'Multi-Omics Target & Disease Intelligence', category: 'Target Discovery', tab: 'multiomics', icon: Database },
+    { id: '11', title: 'De Novo Targeted Molecular Designer', category: 'Generative AI', tab: 'generator', icon: FlaskConical },
+    { id: '12', title: 'Enterprise Role-Based Access Control (RBAC)', category: 'Security Governance', tab: 'rbac', icon: ShieldCheck },
+    { id: '13', title: 'AI Microservices REST & GraphQL Gateway', category: 'API Integration', tab: 'apigateway', icon: Network },
+    { id: '14', title: 'Automated FDA IND/NDA eCTD Dossier Generator', category: 'Regulatory Compliance', tab: 'ectd', icon: FileText },
+    { id: '15', title: 'Clinical Biomarker & Companion Diagnostics (CDx)', category: 'Translational Medicine', tab: 'biomarker', icon: Activity },
+    { id: '16', title: '14-Compartment Whole-Body PBPK Model', category: 'Pharmacokinetics', tab: 'pbpk', icon: Heart },
+    { id: '17', title: 'Antibody-Drug Conjugate (ADC) & Biologics Studio', category: 'Biologics', tab: 'adc', icon: Layers },
+    { id: '18', title: 'Cryptographic Blockchain IP Priority Vault', category: 'IP Protection', tab: 'ipvault', icon: Key },
+    { id: '19', title: 'Electronic Lab Notebook (ELN) & LIMS Inventory', category: 'Lab Operations', tab: 'limseln', icon: Database },
+    { id: '20', title: 'V10 Empirical Benchmark Evidence Browser', category: 'Analytics & Evidence', tab: 'results', icon: BarChart3 },
+    { id: '21', title: 'AI Scientific Research Assistant', category: 'AI Copilot', tab: 'assistant', icon: Bot },
+    { id: '22', title: 'System Configuration & Controls', category: 'Management', tab: 'settings', icon: Settings },
   ];
 
   const filteredItems = items.filter(item =>
@@ -62,7 +63,7 @@ export default function CommandPalette() {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search across all 21 research stations (e.g., eCTD, PBPK, ADC, IP Vault, LIMS, API Gateway)..."
+            placeholder="Search across all 22 research stations (e.g., Methodology, Layman, SOTA, eCTD, PBPK)..."
             className="w-full py-4 bg-transparent text-white font-mono text-xs focus:outline-none placeholder-slate-500"
             autoFocus
           />

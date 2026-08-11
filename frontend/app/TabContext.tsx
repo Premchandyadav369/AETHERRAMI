@@ -21,6 +21,7 @@ export type SectionTab =
   | 'adc'
   | 'ipvault'
   | 'limseln'
+  | 'methodology'
   | 'results'
   | 'assistant'
   | 'settings';

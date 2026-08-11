@@ -20,6 +20,7 @@ import PbpkWholeBodyStudio from './components/PbpkWholeBodyStudio';
 import AdcStudio from './components/AdcStudio';
 import IpVaultStudio from './components/IpVaultStudio';
 import LimsElnStudio from './components/LimsElnStudio';
+import MethodologyStudio from './components/MethodologyStudio';
 import ResultsCenter from './components/ResultsCenter';
 import AssistantChat from './components/AssistantChat';
 import SettingsPage from './components/SettingsPage';
@@ -32,6 +33,7 @@ export default function MainPage() {
     <div className="flex flex-col gap-6 max-w-7xl mx-auto pb-16">
       {/* Active Workstation Router */}
       {activeTab === 'predictor' && <BindingPredictor />}
+      {activeTab === 'methodology' && <MethodologyStudio />}
       {activeTab === 'explorer' && <PdbExplorer />}
       {activeTab === 'alphafold' && <AlphaFoldStudio />}
       {activeTab === 'covalent' && <CovalentStudio />}

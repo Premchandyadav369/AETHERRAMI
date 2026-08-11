@@ -3,7 +3,7 @@
 import React from 'react';
 import {
   Activity, Zap, FlaskConical, Microscope, Layers, Cpu, Database, ShieldCheck,
-  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network, Atom, Flame, Users, Key, Code
+  BarChart3, Heart, FileText, Settings, Bot, Sparkles, Command, Home, Wind, Replace, Beaker, Network, Atom, Flame, Users, Key, Code, BookOpen
 } from 'lucide-react';
 import { GeistSans } from 'geist/font/sans';
 import { Space_Grotesk, IBM_Plex_Mono } from 'next/font/google';
@@ -27,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 const RESEARCH_STATIONS: { key: SectionTab; label: string; desc: string; icon: any; color: string }[] = [
   { key: 'predictor', label: 'Binding Affinity & ADMET', desc: 'Live PubChem & Cross-Attention', icon: Zap, color: 'text-cyan-400 border-cyan-500/40 bg-cyan-950/60' },
+  { key: 'methodology', label: 'Methodology & Layman Explainer', desc: 'SOTA Baselines & Architecture', icon: BookOpen, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
   { key: 'explorer', label: 'RCSB PDB 3D Explorer', desc: 'Live WebGL Coordinate Viewer', icon: Microscope, color: 'text-purple-400 border-purple-500/40 bg-purple-950/60' },
   { key: 'alphafold', label: 'AlphaFold-3 Structure AI', desc: 'pLDDT & PAES Error Scoring', icon: Microscope, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
   { key: 'covalent', label: 'Covalent Warhead Designer', desc: 'Nucleophilic Adduct Rates', icon: Flame, color: 'text-rose-400 border-rose-500/40 bg-rose-950/60' },
