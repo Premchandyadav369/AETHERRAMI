@@ -29,6 +29,7 @@ export type SectionTab =
   | 'apigateway'
   | 'patentpacket'
   | 'limssync'
+  | 'industryhealth'
   | 'methodology'
   | 'results'
   | 'assistant'

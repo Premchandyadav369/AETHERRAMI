@@ -44,6 +44,7 @@ export default function CommandPalette() {
     { id: '20', title: 'AI Microservices REST & GraphQL Gateway', category: 'Automation & Governance', tab: 'apigateway', icon: Network },
     { id: '21', title: '1-Click Provisional Patent Packet Generator (USPTO)', category: 'Automation & Governance', tab: 'patentpacket', icon: FileText },
     { id: '22', title: 'Benchling & Enterprise LIMS Webhook Sync', category: 'Automation & Governance', tab: 'limssync', icon: RefreshCw },
+    { id: '22b', title: 'Industry Telemetry & 99.999% SLA Health Studio', category: 'Automation & Governance', tab: 'industryhealth', icon: Activity },
     { id: '23', title: 'V10 Empirical Benchmark Evidence Browser', category: 'Evidence & AI Copilot', tab: 'results', icon: BarChart3 },
     { id: '24', title: 'AI Scientific Research Assistant', category: 'Evidence & AI Copilot', tab: 'assistant', icon: Bot },
     { id: '25', title: 'System Configuration & Controls', category: 'Evidence & AI Copilot', tab: 'settings', icon: Settings },
@@ -71,7 +72,7 @@ export default function CommandPalette() {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search across all 30 bioScript research stations..."
+            placeholder="Search across all 31 bioScript research stations..."
             className="w-full py-4 bg-transparent text-white font-mono text-xs focus:outline-none placeholder-slate-500"
             autoFocus
           />

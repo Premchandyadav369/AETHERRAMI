@@ -28,6 +28,7 @@ import RbacStudio from './components/RbacStudio';
 import ApiGatewayStudio from './components/ApiGatewayStudio';
 import PatentPacketStudio from './components/PatentPacketStudio';
 import LimsSyncStudio from './components/LimsSyncStudio';
+import IndustryHealthStudio from './components/IndustryHealthStudio';
 import MethodologyStudio from './components/MethodologyStudio';
 import ResultsCenter from './components/ResultsCenter';
 import AssistantChat from './components/AssistantChat';
@@ -67,6 +68,7 @@ export default function MainPage() {
       {activeTab === 'apigateway' && <ApiGatewayStudio />}
       {activeTab === 'patentpacket' && <PatentPacketStudio />}
       {activeTab === 'limssync' && <LimsSyncStudio />}
+      {activeTab === 'industryhealth' && <IndustryHealthStudio />}
       {activeTab === 'results' && <ResultsCenter />}
       {activeTab === 'assistant' && <AssistantChat />}
       {activeTab === 'settings' && <SettingsPage />}

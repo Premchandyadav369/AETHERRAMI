@@ -86,6 +86,7 @@ const STATION_GROUPS: StationGroup[] = [
       { key: 'apigateway', label: 'API Microservices Gateway', desc: 'OpenAPI 3.0 & GraphQL Spec', icon: Network, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
       { key: 'patentpacket', label: 'Provisional Patent Packet', desc: '1-Click USPTO PTO/SB/16 Export', icon: FileText, color: 'text-amber-400 border-amber-500/40 bg-amber-950/60' },
       { key: 'limssync', label: 'Benchling & LIMS Sync', desc: 'Enterprise Webhook Connector', icon: RefreshCw, color: 'text-teal-400 border-teal-500/40 bg-teal-950/60' },
+      { key: 'industryhealth', label: 'Industry Telemetry & Health', desc: '99.999% SLA & FDA Audit Telemetry', icon: Activity, color: 'text-emerald-400 border-emerald-500/40 bg-emerald-950/60' },
     ]
   },
   {
