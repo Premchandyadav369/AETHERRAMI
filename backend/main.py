@@ -65,6 +65,11 @@ def create_app() -> FastAPI:
             "active_nodes": 1
         }
 
+    @app.get("/health", summary="Health Check")
+    @app.get("/api/health", summary="API Health Check")
+    async def health_check():
+        return {"status": "ok", "service": "aether-rami-backend"}
+
     @app.get("/")
     async def root():
         return {
