@@ -33,7 +33,7 @@
 
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-Translating novel small molecules, targeted degraders (PROTACs), radiopharmaceuticals, and RNA-targeting ligands into clinical therapeutics is constrained by pre-clinical attrition rates exceeding 90\%. Traditional virtual screening algorithms rely on rigid-body molecular docking, which lacks physical electronic structure resolution and neglects systemic pharmacokinetic clearance. In this work, we present **AETHER-RAMI**, a unified multimodal deep learning framework for end-to-end biopharmaceutical discovery and systems pharmacology. AETHER-RAMI integrates graph attention networks (GATv2), 3D spatial edge encodings, quantum Density Functional Theory (DFT B3LYP/6-31G*), 14-compartment Physiologically Based Pharmacokinetic (PBPK) differential systems, and Horvath DNA methylation clocks into a sub-5ms inference engine. Evaluated on 45,000 bioactive molecules, AETHER-RAMI demonstrates state-of-the-art accuracy ($R^2 = 0.964$, $\text{RMSE} = 0.210\text{ log }K_d$, ADMET $\text{ROC-AUC} = 0.982$, Horvath Clock $\text{MAE} = 0.84\text{ years}$, PBPK $C_{\max}\text{ Error} = 2.1\%$), outperforming AlphaFold-3 and AutoDock Vina. The platform also provides 31 interactive WebGL workstations, 1-click USPTO patent compilation (Form PTO/SB/16), and FDA 21 CFR Part 11 cryptographic audit trails.
+Translating novel small-molecule candidates, targeted protein degraders, radiopharmaceuticals, and RNA-targeting ligands into human clinical therapeutics remains constrained by preclinical attrition rates exceeding ninety percent. Traditional virtual screening pipelines rely on rigid-body empirical docking scoring functions, which lack electronic structure resolution and neglect systemic pharmacokinetic clearance. In this study, we introduce AETHER-RAMI, a unified multimodal computational biopharmaceutical framework designed for target affinity prediction, quantum chemical calculations, epigenetic clock estimation, and whole-body pharmacokinetic simulation. The architecture combines dual graph attention networks (GATv2), continuous 3D spatial edge encodings, Density Functional Theory (DFT B3LYP/6-31G*) energy Hamiltonians, 14-compartment Physiologically Based Pharmacokinetic (PBPK) differential systems, and Horvath DNA methylation clocks into a sub-5ms inference engine. Evaluated across 45,000 bioactive compounds from PubChem, RCSB PDB, and ChEMBL, AETHER-RAMI achieves high predictive accuracy ($R^2 = 0.964$, $\text{RMSE} = 0.210\text{ log }K_d$, ADMET $\text{ROC-AUC} = 0.982$, Horvath Clock $\text{MAE} = 0.84\text{ years}$, PBPK $C_{\max}\text{ Error} = 2.1\%$), outperforming AlphaFold-3 and AutoDock Vina. The platform also provides 31 interactive WebGL research workstations, automated USPTO patent compilation (Form PTO/SB/16), and FDA 21 CFR Part 11 cryptographic audit verification.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -45,28 +45,28 @@ Multimodal Deep Learning, Graph Attention Networks, GATv2, Quantum DFT B3LYP, Ho
 \IEEEpeerreviewmaketitle
 
 \section{Introduction}
-\IEEEPARstart{T}{he} modern biopharmaceutical discovery pipeline is characterized by immense financial risk and high attrition rates. Bringing a single novel molecular entity (NME) from early-stage target validation to FDA approval requires an average expenditure of \$2.6 billion over a 10- to 15-year timeline \cite{diMasi2016}. Late-stage clinical failures stem predominantly from inaccurate early-stage predictions of multi-objective target binding affinity, off-target cardiotoxicity, and systemic human clearance.
+\IEEEPARstart{T}{he} modern drug discovery timeline is constrained by high financial expenditure and late-stage attrition. Developing a single novel molecular entity from target identification to regulatory authorization requires an average investment of 2.6 billion USD over a ten to fifteen year timeframe \cite{diMasi2016}. Clinical trial failures stem primarily from inadequate target binding affinity, unpredicted off-target toxicity, and unfavorable human pharmacokinetic profiles.
 
-\subsection{Limitations of Legacy Virtual Screening}
-Legacy computational screening relies heavily on static empirical docking algorithms such as AutoDock Vina \cite{trott2010} and PyRosetta \cite{chaudhury2011}. While computationally efficient for coarse steric filtering, these methods exhibit significant structural limitations:
+\subsection{Limitations of Legacy Virtual Screening Methods}
+Legacy computational screening workflows rely on static empirical docking algorithms such as AutoDock Vina \cite{trott2010} and PyRosetta \cite{chaudhury2011}. Although these methods offer computational speed for initial steric filtering, they possess major structural drawbacks:
 \begin{enumerate}
-    \item **Rigid Active Site Assumptions**: Ignores induced-fit conformational changes and water-mediated hydrogen bonding networks.
-    \item **Neglect of Quantum Electronic Effects**: Fails to capture polarization, charge transfer, and electrophilic covalent adduct formation.
-    \item **Decoupled Pharmacokinetics**: Assumes binding affinity directly correlates with clinical efficacy, ignoring systemic clearance and volume of distribution.
-    \item **Lack of Epigenetic Context**: Fails to incorporate biological age decay and chromatin accessibility into patient stratification.
+    \item **Rigid Active Site Assumptions**: Active site side chains are modeled as static structures, omitting induced-fit conformational changes and water-mediated hydrogen bonding networks.
+    \item **Omission of Quantum Electronic Effects**: Empirical scoring functions fail to resolve polarization, charge transfer, and electrophilic covalent adduct formation.
+    \item **Decoupled Pharmacokinetics**: Binding affinity is evaluated in isolation from systemic drug clearance, metabolic stability, and tissue distribution.
+    \item **Absence of Epigenetic Context**: Patient age decay and chromatin accessibility are omitted from early target selection algorithms.
 \end{enumerate}
 
-\subsection{The AETHER-RAMI Paradigm Shift}
-To solve these challenges, we engineered **AETHER-RAMI**, an integrated biopharmaceutical operating system that unifies structural molecular AI with quantum chemical calculations, epigenetics, and systemic whole-body physiology. Over four years of iterative research, AETHER-RAMI evolved across three major technological generations:
+\subsection{The AETHER-RAMI Architectural Framework}
+To address these limitations, we developed AETHER-RAMI, an integrated biopharmaceutical operating system that unifies structural molecular machine learning with quantum chemical calculations, epigenetics, and systemic physiology. Over four years of development, AETHER-RAMI evolved through three major technological generations:
 \begin{itemize}
-    \item **V4 Generation (2023)**: 2D Graph Convolutional Networks (GCN) with topological Morgan fingerprints.
-    \item **V7 Generation (2025)**: 3D Graphormer architectures incorporating Euclidean spatial distance biases and multi-omics knowledge graphs.
-    \item **V10 OMEGA Generation (2026)**: Dual cross-attention GATv2, hybrid QM/MM DFT B3LYP energy, 14-compartment PBPK ordinary differential equations, Horvath DNA methylation clocks, theranostic radiochemistry, and 31 operational workstations.
+    \item **V4 Generation (2023)**: Topological 2D Graph Convolutional Networks (GCN) coupled with Morgan circular fingerprints.
+    \item **V7 Generation (2025)**: 3D Graphormer architectures incorporating Euclidean distance biases and multi-omics knowledge networks.
+    \item **V10 OMEGA Generation (2026)**: Dual cross-attention GATv2, hybrid QM/MM DFT B3LYP energy Hamiltonians, 14-compartment PBPK ordinary differential equations, Horvath DNA methylation clocks, theranostic radiochemistry, and 31 operational workstations.
 \end{itemize}
 
-\section{System Architecture \& Workflow Overview}
+\section{System Architecture and Pipeline Topology}
 
-The AETHER-RAMI platform processes input SMILES sequences and receptor PDB coordinates through a unified, 4-stage pipeline, depicted in Figure 1.
+The AETHER-RAMI engine processes SMILES expressions and structural receptor PDB coordinates through a four-stage pipeline, illustrated in Figure 1.
 
 \begin{figure}[h]
 \centering
@@ -90,29 +90,30 @@ The AETHER-RAMI platform processes input SMILES sequences and receptor PDB coord
 \label{fig:arch}
 \end{figure}
 
-\section{Mathematical Formulations}
+\section{Mathematical Foundations and Theoretical Derivations}
 
-\subsection{V4 Baseline: Topological Graph Convolutional Networks}
-In V4, a small molecule is modeled as an undirected topological graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$, where vertices $v_i \in \mathcal{V}$ denote atoms and edges $e_{ij} \in \mathcal{E}$ denote chemical bonds. Node feature vectors $\mathbf{h}_i^{(0)} \in \mathbb{R}^d$ encode atomic number, hybridization state, formal charge, and aromaticity.
+\subsection{V4 Baseline: Topological Graph Convolutions}
+In the V4 baseline, a small molecule is represented as an undirected topological graph $\mathcal{G} = (\mathcal{V}, \mathcal{E})$, where vertices $v_i \in \mathcal{V}$ correspond to individual atoms and edges $e_{ij} \in \mathcal{E}$ represent covalent bonds. Initial node feature vectors $\mathbf{h}_i^{(0)} \in \mathbb{R}^d$ capture atomic number, hybridization state, formal charge, and aromaticity.
 
-The layer-wise graph convolution operator is defined as:
+The graph convolution update is formulated as:
 \begin{equation}
 \mathbf{h}_i^{(l+1)} = \sigma \left( W^{(l)} \mathbf{h}_i^{(l)} + \sum_{j \in \mathcal{N}(i)} \frac{1}{\sqrt{d_i d_j}} W_{\text{neigh}}^{(l)} \mathbf{h}_j^{(l)} \right)
 \end{equation}
-where $\mathcal{N}(i)$ is the 1-hop neighborhood of atom $i$, $d_i = |\mathcal{N}(i)| + 1$ is the node degree, $W^{(l)}$ and $W_{\text{neigh}}^{(l)}$ are trainable parameters, and $\sigma(\cdot)$ is the ReLU activation function.
+where $\mathcal{N}(i)$ denotes the 1-hop neighbor set of atom $i$, $d_i = |\mathcal{N}(i)| + 1$ is the node degree, $W^{(l)}$ and $W_{\text{neigh}}^{(l)}$ are parameter matrices, and $\sigma(\cdot)$ is the non-linear activation function.
 
-Graph-level pooling aggregates node embeddings into a unified molecular vector $\mathbf{z}_{\text{mol}}$:
+Graph readout combines average and maximum pooling to form the global embedding $\mathbf{z}_{\text{mol}}$:
 \begin{equation}
-\mathbf{z}_{\text{mol}} = \text{Readout}\left(\{ \mathbf{h}_i^{(L)} \}_{i \in \mathcal{V}}\right) = \frac{1}{|\mathcal{V}|} \sum_{i \in \mathcal{V}} \mathbf{h}_i^{(L)} \parallel \max_{i \in \mathcal{V}} \mathbf{h}_i^{(L)}
+\mathbf{z}_{\text{mol}} = \frac{1}{|\mathcal{V}|} \sum_{i \in \mathcal{V}} \mathbf{h}_i^{(L)} \parallel \max_{i \in \mathcal{V}} \mathbf{h}_i^{(L)}
 \end{equation}
 
-\subsection{V7 Architecture: 3D Graphormer \& Spatial Attention}
-To incorporate 3D spatial conformation, V7 extended the Transformer architecture to molecular 3D point clouds. Given 3D Cartesian coordinates $\mathbf{r}_i \in \mathbb{R}^3$ for each atom $i$, Euclidean distances $d_{ij} = \| \mathbf{r}_i - \mathbf{r}_j \|_2$ were mapped through Gaussian Radial Basis Functions (RBF):
+\subsection{V7 Architecture: 3D Graphormer and Spatial Edge Biases}
+To model 3D spatial conformation, V7 maps 3D atomic coordinates $\mathbf{r}_i \in \mathbb{R}^3$ into Gaussian Radial Basis Function (RBF) distance vectors $\mathbf{e}_{ij}^{\text{RBF}}$:
 \begin{equation}
 \mathbf{e}_{ij}^{\text{RBF}} = \left[ \exp\left( -\gamma \| d_{ij} - \mu_k \|^2 \right) \right]_{k=1}^K
 \end{equation}
+where $d_{ij} = \| \mathbf{r}_i - \mathbf{r}_j \|_2$ is the Euclidean distance between atoms $i$ and $j$.
 
-The self-attention matrix $A_{ij}$ in V7 incorporates spatial distance biases $\psi(d_{ij})$ and shortest path distance (SPD) topological biases $\phi(\text{spd}(i,j))$:
+The attention matrix $A_{ij}$ incorporates spatial distance biases $\psi(\cdot)$ and shortest path distance biases $\phi(\cdot)$:
 \begin{equation}
 A_{ij} = \frac{(Q_i K_j^T)}{\sqrt{d_k}} + \psi\left(\mathbf{e}_{ij}^{\text{RBF}}\right) + \phi(\text{spd}(i,j))
 \end{equation}
@@ -120,30 +121,30 @@ A_{ij} = \frac{(Q_i K_j^T)}{\sqrt{d_k}} + \psi\left(\mathbf{e}_{ij}^{\text{RBF}}
 \mathbf{h}_i^{(l+1)} = \text{LayerNorm}\left( \mathbf{h}_i^{(l)} + \text{MultiHeadAttn}\left(A_{ij}, V_j\right) \right)
 \end{equation}
 
-\subsection{V10 OMEGA Architecture: GATv2 Cross-Attention \& QM/MM Integration}
-V10 OMEGA resolves dynamic cross-attention between protein active-site residues $\mathcal{P} = \{\mathbf{p}_1, \dots, \mathbf{p}_M\}$ and ligand atoms $\mathcal{L} = \{\mathbf{l}_1, \dots, \mathbf{l}_N\}$.
+\subsection{V10 OMEGA Architecture: Dual GATv2 Cross-Attention and DFT Integration}
+V10 OMEGA models dynamic cross-attention between receptor residue pockets $\mathcal{P} = \{\mathbf{p}_1, \dots, \mathbf{p}_M\}$ and ligand atoms $\mathcal{L} = \{\mathbf{l}_1, \dots, \mathbf{l}_N\}$.
 
 The GATv2 cross-attention weight $\alpha_{ij}$ between receptor residue $i$ and ligand atom $j$ is computed as:
 \begin{equation}
 \alpha_{ij} = \frac{\exp\left(\mathbf{a}^T \text{LeakyReLU}\left(W_q \mathbf{p}_i + W_k \mathbf{l}_j + W_e \mathbf{e}_{ij}\right)\right)}{\sum_{k \in \mathcal{N}_i} \exp\left(\mathbf{a}^T \text{LeakyReLU}\left(W_q \mathbf{p}_i + W_k \mathbf{l}_k + W_e \mathbf{e}_{ik}\right)\right)}
 \end{equation}
-where $\mathbf{a} \in \mathbb{R}^{d_{\text{out}}}$, $W_q, W_k, W_e \in \mathbb{R}^{d_{\text{out}} \times d_{\text{in}}}$ are weight matrices, and $\mathbf{e}_{ij}$ is the 3D interaction edge embedding.
+where $\mathbf{a} \in \mathbb{R}^{d_{\text{out}}}$ and $W_q, W_k, W_e \in \mathbb{R}^{d_{\text{out}} \times d_{\text{in}}}$ are weight matrices.
 
-The total binding free energy $\Delta G_{\text{bind}}$ is derived by coupling GATv2 embeddings with a hybrid quantum DFT B3LYP energy term $\Delta E_{\text{DFT}}$:
+The total binding free energy $\Delta G_{\text{bind}}$ is derived by coupling GATv2 cross-attention embeddings with a hybrid Density Functional Theory (DFT B3LYP/6-31G*) energy term $\Delta E_{\text{DFT}}$:
 \begin{equation}
 \Delta G_{\text{bind}} = w_{\text{neural}} \cdot f_{\text{GATv2}}(\mathbf{p}, \mathbf{l}) + w_{\text{DFT}} \cdot \Delta E_{\text{DFT}} + \Delta G_{\text{solv}}
 \end{equation}
-where $\Delta E_{\text{DFT}} = E_{\text{complex}}^{\text{B3LYP}} - \left( E_{\text{protein}}^{\text{B3LYP}} + E_{\text{ligand}}^{\text{B3LYP}} \right)$ is calculated using the 6-31G* basis set, and $\Delta G_{\text{solv}}$ is the Poisson-Boltzmann surface area (PBSA) solvation free energy.
+where $\Delta E_{\text{DFT}} = E_{\text{complex}}^{\text{B3LYP}} - \left( E_{\text{protein}}^{\text{B3LYP}} + E_{\text{ligand}}^{\text{B3LYP}} \right)$ and $\Delta G_{\text{solv}}$ represents Poisson-Boltzmann surface area solvation energy.
 
-\subsection{Horvath DNA Methylation Epigenetic Clock \& DunedinPACE Math}
-V10 OMEGA integrates human epigenetic age calculation using Horvath's elastic-net regularized DNA methylation model across $M = 353$ specific CpG sites \cite{horvath2013}.
+\subsection{Horvath Epigenetic DNA Methylation Clock and DunedinPACE}
+V10 OMEGA computes human biological age using Horvath elastic-net regularized DNA methylation modeling across 353 CpG sites \cite{horvath2013}.
 
-Let $m_i \in [0, 1]$ denote the CpG methylation fraction ($\beta$-value) at site $i$. The linear predictor $X$ is defined as:
+Given CpG methylation fractions $m_i \in [0, 1]$, the linear predictor $X$ is defined as:
 \begin{equation}
 X = \beta_0 + \sum_{i=1}^{353} \beta_i \cdot m_i
 \end{equation}
 
-The biological age $\text{BioAge}$ is transformed via the anti-logistic function $F(X)$:
+Biological age $\text{BioAge}$ is derived using the anti-logistic transformation function $F(X)$:
 \begin{equation}
 F(X) = \begin{cases} 
 (21 + 1) \cdot \exp(X) - 1 & \text{if } X < 0 \\
@@ -151,60 +152,62 @@ F(X) = \begin{cases}
 \end{cases}
 \end{equation}
 
-The DunedinPACE pace of aging metric $P$ models annual biological decay relative to chronological time $T_{\text{chrono}}$:
+The DunedinPACE pace of aging metric $P$ quantifies annual rate of biological change relative to chronological time $T_{\text{chrono}}$:
 \begin{equation}
 P = \frac{d(\text{BioAge})}{d(T_{\text{chrono}})} = \sum_{j=1}^{173} w_j \cdot \Delta m_j^{(t_2 - t_1)}
 \end{equation}
 
-\subsection{14-Compartment PBPK Ordinary Differential System}
-Systemic drug distribution across 14 whole-body organs is modeled via coupled ordinary differential equations (ODEs).
+\subsection{14-Compartment PBPK Differential System}
+Systemic drug disposition across 14 anatomical organ compartments is calculated using a coupled ordinary differential equation system.
 
 For non-eliminating tissue compartment $k \in \{1, \dots, 14\}$:
 \begin{equation}
 V_k \frac{dC_k}{dt} = Q_k \cdot \left( C_{\text{art}} - \frac{C_k}{K_{p,k} / R_b} \right)
 \end{equation}
 
-For eliminating hepatic liver compartment ($k = \text{liver}$):
+For the hepatic elimination compartment ($k = \text{liver}$):
 \begin{equation}
 V_{\text{liver}} \frac{dC_{\text{liver}}}{dt} = Q_{\text{liver}} \left( C_{\text{art}} - \frac{C_{\text{liver}}}{K_{p,\text{liver}} / R_b} \right) + Q_{\text{gut}} \frac{C_{\text{gut}}}{K_{p,\text{gut}} / R_b} - \text{CL}_{\text{hepatic}} \cdot C_{u,\text{liver}}
 \end{equation}
+where $V_k$ is tissue volume, $Q_k$ is tissue blood flow rate, $C_k$ is drug concentration, $K_{p,k}$ is tissue-to-plasma partition coefficient, $R_b$ is blood-to-plasma concentration ratio, $\text{CL}_{\text{hepatic}}$ is intrinsic hepatic clearance, and $C_{u}$ is unbound drug fraction.
 
-\subsection{Theranostic Radiochemistry Kinetics \& Absorbed Dose}
-For targeted radiopharmaceutical ligands (e.g., $^{177}\text{Lu}$, $^{225}\text{Ac}$, $^{68}\text{Ga}$), radioisotope decay kinetics follow:
+\subsection{Theranostic Radiochemistry Kinetics and Dosimetry}
+For targeted radiopharmaceuticals ($^{177}\text{Lu}$, $^{225}\text{Ac}$, $^{68}\text{Ga}$), radioisotope decay kinetics follow:
 \begin{equation}
 N(t) = N_0 \cdot e^{-\lambda t}, \quad \lambda = \frac{\ln(2)}{t_{1/2}}
 \end{equation}
 
-The absorbed radiation dose $D_{\text{target}}$ (in Grays, Gy/GBq) in tumor tissue is computed via MIRD S-factor integration:
+The absorbed radiation dose $D_{\text{target}}$ (in Grays per GBq) in target tissue is calculated using MIRD S-factor integration:
 \begin{equation}
 D_{\text{target}} = \tilde{A}_{\text{target}} \cdot S(\text{target} \leftarrow \text{target}) + \sum_{\text{source}} \tilde{A}_{\text{source}} \cdot S(\text{target} \leftarrow \text{source})
 \end{equation}
+where $\tilde{A} = \int_{0}^{\infty} A(t) dt$ represents cumulative activity.
 
-\subsection{PROTAC Ternary Complex Kinetics \& Cooperativity}
-For PROTAC ternary complex formation (Target Protein $P$ + PROTAC $D$ + E3 Ligase $E \rightleftharpoons [PDE]$):
+\subsection{PROTAC Ternary Degradation Kinetics}
+For PROTAC ternary complex formation (Target $P$ + Degrader $D$ + E3 Ligase $E \rightleftharpoons [PDE]$):
 \begin{equation}
 [PDE] = \frac{[P_{\text{tot}}][E_{\text{tot}}]}{K_D^{P} \cdot K_D^{E} \cdot \alpha + [P_{\text{tot}}] \cdot K_D^{E} + [E_{\text{tot}}] \cdot K_D^{P}}
 \end{equation}
-where $\alpha = \frac{K_D^{P}}{K_D^{PDE}}$ is the cooperativity factor ($\alpha > 1$ denotes positive cooperativity).
+where $\alpha = \frac{K_D^{P}}{K_D^{PDE}}$ is the binding cooperativity factor ($\alpha > 1$ denotes positive cooperativity).
 
-\subsection{Covalent Electrophilic Warhead Adduct Kinetics}
-Targeted covalent inhibitors follow a two-step saturation mechanism:
+\subsection{Electrophilic Covalent Warhead Kinetics}
+Targeted covalent inhibitors follow a two-step saturation reaction mechanism:
 \begin{equation}
 E + I \underset{k_{-1}}{\overset{k_1}{\rightleftharpoons}} E \cdot I \xrightarrow{k_{\text{inact}}} E-I
 \end{equation}
-The second-order inactivation efficiency is defined as $k_{\text{inact}} / K_I$, where $K_I = \frac{k_{-1} + k_{\text{inact}}}{k_1}$.
+Inactivation rate efficiency is expressed as $k_{\text{inact}} / K_I$, where $K_I = \frac{k_{-1} + k_{\text{inact}}}{k_1}$.
 
-\section{Empirical Results \& Baseline Comparison}
+\section{Empirical Results and Baseline Evaluation}
 
-AETHER-RAMI was benchmarked against eight leading computational biology models across five standardized datasets:
-1. **BindingDB \& PDBbind v2020** ($45,000$ protein-ligand pairs)
-2. **Tox21 \& TDC ADMET Benchmark** ($12,000$ compounds)
-3. **Horvath Epigenetic Methylation Array** ($8,000$ human blood profiles)
-4. **Human Clinical PK Dataset** ($500$ clinical drug concentration curves)
-5. **Inference Latency Benchmark** ($1,000$ SMILES requests)
+AETHER-RAMI was evaluated against eight baseline computational models across five standardized datasets:
+1. **BindingDB and PDBbind v2020** (45,000 protein-ligand pairs)
+2. **Tox21 and TDC ADMET Benchmark** (12,000 compounds)
+3. **Horvath Epigenetic Methylation Cohort** (8,000 human blood profiles)
+4. **Human Clinical PK Dataset** (500 clinical drug concentration curves)
+5. **Inference Latency Benchmark** (1,000 SMILES requests)
 
 \begin{table*}[t]
-\caption{Comprehensive Benchmark Comparison: AETHER-RAMI V10 OMEGA vs. SOTA Baseline Models}
+\caption{Comprehensive Empirical Comparison: AETHER-RAMI V10 OMEGA vs. SOTA Baselines}
 \label{tab:main_results}
 \centering
 \begin{tabular}{lcccccc}
@@ -226,12 +229,12 @@ AlphaFold-3 Complex \cite{jumper2021} & 0.895 & 0.410 & N/A & N/A & N/A & 18,500
 \end{tabular}
 \end{table*}
 
-\section{Hardware Acceleration \& GPU Scaling}
+\section{Hardware Acceleration and Parallel Scaling}
 
-V10 OMEGA was benchmarked across single and multi-GPU NVIDIA clusters using TensorRT FP16 quantization:
+V10 OMEGA was evaluated across single and multi-GPU NVIDIA clusters using TensorRT FP16 quantization:
 
 \begin{table}[h]
-\caption{Hardware Scaling \& Virtual Screening Throughput Benchmarks}
+\caption{Hardware Scaling and Screening Throughput Benchmarks}
 \label{tab:gpu_scaling}
 \centering
 \begin{tabular}{lccc}
@@ -245,12 +248,12 @@ NVIDIA H100 (8-GPU HGX Cluster) & 28,400 & 18.5 GB & 1.1 ms \\
 \end{tabular}
 \end{table}
 
-\section{Conclusion \& Availability}
+\section{Conclusion and Open Availability}
 
-AETHER-RAMI represents a major step forward in unified computational biopharmaceuticals. By combining multi-modal graph neural attention (GATv2), quantum DFT B3LYP energy Hamiltonians, 14-compartment PBPK differential integration, and Horvath DNA methylation clocks into a sub-5ms enterprise web platform, AETHER-RAMI dramatically accelerates drug discovery timelines while reducing clinical trial risk.
+AETHER-RAMI establishes an integrated approach to biopharmaceutical discovery. By combining graph attention networks (GATv2), quantum DFT B3LYP Hamiltonians, 14-compartment PBPK differential integration, and Horvath DNA methylation clocks into a sub-5ms engine, AETHER-RAMI accelerates early-stage screening while improving predictive fidelity.
 
-\section*{Download \& Code Availability}
-The full LaTeX paper source code (`paper.tex`), complete benchmark datasets, and interactive web workstation codebase are open-source and downloadable at:  
+\section*{Download and Code Access}
+The full LaTeX paper source code (`paper.tex`), benchmark datasets, and interactive web workstation codebase are available at:  
 \url{https://github.com/Premchandyadav369/AETHERRAMI.git}
 
 \begin{thebibliography}{99}
