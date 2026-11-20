@@ -1,0 +1,3 @@
+PubChem Usage & Disclaimer: Notified and reviewed on 2026-11-01T08:21:14Z.
+Open access NIH database for biomedical chemical data.
+Policy: https://pubchem.ncbi.nlm.nih.gov/docs/open-access

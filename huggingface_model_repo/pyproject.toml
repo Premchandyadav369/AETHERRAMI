@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aether-rami"
+version = "16.0.0"
+authors = [
+  { name="Premchand Yadav", email="premchand.yadav2021@vitap.ac.in" },
+]
+description = "Unified Multimodal Deep Learning for De Novo 3D Biopharmaceutical Discovery & Secondary Resistance Bypass"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch>=2.0.0",
+    "transformers>=4.30.0",
+    "safetensors>=0.4.0",
+    "huggingface_hub>=0.20.0",
+    "numpy>=1.24.0",
+]
+
+[project.urls]
+"Homepage" = "https://premchandyadav1.vercel.app/"
+"Repository" = "https://huggingface.co/premchandyadav/aether-rami-esm2-diffsbdd"

@@ -1,0 +1,3 @@
+ChEMBL Data Access Terms: Notified and reviewed on 2026-11-01T08:21:14Z.
+License: Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0).
+Documentation: https://chembl.gitbook.io/chembl-interface-documentation/about

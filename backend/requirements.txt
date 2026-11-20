@@ -10,3 +10,6 @@ python-multipart>=0.0.9
 python-dotenv>=1.0.0
 rdkit>=2022.9.5
 psutil>=5.9.0
+pytest>=8.0.0
+scipy>=1.10.0
+

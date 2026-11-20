@@ -1,0 +1,8 @@
+endpoint,type,dataset,metric_primary,metric_secondary,sens,spec,mcc
+hERG Cardiac Safety,Classification,TDC hERG Central,ROC-AUC: 0.842,Balanced Acc: 80.0%,66.7%,85.7%,0.551
+HLM Metabolic Stability,Classification,ChEMBL Human Liver Microsomes,ROC-AUC: 0.795,Balanced Acc: 75.0%,72.7%,77.8%,0.505
+Ames Genotoxicity,Classification,Hansen et al. / TDC Ames,ROC-AUC: 0.885,Balanced Acc: 66.7%,33.3%,100.0%,0.528
+BBB CNS Penetration,Classification,Martins et al. / TDC BBB,ROC-AUC: 0.812,Balanced Acc: 77.3%,66.7%,87.5%,0.560
+Delaney ESOL Solubility,Regression,Delaney AqSolDB,Pearson r: 0.796,MAE: 0.71 logS,N/A,N/A,RMSE: 1.00
+Caco-2 Intestinal Permeability,Regression,Wang et al. / TDC Caco-2,Pearson r: 0.385,Concordance: 70.0%,N/A,N/A,MAE: 14.2
+CYP Pan-Inhibition (5 Isoforms),Classification,Veith et al. / TDC CYP,ROC-AUC: 0.864,Accuracy: 85.0%,75.0%,92.3%,0.680

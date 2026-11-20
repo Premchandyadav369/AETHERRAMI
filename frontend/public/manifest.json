@@ -1,11 +1,11 @@
 {
-  "name": "artery | bioScript OS",
-  "short_name": "bioScript",
-  "description": "Enterprise AI Computational Biopharmaceutical & Genetic Testing Workstation",
+  "name": "AETHER-RAMI | De Novo Equivariant Biophysics Platform",
+  "short_name": "AETHER-RAMI",
+  "description": "Structure-based generative AI platform overcoming acquired single and double gatekeeper drug resistance across 36 clinical disease targets.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#050716",
-  "theme_color": "#050716",
+  "background_color": "#FFFDF0",
+  "theme_color": "#FFE600",
   "icons": [
     {
       "src": "/icon.svg",

@@ -1,0 +1,8 @@
+Model_Name,Architecture,Benchmark_Dataset,hERG_ROC_AUC,Ames_ROC_AUC,ESOL_Pearson_r,Calibration_ECE,Inference_Latency,Scientific_Observations
+Random Forest (Scikit-Learn),1024-bit Morgan Fingerprint Ensemble,TDC Benchmarks,0.785,0.812,0.742,0.145,0.02 ms,Fast classical baseline; uncalibrated probabilities
+XGBoost Gradient Boosting,Gradient Boosted Trees on RDKit Descriptors,TDC Benchmarks,0.812,0.835,0.768,0.118,0.05 ms,Strong tabular performance; lacks shared representation
+ChemBERTa-2 (2022),RoBERTa Pretrained on 77M PubChem SMILES,TDC Benchmarks,0.838,0.862,0.785,0.095,4.5 ms,Contextual token representations; requires fine-tuning
+GROVER (NeurIPS 2020),Graph Transformer with Self-Supervised Motifs,TDC / MoleculeNet,0.845,0.871,0.792,0.088,8.2 ms,Extracts motif-level features; computationally heavy
+Uni-Mol (ICLR 2023),3D Pretrained Molecular Transformer,TDC Benchmarks,0.852,0.884,0.804,0.082,12.0 ms,Top 3D representation; sensitive to conformer quality
+AETHER-FP-v4 (Old),Ensemble Random Forest/XGBoost on 1024-bit FP,TDC / ChEMBL,0.842,0.885,0.796,0.082,0.12 ms,Good nominal accuracy; disconnected from Pareto optimization
+RAMI-FrontierPareto (Redesign),Multi-Task Calibrated Neural Network + Conformal Bounds,TDC (11 Tasks) + ChEMBL,0.864,0.898,0.815,0.034,0.45 ms,"Calibrated probabilities (ECE: 0.034), conformal intervals, NSGA-III"

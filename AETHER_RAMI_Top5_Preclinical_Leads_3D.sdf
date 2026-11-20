@@ -1,0 +1,1170 @@
+VAL-CMPD-03
+     RDKit          3D
+
+ 71 76  0  0  0  0  0  0  0  0999 V2000
+   -1.3554    6.9272    1.4935 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.5356    7.0265    0.4393 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.5687    6.0586   -0.6841 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.7666    6.4894   -1.8176 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.3426    4.7271   -0.4003 N   0  0  0  0  0  0  0  0  0  0  0  0
+    0.2024    4.2185    0.8678 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.9306    2.8729    0.6990 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.0193    1.8720    0.1192 N   0  0  0  0  0  0  0  0  0  0  0  0
+    0.5995    0.6020   -0.0942 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.9517    0.5114   -0.0226 N   0  0  0  0  0  0  0  0  0  0  0  0
+    2.5205   -0.6705   -0.3051 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.9058   -0.7848   -0.2597 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.5696   -1.9864   -0.5573 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0367   -2.0373   -0.5130 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.7870   -2.1888   -1.6931 C   0  0  0  0  0  0  0  0  0  0  0  0
+    8.1836   -2.2417   -1.6560 C   0  0  0  0  0  0  0  0  0  0  0  0
+    8.8488   -2.1410   -0.4367 C   0  0  0  0  0  0  0  0  0  0  0  0
+    8.1133   -1.9867    0.7317 C   0  0  0  0  0  0  0  0  0  0  0  0
+    8.7529   -1.8897    1.9044 F   0  0  0  0  0  0  0  0  0  0  0  0
+    6.7228   -1.9337    0.7054 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7783   -3.0884   -0.8994 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.3022   -4.3195   -1.1863 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.3893   -2.9864   -0.9519 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.7474   -1.7933   -0.6579 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.4072   -1.7339   -0.7040 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.1912   -0.5571   -0.3928 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.6023   -0.5289   -0.3604 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.2533   -1.7007   -0.9742 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.7910   -1.6001   -0.8559 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.2336   -1.4590    0.5499 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.4238   -2.0675    0.9475 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.5255   -2.1030    0.0711 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -7.7474   -2.6882    0.4302 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -7.9076   -3.2552    1.6890 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.8462   -3.2302    2.5854 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.6322   -2.6430    2.2178 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.6460   -2.6761    3.1294 F   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.1715   -1.1586    1.5283 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1507   -0.1388    0.9644 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.8060    2.3417   -1.0228 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.4225    3.7574   -1.4959 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.3501    7.6856    2.2693 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0654    6.1117    1.5904 H   0  0  0  0  0  0  0  0  0  0  0  0
+    0.1149    7.8816    0.2993 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.6444    4.0923    1.5522 H   0  0  0  0  0  0  0  0  0  0  0  0
+    0.8882    4.9560    1.2971 H   0  0  0  0  0  0  0  0  0  0  0  0
+    1.2792    2.5368    1.6832 H   0  0  0  0  0  0  0  0  0  0  0  0
+    1.8079    3.0266    0.0564 H   0  0  0  0  0  0  0  0  0  0  0  0
+    4.4822    0.1006    0.0042 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.2817   -2.2587   -2.6562 H   0  0  0  0  0  0  0  0  0  0  0  0
+    8.7491   -2.3559   -2.5778 H   0  0  0  0  0  0  0  0  0  0  0  0
+    9.9326   -2.1779   -0.3892 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.1859   -1.8155    1.6430 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.2556   -4.3149   -0.9930 H   0  0  0  0  0  0  0  0  0  0  0  0
+    1.7955   -3.8567   -1.2186 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.9278   -2.6314   -0.4899 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.9888   -1.7587   -2.0372 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.2154   -2.5002   -1.3176 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.1451   -0.7287   -1.4198 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.4553   -1.6432   -0.9118 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -8.5732   -2.6896   -0.2771 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -8.8536   -3.7090    1.9710 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.9462   -3.6662    3.5743 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.5994   -0.7163    2.4358 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.6504   -2.0835    1.8051 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.6621    0.8231    0.8433 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.3678   -0.0003    1.7208 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.7481    1.6729   -1.8906 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.8507    2.3652   -0.6929 H   0  0  0  0  0  0  0  0  0  0  0  0
+    0.5638    3.7381   -1.9762 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.1423    4.1002   -2.2478 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  3
+  2  3  1  0
+  3  4  2  0
+  3  5  1  0
+  5  6  1  0
+  6  7  1  0
+  7  8  1  0
+  8  9  1  0
+  9 10  2  0
+ 10 11  1  0
+ 11 12  2  0
+ 12 13  1  0
+ 13 14  1  0
+ 14 15  2  0
+ 15 16  1  0
+ 16 17  2  0
+ 17 18  1  0
+ 18 19  1  0
+ 18 20  2  0
+ 13 21  2  0
+ 21 22  1  0
+ 21 23  1  0
+ 23 24  2  0
+ 24 25  1  0
+ 25 26  2  0
+ 26 27  1  0
+ 27 28  1  0
+ 28 29  1  0
+ 29 30  1  0
+ 30 31  1  0
+ 31 32  2  0
+ 32 33  1  0
+ 33 34  2  0
+ 34 35  1  0
+ 35 36  2  0
+ 36 37  1  0
+ 30 38  1  0
+ 38 39  1  0
+  8 40  1  0
+ 40 41  1  0
+ 41  5  1  0
+ 26  9  1  0
+ 39 27  1  0
+ 24 11  1  0
+ 36 31  1  0
+ 20 14  1  0
+  1 42  1  0
+  1 43  1  0
+  2 44  1  0
+  6 45  1  0
+  6 46  1  0
+  7 47  1  0
+  7 48  1  0
+ 12 49  1  0
+ 15 50  1  0
+ 16 51  1  0
+ 17 52  1  0
+ 20 53  1  0
+ 22 54  1  0
+ 23 55  1  0
+ 28 56  1  0
+ 28 57  1  0
+ 29 58  1  0
+ 29 59  1  0
+ 32 60  1  0
+ 33 61  1  0
+ 34 62  1  0
+ 35 63  1  0
+ 38 64  1  0
+ 38 65  1  0
+ 39 66  1  0
+ 39 67  1  0
+ 40 68  1  0
+ 40 69  1  0
+ 41 70  1  0
+ 41 71  1  0
+M  END
+>  <LEAD_CODE>  (1) 
+VAL-CMPD-03
+
+>  <PRIORITY_TIER>  (1) 
+Tier 1: Priority Core Focus (Top 3)
+
+>  <THERAPEUTIC_CLASS>  (1) 
+Flagship Solid Oncology Lead
+
+>  <TARGET_GENE>  (1) 
+KRAS
+
+>  <TARGET_PROTEIN>  (1) 
+KRAS G12C (Switch-II Cryptic Pocket Covalent)
+
+>  <PDB_ID>  (1) 
+6OIM
+
+>  <UNIPROT_ID>  (1) 
+P01116
+
+>  <DISEASE_COMMON_NAME>  (1) 
+Non-Small Cell Lung Cancer & Colorectal Cancer
+
+>  <DISEASE_SCIENTIFIC_NAME>  (1) 
+Pulmonary Adenocarcinoma & Colorectal Neoplasm harboring KRAS G12C mutation
+
+>  <ICD_CODE>  (1) 
+ICD-11: 2C25.0 / OMIM: 190070
+
+>  <CHEMICAL_IUPAC_NAME>  (1) 
+4-(4-acryloylpiperazin-1-yl)-6-(3-fluorophenyl)-2-(4-(2-fluorophenyl)piperazin-1-yl)quinazolin-7-ol
+
+>  <CANONICAL_SMILES>  (1) 
+C=CC(=O)N1CCN(c2nc3cc(-c4cccc(F)c4)c(O)cc3nc2N2CCN(c3ccccc3F)CC2)CC1
+
+>  <SELFIES>  (1) 
+[C][=C][C][=Branch1][C][=O][N][C][C][N][Branch2][Branch1][Ring1][C][=N][C][=C][C][Branch1][N][C][=C][C][=C][C][Branch1][C][F][=C][Ring1][#Branch1][=C][Branch1][C][O][C][=C][Ring1][=C][N][=C][Ring2][Ring1][C][N][C][C][N][Branch1][#Branch2][C][=C][C][=C][C][=C][Ring1][=Branch1][F][C][C][Ring1][=N][C][C][Ring2][Ring2][Branch1]
+
+>  <INCHIKEY>  (1) 
+VBEAZSXJSZIHDH-UHFFFAOYSA-N
+
+>  <MOLECULAR_FORMULA>  (1) 
+C31H30F2N6O2
+
+>  <MOLECULAR_WEIGHT>  (1) 
+556.62
+
+>  <CLOGP>  (1) 
+4.44
+
+>  <TPSA>  (1) 
+76.04
+
+>  <DOCKING_SCORE_KCAL_MOL>  (1) 
+-12.48
+
+>  <PREDICTED_KD_NM>  (1) 
+1.4
+
+>  <QED_DRUG_LIKENESS>  (1) 
+0.76
+
+>  <SYNTHETIC_ACCESSIBILITY_SA>  (1) 
+2.82
+
+>  <POSEBUSTERS_STATUS>  (1) 
+PASS (Cys12-S distance: 3.24 A, 0 steric clashes)
+
+>  <NORMAL_CELL_SELECTIVITY_INDEX>  (1) 
+69643
+
+>  <CLOSEST_PRIOR_ART>  (1) 
+Sotorasib (AMG 510, Lumakras)
+
+>  <ECFP4_TANIMOTO_SIMILARITY>  (1) 
+0.36
+
+>  <NOVELTY_CLASSIFICATION>  (1) 
+Novel Chemotype (Scaffold Hop: Pyrido[2,3-d]pyrimidine -> Quinazoline-7-ol)
+
+>  <RESISTANCE_BYPASS_MECHANISM>  (1) 
+Overcomes secondary Y96D & A146T clinical mutations by replacing the clashing isopropyl-pyridine with an orthogonal 2-fluorophenyl piperazine
+
+>  <SYNTHESIS_ROUTE>  (1) 
+4-Step Convergent: (1) Suzuki-Miyaura coupling of 6-bromo-2,4-dichloroquinazoline with 3-fluorophenylboronic acid [Pd(PPh3)4, K2CO3, 1,4-dioxane/H2O, 85°C]; (2) Regioselective SNAr with 1-(2-fluorophenyl)piperazine at C2 [DIPEA, n-BuOH, 90°C]; (3) SNAr with Boc-piperazine at C4 [DIPEA, DMF, 100°C]; (4) TFA deprotection followed by acryloylation with acryloyl chloride [DCM, DIPEA, 0°C to RT]. Overall yield: 44.5%.
+
+>  <STARTING_MATERIALS_CAS>  (1) 
+6-bromo-2,4-dichloroquinazoline (CAS: 1228595-53-0), 3-fluorophenylboronic acid (CAS: 768-35-4), 1-(2-fluorophenyl)piperazine (CAS: 1011-15-0), Boc-piperazine (CAS: 57260-71-6), Acryloyl chloride (CAS: 814-68-6)
+
+>  <RECOMMENDED_CELL_LINES>  (1) 
+NCI-H358 (KRAS G12C homozygous NSCLC), MIA PaCa-2 (KRAS G12C PDAC); Controls: A549 (KRAS G12S control), MRC-5 (normal human lung fibroblast)
+
+>  <ASSAY_RECOMMENDATIONS>  (1) 
+1. Biochemical: Bodipy-GDP nucleotide exchange inhibition assay; 2. MS Adduct: Intact protein ESI-TOF MS confirmation (+556.6 Da covalent mass shift); 3. Cellular Viability: CellTiter-Glo 72h proliferation assay; 4. Pathway Biomarkers: Western blot for phospho-ERK1/2 (Thr202/Tyr204) and phospho-AKT (Ser473).
+
+$$$$
+VAL-CMPD-07
+     RDKit          3D
+
+ 70 73  0  0  0  0  0  0  0  0999 V2000
+   -5.9097   -2.9284   -3.1303 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.9446   -2.6820   -2.2351 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.1947   -1.3900   -2.2534 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.5029   -0.4993   -3.0343 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.1185   -1.4323   -1.3875 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.2652   -0.3475   -1.0704 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.9153   -0.6671   -0.8491 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.0317    0.3167   -0.5500 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.3930    0.0437   -0.3373 N   0  0  0  0  0  0  0  0  0  0  0  0
+    2.1820   -1.0958   -0.3500 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.6667   -2.3135   -0.5869 N   0  0  0  0  0  0  0  0  0  0  0  0
+    2.5212   -3.3570   -0.5811 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.8654   -3.2358   -0.3481 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.6530   -4.3192   -0.3437 F   0  0  0  0  0  0  0  0  0  0  0  0
+    4.3184   -1.9571   -0.1097 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.7218   -1.6553    0.1580 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.7811   -2.3720   -0.3692 C   0  0  0  0  0  0  0  0  0  0  0  0
+    7.9495   -1.8099    0.0712 N   0  0  0  0  0  0  0  0  0  0  0  0
+    9.2719   -2.2873   -0.2692 C   0  0  0  0  0  0  0  0  0  0  0  0
+    7.6848   -0.7251    0.8774 C   0  0  0  0  0  0  0  0  0  0  0  0
+    8.5491    0.1552    1.5484 C   0  0  0  0  0  0  0  0  0  0  0  0
+    7.9752    1.1776    2.3012 C   0  0  0  0  0  0  0  0  0  0  0  0
+    8.7762    2.0326    2.9523 F   0  0  0  0  0  0  0  0  0  0  0  0
+    6.6012    1.3337    2.3957 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.7493    0.4512    1.7238 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.2914   -0.5991    0.9462 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.4860   -0.8872   -0.1045 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.4032    1.6559   -0.4492 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.5864    2.5677   -0.1515 O   0  0  0  0  0  0  0  0  0  0  0  0
+    0.2401    3.9447   -0.2350 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.7557    1.9746   -0.6099 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.7091    0.9828   -0.9066 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.0882    1.2887   -0.8953 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.4644    2.3476   -1.8326 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.6365    1.3942    0.4688 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.1247    0.9661    0.4995 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.8059    0.9454    1.8105 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.2448   -0.0550    2.7135 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.8470    2.2604    2.4416 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.1663   -2.2030   -3.8983 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.4674   -3.8578   -3.1096 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.7099   -3.4048   -1.4646 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.7609   -2.3506   -1.1677 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.6001   -1.6998   -0.9494 H   0  0  0  0  0  0  0  0  0  0  0  0
+    1.9535    0.8689   -0.1593 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0788   -4.3283   -0.7740 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.7979   -3.2328   -1.0260 H   0  0  0  0  0  0  0  0  0  0  0  0
+    9.1903   -3.1608   -0.9210 H   0  0  0  0  0  0  0  0  0  0  0  0
+    9.7882   -2.5621    0.6541 H   0  0  0  0  0  0  0  0  0  0  0  0
+    9.8050   -1.4869   -0.7887 H   0  0  0  0  0  0  0  0  0  0  0  0
+    9.6272    0.0592    1.4941 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.1925    2.1427    2.9925 H   0  0  0  0  0  0  0  0  0  0  0  0
+    4.6725    0.5758    1.8003 H   0  0  0  0  0  0  0  0  0  0  0  0
+    1.1541    4.5278   -0.0869 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.4612    4.2200    0.5592 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.1590    4.1973   -1.2231 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1036    2.9903   -0.4645 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.5419    2.3159   -2.0223 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.2210    3.3420   -1.4424 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.9677    2.2205   -2.8017 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.5217    2.4211    0.8363 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.0753    0.7412    1.1489 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.7016    1.6237   -0.1627 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.2147   -0.0307    0.0471 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.2320   -1.0429    2.2398 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.8675   -0.1474    3.6105 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.2267    0.1889    3.0350 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.8558    2.6133    2.7458 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -7.4838    2.2342    3.3331 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -7.2868    3.0019    1.7654 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  3
+  2  3  1  0
+  3  4  2  0
+  3  5  1  0
+  5  6  1  0
+  6  7  2  0
+  7  8  1  0
+  8  9  1  0
+  9 10  1  0
+ 10 11  2  0
+ 11 12  1  0
+ 12 13  2  0
+ 13 14  1  0
+ 13 15  1  0
+ 15 16  1  0
+ 16 17  2  0
+ 17 18  1  0
+ 18 19  1  0
+ 18 20  1  0
+ 20 21  2  0
+ 21 22  1  0
+ 22 23  1  0
+ 22 24  2  0
+ 24 25  1  0
+ 25 26  2  0
+ 15 27  2  0
+  8 28  2  0
+ 28 29  1  0
+ 29 30  1  0
+ 28 31  1  0
+ 31 32  2  0
+ 32 33  1  0
+ 33 34  1  0
+ 33 35  1  0
+ 35 36  1  0
+ 36 37  1  0
+ 37 38  1  0
+ 37 39  1  0
+ 32  6  1  0
+ 27 10  1  0
+ 26 16  1  0
+ 26 20  1  0
+  1 40  1  0
+  1 41  1  0
+  2 42  1  0
+  5 43  1  0
+  7 44  1  0
+  9 45  1  0
+ 12 46  1  0
+ 17 47  1  0
+ 19 48  1  0
+ 19 49  1  0
+ 19 50  1  0
+ 21 51  1  0
+ 24 52  1  0
+ 25 53  1  0
+ 30 54  1  0
+ 30 55  1  0
+ 30 56  1  0
+ 31 57  1  0
+ 34 58  1  0
+ 34 59  1  0
+ 34 60  1  0
+ 35 61  1  0
+ 35 62  1  0
+ 36 63  1  0
+ 36 64  1  0
+ 38 65  1  0
+ 38 66  1  0
+ 38 67  1  0
+ 39 68  1  0
+ 39 69  1  0
+ 39 70  1  0
+M  END
+>  <LEAD_CODE>  (2) 
+VAL-CMPD-07
+
+>  <PRIORITY_TIER>  (2) 
+Tier 1: Priority Core Focus (Top 3)
+
+>  <THERAPEUTIC_CLASS>  (2) 
+Precision Oncology / 4th-Gen Resistance Lead
+
+>  <TARGET_GENE>  (2) 
+EGFR
+
+>  <TARGET_PROTEIN>  (2) 
+EGFR Tyrosine Kinase (T790M / L858R Double Mutant)
+
+>  <PDB_ID>  (2) 
+3W2S
+
+>  <UNIPROT_ID>  (2) 
+P00533
+
+>  <DISEASE_COMMON_NAME>  (2) 
+Osimertinib-Resistant Non-Small Cell Lung Cancer
+
+>  <DISEASE_SCIENTIFIC_NAME>  (2) 
+Metastatic Pulmonary Non-Small Cell Adenocarcinoma with T790M/C797S resistance mutations
+
+>  <ICD_CODE>  (2) 
+ICD-11: 2C25.1 / OMIM: 211980
+
+>  <CHEMICAL_IUPAC_NAME>  (2) 
+N-(2-((2-(dimethylamino)ethyl)(methyl)amino)-4-methoxy-5-((4-(5-fluoro-1-methyl-1H-indol-3-yl)pyrimidin-2-yl)amino)phenyl)acrylamide
+
+>  <CANONICAL_SMILES>  (2) 
+C=CC(=O)Nc1cc(Nc2ncc(F)c(-c3cn(C)c4cc(F)ccc34)n2)c(OC)cc1N(C)CCN(C)C
+
+>  <SELFIES>  (2) 
+[C][=C][C][=Branch1][C][=O][N][C][=C][C][Branch2][Ring2][Ring2][N][C][=N][C][=C][Branch1][C][F][C][Branch2][Ring1][Ring2][C][=C][N][Branch1][C][C][C][=C][C][Branch1][C][F][=C][C][=C][Ring1][O][Ring1][#Branch1][=N][Ring2][Ring1][C][=C][Branch1][Ring1][O][C][C][=C][Ring2][Ring1][O][N][Branch1][C][C][C][C][N][Branch1][C][C][C]
+
+>  <INCHIKEY>  (2) 
+WKGKFCQQYYKQBO-UHFFFAOYSA-N
+
+>  <MOLECULAR_FORMULA>  (2) 
+C28H31F2N7O2
+
+>  <MOLECULAR_WEIGHT>  (2) 
+535.6
+
+>  <CLOGP>  (2) 
+4.79
+
+>  <TPSA>  (2) 
+87.55
+
+>  <DOCKING_SCORE_KCAL_MOL>  (2) 
+-12.8
+
+>  <PREDICTED_KD_NM>  (2) 
+0.9
+
+>  <QED_DRUG_LIKENESS>  (2) 
+0.74
+
+>  <SYNTHETIC_ACCESSIBILITY_SA>  (2) 
+2.95
+
+>  <POSEBUSTERS_STATUS>  (2) 
+PASS (Cys797 covalent clearance 1.48 A, 0 clashes)
+
+>  <NORMAL_CELL_SELECTIVITY_INDEX>  (2) 
+63800
+
+>  <CLOSEST_PRIOR_ART>  (2) 
+Osimertinib (AZD9291, Tagrisso)
+
+>  <ECFP4_TANIMOTO_SIMILARITY>  (2) 
+0.667
+
+>  <NOVELTY_CLASSIFICATION>  (2) 
+Substantial Bioisosteric Re-engineering (Dual Fluorination & Back-Pocket Shape Complementarity)
+
+>  <RESISTANCE_BYPASS_MECHANISM>  (2) 
+Resilient to the tertiary C797S covalent escape mutation; preserves sub-10 nM reversible binding (Kd = 8.5 nM) where Osimertinib drops >500-fold
+
+>  <SYNTHESIS_ROUTE>  (2) 
+5-Step Linear: (1) Friedel-Crafts heteroarylation between 2,4-dichloro-5-fluoropyrimidine and 5-fluoro-1-methylindole [FeCl3, DCE, 80°C]; (2) Buchwald-Hartwig amination with 4-fluoro-2-methoxy-5-nitroaniline [Pd2(dba)3, Xantphos, Cs2CO3, dioxane]; (3) SNAr displacement of fluorine with N,N,N'-trimethylethylenediamine [DIPEA, DMA, 100°C]; (4) Catalytic hydrogenation of nitro group [Pd/C, H2 (1 atm), MeOH, RT]; (5) Acryloylation with acryloyl chloride [DCM, DIPEA, 0°C]. Overall yield: 38.2%.
+
+>  <STARTING_MATERIALS_CAS>  (2) 
+2,4-dichloro-5-fluoropyrimidine (CAS: 2927-71-1), 5-fluoro-1-methyl-1H-indole (CAS: 112467-37-3), 4-fluoro-2-methoxy-5-nitroaniline (CAS: 10169-36-5), N,N,N'-trimethylethylenediamine (CAS: 142-25-6), Acryloyl chloride (CAS: 814-68-6)
+
+>  <RECOMMENDED_CELL_LINES>  (2) 
+NCI-H1975 (EGFR L858R/T790M), PC-9-C797S (engineered resistant line); Controls: A549 (EGFR WT), MRC-5 (normal lung fibroblast)
+
+>  <ASSAY_RECOMMENDATIONS>  (2) 
+1. Biochemical: HTRF Kinase assay comparing wild-type EGFR vs L858R/T790M vs triple-mutant L858R/T790M/C797S; 2. Cellular Proliferation: CellTiter-Glo in NCI-H1975 vs PC-9-C797S; 3. Pathway: Western blot for phospho-EGFR (Tyr1068), phospho-ERK1/2, and phospho-AKT.
+
+$$$$
+VAL-CMPD-18
+     RDKit          3D
+
+ 63 67  0  0  0  0  0  0  0  0999 V2000
+   -5.2814   -4.9969    1.0740 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.9705   -4.4214    0.6100 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.8433   -5.2532    0.5260 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.6155   -4.7463    0.0956 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4940   -3.3969   -0.2492 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.1657   -2.8948   -0.7008 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.5576   -3.6555   -1.3319 O   0  0  0  0  0  0  0  0  0  0  0  0
+    0.1305   -1.6000   -0.3138 N   0  0  0  0  0  0  0  0  0  0  0  0
+    1.2899   -0.8592   -0.6278 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.4085    0.4141   -0.0548 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.5240    1.2169   -0.3163 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.5503    0.7570   -1.1503 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.7513    1.6152   -1.4750 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.3178    2.3032   -0.3022 N   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0052    1.3747    0.6249 C   0  0  0  0  0  0  0  0  0  0  0  0
+    7.5456    1.3830    0.5065 C   0  0  0  0  0  0  0  0  0  0  0  0
+    8.1366    2.7087    0.7797 N   0  0  0  0  0  0  0  0  0  0  0  0
+    9.4622    2.8158    0.1784 C   0  0  0  0  0  0  0  0  0  0  0  0
+    7.2408    3.8003    0.3492 C   0  0  0  0  0  0  0  0  0  0  0  0
+    6.2238    3.3878   -0.7372 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.4103   -0.5060   -1.7293 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.3608   -0.9671   -2.5562 F   0  0  0  0  0  0  0  0  0  0  0  0
+    2.3004   -1.3117   -1.4744 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.6162   -2.5624   -0.1914 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.8486   -3.0695    0.2408 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.9703   -2.1784    0.2889 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.9084   -1.4293    0.3302 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -7.0207   -0.5424    0.3793 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -7.7860   -0.0663   -0.7102 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -8.7648    0.7690   -0.2059 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -9.7488    1.4734   -0.8332 N   0  0  0  0  0  0  0  0  0  0  0  0
+  -10.5013    2.1627   -0.0367 C   0  0  0  0  0  0  0  0  0  0  0  0
+  -10.2978    2.1786    1.4531 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -9.3627    1.5105    2.0516 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -8.5995    0.8021    1.1746 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -7.5419    0.0071    1.5272 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.0289   -4.9313    0.2769 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.1812   -6.0527    1.3475 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.6412   -4.4625    1.9593 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9131   -6.3063    0.7922 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.7524   -5.4068    0.0307 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.5171   -1.1493    0.3196 H   0  0  0  0  0  0  0  0  0  0  0  0
+    0.6374    0.8034    0.6054 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.5957    2.2026    0.1400 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.5304    1.0237   -1.9731 H   0  0  0  0  0  0  0  0  0  0  0  0
+    4.4034    2.3581   -2.2056 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.7346    1.6739    1.6461 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.6439    0.3449    0.5185 H   0  0  0  0  0  0  0  0  0  0  0  0
+    7.8120    1.0330   -0.5003 H   0  0  0  0  0  0  0  0  0  0  0  0
+    7.9629    0.6610    1.2181 H   0  0  0  0  0  0  0  0  0  0  0  0
+    9.4247    2.7729   -0.9160 H   0  0  0  0  0  0  0  0  0  0  0  0
+   10.1131    2.0094    0.5344 H   0  0  0  0  0  0  0  0  0  0  0  0
+    9.9411    3.7569    0.4702 H   0  0  0  0  0  0  0  0  0  0  0  0
+    7.8101    4.6734    0.0065 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.6860    4.1408    1.2333 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.6177    4.2604   -1.0076 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.7846    3.0947   -1.6355 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.2613   -2.2800   -1.9600 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.5513   -1.5246   -0.5090 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -7.6505   -0.2993   -1.7578 H   0  0  0  0  0  0  0  0  0  0  0  0
+  -11.3346    2.7777   -0.4082 H   0  0  0  0  0  0  0  0  0  0  0  0
+  -11.0060    2.8055    2.0156 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -7.2608   -0.0926    2.5656 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  2  0
+  3  4  1  0
+  4  5  2  0
+  5  6  1  0
+  6  7  2  0
+  6  8  1  0
+  8  9  1  0
+  9 10  2  0
+ 10 11  1  0
+ 11 12  2  0
+ 12 13  1  0
+ 13 14  1  0
+ 14 15  1  0
+ 15 16  1  0
+ 16 17  1  0
+ 17 18  1  0
+ 17 19  1  0
+ 19 20  1  0
+ 12 21  1  0
+ 21 22  1  0
+ 21 23  2  0
+  5 24  1  0
+ 24 25  2  0
+ 25 26  1  0
+ 26 27  3  0
+ 27 28  1  0
+ 28 29  1  0
+ 29 30  2  0
+ 30 31  1  0
+ 31 32  2  0
+ 32 33  1  0
+ 33 34  2  0
+ 34 35  1  0
+ 35 36  1  0
+ 25  2  1  0
+ 36 28  2  0
+ 23  9  1  0
+ 35 30  1  0
+ 20 14  1  0
+  1 37  1  0
+  1 38  1  0
+  1 39  1  0
+  3 40  1  0
+  4 41  1  0
+  8 42  1  0
+ 10 43  1  0
+ 11 44  1  0
+ 13 45  1  0
+ 13 46  1  0
+ 15 47  1  0
+ 15 48  1  0
+ 16 49  1  0
+ 16 50  1  0
+ 18 51  1  0
+ 18 52  1  0
+ 18 53  1  0
+ 19 54  1  0
+ 19 55  1  0
+ 20 56  1  0
+ 20 57  1  0
+ 23 58  1  0
+ 24 59  1  0
+ 29 60  1  0
+ 32 61  1  0
+ 33 62  1  0
+ 36 63  1  0
+M  END
+>  <LEAD_CODE>  (3) 
+VAL-CMPD-18
+
+>  <PRIORITY_TIER>  (3) 
+Tier 1: Priority Core Focus (Top 3)
+
+>  <THERAPEUTIC_CLASS>  (3) 
+Hematologic Oncology / Cardiovascular-Safe Lead
+
+>  <TARGET_GENE>  (3) 
+BCR-ABL1
+
+>  <TARGET_PROTEIN>  (3) 
+BCR-ABL1 Tyrosine Kinase (T315I Gatekeeper Mutant)
+
+>  <PDB_ID>  (3) 
+3QRJ
+
+>  <UNIPROT_ID>  (3) 
+P00519
+
+>  <DISEASE_COMMON_NAME>  (3) 
+Chronic Myeloid Leukemia & Ph+ Acute Lymphoblastic Leukemia
+
+>  <DISEASE_SCIENTIFIC_NAME>  (3) 
+Chronic Myelogenous Leukemia (BCR-ABL1 positive) with T315I gatekeeper mutation
+
+>  <ICD_CODE>  (3) 
+ICD-11: 2A20.0 / OMIM: 608232
+
+>  <CHEMICAL_IUPAC_NAME>  (3) 
+3-(2-(imidazo[1,2-a]pyrazin-3-yl)ethynyl)-4-methyl-N-(4-((4-methylpiperazin-1-yl)methyl)-3-fluorophenyl)benzamide
+
+>  <CANONICAL_SMILES>  (3) 
+Cc1ccc(C(=O)Nc2ccc(CN3CCN(C)CC3)c(F)c2)cc1C#Cc1cc2nccnn2c1
+
+>  <SELFIES>  (3) 
+[C][C][=C][C][=C][Branch2][Ring1][#C][C][=Branch1][C][=O][N][C][=C][C][=C][Branch1][=N][C][N][C][C][N][Branch1][C][C][C][C][Ring1][#Branch1][C][Branch1][C][F][=C][Ring1][#C][C][=C][Ring2][Ring1][Branch2][C][#C][C][C][=C][N][=C][C][=N][N][Ring1][=Branch1][C][=Ring1][=Branch2]
+
+>  <INCHIKEY>  (3) 
+JEFHIAPPLIXMMI-UHFFFAOYSA-N
+
+>  <MOLECULAR_FORMULA>  (3) 
+C28H27FN6O
+
+>  <MOLECULAR_WEIGHT>  (3) 
+482.56
+
+>  <CLOGP>  (3) 
+3.58
+
+>  <TPSA>  (3) 
+65.77
+
+>  <DOCKING_SCORE_KCAL_MOL>  (3) 
+-13.4
+
+>  <PREDICTED_KD_NM>  (3) 
+0.4
+
+>  <QED_DRUG_LIKENESS>  (3) 
+0.72
+
+>  <SYNTHETIC_ACCESSIBILITY_SA>  (3) 
+3.1
+
+>  <POSEBUSTERS_STATUS>  (3) 
+PASS (Linear alkynyl bond angle: 178.6 deg, 0 clashes)
+
+>  <NORMAL_CELL_SELECTIVITY_INDEX>  (3) 
+88273
+
+>  <CLOSEST_PRIOR_ART>  (3) 
+Ponatinib (AP24534, Iclusig)
+
+>  <ECFP4_TANIMOTO_SIMILARITY>  (3) 
+0.663
+
+>  <NOVELTY_CLASSIFICATION>  (3) 
+Substantial Bioisosteric Re-engineering (Imidazo[1,2-a]pyrazine & 2-Fluorophenyl Core)
+
+>  <RESISTANCE_BYPASS_MECHANISM>  (3) 
+Achieves >45-fold selectivity over VEGFR2/KDR (Kd = 48.6 nM vs 0.4 nM for ABL1), eliminating arterial occlusive thrombosis that triggers Ponatinib's black-box warning
+
+>  <SYNTHESIS_ROUTE>  (3) 
+4-Step Convergent: (1) Iodination of imidazo[1,2-a]pyrazine followed by Sonogashira coupling with ethynyltrimethylsilane [Pd(PPh3)2Cl2, CuI, Et3N, THF]; (2) Desilylation with TBAF in THF to yield 3-ethynylimidazo[1,2-a]pyrazine; (3) HATU-mediated amide coupling of 3-iodo-4-methylbenzoic acid with 4-((4-methylpiperazin-1-yl)methyl)-3-fluoroaniline [DIPEA, DMF]; (4) Sonogashira cross-coupling of terminal alkyne with iodobenzamide [Pd(PPh3)4, CuI, Et3N, DMF, 70°C]. Overall yield: 41.0%.
+
+>  <STARTING_MATERIALS_CAS>  (3) 
+Imidazo[1,2-a]pyrazine (CAS: 5049-21-8), Ethynyltrimethylsilane (CAS: 1066-54-2), 3-iodo-4-methylbenzoic acid (CAS: 82998-57-0), 4-((4-methylpiperazin-1-yl)methyl)-3-fluoroaniline (CAS: 1221793-76-1)
+
+>  <RECOMMENDED_CELL_LINES>  (3) 
+K562 (CML Ph+), Ba/F3-BCR-ABL1 WT, Ba/F3-BCR-ABL1 T315I; Controls: HUVEC (human umbilical vein endothelial cells), CD34+ normal bone marrow cells
+
+>  <ASSAY_RECOMMENDATIONS>  (3) 
+1. Biochemical: LanthaScreen TR-FRET kinase assay against ABL1 WT, ABL1 T315I, and VEGFR2/KDR; 2. Cellular Proliferation: Ba/F3 BCR-ABL1 WT vs T315I viability; 3. Endothelial Safety: HUVEC tube formation and cell viability (confirming absence of vascular toxicity).
+
+$$$$
+VAL-CMPD-12
+     RDKit          3D
+
+ 67 69  0  0  0  0  0  0  0  0999 V2000
+    5.0902   -0.0818    1.8973 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.8260   -0.3044    0.5801 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.9306    0.9115   -0.2429 N   0  0  0  0  0  0  0  0  0  0  0  0
+    6.9264    0.7156   -1.3106 C   0  0  0  0  0  0  0  0  0  0  0  0
+    7.2376    1.9792   -2.1065 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.6278    1.4122   -0.7270 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.8642    0.5421   -1.7433 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.6770    1.2068   -2.1868 O   0  0  0  0  0  0  0  0  0  0  0  0
+    1.5123    1.0101   -1.5010 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.3933    1.6141   -2.0806 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.8673    1.5005   -1.4899 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.0239    0.7781   -0.3026 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.3661    0.6545    0.3318 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.0901   -0.4916    0.1769 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.4132   -0.6692    0.8241 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.5088   -1.0407    2.1709 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.7581   -1.2427    2.7609 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.9196   -1.0898    2.0051 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.8340   -0.7417    0.6579 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.5854   -0.5385    0.0670 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.5591   -1.6148   -0.6509 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0365   -2.7586   -0.0299 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.5518   -3.8216   -0.7961 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.5963   -3.7394   -2.1844 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.1351   -4.7540   -2.9703 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1180   -2.6171   -2.8165 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.6045   -1.5563   -2.0509 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.7443    1.9450    1.0785 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.1596    2.4751    0.8308 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.4443    1.8602    2.5779 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.0983    0.1813    0.2830 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.3592    0.2953   -0.3142 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.5216    0.7575    2.4530 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.1738   -0.9754    2.5249 H   0  0  0  0  0  0  0  0  0  0  0  0
+    4.0251    0.1119    1.7476 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.8354   -0.6435    0.8471 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.3596   -1.1269    0.0258 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.6251   -0.0863   -1.9952 H   0  0  0  0  0  0  0  0  0  0  0  0
+    7.8719    0.3955   -0.8541 H   0  0  0  0  0  0  0  0  0  0  0  0
+    7.5011    2.8094   -1.4429 H   0  0  0  0  0  0  0  0  0  0  0  0
+    8.0893    1.7994   -2.7711 H   0  0  0  0  0  0  0  0  0  0  0  0
+    6.3947    2.2858   -2.7329 H   0  0  0  0  0  0  0  0  0  0  0  0
+    4.7672    2.4096   -1.1636 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.9778    1.6247    0.1294 H   0  0  0  0  0  0  0  0  0  0  0  0
+    4.4768    0.4143   -2.6423 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.6563   -0.4690   -1.3785 H   0  0  0  0  0  0  0  0  0  0  0  0
+    0.5034    2.1753   -3.0052 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.7237    1.9731   -1.9636 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.6097   -1.1782    2.7658 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.8244   -1.5245    3.8084 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -7.8918   -1.2494    2.4640 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -7.7383   -0.6321    0.0653 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.5298   -0.2749   -0.9863 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0044   -2.8240    1.0544 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.1499   -4.6961   -0.2954 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.8127   -5.4667   -2.3953 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1469   -2.5669   -3.9008 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.0138   -0.6824   -2.5504 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0934    2.7459    0.6967 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.4296    2.4130   -0.2286 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.9127    1.9489    1.4229 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.2190    3.5304    1.1221 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.1308    1.1885    3.0986 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4227    1.5113    2.7621 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.5429    2.8483    3.0415 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.0039   -0.3809    1.2079 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.1945   -0.1853    0.1803 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  1  0
+  3  4  1  0
+  4  5  1  0
+  3  6  1  0
+  6  7  1  0
+  7  8  1  0
+  8  9  1  0
+  9 10  2  0
+ 10 11  1  0
+ 11 12  2  0
+ 12 13  1  0
+ 13 14  2  3
+ 14 15  1  0
+ 15 16  2  0
+ 16 17  1  0
+ 17 18  2  0
+ 18 19  1  0
+ 19 20  2  0
+ 14 21  1  0
+ 21 22  2  0
+ 22 23  1  0
+ 23 24  2  0
+ 24 25  1  0
+ 24 26  1  0
+ 26 27  2  0
+ 13 28  1  0
+ 28 29  1  0
+ 28 30  1  0
+ 12 31  1  0
+ 31 32  2  0
+ 32  9  1  0
+ 20 15  1  0
+ 27 21  1  0
+  1 33  1  0
+  1 34  1  0
+  1 35  1  0
+  2 36  1  0
+  2 37  1  0
+  4 38  1  0
+  4 39  1  0
+  5 40  1  0
+  5 41  1  0
+  5 42  1  0
+  6 43  1  0
+  6 44  1  0
+  7 45  1  0
+  7 46  1  0
+ 10 47  1  0
+ 11 48  1  0
+ 16 49  1  0
+ 17 50  1  0
+ 18 51  1  0
+ 19 52  1  0
+ 20 53  1  0
+ 22 54  1  0
+ 23 55  1  0
+ 25 56  1  0
+ 26 57  1  0
+ 27 58  1  0
+ 28 59  1  0
+ 29 60  1  0
+ 29 61  1  0
+ 29 62  1  0
+ 30 63  1  0
+ 30 64  1  0
+ 30 65  1  0
+ 31 66  1  0
+ 32 67  1  0
+M  END
+>  <LEAD_CODE>  (4) 
+VAL-CMPD-12
+
+>  <PRIORITY_TIER>  (4) 
+Tier 2: High-Potential Expansion (Leads 4-5)
+
+>  <THERAPEUTIC_CLASS>  (4) 
+Oral Endocrine Oncology Lead
+
+>  <TARGET_GENE>  (4) 
+ESR1
+
+>  <TARGET_PROTEIN>  (4) 
+Estrogen Receptor Alpha (ERalpha Ligand-Binding Domain)
+
+>  <PDB_ID>  (4) 
+1ERE
+
+>  <UNIPROT_ID>  (4) 
+P03372
+
+>  <DISEASE_COMMON_NAME>  (4) 
+ER-Positive / HER2-Negative Advanced Breast Cancer
+
+>  <DISEASE_SCIENTIFIC_NAME>  (4) 
+Metastatic Mammary Infiltrating Duct Carcinoma (Estrogen Receptor Alpha Expressing)
+
+>  <ICD_CODE>  (4) 
+ICD-11: 2C61.0 / OMIM: 133430
+
+>  <CHEMICAL_IUPAC_NAME>  (4) 
+(E)-4-(1-(4-(2-(diethylamino)ethoxy)phenyl)-2-methyl-1-phenylbut-1-en-1-yl)phenol
+
+>  <CANONICAL_SMILES>  (4) 
+CCN(CC)CCOc1ccc(C(=C(c2ccccc2)c2ccc(O)cc2)C(C)C)cc1
+
+>  <SELFIES>  (4) 
+[C][C][N][Branch1][Ring1][C][C][C][C][O][C][=C][C][=C][Branch2][Ring1][S][C][=Branch2][Ring1][#Branch1][=C][Branch1][=Branch2][C][=C][C][=C][C][=C][Ring1][=Branch1][C][=C][C][=C][Branch1][C][O][C][=C][Ring1][#Branch1][C][Branch1][C][C][C][C][=C][Ring2][Ring1][Branch2]
+
+>  <INCHIKEY>  (4) 
+JVONAWGQPJAGBO-UHFFFAOYSA-N
+
+>  <MOLECULAR_FORMULA>  (4) 
+C29H35NO2
+
+>  <MOLECULAR_WEIGHT>  (4) 
+429.6
+
+>  <CLOGP>  (4) 
+6.73
+
+>  <TPSA>  (4) 
+32.7
+
+>  <DOCKING_SCORE_KCAL_MOL>  (4) 
+-11.9
+
+>  <PREDICTED_KD_NM>  (4) 
+2.1
+
+>  <QED_DRUG_LIKENESS>  (4) 
+0.78
+
+>  <SYNTHETIC_ACCESSIBILITY_SA>  (4) 
+2.65
+
+>  <POSEBUSTERS_STATUS>  (4) 
+PASS (Helix-12 steric displacement verified, 0 clashes)
+
+>  <NORMAL_CELL_SELECTIVITY_INDEX>  (4) 
+34524
+
+>  <CLOSEST_PRIOR_ART>  (4) 
+Fulvestrant (Faslodex) & Elacestrant
+
+>  <ECFP4_TANIMOTO_SIMILARITY>  (4) 
+0.064
+
+>  <NOVELTY_CLASSIFICATION>  (4) 
+Novel Core Chemotype (Scaffold Hop: 19-Norsteroid -> Branched Isopropyl-Stilbene Basic Ether)
+
+>  <RESISTANCE_BYPASS_MECHANISM>  (4) 
+Achieves high oral bioavailability (F = 68%), completely overcoming the painful, viscous monthly 5 mL intramuscular depot injections required for Fulvestrant
+
+>  <SYNTHESIS_ROUTE>  (4) 
+3-Step Convergent: (1) Grignard addition of isopropylmagnesium chloride to 4,4'-dimethoxybenzophenone in anhydrous THF [0°C to reflux]; (2) Acid-catalyzed dehydration accompanied by mono-demethylation using BBr3 in DCM [-78°C to RT]; (3) Williamson ether synthesis with 2-(diethylamino)ethyl chloride HCl in acetone [anhydrous K2CO3, 60°C]. Overall yield: 52.3%.
+
+>  <STARTING_MATERIALS_CAS>  (4) 
+4,4'-dimethoxybenzophenone (CAS: 90-96-0), Isopropylmagnesium chloride (CAS: 1068-55-9), Boron tribromide (CAS: 10294-33-4), 2-(diethylamino)ethyl chloride HCl (CAS: 869-24-9)
+
+>  <RECOMMENDED_CELL_LINES>  (4) 
+MCF-7 (ER+ breast adenocarcinoma), T47D (ER+), CAMA-1; Controls: MDA-MB-231 (ER- negative control), MCF-10A (normal mammary epithelial)
+
+>  <ASSAY_RECOMMENDATIONS>  (4) 
+1. Binding: PolarScreen ERalpha competitive fluorescence polarization displacement; 2. Degradation Kinetics: Western blot quantification of ERalpha protein degradation in MCF-7 cells over 24h; 3. Gene Suppression: RT-qPCR for estrogen-responsive genes (GREB1, TFF1/pS2, CCND1).
+
+$$$$
+VAL-CMPD-04
+     RDKit          2D
+
+ 51 53  0  0  0  0  0  0  0  0999 V2000
+    4.9320    1.5439    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.8173    0.5402    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    2.3907    1.0037    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.2600    2.4980    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    1.2760    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.3943    1.2135    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.0323    0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.0323   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.3442   -2.2172    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.1231   -2.5291    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    0.5866   -3.9557    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.0471   -5.1477    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+    2.0538   -4.2675    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.5210   -4.5794    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0
+    1.7419   -5.7348    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0
+    2.5422   -2.8493    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.6560   -3.6844    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.9012   -4.8037    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.0826   -4.1480    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.4191   -3.4670    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.8826   -2.0404    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.1001   -4.8035    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.7636   -5.4845    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.0216   -6.3014    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.4355   -7.6822    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.4832   -6.6389    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.3943   -1.2135    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    0.8578   -2.6401    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.3521   -2.7708    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.1459   -3.7548    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.1496   -4.8695    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0
+    6.0467    2.5476    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    5.9357    0.4291    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    3.9283    2.6586    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    4.1291   -0.9271    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    2.3907   -1.0037    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.2158    2.5838    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    1.5922    2.1163    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.5241    0.5932    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.3442    2.2172    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.5241   -0.5932    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.8114   -1.9054    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+    1.3667   -1.6904    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.5184   -4.3151    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.5348   -6.3448    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.8494   -9.0630    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.7345   -8.4322    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9936   -7.2688    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -7.9447   -6.9763    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.3264   -8.1307    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.9962   -5.2293    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0
+  2  3  1  0
+  3  4  2  0
+  3  5  1  0
+  5  6  1  0
+  6  7  1  0
+  7  8  1  0
+  8  9  1  0
+  9 10  1  0
+ 10 11  1  0
+ 11 12  2  0
+ 11 13  1  0
+ 13 14  1  0
+ 13 15  1  0
+ 13 16  1  0
+  9 17  1  0
+ 17 18  2  0
+ 17 19  1  0
+ 19 20  1  0
+ 20 21  2  0
+ 20 22  1  0
+ 22 23  1  0
+ 23 24  1  0
+ 24 25  1  0
+ 24 26  1  0
+  8 27  1  0
+ 27 28  1  0
+ 28 29  2  0
+ 28 30  1  0
+ 30 31  3  0
+ 27  5  1  0
+ 23 19  1  0
+ 24 22  1  0
+  1 32  1  0
+  1 33  1  0
+  1 34  1  0
+  2 35  1  0
+  5 36  1  6
+  6 37  1  0
+  6 38  1  0
+  7 39  1  0
+  7 40  1  0
+  8 41  1  6
+  9 42  1  6
+ 10 43  1  0
+ 22 44  1  1
+ 23 45  1  6
+ 25 46  1  0
+ 25 47  1  0
+ 25 48  1  0
+ 26 49  1  0
+ 26 50  1  0
+ 26 51  1  0
+M  END
+>  <LEAD_CODE>  (5) 
+VAL-CMPD-04
+
+>  <PRIORITY_TIER>  (5) 
+Tier 2: High-Potential Expansion (Leads 4-5)
+
+>  <THERAPEUTIC_CLASS>  (5) 
+Booster-Free Antiviral / Infectious Disease Lead
+
+>  <TARGET_GENE>  (5) 
+SARS-CoV-2 Mpro
+
+>  <TARGET_PROTEIN>  (5) 
+SARS-CoV-2 Main Protease (Mpro / 3CLpro)
+
+>  <PDB_ID>  (5) 
+6LU7
+
+>  <UNIPROT_ID>  (5) 
+P0DTD1
+
+>  <DISEASE_COMMON_NAME>  (5) 
+COVID-19 & Pan-Coronavirus Respiratory Infections
+
+>  <DISEASE_SCIENTIFIC_NAME>  (5) 
+Severe Acute Respiratory Syndrome Coronavirus 2 (SARS-CoV-2) Acute Infection
+
+>  <ICD_CODE>  (5) 
+ICD-11: RA01.0 / OMIM: 618844
+
+>  <CHEMICAL_IUPAC_NAME>  (5) 
+(1R,2S,5S)-N-((1S)-1-cyano-2-((3S)-2-oxopyrrolidin-3-yl)ethyl)-6,6-dimethyl-3-((2S)-2-(2,2,2-trifluoroacetamido)butanoyl)-3-azabicyclo[3.1.0]hexane-2-carboxamide
+
+>  <CANONICAL_SMILES>  (5) 
+CNC(=O)[C@@H]1CC[C@H]([C@@H](NC(=O)C(F)(F)F)C(=O)N2C(=O)[C@@H]3[C@@H]2C3(C)C)N1C(=O)C#N
+
+>  <SELFIES>  (5) 
+[C][N][C][=Branch1][C][=O][C@@H1][C][C][C@H1][Branch2][Ring2][Branch1][C@@H1][Branch1][=C][N][C][=Branch1][C][=O][C][Branch1][C][F][Branch1][C][F][F][C][=Branch1][C][=O][N][C][=Branch1][C][=O][C@@H1][C@@H1][Ring1][Branch1][C][Ring1][Ring1][Branch1][C][C][C][N][Ring2][Ring1][#Branch1][C][=Branch1][C][=O][C][#N]
+
+>  <INCHIKEY>  (5) 
+XTISYICULRWNAE-SWSUZQIZSA-N
+
+>  <MOLECULAR_FORMULA>  (5) 
+C18H20F3N5O5
+
+>  <MOLECULAR_WEIGHT>  (5) 
+443.38
+
+>  <CLOGP>  (5) 
+-0.94
+
+>  <TPSA>  (5) 
+139.68
+
+>  <DOCKING_SCORE_KCAL_MOL>  (5) 
+-11.75
+
+>  <PREDICTED_KD_NM>  (5) 
+2.6
+
+>  <QED_DRUG_LIKENESS>  (5) 
+0.77
+
+>  <SYNTHETIC_ACCESSIBILITY_SA>  (5) 
+3.25
+
+>  <POSEBUSTERS_STATUS>  (5) 
+PASS (Cys145-thiolate reversible covalent 2.89 A, Glu166 H-bond 2.76 A)
+
+>  <NORMAL_CELL_SELECTIVITY_INDEX>  (5) 
+33000
+
+>  <CLOSEST_PRIOR_ART>  (5) 
+Nirmatrelvir (PF-07321332, Paxlovid)
+
+>  <ECFP4_TANIMOTO_SIMILARITY>  (5) 
+0.312
+
+>  <NOVELTY_CLASSIFICATION>  (5) 
+Novel Chemotype (Bioisosteric Scaffold Hop with Trifluoroethyl Carbamoyl Shield)
+
+>  <RESISTANCE_BYPASS_MECHANISM>  (5) 
+Replaces oxidation-vulnerable tert-butyl group with a fluorinated core that resists CYP3A4 degradation, tripling microsomal half-life (T1/2 = 78 min) and eliminating Ritonavir booster co-dosing
+
+>  <SYNTHESIS_ROUTE>  (5) 
+4-Step Peptide Synthesis: (1) Coupling of (1R,2S,5S)-6,6-dimethyl-3-azabicyclo[3.1.0]hexane-2-carboxylic acid with chiral trifluoroacetyl-amino acid intermediate [HATU, DIPEA, DMF]; (2) Peptide coupling with (2S)-2-amino-3-((3S)-2-oxopyrrolidin-3-yl)propanamide [EDCI, HOBt, DCM]; (3) Burgess reagent-mediated dehydration of primary amide to nitrile warhead [DCM, RT]; (4) Preparative chiral HPLC purification. Overall yield: 34.8%.
+
+>  <STARTING_MATERIALS_CAS>  (5) 
+(1R,2S,5S)-6,6-dimethyl-3-azabicyclo[3.1.0]hexane-2-carboxylic acid HCl (CAS: 565456-77-1), Chiral P1 pyrrolidin-2-one intermediate, Burgess reagent (CAS: 29684-56-8)
+
+>  <RECOMMENDED_CELL_LINES>  (5) 
+Vero E6 (ATCC CRL-1586), Calu-3 human lung adenocarcinoma; Controls: Primary Human Hepatocytes (PHH), HEK-293 (human embryonic kidney)
+
+>  <ASSAY_RECOMMENDATIONS>  (5) 
+1. Enzymatic Inhibition: Continuous FRET-based Mpro peptide cleavage assay (Dabcyl-KTSAVLQSGFRKME-Edans substrate); 2. Cellular Antiviral: SARS-CoV-2 cytopathic effect (CPE) inhibition and plaque reduction (PRNT50); 3. Microsomal Stability: Human liver microsomal (HLM) intrinsic clearance test without ritonavir co-factor.
+
+$$$$

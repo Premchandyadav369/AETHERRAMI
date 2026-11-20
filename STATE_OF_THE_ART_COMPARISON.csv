@@ -1,0 +1,27 @@
+Pillar,Method_Name,Core_Architecture,Benchmark_Dataset,Reported_Performance,Known_Limitations
+OmniDiff,FLOWR (2026),Continuous/Categorical Flow Matching + Equivariant OT,PLINDER/CrossDocked,"PoseBusters: 86.4% raw, Uniqueness: 98.2%, Speed: 0.14s/mol",High GPU memory required for long trajectories
+OmniDiff,TargetDiff (2023),Equivariant Diffusion SDE on Coordinates & Atoms,CrossDocked2020,"PoseBusters: 38.2% raw (fails bond length), Uniqueness: 88.5%",Coordinate drift without interaction constraints
+OmniDiff,DiffSBDD (2022),SE(3)-Equivariant Continuous Diffusion,CrossDocked2020,"PoseBusters: 24.1% raw, Uniqueness: 92.1%",Generates atomic clashes; requires force field post-processing
+OmniDiff,Pocket2Mol (2022),Autoregressive Atom-by-Atom Generation,CrossDocked2020,"High chemical validity (98%), Low geometric diversity",Accumulates sequential errors; slow sampling
+OmniDiff,TerraBind (2026),Coarse Structural Flow + Pretrained Encoders,PDBbind / BindingDB,"5x faster pose generation, Pearson r=0.81 affinity",Approximates sidechains with residue centroids
+OmniDiff,AETHER-OmniDiff-v4 (Current),Continuous SDE + Fallback Scaffolds,CrossDocked/Local,"PoseBusters: 0.0% raw, 100% MMFF; Duplicates: 91.67%",Mode collapse in unconditioned reverse diffusion
+OmniDiff,AETHER-OmniDiff-MoE (Redesign),Equivariant OT-Flow Matching + Valence Penalty + Entropy Reg,PLINDER / PDBbind / CrossDocked,"Target: PoseBusters > 75% raw, Duplicates < 5%",Under implementation and empirical validation
+QuantumPotential,MACE (2022/2024),Higher-Order Equivariant Message Passing MLIP,MP-18 / SPICE,"Energy MAE: 0.008 eV, Force MAE: 0.021 eV/A",High compute scaling with tensor order L
+QuantumPotential,AIMNet2 (2024),Multi-task Neural Potential with Explicit Charge,QMugs / SPICE,"Energy MAE: 0.012 eV, Explicit non-bonded electrostatics",Limited to neutral and small organic ions
+QuantumPotential,ANI-2x (2020),Behler-Parrinello Symmetry Function Potential,COMP6 / ANI-1x,"Energy MAE: 0.025 eV, Fast CPU inference","Restricted to H, C, N, O, S, F, Cl"
+QuantumPotential,AETHER-QP-v4 (Current),Empirical Lennard-Jones + Screened Coulomb,Local Benchmarks,Autograd error < 10^-5; 500-fs Langevin stable,Empirical MM; no learned quantum dispersion
+QuantumPotential,AETHER-QP-XL (Redesign),Equivariant Message-Passing Neural Potential + Autograd Force,QM9 / QCArchive / SPICE,Target: Energy MAE < 0.025 eV; Force MAE < 0.05 eV/A,Hybrid evaluation vs classical MMFF94s
+CellPerturb,scGPT (2024),Generative Pretrained Transformer for Single-Cell,10M scRNA-seq cells,Perturbation Pearson r=0.72 on unseen conditions,Requires massive memory; gene order sensitivity
+CellPerturb,GEARS (2022),Gene Regulatory Graph Transformer for Combinatorial Perturb,Norman Perturb-seq,Predicts 2-gene interactions; Pearson r=0.68,Requires pre-defined gene interaction graphs
+CellPerturb,CellFlow (2024),Continuous Normalizing Flows on Single-Cell Manifolds,LINCS / SciPlex,"Accurate trajectory prediction, Pearson r=0.74",High training complexity for high dimensions
+CellPerturb,AETHER-CP-v4 (Current),Linear MLP on Morgan FP (32 hallmark genes),LINCS L1000,78.9% directional concordance on 32 genes; linear 18.4k,Extrapolation is an in silico linear heuristic
+CellPerturb,RAMI-CellPerturb-scGPT (Redesign),Compound-Conditioned Graph Attention on STRING/L1000 Landmark,LINCS L1000 (978 landmark) + DepMap,Target: Landmark Pearson r > 0.65 on unseen compounds,Replaces linear extrapolation with genuine landmark GRN
+SynthonSpace,Synthia/Chematica (2018/2023),Expert Rule Base (100k+ rules) + Heuristic Search,Commercial Databases,"High synthetic feasibility, trusted chemistry","Proprietary, closed-source, rigid template matching"
+SynthonSpace,Molecular Transformer (2019),Sequence-to-Sequence Retrosynthesis,USPTO-50K,"Top-1 Accuracy: 53.8%, Top-10: 81.2%",Grammar errors; lacks step-by-step route costing
+SynthonSpace,LocalRetro (2021),Atom-Pair Local Reactivity Graph Retrosynthesis,USPTO-50K,"Top-1 Accuracy: 63.4%, Fast inference",Requires atom-mapped training data
+SynthonSpace,AETHER-SS-v4 (Current),256 SMARTS Reaction Rules + Static Catalog Lookup,Local SMARTS / Enamine,"100% route recovery on 25 leads, mean 2.12 steps",Rule-only; no learned template-free prediction
+SynthonSpace,AETHER-SynthonSpace-MoE (Redesign),Learned Reaction Center Classifier + MCTS Route Search,USPTO-50K + Vendor Catalogs,Target: Top-1 Accuracy > 55%; MCTS route success > 85%,Combines template reasoning with learned disconnection
+FrontierPareto,ChemBERTa-2 (2022),RoBERTa Pretrained on 77M SMILES,TDC Benchmarks,Average ROC-AUC: 0.812 across 10 TDC classification tasks,Requires task-specific fine-tuning; no geometry
+FrontierPareto,Uni-Mol (2023),3D Pretrained Molecular Transformer,TDC / MoleculeNet,Average ROC-AUC: 0.845 across ADMET benchmarks,Sensitive to input 3D conformation quality
+FrontierPareto,AETHER-FP-v4 (Current),Ensemble Random Forest/XGBoost on Morgan FPs + NSGA-II,TDC / ChEMBL,"hERG ROC-AUC: 0.842, Ames: 0.885, ESOL r=0.796",Uncertainty calibration not integrated into Pareto selection
+FrontierPareto,RAMI-FrontierPareto (Redesign),Multi-task Calibrated Ensemble + Conformal Prediction + NSGA-III,TDC (11 endpoints) + ChEMBL,Target: ECE < 0.075; Hypervolume increase > 15%,Adds applicability domain rejection and active learning acquisition

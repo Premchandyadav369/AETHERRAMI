@@ -1,0 +1,172 @@
+{
+  "registry_version": "1.0.0",
+  "last_synced_utc": "2026-11-01T08:24:33Z",
+  "connected_sources_count": 12,
+  "sources": {
+    "ChEMBL": {
+      "source_name": "ChEMBL",
+      "base_url": "https://www.ebi.ac.uk/chembl/api/data",
+      "update_frequency": "Quarterly (ChEMBL 34+)",
+      "status": "ONLINE",
+      "latency_ms": 19.11,
+      "cached": true,
+      "details": {
+        "activities": 24527044,
+        "chembl_db_version": "ChEMBL_37",
+        "chembl_release_date": "2026-05-01",
+        "compound_records": 3824604,
+        "disinct_compounds": 2921148,
+        "publications": 101100,
+        "status": "UP",
+        "targets": 18552
+      }
+    },
+    "RCSB_PDB": {
+      "source_name": "RCSB PDB",
+      "base_url": "https://data.rcsb.org/rest/v1/core",
+      "update_frequency": "Weekly (Wednesday release)",
+      "status": "ONLINE",
+      "latency_ms": 21.65,
+      "cached": true,
+      "details": {
+        "rcsb_id": "1STP",
+        "title": "STRUCTURAL ORIGINS OF HIGH-AFFINITY BIOTIN BINDING TO STREPTAVIDIN"
+      }
+    },
+    "PubChem": {
+      "source_name": "PubChem",
+      "base_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug",
+      "update_frequency": "Continuous Daily Updates",
+      "status": "ONLINE",
+      "latency_ms": 21.0,
+      "cached": true,
+      "details": {
+        "CID": 2244,
+        "MolecularFormula": "C9H8O4",
+        "MolecularWeight": "180.16"
+      }
+    },
+    "UniProt": {
+      "source_name": "UniProt",
+      "base_url": "https://rest.uniprot.org/uniprotkb",
+      "update_frequency": "Monthly Releases",
+      "status": "ONLINE",
+      "latency_ms": 17.52,
+      "cached": true,
+      "details": {
+        "primaryAccession": "P00533",
+        "gene": "EGFR",
+        "organism": "Homo sapiens"
+      }
+    },
+    "AlphaFold_DB": {
+      "source_name": "AlphaFold DB",
+      "base_url": "https://alphafold.ebi.ac.uk/api",
+      "update_frequency": "Periodic Global Model Updates",
+      "status": "ONLINE",
+      "latency_ms": 20.47,
+      "cached": true,
+      "details": {
+        "entryId": "AF-P00533-F1",
+        "globalMetricValue": 75.94,
+        "pdbUrl": "https://alphafold.ebi.ac.uk/files/AF-P00533-F1-model_v6.pdb"
+      }
+    },
+    "PubMed": {
+      "source_name": "PubMed",
+      "base_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils",
+      "update_frequency": "Daily Literature Ingestion",
+      "status": "ONLINE",
+      "latency_ms": 17.01,
+      "cached": true,
+      "details": {
+        "query_hits": 1339,
+        "sample_id": "42942861"
+      }
+    },
+    "STRING_DB": {
+      "source_name": "STRING DB",
+      "base_url": "https://string-db.org/api/json",
+      "update_frequency": "Annual Major Releases (v12+)",
+      "status": "ONLINE",
+      "latency_ms": 12.01,
+      "cached": true,
+      "details": {
+        "interactions_found": 1,
+        "sample_partner": "EGFR"
+      }
+    },
+    "Reactome": {
+      "source_name": "Reactome",
+      "base_url": "https://reactome.org/ContentService",
+      "update_frequency": "Quarterly Releases",
+      "status": "ONLINE",
+      "latency_ms": 18.46,
+      "cached": true,
+      "details": {
+        "pathway_id": "R-HSA-177929",
+        "displayName": "Signaling by EGFR"
+      }
+    },
+    "ClinicalTrials": {
+      "source_name": "ClinicalTrials.gov",
+      "base_url": "https://clinicaltrials.gov/api/v2",
+      "update_frequency": "Daily Updates",
+      "status": "ONLINE",
+      "latency_ms": 11.11,
+      "cached": true,
+      "details": {
+        "total_count": 0,
+        "first_study": "NCT07073365"
+      }
+    },
+    "QCArchive": {
+      "source_name": "QCArchive / QM9",
+      "base_url": "https://qcarchive.molssi.org",
+      "update_frequency": "Curated Quantum Chemistry Benchmark Data",
+      "status": "ONLINE",
+      "latency_ms": 0.0,
+      "cached": true,
+      "details": {
+        "dataset": "QM9-DFT-B3LYP",
+        "reference_molecules_loaded": 10
+      }
+    },
+    "BindingDB": {
+      "source_name": "BindingDB",
+      "base_url": "https://www.bindingdb.org",
+      "update_frequency": "Monthly Releases",
+      "status": "ONLINE",
+      "latency_ms": 0.0,
+      "cached": true,
+      "details": {
+        "standard_assays": [
+          "Kd",
+          "Ki",
+          "IC50"
+        ],
+        "affinity_units": "nM / pKd"
+      }
+    },
+    "LINCS_DepMap": {
+      "source_name": "LINCS / DepMap",
+      "base_url": "https://clue.io/api",
+      "update_frequency": "Periodic Data Releases (CCLE/DepMap 24Q2)",
+      "status": "ONLINE",
+      "latency_ms": 0.0,
+      "cached": true,
+      "details": {
+        "landmark_genes_defined": 16,
+        "pathways_mapped": [
+          "Apoptosis",
+          "Cell Cycle",
+          "PI3K/AKT",
+          "MAPK",
+          "NF-kB",
+          "Hypoxia",
+          "Drug Efflux"
+        ]
+      }
+    }
+  }
+}

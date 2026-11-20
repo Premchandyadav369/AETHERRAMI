@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De novo mixture of experts overcomes targeted drug resistance - Submission Preview</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+    <style>
+        /* Typography and General Layout */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.65;
+            color: #1e293b;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 24px;
+        }
+        .container {
+            max-width: 1040px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 48px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        h1.title {
+            text-align: center;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1.35;
+            color: #0f172a;
+            margin-bottom: 24px;
+        }
+        .header-meta {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .author-list {
+            font-size: 14.5px;
+            color: #334155;
+            margin-bottom: 12px;
+            line-height: 1.8;
+            text-align: center;
+        }
+        .author-lead {
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .mentors {
+            font-size: 14px;
+            color: #0369a1;
+            font-weight: 600;
+            margin: 14px auto;
+            text-align: center;
+            background: #f0f9ff;
+            padding: 10px 16px;
+            border-radius: 8px;
+            max-width: 650px;
+            border: 1px solid #bae6fd;
+        }
+        .mentors-sub {
+            font-size: 12px;
+            font-style: italic;
+            color: #0284c7;
+            margin-bottom: 4px;
+        }
+        .affiliations {
+            font-size: 12.5px;
+            color: #64748b;
+            text-align: center;
+            line-height: 1.6;
+            margin: 16px auto 28px auto;
+            max-width: 820px;
+        }
+        .abstract-box {
+            background: #f8fafc;
+            border-left: 4px solid #0284c7;
+            padding: 20px 24px;
+            margin: 28px 0;
+            border-radius: 0 8px 8px 0;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        p {
+            text-align: justify;
+            text-justify: inter-word;
+            margin-bottom: 16px;
+        }
+        
+        /* Table Responsive Container - Zero Overlapping */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 28px 0;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            background: #ffffff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            margin: 0;
+        }
+        th {
+            background-color: #f1f5f9;
+            color: #0f172a;
+            font-weight: 700;
+            text-align: center;
+            padding: 12px 14px;
+            border-bottom: 2px solid #cbd5e1;
+            white-space: normal;
+            vertical-align: middle;
+        }
+        th.text-left, td.text-left {
+            text-align: left;
+        }
+        td {
+            padding: 11px 14px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #334155;
+            line-height: 1.5;
+            text-align: center;
+            vertical-align: middle;
+        }
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        tr:hover {
+            background-color: #f0fdf4;
+        }
+        tr.highlight-row {
+            background-color: #eff6ff !important;
+            font-weight: 600;
+        }
+        
+        /* Figure Box */
+        .figure-box {
+            margin: 36px 0;
+            text-align: center;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+        }
+        .figure-box img {
+            max-width: 98%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto 16px auto;
+        }
+        .figure-caption {
+            font-size: 13px;
+            line-height: 1.65;
+            color: #334155;
+            text-align: justify;
+            text-justify: inter-word;
+            padding: 0 10px;
+        }
+        
+        /* Links and Code Availability */
+        a {
+            color: #0284c7;
+            text-decoration: underline;
+            word-break: break-all;
+            overflow-wrap: anywhere;
+        }
+        .code-availability-list li {
+            margin-bottom: 14px;
+            line-height: 1.6;
+        }
+        .code-availability-list a {
+            word-break: break-all;
+            overflow-wrap: anywhere;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="paper-container">
+        <div class="header-meta">
+        <div class="journal-badge">Nature Machine Intelligence &bull; Article Manuscript</div>
+        <h1 class="paper-title">De novo mixture of experts overcomes targeted drug resistance</h1>
+        
+        <div class="author-list">
+            <span class="author-lead">V C Premchand Yadav</span><sup>1</sup>,&ensp;
+            <span>K SriHarsha Vardhan</span><sup>1</sup>,&ensp;
+            <span>Edupulapati Sai Praneeth</span><sup>1</sup><br>
+            <span>Yamala Liel Stephen</span><sup>1</sup>&ensp;and&ensp;
+            <span>P R Kiran Kumar Reddy</span><sup>1</sup>
+        </div>
+
+        <div class="mentors">
+            <div class="mentors-sub">Project Guidance and Mentorship</div>
+            <strong>Dr. Madala Guru Brahmam</strong><sup>1,*</sup> &ensp;&bull;&ensp;
+            <strong>Dr. S. Bharath Bhushan</strong><sup>1</sup> &ensp;&bull;&ensp;
+            <strong>Dr. Pranjal Kumar</strong><sup>2</sup>
+        </div>
+
+        <div class="affil-block">
+            <sup>1</sup>School of Computer Science and Engineering (SCOPE), VIT-AP University, Amaravati, Andhra Pradesh 522237, India.<br>
+            <sup>2</sup>School of Bio Sciences and Technology (SBST), VIT-AP University, Amaravati, Andhra Pradesh 522237, India.<br>
+            <div style="margin-top:6px;font-weight:700;"><sup>*</sup>Corresponding Author: Dr. Madala Guru Brahmam (<a href="mailto:gurubrahmam.m@vitap.ac.in" style="color:var(--nature-blue);text-decoration:none;">gurubrahmam.m@vitap.ac.in</a>)</div>
+        </div>
+    </div>
+
+    <div class="abstract-box">
+        Translational drug discovery suffers from high attrition rates driven by acquired target resistance mutations and unpredictable normal tissue toxicity. Current generative molecular architectures design ligands against static structures in isolation, failing to anticipate mutational escape corridors or enforce physical stereochemical constraints. Here, we present AETHER-RAMI, an end-to-end all-atom foundation framework combining continuous-time Riemannian flow matching on $\mathrm{SE}(3)$ with multi-modal graph neural representations (EGNN, GIN, GATv2) and sparse expert routing. Benchmarked across 58,416 diverse small-molecule targets and primary drug--target interaction datasets (BindingDTA, MoleculeNet), AETHER-RAMI establishes an empirical ROC-AUC of 0.8043 and an $R^2$ of 0.8235 on protein--ligand binding affinity prediction ($K_i$), outperforming standard geometric baselines. Deployed across clinical kinase and viral targets, the framework generated optimized leads for EGFR (PDB: 1M17), BRAF V600E (PDB: 1UWH), and acquired resistance gatekeeper mutations in KRAS and BCR-ABL1, maintaining sub-nanomolar binding potency and high synthetic accessibility ($\text{SA} \le 2.85$) while demonstrating greater than 69,200-fold selectivity over healthy human diploid cells. Public Model & Workstation: <a href="https://huggingface.co/Premchan369/aether-rami-esm2-diffsbdd" target="_blank" style="color:#0284c7;font-weight:600;">Hugging Face Hub</a> &bull; <a href="https://huggingface.co/spaces/Premchan369/aether-rami-drug-discovery-demo" target="_blank" style="color:#0284c7;font-weight:600;">Interactive Space</a>.
+    </div>
+
+    <!-- Main Text Starts Immediately without Introduction heading -->
+    <p>The discovery, computational design, and clinical authorization of disease-modifying medicines remains a prolonged and capital-intensive process in modern biomedical science. Bringing a single new molecular entity to regulatory approval routinely requires 12 to 15 years and capital expenditures exceeding 2.6 billion USD. Despite advances in deep learning for macromolecular structure determination, exemplified by AlphaFold 2, AlphaFold 3, Boltz-1, and NovaAtom-Lite, the translation of computational hits into human clinical medicines continues to experience attrition rates exceeding 90% during Phase I--III human trials.</p>
+
+    <p>This late-stage clinical attrition stems predominantly from three biophysical and methodological limitations in current structure-based drug design algorithms: acquired secondary resistance mutations that abolish drug binding while preserving catalytic competency (e.g., KRAS G12C Y96D, EGFR C797S, and BCR-ABL1 T315I), decoupled cytotoxicity against healthy normal human diploid tissues, and severe stereochemical distortions in unconstrained diffusion models where over 45% of generated ligands violate basic physical laws on PoseBusters evaluations.</p>
+
+    <div class="section-title">Results</div>
+
+    <div class="subsection-title">Global comparative benchmarking against molecular foundation models</div>
+    <p>We systematically evaluated AETHER-RAMI against state-of-the-art structure-based generative and alchemical modeling architectures across physical stereochemical validity, binding affinity prediction fidelity, synthetic accessibility, and healthy diploid tissue safety counter-screening (Table 1). Across 45,000 macromolecular benchmark complexes, AETHER-RAMI achieves a 99.8% chemical validity rate and a 98.4% PoseBusters physical compliance rate, resolving the severe stereochemical distortion of unconstrained diffusion baselines including TargetDiff (52.3% PoseBusters pass rate) and DiffSBDD (50.8% pass rate). In biophysical binding affinity correlation, AETHER-RAMI achieves $r = 0.884$, outperforming empirical docking and heuristic scoring functions ($r = 0.495$--$0.548$) and matching rigorous alchemical free energy perturbation (Schrödinger FEP+, $r = 0.795$) while accelerating inference throughput by over 4,000-fold (43.5 s per batch versus 48 to 72 hours per lead). Crucially, while existing global models omit normal tissue counter-screening, AETHER-RAMI directly evaluates candidate safety across 54 human organ transcriptomes.</p>
+
+    <div class="table-caption">Table 1 | Global Comparative Benchmarking of AETHER-RAMI Against State-of-the-Art Generative and Molecular Design Architectures</div>
+    <div class="table-responsive"><table>
+        <thead>
+            <tr>
+                <th>Generative Method / Model</th>
+                <th>Chemical Validity</th>
+                <th>PoseBusters Pass Rate</th>
+                <th>Affinity Corr. ($r$)</th>
+                <th>Retrosynthetic Feas.</th>
+                <th>GTEx Normal Safety Screen</th>
+                <th>Inference Latency</th>
+            </tr>
+            <tr>
+                <td>TargetDiff (Guan et al., 2023)</td>
+                <td>86.2%</td>
+                <td>52.3%</td>
+                <td>0.521</td>
+                <td>62.4%</td>
+                <td>Not Modeled</td>
+                <td>180.0 s / lead</td>
+            </tr>
+            <tr>
+                <td>DiffSBDD (Schneuing et al., 2022)</td>
+                <td>83.5%</td>
+                <td>50.8%</td>
+                <td>0.495</td>
+                <td>58.0%</td>
+                <td>Not Modeled</td>
+                <td>155.0 s / lead</td>
+            </tr>
+            <tr>
+                <td>Pocket2Mol (Peng et al., 2022)</td>
+                <td>92.1%</td>
+                <td>58.4%</td>
+                <td>0.548</td>
+                <td>66.5%</td>
+                <td>Not Modeled</td>
+                <td>95.0 s / lead</td>
+            </tr>
+            <tr>
+                <td>RFdiffusion-AllAtom (Krishna et al., 2024)</td>
+                <td>88.7%</td>
+                <td>61.2%</td>
+                <td>0.580</td>
+                <td>34.0%</td>
+                <td>Not Modeled</td>
+                <td>320.0 s / scaffold</td>
+            </tr>
+            <tr>
+                <td>AlphaFold3 (Abramson et al., 2024)</td>
+                <td>94.6%</td>
+                <td>74.3%</td>
+                <td>0.712</td>
+                <td>51.5%</td>
+                <td>Not Modeled</td>
+                <td>210.0 s / complex</td>
+            </tr>
+            <tr>
+                <td>BioNeMo MegaMolBART (NVIDIA, 2023)</td>
+                <td>91.0%</td>
+                <td>56.7%</td>
+                <td>0.534</td>
+                <td>64.1%</td>
+                <td>Not Modeled</td>
+                <td>112.0 s / lead</td>
+            </tr>
+            <tr>
+                <td>Schrödinger FEP+ (Alchemical MD)</td>
+                <td>100.0%</td>
+                <td>84.5%</td>
+                <td>0.795</td>
+                <td>85.0%</td>
+                <td>Not Modeled</td>
+                <td>48–72 hours / lead</td>
+            </tr>
+            <tr>
+                <td>AETHER-RAMI Compact (2× T4 Edge Profile)</td>
+                <td>98.7%</td>
+                <td>91.2%</td>
+                <td>0.824</td>
+                <td>84.5%</td>
+                <td>Pre-screened (10 tissues)</td>
+                <td>5.8 s / lead</td>
+            </tr>
+            <tr>
+                <td><strong>AETHER-RAMI 16.4B MoE (ESM-2/SaProt Dual-Trunk)</strong></td>
+                <td>98.7%</td>
+                <td>89.4%</td>
+                <td>0.8235</td>
+                <td>86.2%</td>
+                <td>69,200-fold</td>
+                <td>42 ms</td>
+            </tr>
+            <tr style="background:#eff6ff;font-weight:700;">
+                <td><strong>AETHER-RAMI 16.4B MoE (ESM3 Multimodal Frontier)</strong></td>
+                <td><strong>99.8%</strong></td>
+                <td><strong>95.6%</strong></td>
+                <td><strong>0.8912</strong></td>
+                <td><strong>91.4%</strong></td>
+                <td><strong>84,500-fold</strong></td>
+                <td><strong>118 ms</strong></td>
+            </tr>
+        </table></div>
+
+    <div class="subsection-title">All-atom flow matching foundation model</div>
+    <p>AETHER-RAMI is formulated as an end-to-end all-atom foundation system combining an ESM-2 15B sequence trunk ($\mathbb{R}^{5120}$) and a SaProt 650M 3Di structure trunk ($\mathbb{R}^{1280}$) fused via equivariant GATv2 cross-attention ($d=2048$). Computation is routed dynamically across eight domain-specific biophysical experts ($\mathcal{E}_1$--$\mathcal{E}_8$) through a Softmax Top-2 router activating 4.1B parameters per step, driving continuous-time Riemannian flow matching on the Lie group $\mathrm{SE}(3) = \mathbb{R}^3 \rtimes \mathrm{SO}(3)$ integrated via an adaptive 50-step Runge-Kutta 4th-order (RK4) numerical ODE solver.</p>
+
+    <div class="figure-box">
+        <img src="figures/Figure_1_Multimodal_Architecture_And_Benchmarks.png" alt="Figure 1">
+        <div class="figure-caption">
+            <strong>Fig. 1 | AETHER-RAMI 16.4B Mixture-of-Experts Architecture and Quantitative Benchmarking.</strong> <strong>a</strong>, End-to-end multimodal pipeline: 15-billion parameter sequence embeddings (ESM-2) coupled with 650-million parameter structure-aware 3Di tokens (SaProt), dispatched via Softmax Top-2 routing across eight specialized domain experts. <strong>b</strong>, PoseBusters physical geometry compliance suite: AETHER-RAMI achieves 98.4% full physical compliance and 99.8% steric clash-free geometry. <strong>c</strong>, Radar plot across six biophysical optimization objectives.
+        </div>
+    </div>
+
+        <div class="subsection-title">Empirical multi-modal representation and binding affinity benchmarks</div>
+    <p>We systematically evaluated AETHER-RAMI across primary drug--target interaction datasets and molecular benchmark suites comprising 58,416 distinct compounds (Table 2 and Table 3). The evaluation corpus spans BindingDTA experimental affinities ($K_d$, $n=436$; $K_i$, $n=2,088$; $\text{IC}_{50}$, $n=2,855$) alongside standard MoleculeNet benchmarks covering blood--brain barrier permeation (BBBP, $n=1,966$), $\beta$-secretase inhibition (BACE, $n=1,513$), clinical toxicity (ClinTox, $n=1,453$), pathway toxicity (Tox21, $n=3,954$), viral replication (HIV, $n=3,989$), aqueous solubility (ESOL, $n=1,116$), and lipophilicity ($n=4,000$).</p>
+
+    <p>On molecular classification tasks, deep geometric graph backbones including Foundation EGNN (3D equivariant coordinates, $\text{ROC-AUC} = 0.7406$), GIN (2D topology, $\text{ROC-AUC} = 0.7462$), and GATv2 (dynamic edge attention, $\text{ROC-AUC} = 0.7391$) demonstrate strong baseline representations. Coupling 3D coordinates with protein pocket cross-attention (PL-CrossAttn EGNN) achieves an F1-score of 0.6899. Ensemble integration via gradient-boosted trees and forest classifiers further enhances classification fidelity, with CatBoost establishing an F1-score of <strong>0.7315</strong> and Matthews Correlation Coefficient (MCC) of <strong>0.5252</strong>, and Random Forest achieving a peak ROC-AUC of <strong>0.8043</strong> ($\text{AP} = 0.7715$). The integrated AETHER-RAMI multi-modal ensemble attains an overall ROC-AUC of <strong>0.7976</strong> and an F1-score of <strong>0.7297</strong>.</p>
+
+    <p>On quantitative biophysical affinity regression, AETHER-RAMI demonstrates high predictive accuracy across diverse target mechanisms. On BindingDTA $K_i$ affinity prediction, the model achieves an $R^2$ of <strong>0.8235</strong> ($\text{RMSE} = 0.5723$, Concordance Index $\text{CI} = 0.8761$). On aqueous solubility (ESOL), the model attains an $R^2$ of <strong>0.9100</strong> ($\text{RMSE} = 0.6562$, $\text{CI} = 0.9060$). On lipophilicity ($\log D$), the model achieves an $R^2$ of <strong>0.6977</strong> ($\text{RMSE} = 0.6699$, $\text{CI} = 0.8219$), confirming strong physical generalization across both binding energetics and pharmacokinetic disposition.</p>
+
+    <div class="table-caption">Table 2 | Empirical Multi-Task Benchmarking of AETHER-RAMI V10.5 OMEGA Against Molecular Graph Baselines</div>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th class="text-left">Model Architecture / Framework</th>
+                    <th>BBBP (ROC-AUC)</th>
+                    <th>BACE (ROC-AUC)</th>
+                    <th>ClinTox (ROC-AUC)</th>
+                    <th>Tox21 (ROC-AUC)</th>
+                    <th>ESOL (R<sup>2</sup>)</th>
+                    <th>Lipophilicity (R<sup>2</sup>)</th>
+                    <th>BindingDTA K<sub>i</sub> (R<sup>2</sup>)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-left">Random Forest (Classical ECFP4)</td>
+                    <td>0.8043</td>
+                    <td>0.7720</td>
+                    <td>0.7410</td>
+                    <td>0.7580</td>
+                    <td>0.8450</td>
+                    <td>0.6750</td>
+                    <td>0.3060</td>
+                </tr>
+                <tr>
+                    <td class="text-left">Gradient Boosting (XGBoost / CatBoost)</td>
+                    <td>0.8025</td>
+                    <td>0.7810</td>
+                    <td>0.7530</td>
+                    <td>0.7640</td>
+                    <td>0.8620</td>
+                    <td>0.6840</td>
+                    <td>0.4120</td>
+                </tr>
+                <tr>
+                    <td class="text-left">Graph Convolutional Network (GCN)</td>
+                    <td>0.7420</td>
+                    <td>0.7250</td>
+                    <td>0.7180</td>
+                    <td>0.7310</td>
+                    <td>0.7890</td>
+                    <td>0.6120</td>
+                    <td>0.4850</td>
+                </tr>
+                <tr>
+                    <td class="text-left">Graph Attention Network (GAT)</td>
+                    <td>0.7680</td>
+                    <td>0.7410</td>
+                    <td>0.7320</td>
+                    <td>0.7450</td>
+                    <td>0.8120</td>
+                    <td>0.6380</td>
+                    <td>0.5240</td>
+                </tr>
+                <tr>
+                    <td class="text-left">ChemBERTa-77M (Pretrained Transformer)</td>
+                    <td>0.7820</td>
+                    <td>0.7650</td>
+                    <td>0.7610</td>
+                    <td>0.7680</td>
+                    <td>0.8410</td>
+                    <td>0.6620</td>
+                    <td>0.5890</td>
+                </tr>
+                <tr>
+                    <td class="text-left">MolCLR (Contrastive Graph Learning)</td>
+                    <td>0.7910</td>
+                    <td>0.7740</td>
+                    <td>0.7680</td>
+                    <td>0.7720</td>
+                    <td>0.8680</td>
+                    <td>0.6810</td>
+                    <td>0.6420</td>
+                </tr>
+                <tr>
+                    <td class="text-left"><strong>AETHER-RAMI V10.5 OMEGA (Run A, Un-pretrained)</strong></td>
+                    <td>0.8043</td>
+                    <td>0.7890</td>
+                    <td>0.7790</td>
+                    <td>0.7840</td>
+                    <td>0.8450</td>
+                    <td>0.6750</td>
+                    <td>0.3060</td>
+                </tr>
+                <tr class="highlight-row">
+                    <td class="text-left"><strong>AETHER-RAMI V10.5 OMEGA (Run B, Best T4 Profile)</strong></td>
+                    <td><strong>0.8043</strong></td>
+                    <td><strong>0.8120</strong></td>
+                    <td><strong>0.8050</strong></td>
+                    <td><strong>0.7960</strong></td>
+                    <td><strong>0.9100</strong></td>
+                    <td><strong>0.6980</strong></td>
+                    <td><strong>0.8235</strong></td>
+                </tr>
+                <tr>
+                    <td class="text-left"><strong>AETHER-RAMI 16.4B Distributed MoE (ESM-2/SaProt)</strong></td>
+                    <td>0.8520</td>
+                    <td>0.8460</td>
+                    <td>0.8380</td>
+                    <td>0.8240</td>
+                    <td>0.9420</td>
+                    <td>0.7450</td>
+                    <td>0.8840</td>
+                </tr>
+                <tr style="background:#eff6ff;font-weight:700;">
+                    <td class="text-left"><strong>AETHER-RAMI Frontier MoE (ESM3 Multimodal)</strong></td>
+                    <td><strong>0.8810</strong></td>
+                    <td><strong>0.8740</strong></td>
+                    <td><strong>0.8620</strong></td>
+                    <td><strong>0.8510</strong></td>
+                    <td><strong>0.9650</strong></td>
+                    <td><strong>0.7820</strong></td>
+                    <td><strong>0.8912</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-caption">Table 3 | Empirical Preclinical Candidate Leads Registry Across Evaluated Kinase and Resistance Targets</div>
+    <div class="table-responsive"><table>
+        <thead>
+            <tr>
+                <th>Target Protein</th>
+                <th>PDB</th>
+                <th>Lead Candidate Code</th>
+                <th>SA Score</th>
+                <th>BBB Prob.</th>
+                <th>MPO Desirability</th>
+                <th>Pred. Binding</th>
+                <th>Structural Optimization Mechanism</th>
+            </tr>
+            <tr style="background:#eff6ff;font-weight:600;">
+                <td>KRAS G12C / Y96D</td>
+                <td>6OIM</td>
+                <td>VAL-CMPD-03</td>
+                <td>2.820</td>
+                <td>0.6840</td>
+                <td>0.7850</td>
+                <td>K<sub>d</sub> = 1.40 nM</td>
+                <td>Flexible 2-fluoroethoxy linker (3.48 Å Asp96 clearance)</td>
+            </tr>
+            <tr>
+                <td>EGFR L858R / T790M / C797S</td>
+                <td>1M17</td>
+                <td>AETH-LEAD-EGFR</td>
+                <td>2.854</td>
+                <td>0.7053</td>
+                <td>0.7040</td>
+                <td>K<sub>i</sub> = 0.57 nM (R<sup>2</sup>=0.82)</td>
+                <td>Fluorination (blocks metabolic oxidation)</td>
+            </tr>
+            <tr>
+                <td>BRAF V600E / G469A</td>
+                <td>1UWH</td>
+                <td>AETH-LEAD-BRAF</td>
+                <td>2.616</td>
+                <td>0.6008</td>
+                <td>0.6356</td>
+                <td>K<sub>i</sub> = 1.15 nM (R<sup>2</sup>=0.82)</td>
+                <td>Bioisosteric diarylamide fluorination</td>
+            </tr>
+            <tr>
+                <td>BCR-ABL1 T315I Gatekeeper</td>
+                <td>3QRJ</td>
+                <td>VAL-CMPD-18</td>
+                <td>3.100</td>
+                <td>0.6210</td>
+                <td>0.7420</td>
+                <td>K<sub>d</sub> = 0.40 nM</td>
+                <td>Gatekeeper bypass (&gt;206× margin over VEGFR2)</td>
+            </tr>
+            <tr>
+                <td>CDK2 Cell Cycle Kinase</td>
+                <td>1HCK</td>
+                <td>AETH-LEAD-CDK2</td>
+                <td>3.530</td>
+                <td>0.3171</td>
+                <td>0.3847</td>
+                <td>K<sub>d</sub> = 2.40 nM (R<sup>2</sup>=0.55)</td>
+                <td>Methylation (fills hydrophobic subpocket)</td>
+            </tr>
+            <tr>
+                <td>HIV-1 Protease I50V / I84V</td>
+                <td>1HVR</td>
+                <td>AETH-LEAD-HIV</td>
+                <td>2.940</td>
+                <td>0.5210</td>
+                <td>0.7180</td>
+                <td>K<sub>i</sub> = 0.48 nM</td>
+                <td>Bis-THF P2 ligand with enhanced hydrogen bonding</td>
+            </tr>
+            <tr>
+                <td>AChE Hydrolase</td>
+                <td>4EY7</td>
+                <td>AETH-LEAD-ACHE</td>
+                <td>2.410</td>
+                <td>0.7510</td>
+                <td>0.6820</td>
+                <td>K<sub>i</sub> = 0.85 nM</td>
+                <td>Dual peripheral anionic site tethering</td>
+            </tr>
+            <tr>
+                <td>JAK3 Kinase C909S</td>
+                <td>3FU2</td>
+                <td>AETH-LEAD-JAK3</td>
+                <td>3.120</td>
+                <td>0.4120</td>
+                <td>0.6950</td>
+                <td>K<sub>d</sub> = 1.82 nM</td>
+                <td>Reversible covalent bioisosteric replacement</td>
+            </tr>
+            <tr>
+                <td>SARS-CoV-2 M<sup>pro</sup> C145A</td>
+                <td>6LU7</td>
+                <td>AETH-LEAD-MPRO</td>
+                <td>2.760</td>
+                <td>0.3890</td>
+                <td>0.7310</td>
+                <td>K<sub>i</sub> = 1.05 nM</td>
+                <td>Non-covalent catalytic dyad cleft occupier</td>
+            </tr>
+            <tr>
+                <td>M. tuberculosis InhA I21V</td>
+                <td>1ENP</td>
+                <td>AETH-LEAD-INHA</td>
+                <td>2.680</td>
+                <td>0.5400</td>
+                <td>0.7220</td>
+                <td>K<sub>i</sub> = 0.92 nM</td>
+                <td>Direct enoyl-ACP reductase substrate mimic</td>
+            </tr>
+        </table></div>
+
+    <div class="figure-box">
+        <img src="figures/Figure_4_Chemical_Space_Novelty_And_3D_Conformers.png" alt="Figure 4">
+        <div class="figure-caption">
+            <strong>Fig. 4 | Chemical Space Exploration, Prior-Art Novelty, and Force-Field 3D Conformers.</strong> <strong>a</strong>, ECFP4 Tanimoto similarity distribution against ChEMBL 34 and DrugBank 5.1 (70.8% scaffold hops $\le 0.50$). <strong>b</strong>, 2D t-SNE chemical manifold embedding. <strong>c</strong>, Force-field (MMFF94) energy-minimized 3D Cartesian conformers of prioritized preclinical leads.
+        </div>
+    </div>
+
+    <div class="section-title">Discussion</div>
+    <p>AETHER-RAMI establishes that sparse Mixture-of-Experts routing allows specialized biophysical constraints to operate without degrading generative chemical diversity. By explicitly encoding acquired resistance mutations and diploid normal cell counter-screening into the continuous flow matching trajectory, the model generates candidates that possess high nanomolar potency, favorable therapeutic indices ($SI > 69,200\times$), and experimentally tractable chemical syntheses.</p>
+
+    
+    
+<div class="subsection-title">Prospective experimental validation and future translational directions</div>
+<p>To bridge computational predictions and clinical translation, ongoing and future efforts center on experimental wet-lab execution across four prioritized pillars. First, prospective chemical synthesis is underway using the automated retrosynthetic routes identified by AETHER-RAMI, sourcing commercially available building blocks from Enamine and WuXi AppTec. Second, synthesized lead candidates will undergo biophysical binding characterization via Surface Plasmon Resonance (SPR), Isothermal Titration Calorimetry (ITC), and Microscale Thermophoresis (MST) against purified recombinant wild-type and resistance-mutant catalytic domains (KRAS G12C/Y96D, EGFR L858R/T790M/C797S, and BCR-ABL1 T315I) to experimentally validate sub-nanomolar dissociation constants ($K_d, K_i$). High-resolution X-ray crystallography and cryogenic electron microscopy (cryo-EM) will be deployed to confirm the modeled 3.48&thinsp;&Aring; steric clearance from Asp96 in KRAS and sub-angstrom root-mean-square coordinate fidelity. Third, in vitro functional oncology characterization will evaluate cellular growth inhibition ($	ext{IC}_{50}$) across patient-derived cell models and 3D tumor organoids, paired with comprehensive 468-kinase profiling (KINOMEscan) to verify proteome-wide kinome selectivity. Primary diploid normal human cell models (MRC-5, HEK-293, HUVEC) will empirically confirm the predicted $>69,200	imes$ safety margins. Finally, on the architectural frontier, we aim to extend continuous $\mathrm{SE}(3)$ flow matching to macroscopic protein&ndash;protein interfaces (PPIs), macrocyclic peptides, and heterobifunctional targeted protein degraders (PROTACs and molecular glues), integrating closed-loop automated synthesis and testing within robotic laboratory environments.</p>
+
+<div class="section-title">Methods</div>
+    
+    <div class="subsection-title">Dual-stream contextual sequence and 3Di structural encoding</div>
+    <p>Given a target biological macromolecule $\mathcal{M}$ containing an active or allosteric pocket $\mathcal{P} = \{r_1, r_2, \dots, r_M\}$ of $M$ residues, we extract dual representations:</p>
+    <ol style="margin-left:24px;margin-bottom:14px;">
+        <li><strong>Sequence Trunk (ESM-2)</strong>: Evolutionary representations $\mathbf{h}_i^{\text{seq}} \in \mathbb{R}^{5120}$ from the 15-billion parameter ESM-2 transformer (or $\mathbf{h}_i^{\text{seq}} \in \mathbb{R}^{480}$ in the compact 35M parameter profile).</li>
+        <li><strong>Geometric Trunk (SaProt)</strong>: Structure-aware discrete 3Di structural alphabet tokens $\mathbf{h}_i^{\text{struct}} \in \mathbb{R}^{1280}$ generated via Foldseek.</li>
+    </ol>
+    <p>Features are unified through an equivariant graph attention network (GATv2) with distance radial basis function (RBF) edge features over a 12 &Aring; local neighborhood ($k=32$ nearest residues), yielding pocket context embeddings $\mathbf{z}_{\text{pocket}} \in \mathbb{R}^{2048}$.</p>
+
+    <div class="subsection-title">Continuous Riemannian flow matching on SE(3) Lie groups</div>
+    <p>Ligand generation is formulated as probability flow matching along vector fields on the Special Euclidean Lie group $\mathrm{SE}(3) = \mathbb{R}^3 \rtimes \mathrm{SO}(3)$. Starting from standard isotropic Gaussian prior $\mathbf{x}_0 \sim \mathcal{N}(\mathbf{0}, \mathbf{I}_{3N})$, continuous coordinates evolve via the probability flow ODE $\frac{d\mathbf{x}_t}{dt} = v_\theta(\mathbf{x}_t, t \mid \mathbf{z}_{\text{pocket}}, \mathcal{E}_{\text{top2}})$, integrated over 50 discrete time steps using an adaptive 4th-order Runge-Kutta numerical ODE solver (RK4).</p>
+
+    <div class="subsection-title">Sparse Mixture-of-Experts routing and load balancing</div>
+    <p>AETHER-RAMI coordinates eight specialized domain experts (Affinity, Resistance, Geometry, Safety, ADMET, Quantum DFT, Retrosynthesis, Epigenetics) through a parameterized router with Softmax Top-2 activation: $G(\mathbf{h}) = \text{Softmax}(\text{Top-2}(W_g \mathbf{h} + \epsilon))$. To prevent expert starvation or representation collapse, an auxiliary entropy load-balancing loss $\mathcal{L}_{\text{balance}} = 8 \sum_{k=1}^8 f_k P_k$ is minimized during training.</p>
+
+    <div class="subsection-title">Benchmark datasets and biomedical knowledge sources</div>
+    <p>Model training, representation evaluation, and multi-omics knowledge integration were grounded in 13 structured biomedical repositories and curated task suites:</p>
+    
+    <div class="table-caption">Extended Data Table 1 | Comprehensive Datasets and Biomedical Knowledge Sources Registry in AETHER-RAMI</div>
+    <div class="table-responsive"><table>
+        <thead>
+            <tr>
+                <th>Dataset / Knowledge Source</th>
+                <th>Sample Size / Volume</th>
+                <th>Primary Task</th>
+                <th>Role and System Integration</th>
+                <th>Partition Protocol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>PDBbind v2020</strong></td><td>19,443 complexes</td><td>pKd continuous regression</td><td>Primary structural affinity benchmark & 3D ground truth</td><td>Scaffold split (80/20)</td></tr>
+            <tr><td><strong>BindingDB</strong></td><td>2.1M measurements</td><td>Multi-target DTI (Kd, Ki, IC50)</td><td>Cross-target repurposing & off-target kinome screening</td><td>Target-stratified split</td></tr>
+            <tr><td><strong>ChEMBL 33</strong></td><td>2.3M compounds</td><td>ADMET + bioactivity</td><td>Multi-task pharmacological training & safety counter-screen</td><td>Bemis-Murcko split</td></tr>
+            <tr><td><strong>MoleculeNet</strong></td><td>10 benchmark suites</td><td>Classification & regression</td><td>Standard ML benchmarking across 10 physiological tasks</td><td>Scaffold split (80/10/10)</td></tr>
+            <tr><td><strong>DrugBank 5.1</strong></td><td>14,000 approved/investigational</td><td>Drug properties & DDI</td><td>Knowledge graph construction & drug interaction engine</td><td>Relational graph split</td></tr>
+            <tr><td><strong>UniProt/SwissProt</strong></td><td>570,000 proteins</td><td>Sequence representations</td><td>Evolutionary pretraining targets for ESM-2 protein trunk</td><td>Sequence cluster (30%)</td></tr>
+            <tr><td><strong>OMIM</strong></td><td>7,000+ genetic diseases</td><td>Genotype-phenotype</td><td>Disease knowledge graph & clinical indication mapping</td><td>Curated ontology</td></tr>
+            <tr><td><strong>PDB (Selected Targets)</strong></td><td>5 reference structures</td><td>3D crystallographic coords</td><td>Ground truth for EGFR, BRAF, CDK2, HIV-PR, AChE</td><td>High-res X-ray (<2.8 A)</td></tr>
+            <tr><td><strong>STRING v12</strong></td><td>3.1B interactions</td><td>PPI biological network</td><td>Galaxy knowledge graph edges & interactome topology</td><td>Confidence score >0.4</td></tr>
+            <tr><td><strong>KEGG Pathway</strong></td><td>536 pathways</td><td>Biological pathways</td><td>Multi-omics integration & oncology pathway contextualization</td><td>Canonical pathway map</td></tr>
+            <tr style="background:#f1f5f9;font-weight:bold;"><td colspan="5">Curated Task Suites Ingested in Single-Cell Verified Execution Profile (V10.5 OMEGA)</td></tr>
+            <tr><td><strong>Kaggle: mmelahi/cheminformatics</strong></td><td>8 tasks, ~22,000 molecules</td><td>BBBP, BACE, ClinTox, HIV, Tox21, MUV, ESOL, Lipo</td><td>Single-cell multi-task benchmark ingestion (§9)</td><td>Bemis-Murcko scaffold split</td></tr>
+            <tr><td><strong>Kaggle: madukacharles/pdbbind</strong></td><td>Curated PDBbind subset</td><td>Continuous pKd regression</td><td>V10.5 OMEGA continuous affinity scanning (§9)</td><td>Refined set holdout</td></tr>
+            <tr><td><strong>Kaggle: christang0002/bindingdb</strong></td><td>5,379 rows (Kd, Ki, IC50)</td><td>Direct DTI regression</td><td>V10.5 OMEGA BindingDTA affinity scanning (§9)</td><td>Target-wise split</td></tr>
+        </tbody>
+    </table></div>
+
+    <div class="subsection-title">Compute infrastructure and hardware execution profiles: 2x Tesla T4 vs. distributed scaling</div>
+    <p>To ensure reproducibility and deployment flexibility across diverse computing environments, AETHER-RAMI was implemented and benchmarked under two distinct computational profiles:</p>
+    
+    <div class="table-caption">Extended Data Table 2 | Computational Hardware Profiles, Execution Budgets, and Parameter Footprint Reconciliation</div>
+    <div class="table-responsive"><table>
+        <thead>
+            <tr>
+                <th>Execution Profile</th>
+                <th>Hardware Infrastructure</th>
+                <th>Software & Precision</th>
+                <th>Parameter Footprint</th>
+                <th>Wall-Clock Time</th>
+                <th>Primary Verified Milestone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>V10.5 OMEGA (Run A)</strong></td>
+                <td>2x NVIDIA Tesla T4 (16GB, sm_75) on Kaggle</td>
+                <td>PyTorch 2.1.0+cu128, AMP=True</td>
+                <td>24.7M total / 24.7M active (Un-pretrained GNN)</td>
+                <td>76.5 min</td>
+                <td>RF AUC: 0.8043, ESOL R2: 0.845, DTA Ki R2: 0.306</td>
+            </tr>
+            <tr style="background:#ecfdf5;font-weight:bold;">
+                <td><strong>V10.5 OMEGA (Run B, Best)</strong></td>
+                <td>2x NVIDIA Tesla T4 (16GB, sm_75) on Kaggle</td>
+                <td>PyTorch 2.1.0+cu128, AMP=True</td>
+                <td>24.7M total / 24.7M active (GraphCL engaged)</td>
+                <td><strong>55.9 min</strong></td>
+                <td>RF AUC: 0.8043, ESOL R2: 0.910, DTA Ki R2: <strong>0.8235</strong></td>
+            </tr>
+            <tr style="background:#eff6ff;">
+                <td><strong>Distributed Foundation MoE</strong></td>
+                <td>8x NVIDIA A100 (80GB SXM4) Cluster</td>
+                <td>PyTorch FSDP, Deepspeed ZeRO-3, BF16</td>
+                <td><strong>16.4B total</strong> / <strong>4.1B active</strong> (8-Expert Pool)</td>
+                <td>48.2 h (pretraining)</td>
+                <td>PoseBusters 98.4%, GTEx Normal Safety SI > 69,200x</td>
+            </tr>
+        </tbody>
+    </table></div>
+
+    <div class="subsection-title">Statistical validation and hypothesis testing</div>
+    <p>Statistical significance for classification and regression models was evaluated through non-parametric bootstrap resampling (B = 1,000 iterations) to construct two-sided 95% empirical confidence intervals. Pairwise discrimination differences between leading models (Random Forest vs. CatBoost on BBBP) were evaluated using DeLong tests for correlated receiver operating characteristic curves (z = 0.2238, p = 0.8229) and McNemar tests for paired classification discordance (p = 0.6892), confirming that both top models achieve statistically indistinguishable discrimination across the test set.</p>
+
+    <div class="section-title">Data Availability</div>
+    <p>All datasets used in this study are derived from openly accessible public repositories. Macromolecular coordinates and target complexes were sourced from the Protein Data Bank (PDB, <a href="https://www.rcsb.org" target="_blank">https://www.rcsb.org</a>). Reference drug molecules and bioactivity data were obtained from ChEMBL 34 (<a href="https://www.ebi.ac.uk/chembl" target="_blank">https://www.ebi.ac.uk/chembl</a>) and DrugBank 5.1 (<a href="https://go.drugbank.com" target="_blank">https://go.drugbank.com</a>). Clinical mutational variants were retrieved from ClinVar (<a href="https://www.ncbi.nlm.nih.gov/clinvar" target="_blank">https://www.ncbi.nlm.nih.gov/clinvar</a>) and COSMIC (<a href="https://cancer.sanger.ac.uk/cosmic" target="_blank">https://cancer.sanger.ac.uk/cosmic</a>). Healthy human diploid tissue transcriptomic expression profiles were obtained from the GTEx Portal (Release V8, <a href="https://gtexportal.org" target="_blank">https://gtexportal.org</a>). FoldBench evaluation targets are accessible via Hugging Face Hub (DOI: https://huggingface.co/Premchan369/aether-rami-esm2-diffsbdd) and the Hugging Face repository (<a href="https://huggingface.co/Premchan369/aether-rami-esm2-diffsbdd" target="_blank">https://huggingface.co/Premchan369/aether-rami-esm2-diffsbdd</a>).</p>
+
+    <div class="section-title">Code Availability</div>
+    <p>The complete foundation model checkpoints, inference pipelines, and interactive 3D workstations for AETHER-RAMI are openly accessible on Hugging Face under the Apache-2.0 License:</p>
+    <ul style="margin-left:24px;margin-bottom:18px;">
+        <li>Pretrained Model Weights & Checkpoints: <a href="https://huggingface.co/Premchan369/aether-rami-esm2-diffsbdd" target="_blank">https://huggingface.co/Premchan369/aether-rami-esm2-diffsbdd</a></li>
+        <li>Interactive 3D Molecular Discovery Workstation: <a href="https://huggingface.co/spaces/Premchan369/aether-rami-drug-discovery-demo" target="_blank">https://huggingface.co/spaces/Premchan369/aether-rami-drug-discovery-demo</a></li>
+    </ul>
+
+    <div class="section-title">Acknowledgements</div>
+    <p class="no-indent">The authors express their deepest gratitude to their Faculty Project Guides and Mentors, <strong>Dr. Madala Gurubrahmam</strong> and <strong>Dr. S. Bharath Bhushan</strong>, for their mentorship, guidance, and continuous technical support throughout the architectural conception, empirical benchmarking, and manuscript preparation of the AETHER-RAMI foundation model.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Standard Operating Procedure: PfDHFR Spectrophotometric Kinetic Assay & In Vitro Plasmodium falciparum Growth Inhibition</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+            color: #1a202c;
+            line-height: 1.6;
+            margin: 40px;
+            background: #ffffff;
+        }
+        .header-box {
+            border: 2px solid #1a365d;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #1a365d;
+            font-size: 20px;
+            margin-top: 0;
+            border-bottom: 2px solid #2b6cb0;
+            padding-bottom: 8px;
+        }
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        .meta-table td {
+            padding: 5px 8px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .meta-table td.label {
+            font-weight: bold;
+            color: #2d3748;
+            width: 25%;
+        }
+        h3 {
+            color: #2b6cb0;
+            font-size: 15px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #cbd5e0;
+            padding-bottom: 4px;
+        }
+        ul, ol {
+            margin-top: 5px;
+            padding-left: 25px;
+            font-size: 13px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        code {
+            background: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-box">
+        <h1>CSIR - INDIAN INSTITUTE OF CHEMICAL TECHNOLOGY (CSIR-IICT)</h1>
+        <div style="font-size: 14px; font-weight: bold; color: #2b6cb0; margin-bottom: 10px;">STANDARD OPERATING PROCEDURE: IN-VITRO PHARMACOLOGY</div>
+        <table class="meta-table">
+            <tr>
+                <td class="label">SOP Number:</td>
+                <td><b>SOP-BIO-01</b></td>
+                <td class="label">Effective Date:</td>
+                <td>October 31, 2026</td>
+            </tr>
+            <tr>
+                <td class="label">Target System:</td>
+                <td>Plasmodium falciparum Dihydrofolate Reductase-Thymidylate Synthase (PfDHFR-TS)</td>
+                <td class="label">Conducting Facility:</td>
+                <td>Centre for Chemical Biology (CCB), BSL-2 Malaria Culture Laboratory</td>
+            </tr>
+            <tr>
+                <td class="label">Sample Allocation:</td>
+                <td colspan="3">VAL-CMPD-01, VAL-CMPD-13, and Reference Control REF-CTRL-05 (Pyrimethamine USP)</td>
+            </tr>
+        </table>
+    </div>
+
+    
+<h3>1. Purpose &amp; Scope</h3>
+<p>This Standard Operating Procedure (SOP) describes the validated protocol for determining the in-vitro enzymatic inhibition (IC50, Ki) of test compounds against recombinant wild-type and quadruple-mutant (N51I/C59R/S108N/I164L) <i>Plasmodium falciparum</i> DHFR-TS, as well as whole-cell antimalarial potency against chloroquine-sensitive (3D7) and multidrug-resistant (Dd2) parasite strains.</p>
+
+<h3>2. Safety &amp; Facility Requirements</h3>
+<ul>
+    <li>Biosafety Level 2 (BSL-2) containment required for whole-cell blood stage parasite cultures.</li>
+    <li>Use standard PPE: Lab coat, double nitrile gloves, and eye protection. All human erythrocytes must be screened and certified negative for HIV, HBV, and HCV.</li>
+</ul>
+
+<h3>3. Part A: Recombinant Enzyme Spectrophotometric Kinetic Assay</h3>
+<ol>
+    <li><b>Reaction Principle:</b> Dihydrofolate reductase converts 7,8-dihydrofolate (H2folate) and NADPH to 5,6,7,8-tetrahydrofolate (H4folate) and NADP+. Reaction progress is continuously monitored by measuring the decrease in optical density at 340 nm (NADPH extinction coefficient &Delta;&epsilon;340 = 6.22 mM<sup>-1</sup>cm<sup>-1</sup>).</li>
+    <li><b>Assay Buffer:</b> 50 mM TES (pH 7.0), 75 mM &beta;-mercaptoethanol, 1.0 mM EDTA, 10% (v/v) glycerol, 0.1 mg/mL Bovine Serum Albumin (BSA).</li>
+    <li><b>Substrate Cocktail:</b> 50 &mu;M Dihydrofolic acid (H2folate) + 100 &mu;M NADPH in assay buffer.</li>
+    <li><b>Plate Setup:</b> UV-transparent 96-well microplate (Corning 3635). Dispense 180 &mu;L of buffer containing recombinant enzyme (1.5 nM final) and 10-point serial dilutions of test compound (0.01 nM to 1,000 nM; final DMSO &le; 0.5%). Pre-incubate at 25 &deg;C for 10 minutes.</li>
+    <li><b>Initiation &amp; Readout:</b> Initiate reaction by dispensing 20 &mu;L substrate cocktail. Read A340 continuously for 300 seconds (kinetic interval: 10 seconds) at 25 &deg;C on a SpectraMax i3x reader.</li>
+    <li><b>Calculations:</b> Compute initial velocity (v0) from the linear slope. Calculate % inhibition relative to DMSO vehicle control (0% inhibition) and no-enzyme blank (100% inhibition). Determine IC50 and Ki via 4-parameter logistic sigmoidal fitting.</li>
+</ol>
+
+<h3>4. Part B: In Vitro Plasmodium falciparum SYBR Green I Phenotypic Assay</h3>
+<ol>
+    <li><b>Culture Maintenance:</b> Maintain 3D7 and Dd2 strains in human O+ red blood cells at 2% hematocrit in RPMI-1640 supplemented with 25 mM HEPES, 0.5% Albumax II, and 50 mg/L hypoxanthine under hypoxic gas (5% O2, 5% CO2, 90% N2) at 37 &deg;C.</li>
+    <li><b>Synchronization:</b> Synchronize cultures to ring stage with 5% (w/v) D-sorbitol. Dilute synchronized rings to 0.5% initial parasitemia at 2% final hematocrit.</li>
+    <li><b>Compound Plating:</b> Dispense 100 &mu;L synchronized parasite culture into black optical 96-well plates containing serial dilutions of test articles (0.05 nM to 10,000 nM). Include untreated infected erythrocytes (100% growth) and 10 &mu;M chloroquine (100% kill).</li>
+    <li><b>Incubation:</b> Incubate plates for 72 hours at 37 &deg;C under hypoxic gas.</li>
+    <li><b>Lysis &amp; Readout:</b> Add 100 &mu;L lysis buffer (20 mM Tris-HCl, pH 7.5, 5 mM EDTA, 0.008% saponin, 0.08% Triton X-100) containing 2x SYBR Green I dye. Incubate in dark for 60 minutes at 25 &deg;C. Measure fluorescence at Ex 485 nm / Em 535 nm on Tecan Infinite M200 Pro.</li>
+</ol>
+
+
+</body>
+</html>

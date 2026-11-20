@@ -1,0 +1,42 @@
+{
+  "manifest_title": "AETHER-RAMI Benchmark Data Split & Leakage Audit Manifest",
+  "total_benchmark_instances": 101,
+  "split_configurations": {
+    "random_split": {
+      "train_count": 80,
+      "test_count": 21,
+      "seed": 42
+    },
+    "scaffold_split": {
+      "train_scaffolds": 45,
+      "test_scaffolds": 15,
+      "test_instances": 25
+    },
+    "target_held_out_split": {
+      "held_out_targets": [
+        "CFTR",
+        "GLP1R",
+        "HBS"
+      ],
+      "test_instances": 18
+    },
+    "temporal_split": {
+      "train_cutoff_year": 2022,
+      "test_discovery_years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ]
+    }
+  },
+  "scaffold_leakage_assessment": {
+    "compounds_with_tanimoto_gte_085": 15,
+    "leakage_percentage": 14.85,
+    "stratified_novel_scaffold_performance": {
+      "r": 0.742,
+      "r2": 0.551,
+      "rmse": 0.584
+    }
+  }
+}

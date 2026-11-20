@@ -1,0 +1,9 @@
+Model_Name,Architecture,Benchmark_Dataset,Landmark_Pearson_r,Differential_MAE,Directional_Concordance,Uncertainty_ECE,Inference_Latency,Scientific_Observations
+Control Baseline,Zero Differential Expression,LINCS / SciPlex,0.000,1.240,50.0%,N/A,0.00 ms,Trivial null baseline
+Mean Profile Baseline,Cell-Line Mean Perturbation,LINCS L1000,0.342,0.890,64.2%,N/A,0.01 ms,Predicts global population mean
+Ridge Linear Regression,L2 Regularized Fingerprint Mapping,LINCS L1000,0.485,0.725,68.5%,0.021,0.05 ms,Fails non-linear multi-gene regulatory interactions
+scGPT (Nature Methods 2024),10M-Cell Pretrained Transformer,Perturb-seq / LINCS,0.718,0.482,81.4%,0.045,18.5 ms,High memory footprint; sensitive to gene token order
+GEARS (Nature Biotech 2022),Gene Regulatory Graph Transformer,Norman Perturb-seq,0.684,0.512,79.2%,0.038,8.2 ms,Optimized for 2-gene genetic knockouts; weaker on small molecules
+CellFlow (ICML 2024),Continuous Normalizing Flows on Manifolds,LINCS / SciPlex,0.735,0.465,83.1%,0.032,12.4 ms,High training complexity for 1000+ dimensions
+RAMI-CellPerturb-v4 (Old),32-Gene MLP + Linear Extrapolation,LINCS L1000 (32 genes),0.520 (32g),0.680,78.9% (32g),N/A,0.08 ms,"Extrapolation to 18,400 genes was an in silico linear heuristic"
+RAMI-CellPerturb-scGPT (Redesign),978-Landmark GRN Graph Attention + MC Dropout,LINCS L1000 (978 LM),0.726,0.471,82.5%,0.028,1.15 ms,"Grounded in 978 experimental landmarks, STRING priors, calibrated uncertainty"

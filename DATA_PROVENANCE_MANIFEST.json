@@ -1,0 +1,67 @@
+{
+  "manifest_version": "1.0.0",
+  "timestamp_utc": "2026-11-01T08:24:33Z",
+  "data_governance": "AETHER-RAMI Scientific Verification Protocol",
+  "source_provenance": {
+    "ChEMBL": {
+      "type": "REST API",
+      "license": "CC BY-SA 3.0",
+      "citation": "Mendez et al., Nucleic Acids Res 2019"
+    },
+    "RCSB_PDB": {
+      "type": "REST API",
+      "license": "CC0 1.0",
+      "citation": "Berman et al., Nucleic Acids Res 2000"
+    },
+    "PubChem": {
+      "type": "PUG-REST API",
+      "license": "Public Domain (NIH)",
+      "citation": "Kim et al., Nucleic Acids Res 2023"
+    },
+    "UniProt": {
+      "type": "REST API",
+      "license": "CC BY 4.0",
+      "citation": "UniProt Consortium, Nucleic Acids Res 2023"
+    },
+    "AlphaFold_DB": {
+      "type": "REST API",
+      "license": "CC BY 4.0",
+      "citation": "Varadi et al., Nucleic Acids Res 2022"
+    },
+    "PubMed": {
+      "type": "E-utilities",
+      "license": "NLM / NCBI Terms",
+      "citation": "Sayers et al., Nucleic Acids Res 2022"
+    },
+    "STRING_DB": {
+      "type": "REST API",
+      "license": "CC BY 4.0",
+      "citation": "Szklarczyk et al., Nucleic Acids Res 2023"
+    },
+    "Reactome": {
+      "type": "REST API",
+      "license": "CC BY 4.0",
+      "citation": "Gillespie et al., Nucleic Acids Res 2022"
+    },
+    "ClinicalTrials": {
+      "type": "API v2",
+      "license": "Public Domain",
+      "citation": "U.S. National Library of Medicine"
+    },
+    "QCArchive": {
+      "type": "Reference Benchmark",
+      "license": "BSD-3-Clause",
+      "citation": "Smith et al., J Chem Phys 2021"
+    },
+    "BindingDB": {
+      "type": "Curated Dataset",
+      "license": "CC BY 3.0",
+      "citation": "Gilson et al., Nucleic Acids Res 2016"
+    },
+    "LINCS_DepMap": {
+      "type": "Processed Matrix",
+      "license": "CC BY 4.0",
+      "citation": "Subramanian et al., Cell 2017; Tsherniak et al., Cell 2017"
+    }
+  }
+}

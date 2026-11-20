@@ -1,0 +1,6 @@
+test_case,tested_endpoint,simulated_error,retry_policy,recovery_result,offline_fallback_triggered
+HTTP 429 Rate Limit Exceeded,ChEMBL / UniProt,429 Too Many Requests,"Exponential backoff (1s, 2s, 4s)",PASSED (Recovered on 2nd retry),False
+HTTP 504 Gateway Timeout (> 30s),PubMed E-utilities,504 Gateway Timeout,Timeout set to 30.0s with 1 retry,PASSED (Fallback to local SHA-256 cache),True
+Malformed JSON Response Payload,AlphaFold DB REST,JSONDecodeError: Unterminated string,Schema validation check,PASSED (Captured gracefully; logged error),True
+Complete Network Disconnection,All 12 Adapters,ConnectionError / DNS resolution failure,Activate offline cached archive,PASSED (100% offline operational continuity),True
+Target Identifier Not Found,RCSB PDB API,404 Not Found for INVALID_PDB,Mark target UNVERIFIED; do not crash,PASSED (Handled safely with error dictionary),False

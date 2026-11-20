@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Standard Operating Procedure: Intact Protein Mass Spectrometry Covalent Adduct Formation & NCI-H358 Antiproliferation Assay</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+            color: #1a202c;
+            line-height: 1.6;
+            margin: 40px;
+            background: #ffffff;
+        }
+        .header-box {
+            border: 2px solid #1a365d;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #1a365d;
+            font-size: 20px;
+            margin-top: 0;
+            border-bottom: 2px solid #2b6cb0;
+            padding-bottom: 8px;
+        }
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        .meta-table td {
+            padding: 5px 8px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .meta-table td.label {
+            font-weight: bold;
+            color: #2d3748;
+            width: 25%;
+        }
+        h3 {
+            color: #2b6cb0;
+            font-size: 15px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #cbd5e0;
+            padding-bottom: 4px;
+        }
+        ul, ol {
+            margin-top: 5px;
+            padding-left: 25px;
+            font-size: 13px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        code {
+            background: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-box">
+        <h1>CSIR - INDIAN INSTITUTE OF CHEMICAL TECHNOLOGY (CSIR-IICT)</h1>
+        <div style="font-size: 14px; font-weight: bold; color: #2b6cb0; margin-bottom: 10px;">STANDARD OPERATING PROCEDURE: IN-VITRO PHARMACOLOGY</div>
+        <table class="meta-table">
+            <tr>
+                <td class="label">SOP Number:</td>
+                <td><b>SOP-BIO-03</b></td>
+                <td class="label">Effective Date:</td>
+                <td>October 31, 2026</td>
+            </tr>
+            <tr>
+                <td class="label">Target System:</td>
+                <td>KRAS G12C Switch-II Pocket Covalent Target</td>
+                <td class="label">Conducting Facility:</td>
+                <td>Centre for Chemical Biology, Bio-Organic Mass Spectrometry & Molecular Oncology Lab</td>
+            </tr>
+            <tr>
+                <td class="label">Sample Allocation:</td>
+                <td colspan="3">VAL-CMPD-03, VAL-CMPD-15, and Reference Control REF-CTRL-07 (Sotorasib Reference)</td>
+            </tr>
+        </table>
+    </div>
+
+    
+<h3>1. Purpose &amp; Scope</h3>
+<p>To measure the rate and extent of irreversible covalent bond formation between electrophilic acrylamide test inhibitors and Cysteine-12 of recombinant GDP-bound KRAS G12C, followed by cellular antiproliferative validation in KRAS G12C mutant non-small cell lung cancer cells (NCI-H358).</p>
+
+<h3>2. Part A: Intact Protein ESI-TOF Mass Spectrometry Covalent Kinetics</h3>
+<ol>
+    <li><b>Protein Preparation:</b> Recombinant human KRAS G12C (amino acids 1-169, GDP-loaded) at 5.0 &mu;M in 20 mM HEPES (pH 7.5), 150 mM NaCl, 1.0 mM MgCl2.</li>
+    <li><b>Reaction Incubation:</b> Incubate KRAS G12C protein with 10.0 &mu;M test compound (VAL-CMPD-03, REF-CTRL-07) at 25 &deg;C. Quench aliquots at t = 15, 30, 60, and 120 minutes with 0.5% formic acid.</li>
+    <li><b>LC-MS Desalting &amp; Acquisition:</b> Inject 5 &mu;L on an Agilent 6545 Q-TOF LC/MS equipped with a PLRP-S column (1000 &Aring;, 5 &mu;m, 2.1 x 50 mm). Run rapid desalting gradient (5% to 90% MeCN + 0.1% FA over 3 minutes at 0.5 mL/min).</li>
+    <li><b>Deconvolution:</b> Deconvolute intact mass spectra using Agilent MassHunter Maximum Entropy algorithm (mass range: 18,000 to 22,000 Da).</li>
+    <li><b>Quantification:</b> Compute % covalent modification:
+        <br><code>% Adduct = [Area(KRAS + Adduct) / (Area(Unmodified KRAS) + Area(KRAS + Adduct))] x 100</code>.
+        <br>Target cutoff: &gt; 95% covalent adduct formation at 60 minutes.</li>
+</ol>
+
+<h3>3. Part B: NCI-H358 Cellular Antiproliferation Assay (CellTiter-Glo)</h3>
+<ol>
+    <li><b>Cell Lines:</b> NCI-H358 (heterozygous KRAS G12C mutant lung adenocarcinoma) and A549 (KRAS G12S control lung carcinoma for selectivity assessment).</li>
+    <li><b>Seeding:</b> Seed 2,000 cells/well in 90 &mu;L complete RPMI-1640 (10% FBS) in white 96-well optical plates. Incubate overnight at 37 &deg;C, 5% CO2.</li>
+    <li><b>Treatment:</b> Add 10 &mu;L of 10x compound serial dilutions (0.1 nM to 10,000 nM; final 0.1% DMSO). Incubate for 72 hours.</li>
+    <li><b>Viability Readout:</b> Equilibrate plates to 25 &deg;C for 30 minutes. Add 100 &mu;L CellTiter-Glo reagent. Shake for 2 minutes and incubate for 10 minutes. Read luminescence on a microplate luminometer. Compute GI50 using non-linear curve fitting.</li>
+</ol>
+
+
+</body>
+</html>

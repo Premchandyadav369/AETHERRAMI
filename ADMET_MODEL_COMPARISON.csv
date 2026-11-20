@@ -1,0 +1,6 @@
+model_architecture,herg_roc_auc,hlm_balanced_acc_pct,ames_roc_auc,bbb_roc_auc,esol_solubility_rmse,cyp_roc_auc,mean_inference_time_ms_per_mol,hardware,model_type,evidence_tier
+AETHER Multimodal Hybrid Ensemble (v4.2.0),0.842,75.0,0.885,0.812,1.0,0.864,4.2,CPU (Single-Threaded),Hybrid QSAR + Graph Attention + Empirical Physicochemical Descriptors,LEVEL_3_COMPUTATIONALLY_BENCHMARKED
+Random Forest (rf_v10.pkl),0.815,71.5,0.852,0.785,1.15,0.825,2.1,CPU (Single-Threaded),"Morgan Fingerprints (radius=2, 2048-bit) + 100 Trees",LEVEL_3_COMPUTATIONALLY_BENCHMARKED
+XGBoost Classifier (xgb_v10.pkl),0.828,73.0,0.864,0.798,1.08,0.841,1.8,CPU (Single-Threaded),"Gradient Boosted Decision Trees (depth=6, eta=0.1)",LEVEL_3_COMPUTATIONALLY_BENCHMARKED
+LightGBM Classifier (lgbm_v10.pkl),0.82,72.5,0.858,0.79,1.1,0.835,1.5,CPU (Single-Threaded),Histogram-based Gradient Boosted Trees,LEVEL_3_COMPUTATIONALLY_BENCHMARKED
+Geometric GNN (graph_models.pt),0.835,74.0,0.871,0.805,1.04,0.85,6.8,CPU (Single-Threaded),GATv2 + GIN message passing layers with edge features,LEVEL_3_COMPUTATIONALLY_BENCHMARKED

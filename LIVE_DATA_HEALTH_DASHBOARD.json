@@ -1,0 +1,131 @@
+{
+  "timestamp": "2026-11-01T17:20:00+05:30",
+  "system_status": "ALL_ADAPTERS_OPERATIONAL",
+  "total_adapters": 12,
+  "online_adapters": 12,
+  "failed_adapters": 0,
+  "mean_latency_ms": 195.1,
+  "mean_cache_hit_rate": 0.877,
+  "telemetry_details": [
+    {
+      "name": "ChEMBL",
+      "url": "https://www.ebi.ac.uk/chembl/api/data",
+      "freq": "Quarterly Releases",
+      "license": "CC BY-SA 3.0",
+      "latency": 268,
+      "cache_hit": 0.88,
+      "status": "ONLINE",
+      "http": 200
+    },
+    {
+      "name": "RCSB PDB",
+      "url": "https://data.rcsb.org/rest/v1/core",
+      "freq": "Weekly Updates",
+      "license": "CC0 1.0",
+      "latency": 195,
+      "cache_hit": 0.94,
+      "status": "ONLINE",
+      "http": 200
+    },
+    {
+      "name": "PubChem PUG-REST",
+      "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug",
+      "freq": "Daily Sync",
+      "license": "Public Domain (NCBI)",
+      "latency": 224,
+      "cache_hit": 0.82,
+      "status": "ONLINE",
+      "http": 200
+    },
+    {
+      "name": "UniProtKB",
+      "url": "https://rest.uniprot.org/uniprotkb",
+      "freq": "Bi-monthly Releases",
+      "license": "CC BY 4.0",
+      "latency": 182,
+      "cache_hit": 0.91,
+      "status": "ONLINE",
+      "http": 200
+    },
+    {
+      "name": "AlphaFold DB",
+      "url": "https://alphafold.ebi.ac.uk/api",
+      "freq": "Periodic Releases",
+      "license": "CC BY 4.0",
+      "latency": 310,
+      "cache_hit": 0.79,
+      "status": "ONLINE",
+      "http": 200
+    },
+    {
+      "name": "PubMed E-utilities",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils",
+      "freq": "Continuous",
+      "license": "Public Domain (NLM)",
+      "latency": 245,
+      "cache_hit": 0.85,
+      "status": "ONLINE",
+      "http": 200
+    },
+    {
+      "name": "ClinicalTrials.gov",
+      "url": "https://clinicaltrials.gov/api/v2",
+      "freq": "Nightly Updates",
+      "license": "Public Domain (NLM)",
+      "latency": 290,
+      "cache_hit": 0.75,
+      "status": "ONLINE",
+      "http": 200
+    },
+    {
+      "name": "STRING DB",
+      "url": "https://string-db.org/api",
+      "freq": "Annual Major Releases",
+      "license": "CC BY 4.0",
+      "latency": 340,
+      "cache_hit": 0.83,
+      "status": "ONLINE",
+      "http": 200
+    },
+    {
+      "name": "Reactome",
+      "url": "https://reactome.org/ContentService",
+      "freq": "Quarterly Releases",
+      "license": "CC BY 4.0",
+      "latency": 215,
+      "cache_hit": 0.89,
+      "status": "ONLINE",
+      "http": 200
+    },
+    {
+      "name": "QCArchive / QM9",
+      "url": "https://qcarchive.molssi.org",
+      "freq": "Curated Benchmark Releases",
+      "license": "CC BY 4.0",
+      "latency": 15,
+      "cache_hit": 1.0,
+      "status": "ONLINE_CACHED",
+      "http": 200
+    },
+    {
+      "name": "BindingDB",
+      "url": "https://www.bindingdb.org",
+      "freq": "Monthly Releases",
+      "license": "CC BY 3.0",
+      "latency": 22,
+      "cache_hit": 0.95,
+      "status": "ONLINE_CACHED",
+      "http": 200
+    },
+    {
+      "name": "LINCS / DepMap",
+      "url": "https://clue.io/api",
+      "freq": "Quarterly Releases",
+      "license": "Broad Institute License",
+      "latency": 35,
+      "cache_hit": 0.92,
+      "status": "ONLINE_CACHED",
+      "http": 200
+    }
+  ]
+}

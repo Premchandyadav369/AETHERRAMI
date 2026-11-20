@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Standard Operating Procedure: Recombinant InhA Spectrophotometric Assay & M. tuberculosis H37Rv Alamar Blue MIC Assay</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+            color: #1a202c;
+            line-height: 1.6;
+            margin: 40px;
+            background: #ffffff;
+        }
+        .header-box {
+            border: 2px solid #1a365d;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #1a365d;
+            font-size: 20px;
+            margin-top: 0;
+            border-bottom: 2px solid #2b6cb0;
+            padding-bottom: 8px;
+        }
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        .meta-table td {
+            padding: 5px 8px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .meta-table td.label {
+            font-weight: bold;
+            color: #2d3748;
+            width: 25%;
+        }
+        h3 {
+            color: #2b6cb0;
+            font-size: 15px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #cbd5e0;
+            padding-bottom: 4px;
+        }
+        ul, ol {
+            margin-top: 5px;
+            padding-left: 25px;
+            font-size: 13px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        code {
+            background: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-box">
+        <h1>CSIR - INDIAN INSTITUTE OF CHEMICAL TECHNOLOGY (CSIR-IICT)</h1>
+        <div style="font-size: 14px; font-weight: bold; color: #2b6cb0; margin-bottom: 10px;">STANDARD OPERATING PROCEDURE: IN-VITRO PHARMACOLOGY</div>
+        <table class="meta-table">
+            <tr>
+                <td class="label">SOP Number:</td>
+                <td><b>SOP-BIO-02</b></td>
+                <td class="label">Effective Date:</td>
+                <td>October 31, 2026</td>
+            </tr>
+            <tr>
+                <td class="label">Target System:</td>
+                <td>Mycobacterium tuberculosis InhA Enoyl-ACP Reductase</td>
+                <td class="label">Conducting Facility:</td>
+                <td>Centre for Chemical Biology (CCB), BSL-3 Mycobacterial Testing Unit</td>
+            </tr>
+            <tr>
+                <td class="label">Sample Allocation:</td>
+                <td colspan="3">VAL-CMPD-02, VAL-CMPD-14, and Reference Control REF-CTRL-06 (Isoniazid IP)</td>
+            </tr>
+        </table>
+    </div>
+
+    
+<h3>1. Purpose &amp; Scope</h3>
+<p>To evaluate direct binding inhibitors of <i>Mycobacterium tuberculosis</i> InhA that act independently of catalase-peroxidase (KatG) activation, circumventing primary clinical isoniazid resistance.</p>
+
+<h3>2. Safety &amp; Containment</h3>
+<ul>
+    <li>Mycobacterial culture work MUST be conducted within certified Biosafety Level 3 (BSL-3) negative pressure suites with dedicated biosafety cabinets (Class II Type A2/B2).</li>
+    <li>N95/P100 respirators and full protective suits mandatory.</li>
+</ul>
+
+<h3>3. Part A: Recombinant InhA Spectrophotometric Kinetic Assay</h3>
+<ol>
+    <li><b>Principle:</b> InhA catalyzes the NADH-dependent reduction of 2-trans-enoyl-ACP. Reaction velocity is quantified by the decrease in absorbance at 340 nm (&Delta;&epsilon;340 = 6.22 mM<sup>-1</sup>cm<sup>-1</sup>) using trans-2-dodecenoyl-CoA (DD-CoA) as substrate analog.</li>
+    <li><b>Reaction Mixture:</b> 30 mM PIPES (pH 6.8), 100 mM NaCl, 0.05% Tween-20, 200 &mu;M NADH, 50 &mu;M DD-CoA, and 50 nM recombinant InhA.</li>
+    <li><b>Execution:</b> Pre-incubate enzyme with test compound (VAL-CMPD-02 or VAL-CMPD-14, 0.1 nM to 10 &mu;M) for 15 minutes at 25 &deg;C. Add DD-CoA substrate and record A340 for 5 minutes. Calculate IC50 and direct-binding inhibition percentage.</li>
+</ol>
+
+<h3>4. Part B: M. tuberculosis H37Rv Microplate Alamar Blue Assay (MABA)</h3>
+<ol>
+    <li><b>Inoculum Preparation:</b> Culture <i>M. tuberculosis</i> H37Rv in Middlebrook 7H9 broth supplemented with 0.2% glycerol, 0.05% Tween-80, and 10% OADC enrichment. Adjust turbidity to McFarland standard 1.0 (approx. 3 x 10<sup>7</sup> CFU/mL) and dilute 1:20 in 7H9 broth.</li>
+    <li><b>Microplate Setup:</b> Dispense 100 &mu;L media in sterile 96-well plates. Add 100 &mu;L compound stock in row A and perform 2-fold serial dilutions down to row G (0.01 &mu;g/mL to 64 &mu;g/mL). Add 100 &mu;L mycobacterial inoculum to all test wells. Include growth controls (no drug) and sterile media blanks.</li>
+    <li><b>Incubation:</b> Seal plates with breathable tape and incubate at 37 &deg;C in 5% CO2 for 7 days.</li>
+    <li><b>Alamar Blue Addition:</b> On day 7, add 25 &mu;L of freshly prepared 1:1 mixture of Alamar Blue reagent and 10% sterile Tween-80. Incubate for additional 24 hours at 37 &deg;C.</li>
+    <li><b>Evaluation:</b> Visual readout: Blue = No growth (Inhibition); Pink = Bacterial growth. Quantitative fluorescence: Ex 530 nm / Em 590 nm. MIC90 is defined as the lowest drug concentration preventing color shift from blue to pink.</li>
+</ol>
+
+
+</body>
+</html>

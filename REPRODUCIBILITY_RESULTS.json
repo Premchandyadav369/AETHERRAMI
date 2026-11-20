@@ -1,0 +1,82 @@
+{
+  "project": "AETHER-RAMI",
+  "release_version": "v4.2.0-Landed",
+  "directive": "Final Scientific Evidence Closure Directive",
+  "verification_timestamp": "2026-11-01T14:20:00+05:30",
+  "determinism_audit": {
+    "seed_42_trial_1_energy": 19.6351866,
+    "seed_42_trial_2_energy": 19.6351866,
+    "seed_123_trial_3_energy": 14.87129373,
+    "same_seed_energy_diff": 0.0,
+    "same_seed_max_grad_diff": 0.0,
+    "diff_seed_energy_diff": 4.763893,
+    "bitwise_determinism_verified": true
+  },
+  "deliverables_cryptographic_manifest": {
+    "GENERATION_EVALUATION.csv": {
+      "path": "C:\\Users\\PREMCHANDYADAV\\.gemini\\antigravity\\brain\\0bb02a7b-91ec-4301-aceb-c0e199a26e13\\GENERATION_EVALUATION.csv",
+      "size_bytes": 19911,
+      "sha256": "f2cc33effc27d73da87fd0895fe806b3b15ee68756cdbb634094f621cfb8ec28",
+      "verified_on_disk": true
+    },
+    "PHYSICS_VALIDATION.csv": {
+      "path": "C:\\Users\\PREMCHANDYADAV\\.gemini\\antigravity\\brain\\0bb02a7b-91ec-4301-aceb-c0e199a26e13\\PHYSICS_VALIDATION.csv",
+      "size_bytes": 2370,
+      "sha256": "39c565e1c47a895ee872983661f920e915dde0f172943607a7c732829ffec32c",
+      "verified_on_disk": true
+    },
+    "TRANSCRIPTOMIC_VALIDATION.csv": {
+      "path": "C:\\Users\\PREMCHANDYADAV\\.gemini\\antigravity\\brain\\0bb02a7b-91ec-4301-aceb-c0e199a26e13\\TRANSCRIPTOMIC_VALIDATION.csv",
+      "size_bytes": 1530,
+      "sha256": "9f7d7b000ced69fafc6b5208a234d3cf70af7b24066d2a33457ea280550c9ac5",
+      "verified_on_disk": true
+    },
+    "ADMET_VALIDATION.csv": {
+      "path": "C:\\Users\\PREMCHANDYADAV\\.gemini\\antigravity\\brain\\0bb02a7b-91ec-4301-aceb-c0e199a26e13\\ADMET_VALIDATION.csv",
+      "size_bytes": 3919,
+      "sha256": "d8fed8901a215d238e882a69e05a5ca156ff3032a9f88a814177b31f23064525",
+      "verified_on_disk": true
+    },
+    "RETROSYNTHESIS_VALIDATION.csv": {
+      "path": "C:\\Users\\PREMCHANDYADAV\\.gemini\\antigravity\\brain\\0bb02a7b-91ec-4301-aceb-c0e199a26e13\\RETROSYNTHESIS_VALIDATION.csv",
+      "size_bytes": 7160,
+      "sha256": "434f85b90ec85c80fe0d6643c37f5febdf88caed44d7b610a101dfdd2e3a80ba",
+      "verified_on_disk": true
+    },
+    "TARGET_STRUCTURE_EVIDENCE.csv": {
+      "path": "C:\\Users\\PREMCHANDYADAV\\.gemini\\antigravity\\brain\\0bb02a7b-91ec-4301-aceb-c0e199a26e13\\TARGET_STRUCTURE_EVIDENCE.csv",
+      "size_bytes": 12530,
+      "sha256": "b7fe4c6dbae634ab5a793af2b593399d9195c0e36c0e6a1710dfbe6c80f341e9",
+      "verified_on_disk": true
+    },
+    "BENCHMARK_RECONSTRUCTION.csv": {
+      "path": "C:\\Users\\PREMCHANDYADAV\\.gemini\\antigravity\\brain\\0bb02a7b-91ec-4301-aceb-c0e199a26e13\\BENCHMARK_RECONSTRUCTION.csv",
+      "size_bytes": 18495,
+      "sha256": "98ce2896c18ec5dd757d2ea46ff6313313a259cab10ccf0a844897a9455a1cda",
+      "verified_on_disk": true
+    },
+    "LIVE_DATA_SOURCE_REGISTRY.json": {
+      "path": "C:\\Users\\PREMCHANDYADAV\\.gemini\\antigravity\\brain\\0bb02a7b-91ec-4301-aceb-c0e199a26e13\\LIVE_DATA_SOURCE_REGISTRY.json",
+      "size_bytes": 4995,
+      "sha256": "aaa82967907d05f3682bd89824046af5ef30dde58e34501a6332634670d2e19f",
+      "verified_on_disk": true
+    },
+    "EXTERNAL_DATASET_CATALOG.csv": {
+      "path": "C:\\Users\\PREMCHANDYADAV\\.gemini\\antigravity\\brain\\0bb02a7b-91ec-4301-aceb-c0e199a26e13\\EXTERNAL_DATASET_CATALOG.csv",
+      "size_bytes": 1778,
+      "sha256": "ecf39580ba70c7d73ae1caffcf1a08d26cc34a1466355dcfbcd97e137a57b68c",
+      "verified_on_disk": true
+    },
+    "DATA_PROVENANCE_MANIFEST.json": {
+      "path": "C:\\Users\\PREMCHANDYADAV\\.gemini\\antigravity\\brain\\0bb02a7b-91ec-4301-aceb-c0e199a26e13\\DATA_PROVENANCE_MANIFEST.json",
+      "size_bytes": 1994,
+      "sha256": "53b0f1b125c068fa5c4fadcc0f052583222f7eea4e9ae82b8748db18646efdb4",
+      "verified_on_disk": true
+    }
+  },
+  "summary": {
+    "total_deliverables_evaluated": 10,
+    "total_verified_on_disk": 10,
+    "overall_reproducibility_status": "VERIFIED_DETERMINISTIC"
+  }
+}

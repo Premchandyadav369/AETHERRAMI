@@ -1,0 +1,3 @@
+RCSB PDB Usage Policy: Notified and reviewed on 2026-11-01T08:21:14Z.
+License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
+Usage Policy: https://www.rcsb.org/pages/usage-policy

@@ -1,118 +1,111 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Search, Zap, Microscope, Beaker, Network, Heart, Database, FlaskConical, BarChart3, Bot, Settings, Flame, Layers, ShieldCheck, FileText, Activity, Key, BookOpen, Users, Sparkles, RefreshCw } from 'lucide-react';
-import { useTab, SectionTab } from '../TabContext';
+import React, { useEffect } from 'react';
+import { Command } from 'cmdk';
+import { Target } from '../data/targets';
+import { Search, Database, ExternalLink, Activity, Target as TargetIcon } from 'lucide-react';
 
-interface PaletteItem {
-  id: string;
-  title: string;
-  category: string;
-  tab: SectionTab;
-  icon: any;
+interface CommandPaletteProps {
+  targets: Target[];
+  isOpen: boolean;
+  onClose: () => void;
+  onSelectTarget: (target: Target) => void;
+  onOpenDrawer: (target: Target) => void;
 }
 
-export default function CommandPalette() {
-  const { isCommandPaletteOpen, setIsCommandPaletteOpen, setActiveTab } = useTab();
-  const [query, setQuery] = useState('');
+export default function CommandPalette({
+  targets,
+  isOpen,
+  onClose,
+  onSelectTarget,
+  onOpenDrawer,
+}: CommandPaletteProps) {
+  useEffect(() => {
+    const down = (e: KeyboardEvent) => {
+      if ((e.key === 'k' && (e.metaKey || e.ctrlKey)) || e.key === '/') {
+        if (
+          (e.target instanceof HTMLElement && e.target.isContentEditable) ||
+          e.target instanceof HTMLInputElement ||
+          e.target instanceof HTMLTextAreaElement ||
+          e.target instanceof HTMLSelectElement
+        ) {
+          return;
+        }
+        e.preventDefault();
+        if (isOpen) {
+          onClose();
+        }
+      }
+    };
 
-  const items: PaletteItem[] = [
-    { id: '0a', title: 'Epigenetic Biological Age & Horvath DNA Methylation Clock', category: 'Epigenetics & Genomic Testing', tab: 'epigenetic', icon: Sparkles },
-    { id: '0b', title: 'Whole-Genome Polygenic Risk Score (PRS) Snapshot', category: 'Epigenetics & Genomic Testing', tab: 'genomerisk', icon: Activity },
-    { id: '1', title: 'Precision Binding Affinity & ADMET Predictor', category: 'Structural & Molecular AI', tab: 'predictor', icon: Zap },
-    { id: '2', title: 'Scientific Methodology & Layman Explainer Guide', category: 'Evidence & AI Copilot', tab: 'methodology', icon: BookOpen },
-    { id: '3', title: 'RCSB PDB 3D WebGL Structural Explorer', category: 'Structural & Molecular AI', tab: 'explorer', icon: Microscope },
-    { id: '4', title: 'AlphaFold-3 & Cryo-EM Structure Intelligence', category: 'Structural & Molecular AI', tab: 'alphafold', icon: Microscope },
-    { id: '4b', title: 'Cryo-EM 3D Density Map Fitting & FSC Resolution Curve', category: 'Structural & Molecular AI', tab: 'cryoem', icon: Microscope },
-    { id: '5', title: 'Covalent Inhibitor & Electrophilic Warhead Designer', category: 'Structural & Molecular AI', tab: 'covalent', icon: Flame },
-    { id: '6', title: 'PROTAC & Molecular Glue Degrader Studio', category: 'Structural & Molecular AI', tab: 'protac', icon: Layers },
-    { id: '6b', title: 'RNA Targeted Small Molecule & Splice Modulator Studio', category: 'Structural & Molecular AI', tab: 'rna', icon: Network },
-    { id: '7', title: '3D Active Site Mutation Resistance Radar', category: 'Structural & Molecular AI', tab: 'mutation', icon: ShieldCheck },
-    { id: '8', title: 'Virtual Drug Discovery Laboratory Suite', category: 'Virtual Drug Lab & Dynamics', tab: 'druglab', icon: Beaker },
-    { id: '8b', title: 'Radiopharmaceutical Theranostic Ligand Studio (Lu-177/Ac-225)', category: 'Virtual Drug Lab & Dynamics', tab: 'radiochem', icon: Flame },
-    { id: '9', title: 'AI Aqueous Solubility & Excipient Optimizer', category: 'Virtual Drug Lab & Dynamics', tab: 'solubility', icon: Beaker },
-    { id: '10', title: '14-Compartment Whole-Body PBPK Model', category: 'Virtual Drug Lab & Dynamics', tab: 'pbpk', icon: Heart },
-    { id: '11', title: 'Digital Human Twin & Organ-on-a-Chip PK/PD', category: 'Virtual Drug Lab & Dynamics', tab: 'digitaltwin', icon: Heart },
-    { id: '12', title: 'Antibody-Drug Conjugate (ADC) & Biologics Studio', category: 'Virtual Drug Lab & Dynamics', tab: 'adc', icon: Layers },
-    { id: '13', title: 'Multi-Omics Target & Disease Intelligence', category: 'Translational & Clinical Hub', tab: 'multiomics', icon: Database },
-    { id: '14', title: 'Clinical Biomarker & Companion Diagnostics (CDx)', category: 'Translational & Clinical Hub', tab: 'biomarker', icon: Activity },
-    { id: '15', title: 'Real-Time Clinical Trial Patient Match Radar', category: 'Translational & Clinical Hub', tab: 'patientradar', icon: Users },
-    { id: '16', title: 'De Novo Targeted Molecular Designer', category: 'Translational & Clinical Hub', tab: 'generator', icon: FlaskConical },
-    { id: '17', title: 'Automated FDA IND/NDA eCTD Dossier Generator', category: 'Translational & Clinical Hub', tab: 'ectd', icon: FileText },
-    { id: '18', title: 'n8n-Inspired Workflow Automation Studio', category: 'Automation & Governance', tab: 'workflow', icon: Network },
-    { id: '19', title: 'Enterprise Role-Based Access Control (RBAC)', category: 'Automation & Governance', tab: 'rbac', icon: ShieldCheck },
-    { id: '20', title: 'AI Microservices REST & GraphQL Gateway', category: 'Automation & Governance', tab: 'apigateway', icon: Network },
-    { id: '21', title: '1-Click Provisional Patent Packet Generator (USPTO)', category: 'Automation & Governance', tab: 'patentpacket', icon: FileText },
-    { id: '22', title: 'Benchling & Enterprise LIMS Webhook Sync', category: 'Automation & Governance', tab: 'limssync', icon: RefreshCw },
-    { id: '22b', title: 'Industry Telemetry & 99.999% SLA Health Studio', category: 'Automation & Governance', tab: 'industryhealth', icon: Activity },
-    { id: '23', title: 'V10 Empirical Benchmark Evidence Browser', category: 'Evidence & AI Copilot', tab: 'results', icon: BarChart3 },
-    { id: '24', title: 'AI Scientific Research Assistant', category: 'Evidence & AI Copilot', tab: 'assistant', icon: Bot },
-    { id: '25', title: 'System Configuration & Controls', category: 'Evidence & AI Copilot', tab: 'settings', icon: Settings },
-  ];
+    document.addEventListener('keydown', down);
+    return () => document.removeEventListener('keydown', down);
+  }, [isOpen, onClose]);
 
-  const filteredItems = items.filter(item =>
-    item.title.toLowerCase().includes(query.toLowerCase()) ||
-    item.category.toLowerCase().includes(query.toLowerCase())
-  );
-
-  const handleSelect = (tab: SectionTab) => {
-    setActiveTab(tab);
-    setIsCommandPaletteOpen(false);
-    setQuery('');
-  };
-
-  if (!isCommandPaletteOpen) return null;
+  if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 bg-slate-950/80 backdrop-blur-md p-4">
-      <div className="w-full max-w-2xl glass-panel-bioscript border border-amber-500/30 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
-        <div className="flex items-center px-4 border-b border-slate-800 bg-slate-950/90">
-          <Search className="w-4 h-4 text-amber-400 mr-3 shrink-0" />
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search across all 31 bioScript research stations..."
-            className="w-full py-4 bg-transparent text-white font-mono text-xs focus:outline-none placeholder-slate-500"
-            autoFocus
-          />
-          <button
-            onClick={() => setIsCommandPaletteOpen(false)}
-            className="text-xs text-slate-500 hover:text-slate-300 font-mono px-2 py-1 rounded bg-slate-900 border border-slate-800"
-          >
-            ESC
-          </button>
-        </div>
+    <div className="fixed inset-0 z-50 flex items-start justify-center pt-24 px-4 bg-black/75">
+      <div className="relative w-full max-w-xl">
+        <Command
+          className="w-full bg-white border-4 border-black shadow-[8px_8px_0px_0px_#000] overflow-hidden font-sans"
+        >
+          <div className="flex items-center px-4 border-b-3 border-black bg-[#FFE600]">
+            <Search className="w-5 h-5 text-black mr-2 shrink-0" />
+            <Command.Input
+              placeholder="Search target, PDB ID (e.g. 2X22), mutation, or lead..."
+              className="w-full bg-transparent py-4 text-sm font-mono font-black text-black placeholder:text-gray-700 focus:outline-none"
+              autoFocus
+            />
+            <kbd className="text-xs font-mono font-black px-2 py-0.5 bg-white border-2 border-black shadow-[1px_1px_0px_#000]">
+              ESC
+            </kbd>
+          </div>
 
-        <div className="max-h-80 overflow-y-auto p-2 flex flex-col gap-1">
-          {filteredItems.length === 0 ? (
-            <div className="p-8 text-center text-xs font-mono text-slate-500">
-              No matching research stations found.
-            </div>
-          ) : (
-            filteredItems.map(item => {
-              const Icon = item.icon;
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => handleSelect(item.tab)}
-                  className="w-full p-3 rounded-xl hover:bg-amber-500/15 border border-transparent hover:border-amber-500/30 text-left transition-all flex items-center justify-between group"
+          <Command.List className="max-h-80 overflow-y-auto p-3 divide-y-2 divide-black font-mono text-xs">
+            <Command.Empty className="py-6 text-center text-xs text-black font-mono font-black">
+              No matching clinical targets found.
+            </Command.Empty>
+
+            <Command.Group heading="36 Clinical Disease Targets" className="text-black font-black py-1">
+              {targets.map((t) => (
+                <Command.Item
+                  key={t.id}
+                  value={`${t.name} ${t.disease} ${t.pdb} ${t.clinical_bypass} ${t.frontline_drug} ${t.lead_code}`}
+                  onSelect={() => {
+                    onSelectTarget(t);
+                    onOpenDrawer(t);
+                    onClose();
+                  }}
+                  className="flex items-center justify-between p-2.5 my-1 border-2 border-transparent hover:border-black hover:bg-[#A6FF00] cursor-pointer transition-all text-black font-bold"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-slate-900 text-amber-400 group-hover:bg-amber-950 border border-slate-800">
-                      <Icon className="w-4 h-4" />
-                    </div>
+                  <div className="flex items-center gap-2.5">
+                    <TargetIcon className="w-4 h-4 text-black shrink-0" />
                     <div>
-                      <span className="font-bold text-xs text-slate-200 group-hover:text-amber-300 block">{item.title}</span>
-                      <span className="text-[10px] text-slate-500 font-mono">{item.category}</span>
+                      <span className="font-black text-black text-sm">{t.name}</span>
+                      <span className="text-xs font-bold text-gray-700 ml-2 bg-white px-1 border border-black">
+                        PDB: {t.pdb}
+                      </span>
+                      <div className="text-[11px] text-gray-800">{t.disease}</div>
                     </div>
                   </div>
-                  <span className="text-[10px] text-slate-500 font-mono group-hover:text-amber-400">Navigate &rarr;</span>
-                </button>
-              );
-            })
-          )}
-        </div>
+
+                  <div className="text-right">
+                    <span className="bg-[#FF5470] text-white px-1.5 py-0.2 border border-black font-black text-[11px]">
+                      {t.clinical_bypass}
+                    </span>
+                    <div className="text-xs font-black text-black mt-0.5">{t.kd_nm} nM</div>
+                  </div>
+                </Command.Item>
+              ))}
+            </Command.Group>
+          </Command.List>
+
+          <div className="p-3 bg-[#FFFDF0] border-t-3 border-black flex items-center justify-between text-[11px] font-mono font-black text-black">
+            <span>Navigation: ↑↓ to navigate • ↵ to select</span>
+            <span className="bg-black text-white px-1.5 py-0.2">AETHER-RAMI</span>
+          </div>
+        </Command>
       </div>
     </div>
   );

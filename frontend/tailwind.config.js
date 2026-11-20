@@ -4,75 +4,61 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        aether: {
-          bg: '#050816',
-          bg2: '#081121',
-          bg3: '#0B132B',
-          card: '#0c1428',
-          border: '#1a2744',
-          primary: '#00E5FF',
-          secondary: '#6EE7B7',
-          accent: '#8B5CF6',
-          danger: '#FF4D6D',
-          success: '#22C55E',
-          muted: '#64748b',
-          text: '#e2e8f0',
+        neo: {
+          bg: '#FFFDF0',      // Warm paper canvas
+          card: '#FFFFFF',    // Crisp white card
+          dark: '#121212',    // Ink black
+          black: '#000000',   // Pure black
+          yellow: '#FFE600',  // Electric yellow
+          lime: '#A6FF00',    // Acid / neon green
+          cyan: '#00F0FF',    // Radical cyan
+          coral: '#FF5470',   // Hot punch coral / pink
+          purple: '#E0C3FC',  // Vivid retro lavender
+          cream: '#F4E8C1',   // Retro cream
+          blue: '#3B82F6',    // Electric blue
+          amber: '#F59E0B',   // Deep amber
+          emerald: '#10B981', // Clinical emerald
+          border: '#000000',  // Stark black border
         },
-        cyber: {
-          bg: '#050816',
-          card: '#0c1428',
-          border: '#1a2744',
-          glow: '#00E5FF',
-          accent: '#8B5CF6',
-          gold: '#f59e0b',
-          green: '#6EE7B7'
+        canvas: {
+          DEFAULT: '#FFFDF0',
+          panel: '#FFFFFF',
+          elevated: '#F4E8C1',
+          border: '#000000',
+          subtle: '#FDFBF7',
+        },
+        ink: {
+          DEFAULT: '#000000',
+          secondary: '#262626',
+          muted: '#525252',
+          faint: '#737373',
+        },
+        bio: {
+          emerald: '#10B981',
+          cobalt: '#2563EB',
+          amber: '#D97706',
+          rose: '#DC2626',
+          violet: '#7C3AED',
         }
       },
-      fontFamily: {
-        sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-ibm-plex-mono)', 'monospace'],
-        display: ['var(--font-space-grotesk)', 'system-ui', 'sans-serif'],
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'mesh-glow': 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0,229,255,0.12) 0%, transparent 60%)',
-        'mesh-accent': 'radial-gradient(ellipse 60% 40% at 80% 50%, rgba(139,92,246,0.08) 0%, transparent 50%)',
-        'grid-scientific': 'linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px)',
-      },
-      backgroundSize: {
-        'grid-scientific': '40px 40px',
-      },
       boxShadow: {
-        'neon': '0 0 20px rgba(0, 229, 255, 0.35)',
-        'neon-purple': '0 0 20px rgba(139, 92, 246, 0.35)',
-        'neon-green': '0 0 20px rgba(110, 231, 183, 0.35)',
-        'neon-pink': '0 0 20px rgba(255, 77, 109, 0.35)',
-        'card': '0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(0,229,255,0.05)',
+        'neo-sm': '2px 2px 0px 0px #000000',
+        'neo': '4px 4px 0px 0px #000000',
+        'neo-md': '5px 5px 0px 0px #000000',
+        'neo-lg': '6px 6px 0px 0px #000000',
+        'neo-xl': '8px 8px 0px 0px #000000',
+        'neo-2xl': '12px 12px 0px 0px #000000',
       },
-      animation: {
-        'dash': 'dash 6s linear infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'orbit': 'orbit 3s linear infinite',
+      fontFamily: {
+        sans: ['var(--font-geist-sans)', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['var(--font-ibm-plex-mono)', 'monospace'],
       },
-      keyframes: {
-        dash: {
-          '0%': { strokeDashoffset: '0' },
-          '100%': { strokeDashoffset: '-230' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-12px)' },
-        },
-        orbit: {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
-        },
-      },
+      borderWidth: {
+        '3': '3px',
+      }
     },
   },
   plugins: [],

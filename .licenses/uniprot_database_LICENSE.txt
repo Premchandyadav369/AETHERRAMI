@@ -1,0 +1,3 @@
+UniProt Consortium License: Notified and reviewed on 2026-11-01T08:21:14Z.
+License: Creative Commons Attribution (CC BY 4.0).
+Terms: https://www.uniprot.org/help/license

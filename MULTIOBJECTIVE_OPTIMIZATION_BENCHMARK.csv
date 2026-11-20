@@ -1,0 +1,5 @@
+Algorithm_Name,Optimization_Method,Hypervolume_Metric,Generational_Distance,Spread_Metric,Pareto_Set_Size,Scientific_Observations
+Random Sampling,Uniform Random Acquisition,0.412,0.845,0.380,12,Poor convergence and sparse coverage
+NSGA-II (Baseline),Crowding Distance Rank Sorting,0.685,0.320,0.640,28,Degrades when number of objectives M > 3
+MOEA/D (2007),Decomposition into Sub-Problems,0.742,0.245,0.710,34,Uniform spread; sensitive to weight vector distribution
+NSGA-III (Redesign),Reference-Point Hypervolume Guided Search,0.824,0.165,0.835,42,Optimal high-dimensional Pareto frontier coverage (M=5)

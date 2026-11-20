@@ -1,0 +1,6 @@
+Epoch,Velocity_Loss_MSE,Atom_Type_CrossEntropy,Raw_PoseBusters_Pass,Relaxed_PoseBusters_Pass,Mean_QED,Mean_SA
+Epoch_01,0.842,0.621,12.4%,100.0%,0.412,3.84
+Epoch_05,0.415,0.310,34.2%,100.0%,0.521,3.42
+Epoch_10,0.228,0.184,58.0%,100.0%,0.612,3.10
+Epoch_20,0.142,0.105,74.5%,100.0%,0.684,2.75
+Epoch_30,0.089,0.071,19.0%,100.0%,0.261,4.07

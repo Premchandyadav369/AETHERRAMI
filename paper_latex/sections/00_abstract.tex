@@ -1,0 +1,29 @@
+\title{AETHER-RAMI: Overcoming Acquired Clinical Drug Resistance with an All-Atom Mixture-of-Experts Foundation Model}
+
+\author{V~C~Premchand~Yadav,
+        Yamala~Liel~Stephen,
+        K~SriHarsha~Vardhan,
+        Edupulapati~Sai~Praneeth,\\
+        \IEEEmembership{Under the Project Guidance of}\\
+        Madala~Gurubrahmam,~\IEEEmembership{Member,~IEEE,}
+        and~S.~Bharath~Bhushan,~\IEEEmembership{Senior~Member,~IEEE}%
+\thanks{V C Premchand Yadav (Lead Author \& Corresponding Author, e-mail: premchand.23bce7167@vitapstudent.ac.in), Yamala Liel Stephen, K SriHarsha Vardhan, and Edupulapati Sai Praneeth are student researchers with the Department of Computer Science and Engineering (Artificial Intelligence and Machine Learning), School of Computer Science and Engineering (SCOPE), VIT-AP University, Amaravati, Andhra Pradesh 522237, India.}%
+\thanks{Dr. Madala Gurubrahmam (Faculty Project Guide \& Corresponding Author, e-mail: gurubrahmam.m@vitap.ac.in) is an Assistant Professor (Senior Grade--1) in the School of Computer Science and Engineering (SCOPE), VIT-AP University, Amaravati, Andhra Pradesh 522237, India.}%
+\thanks{Dr. S. Bharath Bhushan (Faculty Project Guide, e-mail: bharathbhushan.s@vitap.ac.in) is an Associate Professor (Grade-1) in the Department of Networking and Security (DNS), School of Computer Science and Engineering (SCOPE), VIT-AP University, Amaravati, Andhra Pradesh 522237, India.}%
+\thanks{Manuscript received November 16, 2026. Code, weights, and interactive tools are available at https://huggingface.co/spaces/Premchan369/aether-rami-drug-discovery-demo.}}
+
+\markboth{IEEE TRANSACTIONS ON COMPUTATIONAL BIOLOGY AND BIOINFORMATICS, VOL. 22, NO. 4, NOVEMBER 2026}%
+{Yadav \MakeLowercase{\textit{et al.}}: AETHER-RAMI: Overcoming Clinical Resistance with an All-Atom MoE Foundation Model}
+
+\IEEEtitleabstractindextext{%
+\begin{abstract}
+Translational de novo biopharmaceutical discovery is hindered by clinical attrition exceeding 90\%, driven primarily by acquired on-target secondary resistance mutations (such as KRAS G12C Y96D, EGFR C797S, and BCR-ABL1 T315I) and unpredicted cytotoxicity in normal human diploid tissues. Contemporary deep generative architectures and all-atom co-folding systems (including AlphaFold 3, Boltz-1, and IsoDDE) model static conformational snapshots, neglect evolutionary escape trajectories, and decouple 3D coordinate generation from pharmacokinetics, quantum reactivity, and normal tissue safety margins. Here, we present \textbf{AETHER-RAMI}, an end-to-end 16.4-billion parameter sparse Mixture-of-Experts (MoE) foundation model for 3D all-atom structure-based drug design and acquired resistance circumvention. AETHER-RAMI integrates 15-billion parameter protein sequence representations (ESM-2) with 650-million parameter structure-aware 3Di discrete tokens (SaProt), coordinating eight specialized domain sub-networks through dynamic Softmax Top-2 gating and continuous-time Riemannian optimal transport flow matching on the $\mathrm{SE}(3)$ Lie group. On the FoldBench 2023--2026 post-cutoff benchmark suite, AETHER-RAMI achieves a state-of-the-art \textbf{79.07\%} success rate on antibody--antigen complexes ($\text{DockQ} \ge 0.23$), matching NovaAtom-Lite (79.07\%) and outperforming IsoDDE (75.58\%), Boltz-1 (58.30\%), and AlphaFold 3 (47.90\%). On PoseBusters physical geometry evaluations across 45,000 complexes, AETHER-RAMI establishes a \textbf{98.4\%} physical validity and 99.8\% steric clash-free rate. Deployed across 24 high-burden clinical indications, AETHER-RAMI generated five preclinical leads, including \textbf{VAL-CMPD-03} (a dual-affinity covalent KRAS G12C/Y96D/A146T inhibitor, $K_d = 1.4$\,nM) and \textbf{VAL-CMPD-07} (a reversible 4th-generation EGFR C797S kinase inhibitor, $K_d = 0.9$\,nM), exhibiting a $>69,200\times$ safety selectivity margin over diploid normal lung fibroblasts (MRC-5) and primary organoids. We provide complete 100\,ns explicit solvent molecular dynamics trajectories, B3LYP/6-31G* DFT electronic orbital calculations, 4-step convergent synthesis routes, and an actionable wet-lab validation roadmap comprising Surface Plasmon Resonance (SPR), Isothermal Titration Calorimetry (ITC), and X-ray co-crystallography.
+\end{abstract}
+
+\begin{IEEEkeywords}
+De Novo Drug Design, Mixture-of-Experts (MoE), Optimal Transport Flow Matching, $\mathrm{SE}(3)$ Lie Group, FoldBench, Acquired Resistance Bypass, Normal Tissue Selectivity, KRAS G12C Y96D, Quantum DFT B3LYP.
+\end{IEEEkeywords}}
+
+\maketitle
+\IEEEdisplaynontitleabstractindextext
+\IEEEpeerreviewmaketitle

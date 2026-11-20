@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Standard Operating Procedure: Tier-1 In Vitro ADMET Screening (Liver Microsomal Stability, Automated Patch Clamp hERG & Caco-2 Permeability)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+            color: #1a202c;
+            line-height: 1.6;
+            margin: 40px;
+            background: #ffffff;
+        }
+        .header-box {
+            border: 2px solid #1a365d;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #1a365d;
+            font-size: 20px;
+            margin-top: 0;
+            border-bottom: 2px solid #2b6cb0;
+            padding-bottom: 8px;
+        }
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        .meta-table td {
+            padding: 5px 8px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .meta-table td.label {
+            font-weight: bold;
+            color: #2d3748;
+            width: 25%;
+        }
+        h3 {
+            color: #2b6cb0;
+            font-size: 15px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #cbd5e0;
+            padding-bottom: 4px;
+        }
+        ul, ol {
+            margin-top: 5px;
+            padding-left: 25px;
+            font-size: 13px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        code {
+            background: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-box">
+        <h1>CSIR - INDIAN INSTITUTE OF CHEMICAL TECHNOLOGY (CSIR-IICT)</h1>
+        <div style="font-size: 14px; font-weight: bold; color: #2b6cb0; margin-bottom: 10px;">STANDARD OPERATING PROCEDURE: IN-VITRO PHARMACOLOGY</div>
+        <table class="meta-table">
+            <tr>
+                <td class="label">SOP Number:</td>
+                <td><b>SOP-BIO-04</b></td>
+                <td class="label">Effective Date:</td>
+                <td>October 31, 2026</td>
+            </tr>
+            <tr>
+                <td class="label">Target System:</td>
+                <td>Early In-Vitro ADMET Profiling & Cardiac Safety</td>
+                <td class="label">Conducting Facility:</td>
+                <td>Department of Pharmacology & Toxicology (DPT), Preclinical ADMET Laboratory</td>
+            </tr>
+            <tr>
+                <td class="label">Sample Allocation:</td>
+                <td colspan="3">All 24 Blinded Test Articles (VAL-CMPD-01 to 24)</td>
+            </tr>
+        </table>
+    </div>
+
+    
+<h3>1. Purpose &amp; Scope</h3>
+<p>To establish baseline drug-like properties, Phase I hepatic metabolic clearance, automated patch clamp cardiotoxicity safety margins, and gastrointestinal monolayer permeability.</p>
+
+<h3>2. Part A: Hepatic Microsomal Stability (Human &amp; Mouse)</h3>
+<ol>
+    <li><b>Incubation Setup:</b> 0.5 mg/mL pooled human or mouse liver microsomes in 100 mM potassium phosphate buffer (pH 7.4) with 3.3 mM MgCl2. Add 1.0 &mu;M test compound.</li>
+    <li><b>Reaction Initiation:</b> Pre-warm mixture at 37 &deg;C for 5 minutes. Initiate by adding NADPH regenerating system (1.3 mM NADP+, 3.3 mM glucose-6-phosphate, 0.4 U/mL G6PDH).</li>
+    <li><b>Time Points:</b> Terminate reactions at t = 0, 15, 30, and 60 minutes by adding 3 volumes of ice-cold acetonitrile containing 100 ng/mL internal standard (tolbutamide).</li>
+    <li><b>Centrifugation &amp; Analysis:</b> Centrifuge at 4,000 rpm for 20 minutes at 4 &deg;C. Quantify parent compound depletion via LC-MS/MS. Compute in-vitro half-life (t1/2) and intrinsic clearance (Clint).</li>
+</ol>
+
+<h3>3. Part B: Automated Patch Clamp hERG Cardiotoxicity Screening</h3>
+<ol>
+    <li><b>Cell Preparation:</b> HEK293 cells stably transfected with human KCNH2 (hERG) gene. Detach cells with TrypLE, wash, and resuspend in extracellular recording solution.</li>
+    <li><b>Instrument:</b> SyncroPatch 384 or QPatch automated patch-clamp platform.</li>
+    <li><b>Voltage Protocol:</b> Holding potential -80 mV; depolarizing pulse to +40 mV for 2,000 ms to activate hERG channels; repolarizing step to -40 mV for 2,000 ms to elicit outward tail current. Tail current amplitude is continuously measured.</li>
+    <li><b>Concentration Response:</b> 6-point concentration curve (0.3 &mu;M to 100 &mu;M). Positive control: Dofetilide (100 nM). Cutoff: IC50 &gt; 30 &mu;M (&gt; 300x therapeutic safety margin).</li>
+</ol>
+
+<h3>4. Part C: Caco-2 Monolayer Bidirectional Permeability</h3>
+<ol>
+    <li><b>Culture:</b> Caco-2 cells seeded on 24-well Transwell polycarbonate inserts (0.4 &mu;m pore size) cultured for 21 days until TEER exceeds 400 &Omega;&middot;cm<sup>2</sup>.</li>
+    <li><b>Transport Assay:</b> Measure Apical-to-Basolateral (A-B) and Basolateral-to-Apical (B-A) transport in HBSS buffer (apical pH 6.5, basolateral pH 7.4) over 120 minutes.</li>
+    <li><b>Evaluation:</b> Quantify compound transport by LC-MS/MS. Calculate apparent permeability coefficient (Papp) and Efflux Ratio (ER = Papp B-A / Papp A-B). Target: Papp &gt; 10 x 10<sup>-6</sup> cm/s, ER &lt; 2.0.</li>
+</ol>
+
+
+</body>
+</html>

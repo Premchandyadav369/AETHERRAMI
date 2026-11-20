@@ -1,0 +1,11 @@
+{
+  "tokenizer_class": "PreTrainedTokenizerFast",
+  "model_max_length": 512,
+  "padding_side": "right",
+  "clean_up_tokenization_spaces": false,
+  "bos_token": "<s>",
+  "eos_token": "</s>",
+  "unk_token": "<unk>",
+  "pad_token": "<pad>",
+  "mask_token": "<mask>"
+}

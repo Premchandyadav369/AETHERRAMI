@@ -1,0 +1,13 @@
+Dataset Name,Source Domain,Application in AETHER-RAMI,Format / Protocol,Primary Identifiers,Licensing
+ChEMBL 34,Bioactivity & SAR,"Inhibitor IC50/Ki labels, target binding profiles",REST JSON,"CHEMBL_ID, SMILES",CC BY-SA 3.0
+RCSB Protein Data Bank,Structural Biology,"Target 3D holo-structures, cofactors, active site pockets",mmCIF / PDB REST,PDB ID (4-char),CC0 1.0
+PubChem Compound,Cheminformatics,"Standardized chemical properties, 2D structures, safety flags",PUG-REST JSON,"CID, Canonical SMILES",Public Domain
+UniProtKB,Protein Sequence & Function,"Canonical sequences, organism taxonomy, functional residues",REST JSON / FASTA,UniProt Accession,CC BY 4.0
+AlphaFold Structure DB,Structure Prediction,High-accuracy protein models for orphan targets (pLDDT),REST API / CIF,UniProt Accession,CC BY 4.0
+NCBI PubMed,Biomedical Literature,Peer-reviewed target validation & mechanism of action,E-utilities XML/JSON,"PMID, PMCID, DOI",Public Domain
+STRING DB v12,Systems Pharmacology,"Protein interaction networks, functional modules",JSON API / TSV,"NCBI TaxID, Ensembl ID",CC BY 4.0
+Reactome v88,Pathways & Phenotypes,Biological pathway enrichment & signaling networks,REST JSON,Reactome Stable ID,CC BY 4.0
+ClinicalTrials.gov v2,Translational Medicine,"Clinical development status, indications, phases",REST API v2,NCT Number,Public Domain
+QM9 / QCArchive,Quantum Mechanics,"B3LYP DFT ground truth energies, dipoles, geometries",HDF5 / JSON,"InChIKey, SMILES",BSD-3-Clause
+BindingDB 2026,Binding Affinity,"Independent target-ligand binding measurements (Kd, Ki)",TSV / REST,BindingDB Monomer ID,CC BY 3.0
+LINCS L1000 / DepMap,Perturbational Biology,Transcriptomic drug signatures & CRISPR knockout fitness,GCTx / CSV / REST,"Broad Pert ID, Gene Symbol",CC BY 4.0

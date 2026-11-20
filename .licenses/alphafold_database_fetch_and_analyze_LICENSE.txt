@@ -1,0 +1,3 @@
+AlphaFold Protein Structure Database: Notified and reviewed on 2026-11-01T08:21:14Z.
+License: CC BY 4.0.
+Terms: https://alphafold.ebi.ac.uk/about

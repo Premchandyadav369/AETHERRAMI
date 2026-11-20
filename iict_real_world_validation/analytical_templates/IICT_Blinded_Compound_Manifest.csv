@@ -1,0 +1,25 @@
+Blinded_Sample_ID,Plate_Well_ID,Target_Indication,Nominated_Lead_Code,Molecular_Formula,Monoisotopic_MW,Reconstitution_Solvent,Storage_Temp,Recommended_Max_Conc_mM,Expected_Assay_Readout
+IICT-VAL-001,A01,Malaria (PfDHFR-TS),AETH-MAL-001,C23H22F7N7O3S,609.1393,100% Anhydrous DMSO,-20 C Desiccated,20.0,PfDHFR enzymatic & P. falciparum 3D7/Dd2 growth inhibition
+IICT-VAL-002,A02,Tuberculosis (InhA),AETH-INHA-002,C16H14ClN5O2,343.0836,100% Anhydrous DMSO,-20 C Desiccated,50.0,InhA recombinant enzyme & Mtb H37Rv MABA MIC
+IICT-VAL-003,A03,NSCLC (KRAS G12C),AETH-KRAS-001,C29H30F2N6O2,532.2398,100% Anhydrous DMSO,-20 C Desiccated,10.0,Intact MS covalent adduct & NCI-H358 CellTiter-Glo
+IICT-VAL-004,A04,COVID-19 (Mpro),AETH-COVID-001,C23H32F3N5O4,499.2384,100% Anhydrous DMSO,-20 C Desiccated,25.0,Recombinant SARS-CoV-2 Mpro FRET cleavage assay
+IICT-VAL-005,A05,Malaria (Control),Pyrimethamine-FDA,C12H13ClN4,248.0829,100% Anhydrous DMSO,-20 C Desiccated,50.0,Standard Antifolate Control (Resistant to Dd2)
+IICT-VAL-006,A06,Tuberculosis (Control),Isoniazid-FDA,C6H7N3O,137.0589,Water/DMSO (1:1),+4 C Desiccated,100.0,Standard InhA Prodrug Control
+IICT-VAL-007,A07,NSCLC (Control),Sotorasib-FDA,C30H30F2N6O3,560.2347,100% Anhydrous DMSO,-20 C Desiccated,10.0,FDA Approved KRAS G12C Inhibitor Control
+IICT-VAL-008,A08,COVID-19 (Control),Nirmatrelvir-FDA,C23H32F3N5O4,499.2384,100% Anhydrous DMSO,-20 C Desiccated,25.0,FDA Approved Mpro Protease Control
+IICT-VAL-009,B01,Alzheimer's (BACE1),AETH-BACE-001,C28H31F4N5O3,561.2363,100% Anhydrous DMSO,-20 C Desiccated,20.0,BACE1 FRET enzymatic cleavage & SH-SY5Y Abeta
+IICT-VAL-010,B02,Glioblastoma (EGFR),AETH-EGFR-001,C26H28ClN7O2,505.1993,100% Anhydrous DMSO,-20 C Desiccated,20.0,EGFR T790M/L858R kinase TR-FRET & H1975 viability
+IICT-VAL-011,B03,HIV-1 (Protease),AETH-HIV-001,C34H44N4O5,588.3312,100% Anhydrous DMSO,-20 C Desiccated,20.0,HIV-1 protease catalytic dyad FRET assay
+IICT-VAL-012,B04,Breast Cancer (HER2),AETH-HER2-001,C29H27ClF3N5O3,585.1754,100% Anhydrous DMSO,-20 C Desiccated,15.0,HER2 kinase autophosphorylation & BT-474 antiproliferation
+IICT-VAL-013,B05,Malaria (Variant),AETH-REAL-CLICK-01,C22H21F4N7O2,491.1712,100% Anhydrous DMSO,-20 C Desiccated,25.0,Bioorthogonal Triazole PfDHFR lead
+IICT-VAL-014,B06,Tuberculosis (Variant),AETH-INHA-001,C15H12ClN5O,313.0730,100% Anhydrous DMSO,-20 C Desiccated,50.0,NADH pocket clamp derivative
+IICT-VAL-015,B07,NSCLC (PROTAC),AETH-PROTAC-KRAS-01,C48H54F2N10O7,920.4145,100% Anhydrous DMSO,-20 C Desiccated,5.0,CRBN-dependent KRAS G12C degradation (Western blot)
+IICT-VAL-016,B08,COVID-19 (Variant),AETH-COVID-002,C24H31F6N5O4,567.2280,100% Anhydrous DMSO,-20 C Desiccated,20.0,CF3 P1'-extended warhead derivative
+IICT-VAL-017,C01,Diabetes (DPP-4),AETH-DPP4-001,C20H23F2N5O,387.1871,100% Anhydrous DMSO,-20 C Desiccated,50.0,DPP-4 cleavage of Gly-Pro-AMC fluorogenic substrate
+IICT-VAL-018,C02,CML (BCR-ABL),AETH-CML-001,C29H28F3N7O,547.2307,100% Anhydrous DMSO,-20 C Desiccated,20.0,BCR-ABL T315I gatekeeper resistance kinase assay
+IICT-VAL-019,C03,Hypertension (ACE2),AETH-ACE-001,C24H32N4O5,456.2373,100% Anhydrous DMSO,-20 C Desiccated,25.0,ACE enzyme cleavage assay
+IICT-VAL-020,C04,Depression (SERT),AETH-DEP-001,C21H24FNO,325.1842,100% Anhydrous DMSO,-20 C Desiccated,50.0,Radioligand binding [3H]-citalopram displacement
+IICT-VAL-021,C05,Alzheimer's (AChE),AETH-ACHE-001,C28H34N2O3,446.2569,100% Anhydrous DMSO,-20 C Desiccated,25.0,Ellman's acetylcholinesterase assay
+IICT-VAL-022,C06,Atherosclerosis (PCSK9),AETH-PCSK9-001,C38H48N6O8,716.3533,100% Anhydrous DMSO,-20 C Desiccated,10.0,PCSK9-LDLR interaction TR-FRET assay
+IICT-VAL-023,C07,Rheumatoid (JAK3),AETH-JAK3-001,C22H25N7O,403.2121,100% Anhydrous DMSO,-20 C Desiccated,25.0,JAK3 transphosphorylation assay
+IICT-VAL-024,C08,Cystic Fibrosis (CFTR),AETH-CF-001,C26H28N4O4,460.2111,100% Anhydrous DMSO,-20 C Desiccated,20.0,YFP halide-quenching CFTR gating flux assay

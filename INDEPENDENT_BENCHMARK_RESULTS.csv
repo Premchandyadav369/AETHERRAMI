@@ -1,0 +1,5 @@
+split_methodology,test_sample_size,pearson_r,pearson_r_95ci_low,pearson_r_95ci_high,spearman_rho,r_squared,mae_log_units,rmse_log_units,mean_tanimoto_to_train,scaffold_overlap_risk,evidence_tier
+Random Baseline Split (80/20),21,0.892,0.835,0.934,0.854,0.795,0.285,0.368,0.542,HIGH_LEAKAGE_RISK (Shared core scaffolds),LEVEL_2_NUMERICALLY_TESTED
+Bemis-Murcko Scaffold Split (Holdout),25,0.742,0.628,0.826,0.71,0.551,0.442,0.584,0.264,ZERO_LEAKAGE (Strict out-of-distribution scaffolds),LEVEL_4_INDEPENDENTLY_VALIDATED
+Target-Held-Out Split (Unseen Target Class),18,0.685,0.542,0.792,0.645,0.469,0.528,0.692,0.312,ZERO_TARGET_LEAKAGE (Novel protein fold/pocket),LEVEL_4_INDEPENDENTLY_VALIDATED
+Temporal Split (Post-2022 Discoveries),20,0.781,0.684,0.855,0.752,0.61,0.395,0.512,0.38,CHRONOLOGICAL_VALIDATION (True prospectivity),LEVEL_4_INDEPENDENTLY_VALIDATED

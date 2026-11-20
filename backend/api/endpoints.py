@@ -5,10 +5,12 @@ try:
     from services.inference import inference_service
     from services.vector_search import vector_search_service
     from services.research_engine import research_engine
+    from services.science_integration import AetherSciencePipeline, ScientificEvidenceCoordinator
 except ImportError:
     from backend.services.inference import inference_service
     from backend.services.vector_search import vector_search_service
     from backend.services.research_engine import research_engine
+    from backend.services.science_integration import AetherSciencePipeline, ScientificEvidenceCoordinator
 
 router = APIRouter()
 
@@ -275,3 +277,25 @@ async def leaderboard():
 @router.get("/drug-dictionary", summary="Drug and docking knowledge dictionary")
 async def drug_dictionary_endpoint(query: str = Query(..., example="EGFR")):
     return research_engine.global_intelligence(query)
+
+
+# ==============================================================================
+# Science Plugin Unified Endpoints
+# ==============================================================================
+
+class SciencePipelineRequest(BaseModel):
+    target: str = Field("CDK2", example="CDK2")
+    pdb_id: str = Field("1HCK", example="1HCK")
+    candidates: Optional[List[Dict[str, str]]] = Field(None)
+
+@router.get("/science/target-evidence", summary="Federate target evidence across Science Plugin databases")
+async def get_science_target_evidence(target: str = Query("CDK2"), pdb_id: str = Query("1HCK")):
+    coordinator = ScientificEvidenceCoordinator()
+    return coordinator.gather_full_evidence_dossier(target, pdb_id)
+
+@router.post("/science/pipeline", summary="Run 4-layer AETHER-RAMI x Science Plugin discovery and critic pipeline")
+async def run_science_pipeline_endpoint(request: SciencePipelineRequest):
+    artifact_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "results"))
+    os.makedirs(artifact_dir, exist_ok=True)
+    pipeline = AetherSciencePipeline(artifact_dir)
+    return pipeline.run_discovery_pipeline(request.target, request.pdb_id, request.candidates)

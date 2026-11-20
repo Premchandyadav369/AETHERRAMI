@@ -1,0 +1,26 @@
+Lead_Compound,Target_Mechanism,SMILES,Route_Status,Num_Synthetic_Steps,Estimated_Yield,Synthetic_Complexity,Reaction_Cascade_Sequence
+Osimertinib,EGFR_T790M,CN1CCN(CC1)c2cc(Nc3nccc(n3)c4cn(C)c5ccccc45)c(cc2OC)NC(=O)C=C,ROUTE_DISCOVERED,4,73.2%,5.80,Acylation_Amide_Formation -> Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation
+Gefitinib,EGFR_Kinase,COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCCN1CCOCC1,ROUTE_DISCOVERED,3,76.2%,4.46,Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation -> Williamson_Ether_Synthesis
+Erlotinib,EGFR_Kinase,COCCOC1=C(C=C2C(=C1)C(=NC=N2)NC3=CC=CC(=C3)C#C)OCCOC,ROUTE_DISCOVERED,4,67.1%,5.99,Heteroatom_Alkylation_Arylation -> Williamson_Ether_Synthesis -> Williamson_Ether_Synthesis -> Williamson_Ether_Synthesis
+Sotorasib,KRAS_G12C,Cc1c(Nc2c(F)cccc2F)nc(N3CC(N)(C)CCC3)nc1C(=O)N4CCN(C(=O)C=C)CC4,ROUTE_DISCOVERED,3,79.6%,4.36,Acylation_Amide_Formation -> Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation
+Adagrasib,KRAS_G12C,CC(C)n1c(=O)c2cc(F)c(N3CCNC[C@@H]3c4cccc(F)c4)cc2n1C(=O)C=C,ROUTE_DISCOVERED,1,94.0%,1.43,Acylation_Amide_Formation
+Nirmatrelvir,SARS_CoV_2_Mpro,CC(C)(C)C(NC(=O)C(F)(F)F)C(=O)N1CC2C(C1C(=O)NC(CC3CCNC3=O)C#N)C2(C)C,ROUTE_DISCOVERED,3,83.1%,4.26,Acylation_Amide_Formation -> Acylation_Amide_Formation -> Acylation_Amide_Formation
+Ensitrelvir,SARS_CoV_2_Mpro,Cc1ccc(cc1Cl)n2c(=O)n(c(=O)n2C)Cc3ccc(cn3)c4cc(nc(c4)F)C(F)(F)F,ROUTE_DISCOVERED,1,92.0%,1.49,Heteroatom_Alkylation_Arylation
+Palbociclib,CDK4_6,CC(=O)c1c(C)c2cnc(Nc3ccc(N4CCNCC4)cn3)nc2n1C5CCCC5,ROUTE_DISCOVERED,2,84.6%,2.96,Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation
+Ribociclib,CDK4_6,CN(C)C(=O)c1cc2cnc(Nc3ccc(N4CCNCC4)cn3)nc2n1C5CCCC5,ROUTE_DISCOVERED,3,79.6%,4.36,Acylation_Amide_Formation -> Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation
+Abemaciclib,CDK4_6,CCN1CCN(CC1)Cc2ccc(Nc3ncc(c(n3)c4cc5c(cc4)n(c5)C(C)C)F)nc2,FAILED,0,0.0%,5.00,Direct Building Block
+Venetoclax,BCL2,CC1(C)CCC(CN2CCN(c3ccc(C(=O)NS(=O)(=O)c4ccc(NCC5CCOCC5)c(c4)[N+](=O)[O-])c(c3)Cl)CC2)=C(c6ccc(Cl)cc6)C1,ROUTE_DISCOVERED,3,79.6%,4.36,Acylation_Amide_Formation -> Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation
+Navitoclax,BCL2_BCL_XL,CC1(C)CCC(CN2CCN(c3ccc(C(=O)NS(=O)(=O)c4ccc(Nc5ccccc5)c(c4)[N+](=O)[O-])c(c3)Cl)CC2)=C(c6ccc(Cl)cc6)C1,ROUTE_DISCOVERED,3,79.6%,4.36,Acylation_Amide_Formation -> Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation
+Imatinib,BCR_ABL,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc4nccc(n4)c5cccnc5,ROUTE_DISCOVERED,4,73.2%,5.80,Acylation_Amide_Formation -> Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation
+Dasatinib,BCR_ABL_Src,Cc1nc(Nc2c(Cl)cccc2Cl)sc1C(=O)Nc3cc(N4CCN(CCO)CC4)nc(C)n3,ROUTE_DISCOVERED,4,73.2%,5.80,Acylation_Amide_Formation -> Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation
+Nilotinib,BCR_ABL,Cc1ccc(cc1Nc2nccc(n2)c3cccnc3)C(=O)Nc4cc(cc(c4)C(F)(F)F)n5ccnc5,ROUTE_DISCOVERED,4,73.2%,5.80,Acylation_Amide_Formation -> Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation
+Bosutinib,BCR_ABL_Src,COc1cc2c(Nc3ccc(Cl)c(Cl)c3OC)c(C#N)cnc2cc1OCCCN4CCN(C)CC4,ROUTE_DISCOVERED,4,70.1%,5.90,Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation -> Williamson_Ether_Synthesis
+Ibrutinib,BTK,C=CC(=O)N1CCC(CC1)n2c3c(c(n2)c4ccc(Oc5ccccc5)cc4)c(ncn3)N,ROUTE_DISCOVERED,3,79.6%,4.36,Acylation_Amide_Formation -> Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation
+Acalabrutinib,BTK,CC#CC(=O)N1CCCC1c2nc(c3c(n2)c(ncn3)N)c4ccc(NC(=O)c5ccccn5)cc4,ROUTE_DISCOVERED,4,74.8%,5.76,Acylation_Amide_Formation -> Acylation_Amide_Formation -> Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation
+Ruxolitinib,JAK1_2,C1CC(C1)C(CC#N)n2cc(cn2)c3c4cc[nH]c4ncn3,ROUTE_DISCOVERED,1,92.0%,1.49,Heteroatom_Alkylation_Arylation
+Tofacitinib,JAK3,CC1CCN(CC1N(C)c2c3cc[nH]c3ncn2)C(=O)CC#N,ROUTE_DISCOVERED,2,86.5%,2.91,Acylation_Amide_Formation -> Heteroatom_Alkylation_Arylation
+Vorinostat,HDAC,O=C(NO)CCCCCCC(=O)Nc1ccccc1,ROUTE_DISCOVERED,2,88.4%,2.85,Acylation_Amide_Formation -> Acylation_Amide_Formation
+Belinostat,HDAC,O=C(NO)/C=C/c1cccc(S(=O)(=O)Nc2ccccc2)c1,ROUTE_DISCOVERED,2,86.5%,2.91,Acylation_Amide_Formation -> Heteroatom_Alkylation_Arylation
+Panobinostat,HDAC,CN(CCO)Cc1ccc(cc1)c2c[nH]c3ccc(C=CC(=O)NO)cc23,ROUTE_DISCOVERED,4,72.4%,5.83,Acylation_Amide_Formation -> Heteroatom_Alkylation_Arylation -> Heteroatom_Alkylation_Arylation -> C_C_Cross_Coupling_Suzuki
+Bortezomib,Proteasome,CC(C)CC(NC(=O)C(Cc1ccccc1)NC(=O)c2cnccn2)B(O)O,ROUTE_DISCOVERED,2,88.4%,2.85,Acylation_Amide_Formation -> Acylation_Amide_Formation
+Aspirin,COX_1_2,CC(=O)Oc1ccccc1C(=O)O,ROUTE_DISCOVERED,1,92.0%,1.49,Esterification_Acylation

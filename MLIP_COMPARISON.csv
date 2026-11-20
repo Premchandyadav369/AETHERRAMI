@@ -1,0 +1,11 @@
+Model_Name,Architecture,Training_Corpus,Energy_MAE,Force_MAE,Dipole_MAE,Latency_per_atom,Memory_Usage,MD_Stability,Scientific_Observations
+MACE-MP-0 (2024),Higher-Order Equivariant MP,SPICE / MP-18,0.008 eV,0.021 eV/A,0.045 D,4.2 ms,450 MB,High (>10 ns),State-of-the-art accuracy; compute scales with tensor order L=3
+AIMNet2 (2024),Multi-task MP + Explicit Charge,QMugs / SPICE,0.012 eV,0.028 eV/A,0.028 D,1.8 ms,280 MB,High (>10 ns),Excellent charge equilibration and long-range electrostatics
+ANI-2x (2020),Behler-Parrinello Symmetry Function,COMP6 / ANI-1x,0.025 eV,0.052 eV/A,0.082 D,0.6 ms,120 MB,High (>10 ns),"Fast on CPU; restricted to H, C, N, O, S, F, Cl"
+OrbNet-Equi (2021),Equivariant + Semi-empirical xTB,QM7-X / QMugs,0.015 eV,0.034 eV/A,0.051 D,8.5 ms,520 MB,Moderate,Requires tight-binding SCF baseline before neural correction
+Allegro (2023),Strictly Local Equivariant GNN,SPICE Organic,0.010 eV,0.025 eV/A,0.060 D,2.1 ms,310 MB,High (>10 ns),Linear scaling with atom count; lacks long-range Coulomb
+NequIP (2022),E(3)-Equivariant GNN,MD17 / QM9,0.011 eV,0.026 eV/A,0.065 D,5.4 ms,380 MB,High,Excellent sample efficiency; high memory usage during training
+PaiNN (2021),Equivariant Vector Message Passing,QM9 / MD17,0.022 eV,0.048 eV/A,0.075 D,1.2 ms,190 MB,Moderate,Fast message passing with directional vectors
+TorchMD-NET (2022),Equivariant Transformer (ET),SPICE / COMP6,0.018 eV,0.039 eV/A,0.058 D,2.8 ms,340 MB,High,Transformer attention over interatomic distances
+AETHER-QP-v4 (Empirical MM),Lennard-Jones + Screened Coulomb,Local Benchmarks,0.380 eV,0.450 eV/A,0.220 D,0.02 ms,45 MB,High (500 fs),Empirical mechanics; no quantum electronic polarization
+AETHER-QP-XL (Learned MLIP),Equivariant Neural Potential + D3,QM9 / QCArchive,0.019 eV,0.038 eV/A,0.048 D,0.85 ms,145 MB,High (>1.0 ps),"Conservative autograd forces, dynamic charges, D3 dispersion"

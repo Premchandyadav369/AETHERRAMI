@@ -1,0 +1,13 @@
+source_name,base_endpoint_url,update_cadence,last_ingestion_timestamp,cache_ttl_days,cache_expiration_date,staleness_alert_flag,data_freshness_status,open_source_license
+ChEMBL,https://www.ebi.ac.uk/chembl/api/data,Quarterly Releases,2026-11-01 11:00:00,30,2026-12-01 11:00:00,False,CURRENT_VALID_CACHE,CC BY-SA 3.0
+RCSB PDB,https://data.rcsb.org/rest/v1/core,Weekly Updates,2026-11-01 11:00:00,30,2026-12-01 11:00:00,False,CURRENT_VALID_CACHE,CC0 1.0
+PubChem PUG-REST,https://pubchem.ncbi.nlm.nih.gov/rest/pug,Daily Sync,2026-11-01 11:00:00,30,2026-12-01 11:00:00,False,CURRENT_VALID_CACHE,Public Domain (NCBI)
+UniProtKB,https://rest.uniprot.org/uniprotkb,Bi-monthly Releases,2026-11-01 11:00:00,30,2026-12-01 11:00:00,False,CURRENT_VALID_CACHE,CC BY 4.0
+AlphaFold DB,https://alphafold.ebi.ac.uk/api,Periodic Releases,2026-11-01 11:00:00,30,2026-12-01 11:00:00,False,CURRENT_VALID_CACHE,CC BY 4.0
+PubMed E-utilities,https://eutils.ncbi.nlm.nih.gov/entrez/eutils,Continuous,2026-11-01 11:00:00,30,2026-12-01 11:00:00,False,CURRENT_VALID_CACHE,Public Domain (NLM)
+ClinicalTrials.gov,https://clinicaltrials.gov/api/v2,Nightly Updates,2026-11-01 11:00:00,30,2026-12-01 11:00:00,False,CURRENT_VALID_CACHE,Public Domain (NLM)
+STRING DB,https://string-db.org/api,Annual Major Releases,2026-11-01 11:00:00,30,2026-12-01 11:00:00,False,CURRENT_VALID_CACHE,CC BY 4.0
+Reactome,https://reactome.org/ContentService,Quarterly Releases,2026-11-01 11:00:00,30,2026-12-01 11:00:00,False,CURRENT_VALID_CACHE,CC BY 4.0
+QCArchive / QM9,https://qcarchive.molssi.org,Curated Benchmark Releases,2026-11-01 11:00:00,30,2026-12-01 11:00:00,False,CURRENT_VALID_CACHE,CC BY 4.0
+BindingDB,https://www.bindingdb.org,Monthly Releases,2026-11-01 11:00:00,30,2026-12-01 11:00:00,False,CURRENT_VALID_CACHE,CC BY 3.0
+LINCS / DepMap,https://clue.io/api,Quarterly Releases,2026-11-01 11:00:00,30,2026-12-01 11:00:00,False,CURRENT_VALID_CACHE,Broad Institute License
