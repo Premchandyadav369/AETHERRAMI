@@ -49,6 +49,21 @@ export default function AlphaFoldWorkbench({
   const featuredIds = ['TB_INHA_MDR', 'ONC_KRAS_G12D', 'ONC_EGFR_C797S', 'ONC_BCR_ABL1_T315I', 'INF_NIPAH_G', 'MAL_PFDHFR_TS'];
   const featuredTargets = targets.filter(t => featuredIds.includes(t.id));
 
+  // Category state for All 36 Diseases
+  const [selectedCategory, setSelectedCategory] = useState<string>('All (36)');
+  const diseaseCategories = [
+    'All (36)',
+    'High-Burden India',
+    'Global Oncology',
+    'Infectious & AMR',
+    'Neurology & Metabolic',
+    'Cardiovascular'
+  ];
+
+  const filteredTargets = selectedCategory === 'All (36)'
+    ? targets
+    : targets.filter(t => t.category.toLowerCase().includes(selectedCategory.toLowerCase().slice(0, 5)));
+
   // Debounced search across local registry and worldwide RCSB PDB
   useEffect(() => {
     if (!searchQuery.trim() || searchQuery.length < 2) {
@@ -176,29 +191,104 @@ export default function AlphaFoldWorkbench({
             </p>
           </div>
 
-          {/* Quick Target Switcher Pills */}
+          {/* Quick Target Switcher Summary */}
           <div className="flex flex-col items-start md:items-end gap-2">
             <div className="text-[11px] font-mono font-black uppercase tracking-wider text-black">
-              Curated Clinical Programs:
+              Current Active Program:
             </div>
-            <div className="flex flex-wrap gap-2">
-              {featuredTargets.map((ft) => (
-                <button
-                  key={ft.id}
-                  onClick={() => {
-                    onSelectTarget(ft);
+            <div className="flex items-center gap-2">
+              <span className="px-3 py-1.5 text-xs font-mono font-black uppercase bg-[#FFE600] text-black border-2 border-black shadow-[3px_3px_0px_#000]">
+                {activeTarget.disease} • PDB: {activeTarget.pdb}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* ALL 36 CLINICAL DISEASES & PDB DIRECTORY (DISEASE NAME + PDB CODE) */}
+        <div className="p-4 bg-white border-4 border-black shadow-[6px_6px_0px_#000] rounded-xl space-y-3">
+          <div className="flex flex-wrap items-center justify-between gap-3 border-b-2 border-black pb-2.5">
+            <div className="flex items-center gap-2">
+              <span className="font-mono text-xs font-black uppercase text-black bg-[#A6FF00] px-2.5 py-1 border-2 border-black shadow-[2px_2px_0px_#000]">
+                PORTFOLIO OF 36 CLINICAL DISEASES &amp; PDBs
+              </span>
+              <span className="text-xs font-bold text-neutral-600 hidden sm:inline">
+                Click any disease to load structure and PDB coordinates:
+              </span>
+            </div>
+
+            {/* Quick Select Dropdown */}
+            <div className="flex items-center gap-2 w-full sm:w-auto">
+              <span className="font-mono text-xs font-black uppercase text-black hidden md:inline">
+                Quick Select:
+              </span>
+              <select
+                value={activeTarget.id}
+                onChange={(e) => {
+                  const found = targets.find(t => t.id === e.target.value);
+                  if (found) {
+                    onSelectTarget(found);
                     setGroqExplanation(null);
-                  }}
-                  className={`px-3 py-1.5 text-xs font-mono font-black uppercase border-2 border-black transition-all cursor-pointer neo-btn ${
-                    activeTarget.id === ft.id
-                      ? 'bg-[#FFE600] text-black shadow-[3px_3px_0px_#000]'
-                      : 'bg-white text-black hover:bg-gray-100 shadow-[2px_2px_0px_#000]'
-                  }`}
-                >
-                  {ft.pdb} • {ft.clinical_bypass}
-                </button>
-              ))}
+                    toast.success(`Loaded ${found.disease} (${found.pdb}) into 3D Viewport`);
+                  }
+                }}
+                className="w-full sm:w-80 bg-[#FFE600] text-xs font-mono font-black text-black border-2 border-black shadow-[2px_2px_0px_#000] px-3 py-1.5 focus:outline-none cursor-pointer"
+                title="Select Any Disease with Disease Name and PDB Code"
+              >
+                {targets.map((t, idx) => (
+                  <option key={t.id} value={t.id}>
+                    {idx + 1}. {t.disease} ({t.name}) • PDB: {t.pdb}
+                  </option>
+                ))}
+              </select>
             </div>
+          </div>
+
+          {/* Category Filter Pills */}
+          <div className="flex flex-wrap items-center gap-1.5 pt-1">
+            {diseaseCategories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                className={`px-2.5 py-1 text-xs font-mono font-black uppercase border-2 border-black transition-all cursor-pointer neo-btn ${
+                  selectedCategory === cat
+                    ? 'bg-black text-[#FFE600] shadow-[2px_2px_0px_#FFE600]'
+                    : 'bg-neutral-100 hover:bg-[#FFE600] text-black shadow-[1px_1px_0px_#000]'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          {/* Quick Click Badges Grid (Scrollable) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 max-h-48 overflow-y-auto pr-1 pt-1">
+            {filteredTargets.map((t) => {
+              const isSelected = activeTarget.id === t.id;
+              return (
+                <button
+                  key={t.id}
+                  onClick={() => {
+                    onSelectTarget(t);
+                    setGroqExplanation(null);
+                    toast.success(`Loaded ${t.disease} (${t.pdb}) into 3D Viewport`);
+                  }}
+                  className={`p-2 text-left border-2 border-black transition-all cursor-pointer neo-btn flex items-center justify-between gap-1.5 ${
+                    isSelected
+                      ? 'bg-[#FFE600] shadow-[3px_3px_0px_#000]'
+                      : 'bg-[#FFFDF0] hover:bg-[#A6FF00] shadow-[2px_2px_0px_#000]'
+                  }`}
+                  title={`${t.disease} (${t.name}) - PDB: ${t.pdb}`}
+                >
+                  <div className="truncate flex-1">
+                    <div className="text-[11px] font-black text-black truncate">{t.disease}</div>
+                    <div className="text-[10px] font-bold text-neutral-600 truncate">{t.name}</div>
+                  </div>
+                  <span className="font-mono text-[10px] font-black bg-black text-white px-1.5 py-0.5 shrink-0">
+                    {t.pdb}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
 
@@ -275,6 +365,30 @@ export default function AlphaFoldWorkbench({
           
           {/* Left Column: Full-Scale 3D WebGL Canvas (8 cols) */}
           <div className="lg:col-span-8 space-y-4">
+            
+            {/* Active Disease & Structure Status Bar */}
+            <div className="bg-[#FFE600] border-4 border-black p-3.5 shadow-[5px_5px_0px_#000] rounded-xl flex flex-wrap items-center justify-between gap-3 text-xs font-mono font-black">
+              <div className="flex items-center gap-2">
+                <span className="bg-black text-[#FFE600] px-2.5 py-1 uppercase text-[11px] shadow-[2px_2px_0px_#000]">
+                  ACTIVE DISEASE
+                </span>
+                <span className="text-sm font-black text-black">
+                  {activeTarget.disease}
+                </span>
+              </div>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="bg-white border-2 border-black px-2 py-0.5 shadow-[1px_1px_0px_#000]">
+                  TARGET: {activeTarget.name}
+                </span>
+                <span className="bg-[#00F0FF] border-2 border-black px-2 py-0.5 shadow-[1px_1px_0px_#000]">
+                  PDB: {activeTarget.pdb}
+                </span>
+                <span className="bg-[#A6FF00] border-2 border-black px-2 py-0.5 shadow-[1px_1px_0px_#000]">
+                  LEAD: {activeTarget.lead_code}
+                </span>
+              </div>
+            </div>
+
             <div className="relative rounded-xl overflow-hidden border-4 border-black bg-[#070B14] shadow-[8px_8px_0px_0px_#000]">
               <MolecularViewer3D
                 target={activeTarget}

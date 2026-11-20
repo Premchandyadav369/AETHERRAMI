@@ -927,8 +927,11 @@ END
 
       {/* 2. Top Header Overlay & Metadata */}
       <div className="flex flex-wrap items-center justify-between z-20 p-3 sm:p-4 bg-gradient-to-b from-[#070B14] via-[#070B14]/90 to-transparent border-b-2 border-black/50">
-        <div className="flex flex-col gap-1">
-          <div className="flex items-center gap-2">
+        <div className="flex flex-col gap-1.5">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="font-mono text-xs font-black text-black uppercase tracking-wider bg-[#FFE600] px-2.5 py-0.5 border-2 border-black shadow-[2px_2px_0px_#000]">
+              DISEASE: {target.disease}
+            </span>
             <span className="font-mono text-xs font-black text-white uppercase tracking-wider bg-black px-2.5 py-0.5 border border-white">
               {target.name}
             </span>
@@ -953,7 +956,7 @@ END
 
         {/* Header Action Tools */}
         <div className="flex items-center gap-2 mt-2 sm:mt-0">
-          {/* Target Dropdown */}
+          {/* Target Dropdown with Disease Name & PDB Code */}
           {allTargets.length > 0 && onTargetChange && (
             <select
               value={target.id}
@@ -961,11 +964,12 @@ END
                 const selected = allTargets.find((t) => t.id === e.target.value);
                 if (selected) onTargetChange(selected);
               }}
-              className="bg-[#FFE600] text-xs font-mono font-black text-black border-2 border-black shadow-[2px_2px_0px_#000] px-2.5 py-1 focus:outline-none cursor-pointer"
+              className="bg-[#FFE600] text-xs font-mono font-black text-black border-2 border-black shadow-[2px_2px_0px_#000] px-2.5 py-1 focus:outline-none cursor-pointer max-w-[280px] sm:max-w-[420px]"
+              title="Select Any Disease with Disease Name and PDB Code"
             >
               {allTargets.map((t) => (
                 <option key={t.id} value={t.id}>
-                  {t.pdb} • {t.name.slice(0, 20)}
+                  {t.disease} ({t.name}) • PDB: {t.pdb}
                 </option>
               ))}
             </select>
