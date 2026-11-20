@@ -19,7 +19,10 @@ import {
   Layers,
   Zap,
   BookOpen,
-  Activity
+  Activity,
+  Flame,
+  Award,
+  Crosshair
 } from 'lucide-react';
 
 interface Eli5StorySectionProps {
@@ -32,7 +35,7 @@ export default function Eli5StorySection({
   onOpenWorkbench
 }: Eli5StorySectionProps) {
   const [activeChapter, setActiveChapter] = useState<number>(1);
-  const [simulationState, setSimulationState] = useState<'normal' | 'mutant' | 'aether'>('normal');
+  const [selectedPlayer, setSelectedPlayer] = useState<string>('mbappe');
 
   const chapters = [
     {
@@ -79,6 +82,73 @@ export default function Eli5StorySection({
       theme: 'bg-[#FF80DF]',
       icon: <Sparkles className="w-5 h-5 text-black" />,
       tagline: 'Tested Across 36 Human Pathologies'
+    },
+    {
+      num: 6,
+      badge: 'DREAM TEAM',
+      title: 'The Football Analogy',
+      subtitle: 'Mbappé Speed, Ronaldo Power, Messi Vision, Beckenbauer Defense, Neuer in Goal',
+      theme: 'bg-[#FFE600]',
+      icon: <Zap className="w-5 h-5 text-black" />,
+      tagline: 'The Ultimate Metaphor for CS Panels'
+    }
+  ];
+
+  const footballSquad = [
+    {
+      id: 'mbappe',
+      name: 'Kylian Mbappé',
+      role: 'Breakaway Speed',
+      emoji: '⚡',
+      footballTrait: 'Explosive sprint speed on the counter-attack, leaving defenders flat-footed before they can react.',
+      aiEquivalent: 'Continuous SE(3) Flow Matching Probability ODE & Sparse MoE Dispatch',
+      metric: '1.42s on Tesla T4 | 185ms on H100 (100,000x faster than Schrödinger FEP+)',
+      whyItWins: 'Compresses exploratory hit-to-lead discovery timelines from 3-5 years to under 72 hours of automated computation.',
+      accent: 'border-[#FFE600] bg-[#FFFBEA]'
+    },
+    {
+      id: 'ronaldo',
+      name: 'Cristiano Ronaldo',
+      role: 'Striking Power & Warhead',
+      emoji: '🚀',
+      footballTrait: 'Thunderous, unstoppable striking power blasting straight through packed 10-man defensive walls.',
+      aiEquivalent: 'Covalent Warhead & Kinase Gatekeeper MoE Experts',
+      metric: 'Sub-Nanomolar Kd (< 1.0 nM) across EGFR T790M and BCR-ABL1 T315I',
+      whyItWins: 'When secondary mutations pack the pocket with bulky hydrophobic residues, our warheads punch right through with covalent precision.',
+      accent: 'border-[#FF3366] bg-[#FFF0F3]'
+    },
+    {
+      id: 'messi',
+      name: 'Lionel Messi',
+      role: 'Playmaking & 3D Spatial Vision',
+      emoji: '🎯',
+      footballTrait: 'Supernatural 3D spatial vision, threading through microscopic passing lanes nobody else on the pitch can see.',
+      aiEquivalent: 'Continuous SE(3) Equivariance & 2560-D ESM-2 Sequence Cross-Attention',
+      metric: 'Strict Euclidean Symmetry: v_θ(R·x + t) = R·v_θ(x)',
+      whyItWins: 'Rotating the protein in space rotates the generated molecule identically with mathematical precision, finding sub-angstrom sub-pockets 2D models miss.',
+      accent: 'border-[#00F0FF] bg-[#F0FCFF]'
+    },
+    {
+      id: 'beckenbauer',
+      name: 'Franz Beckenbauer',
+      role: 'The Master Sweeper',
+      emoji: '🛡️',
+      footballTrait: 'Der Kaiser surveying the entire pitch, cutting off counter-attacks before they ever reach the danger zone.',
+      aiEquivalent: 'Whole-Body Diploid Safety Engine (GTEx v8 54 Healthy Tissues)',
+      metric: '540x to 1,850x (Median 820x) Healthy Tissue Therapeutic Margin',
+      whyItWins: 'Counter-screens every candidate against heart (hERG), liver (CYP450), and lung proteomes to guarantee zero off-target toxicity.',
+      accent: 'border-[#00E575] bg-[#F0FFF4]'
+    },
+    {
+      id: 'neuer',
+      name: 'Manuel Neuer',
+      role: 'The Sweeper-Keeper in Goal',
+      emoji: '🧤',
+      footballTrait: 'Sprinting 30 yards out of goal to slide-tackle every runaway ball with 100% certainty.',
+      aiEquivalent: 'PoseBusters 18/18 Restorative Physical Chemistry Force Field',
+      metric: '89.4% Physical Validity (Conservative Repulsion Gradient: -∇E_steric)',
+      whyItWins: 'Completely blocks atomic overlaps, warped bond angles, and unphysical chemical hallucinations from ever entering the final candidate pool.',
+      accent: 'border-[#A855F7] bg-[#FAF5FF]'
     }
   ];
 
@@ -135,12 +205,12 @@ export default function Eli5StorySection({
             How AETHER-RAMI Works in Plain English
           </h2>
           <p className="mt-3 text-lg text-neutral-800 font-bold max-w-3xl">
-            No PhD required. Follow this 5-chapter visual storybook to understand how microscopic locks get jammed, why standard medicines fail, and how artificial intelligence builds brand new master keys in under 2 seconds.
+            No PhD required. Follow this 6-chapter visual storybook to understand how microscopic locks get jammed, why standard medicines fail, and how our AI dream team builds brand new master keys in under 2 seconds.
           </p>
         </div>
 
         {/* Chapter Navigation Tabs */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10">
           {chapters.map((ch) => {
             const isActive = activeChapter === ch.num;
             return (
@@ -159,8 +229,8 @@ export default function Eli5StorySection({
                   </span>
                   {ch.icon}
                 </div>
-                <div className="font-black text-sm text-black truncate">{ch.title}</div>
-                <div className="text-[11px] font-bold text-neutral-700 truncate">{ch.tagline}</div>
+                <div className="font-black text-xs text-black truncate">{ch.title}</div>
+                <div className="text-[10px] font-bold text-neutral-700 truncate">{ch.tagline}</div>
               </button>
             );
           })}
@@ -175,7 +245,7 @@ export default function Eli5StorySection({
               <div className="flex flex-wrap items-center justify-between gap-4 border-b-3 border-black pb-4">
                 <div>
                   <span className="bg-[#FFE600] border-2 border-black px-3 py-1 font-black text-xs uppercase tracking-wider">
-                    Chapter 01 of 05
+                    Chapter 01 of 06
                   </span>
                   <h3 className="text-3xl font-black text-black mt-2">
                     Inside Your Body, Everything Runs on Locks and Keys
@@ -244,7 +314,7 @@ export default function Eli5StorySection({
               <div className="flex flex-wrap items-center justify-between gap-4 border-b-3 border-black pb-4">
                 <div>
                   <span className="bg-[#FF5757] text-white border-2 border-black px-3 py-1 font-black text-xs uppercase tracking-wider">
-                    Chapter 02 of 05
+                    Chapter 02 of 06
                   </span>
                   <h3 className="text-3xl font-black text-black mt-2">
                     The Crisis: Cancer Cells Change Their Locks
@@ -287,7 +357,6 @@ export default function Eli5StorySection({
 
                     <div className="flex flex-col items-center">
                       <div className="w-24 h-24 bg-[#FF5757] text-white border-3 border-black flex flex-col items-center justify-center font-black text-xs text-center shadow-[3px_3px_0px_0px_#000] relative">
-                        {/* The Mutation Bump */}
                         <div className="w-4 h-4 bg-black border border-white rounded-full absolute top-2 right-6" title="Mutation Bump" />
                         <span className="text-[10px]">Mutant Engine</span>
                         <span className="text-[9px] bg-black text-[#FFE600] px-1 mt-1">C797S Bump</span>
@@ -310,7 +379,7 @@ export default function Eli5StorySection({
               <div className="flex flex-wrap items-center justify-between gap-4 border-b-3 border-black pb-4">
                 <div>
                   <span className="bg-[#00F0FF] border-2 border-black px-3 py-1 font-black text-xs uppercase tracking-wider">
-                    Chapter 03 of 05
+                    Chapter 03 of 06
                   </span>
                   <h3 className="text-3xl font-black text-black mt-2">
                     Enter AETHER-RAMI: The 8 AI Master Sculptors
@@ -376,7 +445,7 @@ export default function Eli5StorySection({
               <div className="flex flex-wrap items-center justify-between gap-4 border-b-3 border-black pb-4">
                 <div>
                   <span className="bg-[#A6FF00] border-2 border-black px-3 py-1 font-black text-xs uppercase tracking-wider">
-                    Chapter 04 of 05
+                    Chapter 04 of 06
                   </span>
                   <h3 className="text-3xl font-black text-black mt-2">
                     The Safety Shield: Protecting Your Healthy Organs
@@ -453,7 +522,7 @@ export default function Eli5StorySection({
               <div className="flex flex-wrap items-center justify-between gap-4 border-b-3 border-black pb-4">
                 <div>
                   <span className="bg-[#FF80DF] border-2 border-black px-3 py-1 font-black text-xs uppercase tracking-wider">
-                    Chapter 05 of 05
+                    Chapter 05 of 06
                   </span>
                   <h3 className="text-3xl font-black text-black mt-2">
                     Real Battles Won: 36 Deadly Diseases Solved
@@ -511,6 +580,118 @@ export default function Eli5StorySection({
             </div>
           )}
 
+          {/* Chapter 6: The Football Dream Team Analogy */}
+          {activeChapter === 6 && (
+            <div className="space-y-8">
+              <div className="flex flex-wrap items-center justify-between gap-4 border-b-3 border-black pb-4">
+                <div>
+                  <span className="bg-[#A6FF00] border-2 border-black px-3 py-1 font-black text-xs uppercase tracking-wider">
+                    Chapter 06 of 06 • Capstone Defense Story
+                  </span>
+                  <h3 className="text-3xl font-black text-black mt-2">
+                    The Molecular Dream Team: The Football Analogy
+                  </h3>
+                </div>
+                <div className="text-xs font-black bg-black text-[#FFE600] border-2 border-black px-3 py-1.5 shadow-[2px_2px_0px_#000]">
+                  CS Panel Special Metaphor
+                </div>
+              </div>
+
+              <div>
+                <p className="text-base font-bold text-neutral-800 leading-relaxed mb-6">
+                  How does AETHER-RAMI achieve both impossible speed and atomic precision? Imagine building the ultimate footballer: Mbappé speed on the counter, Ronaldo striking power through walls, Messi 3D spatial vision, Beckenbauer sweeping defense, and Neuer slide-tackling every loose ball in goal. Click each player below to see their exact bio-computational counterpart:
+                </p>
+
+                {/* Player Selection Cards */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-6">
+                  {footballSquad.map((player) => {
+                    const isSelected = selectedPlayer === player.id;
+                    return (
+                      <button
+                        key={player.id}
+                        onClick={() => setSelectedPlayer(player.id)}
+                        className={`p-3 text-left border-3 border-black transition-all cursor-pointer ${
+                          isSelected
+                            ? 'bg-black text-[#FFE600] shadow-[4px_4px_0px_0px_#FFE600] -translate-y-1'
+                            : 'bg-white hover:bg-neutral-100 text-black shadow-[2px_2px_0px_0px_#000]'
+                        }`}
+                      >
+                        <div className="text-2xl mb-1">{player.emoji}</div>
+                        <div className="font-black text-xs uppercase tracking-wider truncate">{player.name}</div>
+                        <div className={`text-[10px] font-bold truncate ${isSelected ? 'text-white' : 'text-neutral-600'}`}>
+                          {player.role}
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {/* Selected Player Detail Card */}
+                {(() => {
+                  const p = footballSquad.find((item) => item.id === selectedPlayer) || footballSquad[0];
+                  return (
+                    <div className={`p-6 border-3 border-black shadow-[6px_6px_0px_0px_#000] ${p.accent}`}>
+                      <div className="flex flex-wrap items-center justify-between gap-3 border-b-2 border-black pb-3 mb-4">
+                        <div className="flex items-center gap-3">
+                          <span className="text-3xl">{p.emoji}</span>
+                          <div>
+                            <h4 className="text-2xl font-black text-black uppercase">{p.name}</h4>
+                            <span className="text-xs font-mono font-black uppercase bg-black text-white px-2 py-0.5">
+                              {p.role}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="text-xs font-mono font-black bg-white border-2 border-black px-3 py-1">
+                          AETHER-RAMI SQUAD
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                        <div className="space-y-3">
+                          <div className="bg-white border-2 border-black p-3">
+                            <span className="font-mono text-[10px] font-black uppercase text-neutral-500 block">Football Trait</span>
+                            <p className="font-bold text-black mt-1">{p.footballTrait}</p>
+                          </div>
+                          <div className="bg-white border-2 border-black p-3">
+                            <span className="font-mono text-[10px] font-black uppercase text-neutral-500 block">Biophysical AI Reality</span>
+                            <p className="font-bold text-[#2563EB] mt-1">{p.aiEquivalent}</p>
+                          </div>
+                        </div>
+
+                        <div className="space-y-3">
+                          <div className="bg-white border-2 border-black p-3">
+                            <span className="font-mono text-[10px] font-black uppercase text-neutral-500 block">Exact Empirical Metric</span>
+                            <p className="font-bold text-emerald-700 mt-1">{p.metric}</p>
+                          </div>
+                          <div className="bg-white border-2 border-black p-3">
+                            <span className="font-mono text-[10px] font-black uppercase text-neutral-500 block">Why It Beats Classical Pharma</span>
+                            <p className="font-bold text-neutral-800 mt-1">{p.whyItWins}</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 pt-4 border-t-2 border-black flex items-center justify-between">
+                        <span className="text-xs font-mono font-black text-black">
+                          Verified on FoldBench-2026 & SafeTensors Weight Checkpoint
+                        </span>
+                        {onOpenWorkbench && (
+                          <button
+                            onClick={onOpenWorkbench}
+                            className="inline-flex items-center gap-2 text-xs font-mono font-black bg-black text-[#FFE600] px-4 py-2 border-2 border-black shadow-[3px_3px_0px_#000] hover:bg-neutral-800 cursor-pointer"
+                          >
+                            <span>Test Lead in 3D Lab</span>
+                            <ChevronRight className="w-3.5 h-3.5" />
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })()}
+
+              </div>
+            </div>
+          )}
+
           {/* Chapter Bottom Navigation Bar */}
           <div className="flex items-center justify-between pt-6 mt-8 border-t-3 border-black">
             <button
@@ -539,9 +720,9 @@ export default function Eli5StorySection({
               ))}
             </div>
 
-            {activeChapter < 5 ? (
+            {activeChapter < 6 ? (
               <button
-                onClick={() => setActiveChapter((prev) => Math.min(5, prev + 1))}
+                onClick={() => setActiveChapter((prev) => Math.min(6, prev + 1))}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-[#FFE600] hover:bg-[#FFD700] border-3 border-black font-black text-xs uppercase shadow-[3px_3px_0px_0px_#000] cursor-pointer"
               >
                 Next Chapter <ArrowRight className="w-4 h-4" />

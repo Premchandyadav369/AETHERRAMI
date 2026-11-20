@@ -110,6 +110,18 @@ export default function Hero({
             </Link>
 
             <a
+              href="/AETHER_RAMI_CSE_PANEL_QUESTIONS_AND_SIMPLE_EXPLANATIONS.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3.5 text-sm font-mono font-black uppercase text-black bg-[#FF80DF] hover:bg-[#FF66D5] border-3 border-black shadow-[5px_5px_0px_#000] neo-btn flex items-center gap-2"
+              title="Download 50 CSE Panel Questions & Simple Explanations Dossier"
+            >
+              <BookOpen className="w-4 h-4 text-black" />
+              <span>Defense Dossier (PDF)</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+
+            <a
               href="https://huggingface.co/Premchan369/aether-rami-esm2-diffsbdd"
               target="_blank"
               rel="noopener noreferrer"
