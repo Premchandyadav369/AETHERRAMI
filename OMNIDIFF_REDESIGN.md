@@ -32,7 +32,7 @@ The redesigned **AETHER-OmniDiff-MoE** completely replaces reverse-time diffusio
                           [Valence Graph Perception (No Fallback)]
                                            |
                                            v
-                    [Unique Drug-Like Lead (Raw PB: 19.0%, Duplicates: 0.0%)]
+                    [Unique Drug-Like Lead (Raw PB: 13.0%, Duplicates: 0.0%)]
 ```
 
 ### Core Mathematical Components
@@ -50,7 +50,7 @@ The redesigned **AETHER-OmniDiff-MoE** completely replaces reverse-time diffusio
 
 | Metric | Previous Diffusion SDE | Redesigned OT-Flow MoE | FLOWR (2026 Reference) |
 | :--- | :--- | :--- | :--- |
-| **Raw PoseBusters Pass Rate** | 0.0% | **19.0%** | 86.4% |
+| **Raw PoseBusters Pass Rate** | 0.0% | **13.0%** | 86.4% |
 | **Relaxed PoseBusters Pass Rate**| 100.0% | **100.0%** | 100.0% |
 | **Duplicate Rate** | 91.67% | **0.0%** | 1.8% |
 | **Sampling Latency (CPU)** | 0.18 s / mol | **0.11 s / mol** | 0.14 s / mol (GPU) |

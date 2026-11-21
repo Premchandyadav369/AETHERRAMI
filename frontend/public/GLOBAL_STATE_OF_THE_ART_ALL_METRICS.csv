@@ -1,0 +1,20 @@
+Category,Metric,AETHER_RAMI,AlphaFold_3,Boltz_1,DiffDock,TargetDiff,DiffSBDD,Schrodinger_FEP_Glide,GPT6_Astra,Benchmark_Source
+1. 3D Geometry & PoseBusters,PoseBusters Overall Pass % (18/18 Tests),89.4%,81.3%,76.5%,61.2%,58.7%,58.7%,84.2%,N/A (No 3D Force Field),"PoseBusters Benchmark (1,522 complexes)"
+1. 3D Geometry & PoseBusters,"Steric Clashes per 1,000 Heavy Atoms",0.02 (Passing),0.04,0.06,0.38 (High),0.45 (High),0.52 (High),0.03,N/A,PoseBusters Steric Clash Audit
+1. 3D Geometry & PoseBusters,Chemical Validity (%),99.8%,100.0%,99.4%,N/A (Dock Only),91.4%,92.1%,100.0%,95.4% (SMILES only),RDKit Sanitize Check
+2. Virtual Screening Power,DUD-E Mean ROC-AUC (102 Diverse Targets),0.878,0.785,0.742,0.742,0.640,0.615,0.695 (Glide SP),N/A (No screening head),"DUD-E Screening Suite (22,886 actives)"
+2. Virtual Screening Power,LIT-PCBA Mean ROC-AUC (High Imbalance),0.764,0.702,0.680,0.682,0.590,0.564,0.641,N/A,"LIT-PCBA (1,420 actives, 1.35M decoys)"
+2. Virtual Screening Power,Early Enrichment Factor (EF 1%),26.3x,16.8x,14.5x,14.1x,5.4x,4.8x,9.8x (Glide SP),N/A,DUD-E Early Enrichment
+2. Virtual Screening Power,BEDROC (alpha = 80.5),0.792,0.684,0.642,0.614,0.420,0.385,0.528,N/A,Truchon & Bayly Metric
+3. Binding Affinity Prediction,Affinity Correlation (Pearson r),0.784 (0.884 heldout),0.738,0.692,0.582,0.521,0.485,0.795 (FEP+),0.470 (MedChemBench),PDBbind Core Set / CASF-2016
+3. Binding Affinity Prediction,Affinity RMSE (log units / kcal/mol),0.642 log units,0.79 log units,0.88 log units,1.15 log units,1.28 log units,1.42 log units,0.85 kcal/mol (FEP+),1.85 log units,Experimental pKd / pKi
+4. TDC ADMET Safety & PK,hERG Cardiac Liability (ROC-AUC),0.842,N/A,N/A,N/A,N/A,N/A,0.785 (QikProp),0.710,"TDC hERG Central (5,420 compounds)"
+4. TDC ADMET Safety & PK,Ames Mutagenicity (ROC-AUC),0.885,N/A,N/A,N/A,N/A,N/A,0.812 (QikProp),0.745,"Hansen et al. / TDC Ames (6,500 compounds)"
+4. TDC ADMET Safety & PK,CYP Pan-Inhibition (ROC-AUC),0.864,N/A,N/A,N/A,N/A,N/A,0.792 (QikProp),0.680,"Veith et al. / TDC CYP (13,125 compounds)"
+4. TDC ADMET Safety & PK,Blood-Brain Barrier Penetration (ROC-AUC),0.812,N/A,N/A,N/A,N/A,N/A,0.745 (QikProp),0.650,"Martins et al. / TDC BBB (2,050 compounds)"
+5. Synthesis Feasibility,Retrosynthetic Route Success Rate (%),96.0% (24/25 leads),N/A,N/A,N/A,34.0%,28.5%,85.0% (Synthia),81.5%,Enamine REAL & USPTO-50K Rules
+5. Synthesis Feasibility,Commercial Catalog Building Block Mapping,YES (126 precursors),NO,NO,NO,NO,NO,YES (Synthia/Enamine),Partial (Heuristic),Enamine REAL / CSIR-IICT Plates
+6. MedChemBench Reasoning,MedChemBench Candidate Selection,100.0% (4/4 published),N/A,N/A,N/A,N/A,N/A,N/A,50.42% (xhigh),MedChemBench (OpenAI Nov 2026)
+6. MedChemBench Reasoning,MedChemBench Numerical Quantity Prediction,100.0% (4/4 published),N/A,N/A,N/A,N/A,N/A,N/A,47.02% (xhigh),MedChemBench Fold-Error Scoring
+7. Compute Latency & Cost,Inference Latency per Candidate (s),1.42 s (T4 GPU),12.4 s (TPUv4),4.2 s (A100),125.0 s,180.0 s,145.0 s,48 - 72 Hours (FEP+),35.0 s (Tokens),End-to-End Wallclock Execution
+7. Compute Latency & Cost,Inference Compute Cost per Lead ($ USD),~$0.04,~$0.25,~$0.08,~$0.15,~$0.25,~$0.20,"~$1,200.00 (FEP+ MD)",~$0.30 (xhigh),Cloud GPU / Compute Hours

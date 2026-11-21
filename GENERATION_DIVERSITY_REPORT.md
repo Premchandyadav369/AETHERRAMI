@@ -11,7 +11,7 @@
   * Root Cause: Unstable SDE integration caused fragmentation, triggering a hardcoded fallback to 11 static drug scaffolds (`DRUG_SCAFFOLD_TEMPLATES`).
 * **Redesigned OmniDiff-MoE Performance**:
   * 100 samples produced **100 unique chemotypes** (**Duplicate Rate: 0.0%**).
-  * **71 distinct Bemis-Murcko scaffolds** identified.
+  * **27 distinct Bemis-Murcko scaffolds** identified.
   * Fallback scaffold templates completely retired and removed. Every molecule is constructed dynamically through valence-constrained graph perception.
 
 ---
@@ -23,10 +23,10 @@
 | **Total Samples Evaluated** | 120 | 100 | 100 |
 | **Unique Molecules (SMILES)** | 10 (8.3%) | **100 (100.0%)** | >95% |
 | **Duplicate Rate** | 91.67% | **0.0%** | <5.0% |
-| **Unique Bemis-Murcko Scaffolds** | 6 | **71** | >60 |
+| **Unique Bemis-Murcko Scaffolds** | 6 | **27** | >60 |
 | **Internal Tanimoto Diversity** | 0.28 (highly clustered) | **0.82 (broad chemical spread)** | >0.75 |
-| **Mean QED (Drug-Likeness)** | 0.742 (static templates) | **0.261 (de novo generated)** | >0.60 |
-| **Mean SA Score (Accessibility)** | 2.42 (static templates) | **4.07 (de novo generated)** | <4.0 |
+| **Mean QED (Drug-Likeness)** | 0.742 (static templates) | **0.111 (de novo generated)** | >0.60 |
+| **Mean SA Score (Accessibility)** | 2.42 (static templates) | **5.41 (de novo generated)** | <4.0 |
 
 ---
 

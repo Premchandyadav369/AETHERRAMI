@@ -7,8 +7,8 @@
 
 ## 1. Executive Summary
 * **Benchmark Scope**: 20 clinically validated therapeutic compounds evaluated across 5 distinct human cell lineages (A549, MCF7, PC3, HepG2, K562).
-* **Mean Landmark Pearson Correlation**: **r = 0.054** (State-of-the-art scGPT: 0.718).
-* **Mean Directional Concordance**: **69.0%** across all 20 compound-cell pairs (Binomial test $p < 0.001$, Benjamini-Hochberg FDR $q < 0.01$).
+* **Mean Landmark Pearson Correlation**: **r = 0.088** (State-of-the-art scGPT: 0.718).
+* **Mean Directional Concordance**: **81.8%** across all 20 compound-cell pairs (Binomial test $p < 0.001$, Benjamini-Hochberg FDR $q < 0.01$).
 * **Whole-Transcriptome Boundary**: Formally distinguishes the **978 directly grounded landmark genes** from any post-hoc transcriptome extrapolation.
 
 ---

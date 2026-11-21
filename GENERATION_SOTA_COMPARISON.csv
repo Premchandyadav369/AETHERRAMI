@@ -5,4 +5,4 @@ Pocket2Mol (ICML 2022),Autoregressive Graph Assembly,CrossDocked2020,62.4%,100.0
 FLOWR (Nat. Comp. Sci. 2026),Equivariant OT Flow Matching,PLINDER / CrossDocked,86.4%,100.0%,1.8%,0.690,2.65,0.14s / mol,Requires large GPU memory during training
 TerraBind (ICML 2026),Coarse Structural Flow,PDBbind / BindingDB,72.1%,100.0%,4.2%,0.640,2.90,0.05s / mol,Approximates sidechains with residue centroids
 AETHER-OmniDiff-v4 (Old),Continuous SDE + Scaffold Fallback,CrossDocked / Local,0.0%,100.0%,91.67%,0.742,2.42,0.18s / mol,Catastrophic mode collapse to 11 templates
-AETHER-OmniDiff-MoE (New),Equivariant OT-Flow + Analytical Geometry + Entropy Reg,PLINDER / PDBbind / Local,19.0%,100.0%,0.0%,0.261,4.07,0.11s / mol,Genuinely de novo; 0% fallback templates; zero mode collapse
+AETHER-OmniDiff-MoE (New),Equivariant OT-Flow + Analytical Geometry + Entropy Reg,PLINDER / PDBbind / Local,13.0%,100.0%,0.0%,0.111,5.41,0.11s / mol,Genuinely de novo; 0% fallback templates; zero mode collapse
