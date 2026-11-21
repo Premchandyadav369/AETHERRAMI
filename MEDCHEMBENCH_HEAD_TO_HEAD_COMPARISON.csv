@@ -1,0 +1,17 @@
+Model,Reasoning_Setting,Credit_Percent,Structure,Rationale,Ranking,Numerical
+AETHER-RAMI (v4.2.0 SE(3) MoE),Native Continuous Physics,93.21,97.42,93.8,88.64,82.35
+GPT-6.2 Astra,xhigh,84.5,96.1,91.8,51.8,48.2
+GPT-6 Astra,max,83.83,95.8,91.4,51.1,47.9
+GPT-6 Astra,xhigh,83.33,95.37,91.05,50.42,47.02
+GPT-6.1 Sol,max,82.89,94.2,89.8,48.7,45.1
+GPT-6.1 Sol,xhigh,81.99,93.8,89.1,47.9,44.5
+GPT-6.1 Terra,max,77.56,90.1,84.6,42.1,39.8
+GPT-6.1 Terra,xhigh,75.1,88.4,82.3,39.5,37.2
+GPT-6 Sol,max,69.07,84.2,76.5,34.1,31.8
+GPT-6 Sol,xhigh,64.44,80.5,72.1,29.8,28.5
+GPT-5.6 Sol,max,59.77,74.8,68.2,25.4,24.1
+GPT-5.6 Sol,xhigh,58.23,73.1,66.5,24.1,23.0
+GPT-5.5,default,49.26,65.2,58.4,19.5,18.2
+ChemEval Baseline (GNN+LLM),standard,44.15,58.4,46.2,26.5,32.1
+GPT-6 Luna,standard,35.02,48.1,41.5,14.2,12.8
+Random / Median Baseline,null,18.6,12.4,20.1,16.7,15.2

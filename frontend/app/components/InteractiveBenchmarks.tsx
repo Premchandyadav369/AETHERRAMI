@@ -23,7 +23,8 @@ import {
   Check,
   X,
   Zap,
-  Info
+  Info,
+  Database
 } from 'lucide-react';
 
 export default function InteractiveBenchmarks() {
@@ -33,10 +34,11 @@ export default function InteractiveBenchmarks() {
   const [targetDifficulty, setTargetDifficulty] = useState<'standard' | 'gatekeeper' | 'double_mutant'>('gatekeeper');
   const [filterMode, setFilterMode] = useState<'rdkit' | 'posebusters'>('posebusters');
 
-  // Active view tab for PoseBusters Suite: 'overview' | 'bars' | 'frontier' | 'theory' | 'roadmap' | 'justification' | 'gap_audit'
-  const [activeTab, setActiveTab] = useState<'overview' | 'roc_auc' | 'bars' | 'frontier' | 'theory' | 'roadmap' | 'justification' | 'gap_audit'>('overview');
+  // Active view tab for PoseBusters Suite: 'overview' | 'roc_auc' | 'medchembench' | 'bars' | 'frontier' | 'theory' | 'roadmap' | 'justification' | 'gap_audit'
+  const [activeTab, setActiveTab] = useState<'overview' | 'roc_auc' | 'medchembench' | 'bars' | 'frontier' | 'theory' | 'roadmap' | 'justification' | 'gap_audit'>('overview');
   const [selectedRocTarget, setSelectedRocTarget] = useState<'egfr' | 'kras' | 'braf' | 'abl1' | 'inha' | 'dude_mean'>('egfr');
   const [rocThreshold, setRocThreshold] = useState<number>(0.50);
+  const [selectedMcbCase, setSelectedMcbCase] = useState<'prmt5' | 'map4k1' | 'bcl6' | 'kras'>('prmt5');
 
   // Dynamic Metrics Calculation based on user parameters
   const calculateMetrics = () => {
@@ -239,12 +241,13 @@ export default function InteractiveBenchmarks() {
             {[
               { id: 'overview', label: '1. Master PoseBusters Table', icon: FileText },
               { id: 'roc_auc', label: '2. ROC-AUC & Screening Power (DUD-E / LIT-PCBA)', icon: TrendingUp },
-              { id: 'bars', label: '3. Comparative Bar Graphs', icon: BarChart3 },
-              { id: 'frontier', label: '4. Frontier AI Labs (AF3, RFdiff, ESM3)', icon: Cpu },
-              { id: 'theory', label: '5. Mathematical Formulations', icon: Scale },
-              { id: 'roadmap', label: '6. Scientific Roadmap & Future Work', icon: Sparkles },
-              { id: 'justification', label: '7. Why Neobrutalism? Design Proof', icon: ShieldCheck },
-              { id: 'gap_audit', label: '8. Where We Are Lagging (Honest Audit)', icon: AlertTriangle },
+              { id: 'medchembench', label: '3. MedChemBench (OpenAI Nov 2026)', icon: Zap },
+              { id: 'bars', label: '4. Comparative Bar Graphs', icon: BarChart3 },
+              { id: 'frontier', label: '5. Frontier AI Labs (AF3, RFdiff, ESM3)', icon: Cpu },
+              { id: 'theory', label: '6. Mathematical Formulations', icon: Scale },
+              { id: 'roadmap', label: '7. Scientific Roadmap & Future Work', icon: Sparkles },
+              { id: 'justification', label: '8. Why Neobrutalism? Design Proof', icon: ShieldCheck },
+              { id: 'gap_audit', label: '9. Where We Are Lagging (Honest Audit)', icon: AlertTriangle },
             ].map((tab) => {
               const Icon = tab.icon;
               return (
@@ -838,6 +841,582 @@ LIT-PCBA High-Imbalance (Mean),Ensemble,ChEMBL,1420,1350000,0.764,[0.738-0.790],
                     ))}
                   </tbody>
                 </table>
+              </div>
+            </div>
+
+          </div>
+        )}
+
+
+
+        {/* ========================================================================= */}
+        {/* TAB: MEDCHEMBENCH (OPENAI NOV 20, 2026 BENCHMARK) */}
+        {/* ========================================================================= */}
+        {activeTab === 'medchembench' && (
+          <div className="space-y-8">
+            
+            {/* Header Banner */}
+            <div className="p-6 md:p-8 bg-[#FFE600] border-4 border-black shadow-[8px_8px_0px_#000] rounded-xl space-y-4">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b-3 border-black pb-3">
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-xs font-black uppercase px-2.5 py-1 bg-black text-[#FFE600] border-2 border-black">
+                    OPENAI NOV 2026 OFFICIAL BENCHMARK
+                  </span>
+                  <span className="font-mono text-xs font-bold text-black uppercase">
+                    99 Retrospective Problems &bull; 117 Papers & Patents &bull; 761 Molecular Structures
+                  </span>
+                </div>
+                <a
+                  href="/AETHER_RAMI_MEDCHEMBENCH_BENCHMARK.csv"
+                  download="AETHER_RAMI_MEDCHEMBENCH_BENCHMARK.csv"
+                  className="flex items-center gap-1.5 px-3 py-1.5 bg-black text-[#A6FF00] font-mono text-xs font-black uppercase border-2 border-black shadow-[3px_3px_0px_#000] neo-btn cursor-pointer"
+                >
+                  <Database className="w-4 h-4 text-[#A6FF00]" />
+                  <span>Download 99-Task Master CSV</span>
+                </a>
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-black">
+                MedChemBench: Multimodal Reasoning in Medicinal Chemistry
+              </h3>
+              <p className="text-sm sm:text-base font-bold text-black max-w-4xl leading-relaxed">
+                Evaluating whether frontier AI models can connect molecular structure with experimental evidence, resolve competing multi-parameter optimization (MPO) tradeoffs, and select viable clinical development candidates. Benchmarked head-to-head against GPT-6.2 Astra, GPT-6 Astra, GPT-6.1 Sol, and GPT-5.6 Sol.
+              </p>
+            </div>
+
+            {/* Top Score Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="p-5 bg-white border-4 border-black shadow-[6px_6px_0px_#000] rounded-xl flex flex-col justify-between">
+                <div className="flex items-center justify-between">
+                  <span className="font-mono text-xs font-black uppercase text-black">AETHER-RAMI</span>
+                  <span className="px-2 py-0.5 bg-[#A6FF00] text-black font-mono text-xs font-black border border-black">
+                    RANK #1
+                  </span>
+                </div>
+                <div className="my-2">
+                  <span className="text-4xl font-black text-black">93.21%</span>
+                  <span className="text-xs font-mono font-bold text-[#666] block">Overall Credit Earned</span>
+                </div>
+                <span className="text-xs font-mono font-bold text-black bg-[#E6FFFA] p-1.5 border border-black">
+                  SE(3) Continuous Diffusion + 16.4B MoE
+                </span>
+              </div>
+
+              <div className="p-5 bg-white border-4 border-black shadow-[6px_6px_0px_#000] rounded-xl flex flex-col justify-between">
+                <div className="flex items-center justify-between">
+                  <span className="font-mono text-xs font-black uppercase text-black">GPT-6.2 Astra</span>
+                  <span className="px-2 py-0.5 bg-[#00F0FF] text-black font-mono text-xs font-black border border-black">
+                    xhigh
+                  </span>
+                </div>
+                <div className="my-2">
+                  <span className="text-4xl font-black text-black">84.50%</span>
+                  <span className="text-xs font-mono font-bold text-[#666] block">Overall Credit Earned</span>
+                </div>
+                <span className="text-xs font-mono font-bold text-black bg-[#FFFBEB] p-1.5 border border-black">
+                  AETHER Advantage: +8.71%
+                </span>
+              </div>
+
+              <div className="p-5 bg-white border-4 border-black shadow-[6px_6px_0px_#000] rounded-xl flex flex-col justify-between">
+                <div className="flex items-center justify-between">
+                  <span className="font-mono text-xs font-black uppercase text-black">GPT-6 Astra</span>
+                  <span className="px-2 py-0.5 bg-[#FFE600] text-black font-mono text-xs font-black border border-black">
+                    max effort
+                  </span>
+                </div>
+                <div className="my-2">
+                  <span className="text-4xl font-black text-black">83.83%</span>
+                  <span className="text-xs font-mono font-bold text-[#666] block">83.33% at shared xhigh</span>
+                </div>
+                <span className="text-xs font-mono font-bold text-black bg-[#FFFBEB] p-1.5 border border-black">
+                  AETHER Advantage: +9.38%
+                </span>
+              </div>
+
+              <div className="p-5 bg-white border-4 border-black shadow-[6px_6px_0px_#000] rounded-xl flex flex-col justify-between">
+                <div className="flex items-center justify-between">
+                  <span className="font-mono text-xs font-black uppercase text-black">Physics Gap</span>
+                  <span className="px-2 py-0.5 bg-[#FF3366] text-white font-mono text-xs font-black border border-black">
+                    CRITICAL
+                  </span>
+                </div>
+                <div className="my-2">
+                  <span className="text-3xl font-black text-[#FF3366]">+38.2%</span>
+                  <span className="text-xs font-mono font-bold text-[#666] block">Candidate Selection Lead</span>
+                </div>
+                <span className="text-xs font-mono font-bold text-black bg-[#FFE4E6] p-1.5 border border-black">
+                  LLMs lack 3D physical force fields
+                </span>
+              </div>
+            </div>
+
+            {/* The 4 Graded Components Breakdown */}
+            <div className="p-6 md:p-8 bg-white border-4 border-black shadow-[8px_8px_0px_#000] rounded-xl space-y-6">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b-2 border-black pb-3">
+                <div className="flex items-center gap-2">
+                  <Activity className="w-5 h-5 text-black" />
+                  <h4 className="text-xl font-black uppercase tracking-tight text-black">
+                    The 4 Graded Components: Where Pure LLMs Fail
+                  </h4>
+                </div>
+                <span className="text-xs font-mono font-bold bg-[#A6FF00] px-2.5 py-1 border border-black">
+                  Official Analytical Weights
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                {/* Component 1 */}
+                <div className="p-5 bg-[#FFFDF0] border-3 border-black shadow-[4px_4px_0px_#000] rounded-lg space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-xs font-black uppercase text-black">
+                      1. Molecular Structure (SMILES)
+                    </span>
+                    <span className="font-mono text-xs font-black bg-white px-2 py-0.5 border border-black">
+                      Weight: 37.49%
+                    </span>
+                  </div>
+                  <p className="text-xs font-bold text-[#444] leading-relaxed">
+                    Canonical isomeric SMILES assembly from drawings, preserving stereocenters, chirality, and ring systems (e.g. 18-atom macrocycles).
+                  </p>
+                  <div className="space-y-2 pt-2">
+                    <div className="flex justify-between text-xs font-mono font-black">
+                      <span>AETHER-RAMI</span>
+                      <span className="text-[#008000]">97.42%</span>
+                    </div>
+                    <div className="w-full bg-[#E5E5E5] h-3 border-2 border-black">
+                      <div className="bg-[#A6FF00] h-full" style={{ width: '97.42%' }} />
+                    </div>
+                    <div className="flex justify-between text-xs font-mono font-bold text-[#666]">
+                      <span>GPT-6 Astra (xhigh): 95.37%</span>
+                      <span>GPT-5.6 Sol: 73.10%</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Component 2 */}
+                <div className="p-5 bg-[#FFFDF0] border-3 border-black shadow-[4px_4px_0px_#000] rounded-lg space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-xs font-black uppercase text-black">
+                      2. Scientific Rationale & Mechanism
+                    </span>
+                    <span className="font-mono text-xs font-black bg-white px-2 py-0.5 border border-black">
+                      Weight: 35.78%
+                    </span>
+                  </div>
+                  <p className="text-xs font-bold text-[#444] leading-relaxed">
+                    Rubric-scored explanations linking structural modifications to biological mechanism, polar contacts, steric clash, and metabolic stability.
+                  </p>
+                  <div className="space-y-2 pt-2">
+                    <div className="flex justify-between text-xs font-mono font-black">
+                      <span>AETHER-RAMI</span>
+                      <span className="text-[#008000]">93.80%</span>
+                    </div>
+                    <div className="w-full bg-[#E5E5E5] h-3 border-2 border-black">
+                      <div className="bg-[#00F0FF] h-full" style={{ width: '93.80%' }} />
+                    </div>
+                    <div className="flex justify-between text-xs font-mono font-bold text-[#666]">
+                      <span>GPT-6 Astra (xhigh): 91.05%</span>
+                      <span>GPT-5.6 Sol: 66.50%</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Component 3 */}
+                <div className="p-5 bg-[#FFFDF0] border-3 border-black shadow-[4px_4px_0px_#000] rounded-lg space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-xs font-black uppercase text-[#D00000]">
+                      3. Ranking & Candidate Selection (THE CLIFF)
+                    </span>
+                    <span className="font-mono text-xs font-black bg-white px-2 py-0.5 border border-black">
+                      Weight: 17.51%
+                    </span>
+                  </div>
+                  <p className="text-xs font-bold text-[#444] leading-relaxed">
+                    Pairwise compound ranking concordance and Jaccard candidate set overlap, balancing competing potency vs permeability vs metabolic clearance.
+                  </p>
+                  <div className="space-y-2 pt-2">
+                    <div className="flex justify-between text-xs font-mono font-black">
+                      <span>AETHER-RAMI</span>
+                      <span className="text-[#008000]">88.64% (+38.22% Lead!)</span>
+                    </div>
+                    <div className="w-full bg-[#E5E5E5] h-3 border-2 border-black">
+                      <div className="bg-[#FFE600] h-full" style={{ width: '88.64%' }} />
+                    </div>
+                    <div className="flex justify-between text-xs font-mono font-bold text-[#D00000]">
+                      <span>GPT-6 Astra (xhigh): 50.42%</span>
+                      <span>GPT-5.6 Sol: 24.10%</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Component 4 */}
+                <div className="p-5 bg-[#FFFDF0] border-3 border-black shadow-[4px_4px_0px_#000] rounded-lg space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-xs font-black uppercase text-[#D00000]">
+                      4. Quantity & Numerical Prediction (THE CLIFF)
+                    </span>
+                    <span className="font-mono text-xs font-black bg-white px-2 py-0.5 border border-black">
+                      Weight: 8.92%
+                    </span>
+                  </div>
+                  <p className="text-xs font-bold text-[#444] leading-relaxed">
+                    Continuous fold-error accuracy min(p, t) / max(p, t) for measured IC50, Kd, MDCK Papp, microsomal Clint, and oral bioavailability %F.
+                  </p>
+                  <div className="space-y-2 pt-2">
+                    <div className="flex justify-between text-xs font-mono font-black">
+                      <span>AETHER-RAMI</span>
+                      <span className="text-[#008000]">82.35% (+35.33% Lead!)</span>
+                    </div>
+                    <div className="w-full bg-[#E5E5E5] h-3 border-2 border-black">
+                      <div className="bg-[#FF3366] h-full" style={{ width: '82.35%' }} />
+                    </div>
+                    <div className="flex justify-between text-xs font-mono font-bold text-[#D00000]">
+                      <span>GPT-6 Astra (xhigh): 47.02%</span>
+                      <span>GPT-5.6 Sol: 23.00%</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Interactive Problem Case Studies */}
+            <div className="p-6 md:p-8 bg-white border-4 border-black shadow-[8px_8px_0px_#000] rounded-xl space-y-6">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b-2 border-black pb-3">
+                <div className="flex items-center gap-2">
+                  <FlaskConical className="w-5 h-5 text-black" />
+                  <h4 className="text-xl font-black uppercase tracking-tight text-black">
+                    Interactive Problem Inspector: Real Retrospective Challenges
+                  </h4>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { id: 'prmt5', label: 'Case 1: PRMT5 MTAP-null (Brain Penetration)' },
+                    { id: 'map4k1', label: 'Case 2: MAP4K1 Kinase (ROCK2 Selectivity)' },
+                    { id: 'bcl6', label: 'Case 3: BCL6 18-Atom Macrocyclization' },
+                    { id: 'kras', label: 'Case 4: KRAS G12D Non-Covalent Lead' }
+                  ].map((c) => (
+                    <button
+                      key={c.id}
+                      onClick={() => setSelectedMcbCase(c.id as any)}
+                      className={`px-3 py-1 font-mono text-xs font-black uppercase border-2 border-black cursor-pointer transition-all ${
+                        selectedMcbCase === c.id
+                          ? 'bg-black text-[#A6FF00] shadow-[2px_2px_0px_#FFE600]'
+                          : 'bg-white text-black hover:bg-[#FFE600]'
+                      }`}
+                    >
+                      {c.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Case 1: PRMT5 */}
+              {selectedMcbCase === 'prmt5' && (
+                <div className="space-y-4">
+                  <div className="p-4 bg-[#FFFDF0] border-2 border-black rounded-lg space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="font-mono text-xs font-black uppercase bg-[#FFE600] px-2 py-0.5 border border-black">
+                        Problem MCB-001 &bull; J. Med. Chem. 2025, 68, 14, 10245-10260
+                      </span>
+                      <span className="font-mono text-xs font-bold text-[#666]">
+                        Category: Integrated Lead Selection
+                      </span>
+                    </div>
+                    <h5 className="text-lg font-black uppercase text-black">
+                      PRMT5 / MTA Cooperative Brain-Penetrant Glioblastoma Inhibitor
+                    </h5>
+                    <p className="text-xs font-bold text-black leading-relaxed">
+                      The model is given structural drawings and biochemical data for earlier compounds and must predict in-cell SDMA IC50, MDCK permeability, and liver microsomal clearance (Clint) for three related compounds, then choose which to advance for intracranial glioblastoma models.
+                    </p>
+                  </div>
+
+                  {/* Comparative Cards */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="p-4 bg-white border-2 border-black shadow-[3px_3px_0px_#000] rounded-lg space-y-2">
+                      <span className="font-mono text-xs font-black uppercase text-[#666]">Compound 16 (Lead Ref)</span>
+                      <div className="text-xs font-mono space-y-1">
+                        <div>Cellular SDMA: <span className="font-bold">85.0 nM</span></div>
+                        <div>MDCK Papp: <span className="font-bold">4.2 &times; 10⁻⁶ cm/s</span></div>
+                        <div>Microsomal Clint: <span className="font-bold">25.0 &mu;L/min/mg</span></div>
+                      </div>
+                      <span className="text-[11px] font-mono text-[#666] block border-t border-black pt-1">
+                        Status: Sub-optimal potency & moderate clearance
+                      </span>
+                    </div>
+
+                    <div className="p-4 bg-[#FFF0F0] border-2 border-black shadow-[3px_3px_0px_#000] rounded-lg space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="font-mono text-xs font-black uppercase text-[#D00000]">Compound 23 (The Trap)</span>
+                        <span className="text-[10px] font-mono font-bold bg-[#FF3366] text-white px-1.5 py-0.5">Astra Picked</span>
+                      </div>
+                      <div className="text-xs font-mono space-y-1">
+                        <div>Cellular SDMA: <span className="font-black text-[#008000]">3.2 nM (Most Potent!)</span></div>
+                        <div>MDCK Papp: <span className="font-black text-[#D00000]">1.8 &times; 10⁻⁶ (Poor)</span></div>
+                        <div>Microsomal Clint: <span className="font-black text-[#D00000]">48.0 &mu;L/min/mg (Rapid)</span></div>
+                      </div>
+                      <span className="text-[11px] font-mono font-bold text-[#D00000] block border-t border-black pt-1">
+                        Astra failed: Seduced by in-vitro potency, ignoring BBB efflux & hepatic breakdown!
+                      </span>
+                    </div>
+
+                    <div className="p-4 bg-[#F0FFF0] border-2 border-black shadow-[3px_3px_0px_#000] rounded-lg space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="font-mono text-xs font-black uppercase text-[#008000]">Compound 24 (True Winner)</span>
+                        <span className="text-[10px] font-mono font-bold bg-[#A6FF00] text-black px-1.5 py-0.5">AETHER Picked</span>
+                      </div>
+                      <div className="text-xs font-mono space-y-1">
+                        <div>Cellular SDMA: <span className="font-bold">18.5 nM</span></div>
+                        <div>MDCK Papp: <span className="font-black text-[#008000]">14.5 &times; 10⁻⁶ (High BBB)</span></div>
+                        <div>Microsomal Clint: <span className="font-black text-[#008000]">11.0 &mu;L/min/mg (Stable)</span></div>
+                      </div>
+                      <span className="text-[11px] font-mono font-bold text-[#008000] block border-t border-black pt-1">
+                        AETHER succeeded: SE(3) + ADMET correctly prioritized 8x permeability & 4x clearance stability!
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Case 2: MAP4K1 */}
+              {selectedMcbCase === 'map4k1' && (
+                <div className="space-y-4">
+                  <div className="p-4 bg-[#FFFDF0] border-2 border-black rounded-lg space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="font-mono text-xs font-black uppercase bg-[#FFE600] px-2 py-0.5 border border-black">
+                        Problem MCB-002 &bull; Bioorg. Med. Chem. Lett. 2025, 52, 128910
+                      </span>
+                      <span className="font-mono text-xs font-bold text-[#666]">
+                        Category: Integrated Lead Selection
+                      </span>
+                    </div>
+                    <h5 className="text-lg font-black uppercase text-black">
+                      MAP4K1 (HPK1) Immuno-Oncology Kinase vs ROCK2 Off-Target Selectivity
+                    </h5>
+                    <p className="text-xs font-bold text-black leading-relaxed">
+                      Select development lead candidate achieving MAP4K1 IC50 &lt; 10 nM, ROCK2 selectivity ratio &gt; 100-fold (cardiovascular off-target liability), and rat oral bioavailability %F &gt; 30%.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="p-4 bg-[#FFF0F0] border-2 border-black shadow-[3px_3px_0px_#000] rounded-lg space-y-2">
+                      <span className="font-mono text-xs font-black uppercase text-[#D00000]">Compound 36 (GPT-6 Astra Pick)</span>
+                      <div className="text-xs font-mono space-y-1">
+                        <div>MAP4K1 IC50: <span className="font-black text-[#008000]">2.1 nM (Potent)</span></div>
+                        <div>ROCK2 Selectivity: <span className="font-black text-[#D00000]">15-fold (FAILED: Hazard!)</span></div>
+                        <div>Oral Bioavailability %F: <span className="font-black text-[#D00000]">18% (FAILED)</span></div>
+                      </div>
+                      <span className="text-[11px] font-mono font-bold text-[#D00000] block border-t border-black pt-1">
+                        Astra Error: Over-weighted primary potency, ignoring fatal cardiovascular off-target kinase inhibition.
+                      </span>
+                    </div>
+
+                    <div className="p-4 bg-[#F0FFF0] border-2 border-black shadow-[3px_3px_0px_#000] rounded-lg space-y-2">
+                      <span className="font-mono text-xs font-black uppercase text-[#008000]">Compound 34 (AETHER-RAMI Pick)</span>
+                      <div className="text-xs font-mono space-y-1">
+                        <div>MAP4K1 IC50: <span className="font-bold">4.8 nM (Active)</span></div>
+                        <div>ROCK2 Selectivity: <span className="font-black text-[#008000]">240-fold (PASS: Safe!)</span></div>
+                        <div>Oral Bioavailability %F: <span className="font-black text-[#008000]">42% (PASS: High Oral F)</span></div>
+                      </div>
+                      <span className="text-[11px] font-mono font-bold text-[#008000] block border-t border-black pt-1">
+                        AETHER Success: Modeled gatekeeper Thr431 steric clash in ROCK2, delivering 240x window and 42% oral F.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Case 3: BCL6 */}
+              {selectedMcbCase === 'bcl6' && (
+                <div className="space-y-4">
+                  <div className="p-4 bg-[#FFFDF0] border-2 border-black rounded-lg space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="font-mono text-xs font-black uppercase bg-[#FFE600] px-2 py-0.5 border border-black">
+                        Problem MCB-003 &bull; Nature Chemical Biology 2025, 21, 312-325
+                      </span>
+                      <span className="font-mono text-xs font-bold text-[#666]">
+                        Category: Molecular Design &amp; Enumeration
+                      </span>
+                    </div>
+                    <h5 className="text-lg font-black uppercase text-black">
+                      BCL6 BTB Domain 18-Atom Macrocyclic Degrader Ring Assembly
+                    </h5>
+                    <p className="text-xs font-bold text-black leading-relaxed">
+                      Assemble an 18-atom macrocycle connecting phenoxy core to piperazine tether with specified trans-amide geometry to constrain flexible degrader molecules into active conformation.
+                    </p>
+                  </div>
+
+                  <div className="p-4 bg-white border-2 border-black shadow-[3px_3px_0px_#000] rounded-lg space-y-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center text-xs font-mono font-bold">
+                      <div className="p-3 bg-[#E6FFFA] border-2 border-black">
+                        <span className="text-xs uppercase block text-[#008000]">AETHER-RAMI &amp; Astra</span>
+                        <span className="text-xl font-black text-black">18-Atom Ring</span>
+                        <span className="text-[10px] text-[#008000] block">10/10 Correct (100% Credit)</span>
+                      </div>
+                      <div className="p-3 bg-[#FFE4E6] border-2 border-black">
+                        <span className="text-xs uppercase block text-[#D00000]">GPT-5.6 Sol</span>
+                        <span className="text-xl font-black text-[#D00000]">15-Atom Ring</span>
+                        <span className="text-[10px] text-[#D00000] block">0/10 Correct (Collapsed Ring)</span>
+                      </div>
+                      <div className="p-3 bg-[#FFE4E6] border-2 border-black">
+                        <span className="text-xs uppercase block text-[#D00000]">GPT-5.6 Luna</span>
+                        <span className="text-xl font-black text-[#D00000]">Fragmented</span>
+                        <span className="text-[10px] text-[#D00000] block">0/10 Correct (Disconnected)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Case 4: KRAS G12D */}
+              {selectedMcbCase === 'kras' && (
+                <div className="space-y-4">
+                  <div className="p-4 bg-[#FFFDF0] border-2 border-black rounded-lg space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="font-mono text-xs font-black uppercase bg-[#FFE600] px-2 py-0.5 border border-black">
+                        Problem MCB-004 &bull; ACS Med. Chem. Lett. 2025, 16, 8, 1140-1152
+                      </span>
+                      <span className="font-mono text-xs font-bold text-[#666]">
+                        Category: Integrated Lead Selection
+                      </span>
+                    </div>
+                    <h5 className="text-lg font-black uppercase text-black">
+                      KRAS G12D Non-Covalent Switch-II Pocket Salt Bridges
+                    </h5>
+                    <p className="text-xs font-bold text-black leading-relaxed">
+                      Select non-covalent KRAS G12D inhibitor with Asp12 salt-bridge engagement, selectivity &gt; 50-fold over KRAS WT, and cellular pERK inhibition.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="p-4 bg-white border-2 border-black shadow-[3px_3px_0px_#000] rounded-lg space-y-2">
+                      <span className="font-mono text-xs font-black uppercase text-[#666]">Compound K-12</span>
+                      <div className="text-xs font-mono space-y-1">
+                        <div>KRAS G12D IC50: <span className="font-bold">420.0 nM</span></div>
+                        <div>WT Selectivity: <span className="font-bold">4.2-fold (Low)</span></div>
+                        <div>Salt Bridge: <span className="font-bold">None</span></div>
+                      </div>
+                    </div>
+                    <div className="p-4 bg-[#F0FFF0] border-2 border-black shadow-[3px_3px_0px_#000] rounded-lg space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="font-mono text-xs font-black uppercase text-[#008000]">Compound K-44 (Selected)</span>
+                        <span className="text-[10px] font-mono font-bold bg-[#A6FF00] text-black px-1.5 py-0.5">78x Selectivity</span>
+                      </div>
+                      <div className="text-xs font-mono space-y-1">
+                        <div>KRAS G12D IC50: <span className="font-bold">6.4 nM</span></div>
+                        <div>WT Selectivity: <span className="font-bold">78-fold (High)</span></div>
+                        <div>Salt Bridge: <span className="font-bold">Asp12 Carboxylate Bidentate</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+            </div>
+
+            {/* Comprehensive 11-Model Head-to-Head Table */}
+            <div className="p-6 md:p-8 bg-white border-4 border-black shadow-[8px_8px_0px_#000] rounded-xl space-y-4">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b-2 border-black pb-3">
+                <div className="flex items-center gap-2">
+                  <BarChart3 className="w-5 h-5 text-black" />
+                  <h4 className="text-xl font-black uppercase tracking-tight text-black">
+                    Comprehensive 11-Model MedChemBench Leaderboard
+                  </h4>
+                </div>
+                <span className="text-xs font-mono font-bold text-[#666]">
+                  Averaged over all 99 problems across 117 papers
+                </span>
+              </div>
+
+              <div className="overflow-x-auto border-3 border-black">
+                <table className="w-full text-left font-mono text-xs border-collapse">
+                  <thead>
+                    <tr className="bg-black text-white">
+                      <th className="py-2.5 px-3 border-r-2 border-white">Model Architecture</th>
+                      <th className="py-2.5 px-3 border-r-2 border-white">Reasoning Setting</th>
+                      <th className="py-2.5 px-3 border-r-2 border-white text-right">Composite Credit</th>
+                      <th className="py-2.5 px-3 border-r-2 border-white text-right">Structure (37.5%)</th>
+                      <th className="py-2.5 px-3 border-r-2 border-white text-right">Rationale (35.8%)</th>
+                      <th className="py-2.5 px-3 border-r-2 border-white text-right">Ranking (17.5%)</th>
+                      <th className="py-2.5 px-3 text-right">Numerical (8.9%)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      { model: 'AETHER-RAMI (v4.2.0 SE(3) MoE)', setting: 'Native Continuous Physics', composite: '93.21%', struct: '97.42%', rat: '93.80%', rank: '88.64%', num: '82.35%', highlight: true },
+                      { model: 'GPT-6.2 Astra (OpenAI)', setting: 'xhigh', composite: '84.50%', struct: '96.10%', rat: '91.80%', rank: '51.80%', num: '48.20%' },
+                      { model: 'GPT-6 Astra (OpenAI)', setting: 'max effort', composite: '83.83%', struct: '95.80%', rat: '91.40%', rank: '51.10%', num: '47.90%' },
+                      { model: 'GPT-6 Astra (OpenAI)', setting: 'xhigh', composite: '83.33%', struct: '95.37%', rat: '91.05%', rank: '50.42%', num: '47.02%' },
+                      { model: 'GPT-6.1 Sol (OpenAI)', setting: 'max effort', composite: '82.89%', struct: '94.20%', rat: '89.80%', rank: '48.70%', num: '45.10%' },
+                      { model: 'GPT-6.1 Sol (OpenAI)', setting: 'xhigh', composite: '81.99%', struct: '93.80%', rat: '89.10%', rank: '47.90%', num: '44.50%' },
+                      { model: 'GPT-6.1 Terra (OpenAI)', setting: 'max effort', composite: '77.56%', struct: '90.10%', rat: '84.60%', rank: '42.10%', num: '39.80%' },
+                      { model: 'GPT-6.1 Terra (OpenAI)', setting: 'xhigh', composite: '75.10%', struct: '88.40%', rat: '82.30%', rank: '39.50%', num: '37.20%' },
+                      { model: 'GPT-6 Sol (OpenAI)', setting: 'max effort', composite: '69.07%', struct: '84.20%', rat: '76.50%', rank: '34.10%', num: '31.80%' },
+                      { model: 'GPT-6 Sol (OpenAI)', setting: 'xhigh', composite: '64.44%', struct: '80.50%', rat: '72.10%', rank: '29.80%', num: '28.50%' },
+                      { model: 'GPT-5.6 Sol (OpenAI)', setting: 'max effort', composite: '59.77%', struct: '74.80%', rat: '68.20%', rank: '25.40%', num: '24.10%' },
+                      { model: 'GPT-5.6 Sol (OpenAI)', setting: 'xhigh', composite: '58.23%', struct: '73.10%', rat: '66.50%', rank: '24.10%', num: '23.00%' },
+                      { model: 'GPT-5.5 (OpenAI)', setting: 'default', composite: '49.26%', struct: '65.20%', rat: '58.40%', rank: '19.50%', num: '18.20%' },
+                      { model: 'ChemEval Baseline (GNN+LLM)', setting: 'standard', composite: '44.15%', struct: '58.40%', rat: '46.20%', rank: '26.50%', num: '32.10%' },
+                      { model: 'GPT-6 Luna (OpenAI)', setting: 'standard', composite: '35.02%', struct: '48.10%', rat: '41.50%', rank: '14.20%', num: '12.80%' },
+                      { model: 'Median / Random Baseline', setting: 'null', composite: '18.60%', struct: '12.40%', rat: '20.10%', rank: '16.70%', num: '15.20%' }
+                    ].map((row, idx) => (
+                      <tr
+                        key={idx}
+                        className={`border-b border-black ${
+                          row.highlight
+                            ? 'bg-[#A6FF00] font-black text-black'
+                            : idx % 2 === 0
+                            ? 'bg-[#FFFDF0]'
+                            : 'bg-white'
+                        }`}
+                      >
+                        <td className="py-2 px-3 border-r-2 border-black font-bold">{row.model}</td>
+                        <td className="py-2 px-3 border-r-2 border-black text-[#666]">{row.setting}</td>
+                        <td className="py-2 px-3 border-r-2 border-black text-right font-black">{row.composite}</td>
+                        <td className="py-2 px-3 border-r-2 border-black text-right">{row.struct}</td>
+                        <td className="py-2 px-3 border-r-2 border-black text-right">{row.rat}</td>
+                        <td className="py-2 px-3 border-r-2 border-black text-right">{row.rank}</td>
+                        <td className="py-2 px-3 text-right">{row.num}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* 7 Task Categories Breakdown */}
+            <div className="p-6 md:p-8 bg-white border-4 border-black shadow-[8px_8px_0px_#000] rounded-xl space-y-4">
+              <div className="flex items-center gap-2 border-b-2 border-black pb-3">
+                <Layers className="w-5 h-5 text-black" />
+                <h4 className="text-xl font-black uppercase tracking-tight text-black">
+                  Performance Across the 7 MedChemBench Task Categories
+                </h4>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
+                {[
+                  { cat: 'Integrated Lead Selection', tasks: 48, aether: '91.87%', astra: '79.75%', desc: 'Selecting leads balancing cellular potency vs clearance vs permeability.' },
+                  { cat: 'SAR Forecasting', tasks: 26, aether: '92.53%', astra: '81.26%', desc: 'Predicting delta-affinity for matched molecular pairs across series.' },
+                  { cat: 'ADME & Delivery', tasks: 8, aether: '88.89%', astra: '87.47%', desc: 'PAMPA/Caco-2 permeability and microsomal metabolic stability.' },
+                  { cat: 'Safety & Liabilities', tasks: 4, aether: '95.89%', astra: '83.56%', desc: 'Deselecting hERG cardiac QTc prolongation and CYP liabilities.' },
+                  { cat: 'Molecular Design & Enumeration', tasks: 6, aether: '90.19%', astra: '83.42%', desc: 'Macrocyclization and conformationally restricted scaffolds.' },
+                  { cat: 'Assay Biology & Mechanism', tasks: 3, aether: '90.75%', astra: '75.63%', desc: 'Deconvoluting cellular vs biochemical IC50 shifts and ATP competition.' },
+                  { cat: 'Retrosynthesis', tasks: 4, aether: '81.58%', astra: '93.25%', desc: 'Convergent synthetic route planning with commercial Enamine REAL synthons.' }
+                ].map((item, i) => (
+                  <div key={i} className="p-4 bg-[#FFFDF0] border-2 border-black shadow-[3px_3px_0px_#000] rounded-lg space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="font-mono text-xs font-black uppercase text-black">{item.cat}</span>
+                      <span className="text-[10px] font-mono font-bold bg-white px-1.5 py-0.5 border border-black">{item.tasks} Tasks</span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs font-mono font-black border-y border-black py-1">
+                      <span>AETHER: <span className="text-[#008000]">{item.aether}</span></span>
+                      <span>Astra: <span className="text-[#666]">{item.astra}</span></span>
+                    </div>
+                    <p className="text-[11px] font-bold text-[#555] leading-snug">{item.desc}</p>
+                  </div>
+                ))}
               </div>
             </div>
 

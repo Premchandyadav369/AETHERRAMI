@@ -23,8 +23,16 @@ export default function BenchmarksPage() {
 
         <div className="flex items-center gap-2">
           <span className="hidden sm:inline font-mono text-xs font-black uppercase text-black">
-            FOLDBENCH-2026 OFFICIAL LEDGER
+            MEDCHEMBENCH (NOV 2026) & FOLDBENCH OFFICIAL LEDGER
           </span>
+          <a
+            href="/AETHER_RAMI_MEDCHEMBENCH_BENCHMARK.csv"
+            download="AETHER_RAMI_MEDCHEMBENCH_BENCHMARK.csv"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-[#00F0FF] text-black text-xs font-mono font-black uppercase border-2 border-black shadow-[2px_2px_0px_#000] neo-btn cursor-pointer"
+          >
+            <Database className="w-3.5 h-3.5 text-black" />
+            <span>MedChemBench 99-Task CSV</span>
+          </a>
           <button
             onClick={() => {
               const csvData = `target_name,uniprot_id,pdb_code,actives_count,decoys_count,roc_auc,roc_auc_ci95,pr_auc,ef_1pct,ef_5pct,bedroc_alpha80,diffdock_roc_auc,vina_roc_auc
@@ -46,7 +54,7 @@ LIT-PCBA High-Imbalance (Mean),Ensemble,ChEMBL,1420,1350000,0.764,[0.738-0.790],
             className="flex items-center gap-1.5 px-3 py-1.5 bg-black text-[#A6FF00] text-xs font-mono font-black uppercase border-2 border-black shadow-[2px_2px_0px_#FFE600] neo-btn cursor-pointer"
           >
             <Database className="w-3.5 h-3.5 text-[#A6FF00]" />
-            <span>Download Benchmark CSV</span>
+            <span>Screening CSV</span>
           </button>
         </div>
       </header>

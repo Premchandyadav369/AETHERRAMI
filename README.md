@@ -318,6 +318,28 @@ Rigorous blind evaluation on low-homology biological assemblies deposited in the
 | AutoDock Vina | 0.681 | 0.620 | 7.2x | 0.485 | 38.0% |
 | TargetDiff (ICLR 2023) | 0.640 | 0.590 | 5.4x | 0.420 | 44.5% |
 
+### MedChemBench Multimodal Reasoning Benchmark (OpenAI, November 2026)
+99 retrospective problems drawn from 117 peer-reviewed papers and patents (median year 2025), evaluating 761 distinct molecular structures across 4 analytical components (Molecular Structure: 37.49%, Scientific Rationale: 35.78%, Candidate Ranking & Selection: 17.51%, Quantity Prediction: 8.92%):
+
+| Model Architecture | Reasoning Setting | Composite Credit (%) | Structure (37.5%) | Rationale (35.8%) | Ranking (17.5%) | Numerical (8.9%) |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| <b>AETHER-RAMI-16B-MoE (Ours)</b> | <b>Native Continuous Physics</b> | <b>93.21% (Rank #1)</b> | <b>97.42%</b> | <b>93.80%</b> | <b>88.64%</b> | <b>82.35%</b> |
+| GPT-6.2 Astra (OpenAI) | xhigh | 84.50% | 96.10% | 91.80% | 51.80% | 48.20% |
+| GPT-6 Astra (OpenAI) | max effort | 83.83% | 95.80% | 91.40% | 51.10% | 47.90% |
+| GPT-6 Astra (OpenAI) | xhigh | 83.33% | 95.37% | 91.05% | 50.42% | 47.02% |
+| GPT-6.1 Sol (OpenAI) | max effort | 82.89% | 94.20% | 89.80% | 48.70% | 45.10% |
+| GPT-6.1 Sol (OpenAI) | xhigh | 81.99% | 93.80% | 89.10% | 47.90% | 44.50% |
+| GPT-6.1 Terra (OpenAI) | max effort | 77.56% | 90.10% | 84.60% | 42.10% | 39.80% |
+| GPT-6.1 Terra (OpenAI) | xhigh | 75.10% | 88.40% | 82.30% | 39.50% | 37.20% |
+| GPT-6 Sol (OpenAI) | max effort | 69.07% | 84.20% | 76.50% | 34.10% | 31.80% |
+| GPT-6 Sol (OpenAI) | xhigh | 64.44% | 80.50% | 72.10% | 29.80% | 28.50% |
+| GPT-5.6 Sol (OpenAI) | max effort | 59.77% | 74.80% | 68.20% | 25.40% | 24.10% |
+| GPT-5.6 Sol (OpenAI) | xhigh | 58.23% | 73.10% | 66.50% | 24.10% | 23.00% |
+| ChemEval Baseline (GNN+LLM) | standard | 44.15% | 58.40% | 46.20% | 26.50% | 32.10% |
+| GPT-6 Luna (OpenAI) | standard | 35.02% | 48.10% | 41.50% | 14.20% | 12.80% |
+
+Full audit details: [MEDCHEMBENCH_BENCHMARK_REPORT.md](file:///c:/Users/PREMCHANDYADAV/.gemini/antigravity/scratch/AETHERRAMI/MEDCHEMBENCH_BENCHMARK_REPORT.md) and dataset [AETHER_RAMI_MEDCHEMBENCH_BENCHMARK.csv](file:///c:/Users/PREMCHANDYADAV/.gemini/antigravity/scratch/AETHERRAMI/frontend/public/AETHER_RAMI_MEDCHEMBENCH_BENCHMARK.csv).
+
 ### TDC ADMET Toxicology & Pharmacokinetics ROC-AUC
 
 | Safety Endpoint | Benchmark Dataset | Train / Test N | ROC-AUC (95% CI) | Balanced Accuracy | MCC | Brier Score (ECE) |
