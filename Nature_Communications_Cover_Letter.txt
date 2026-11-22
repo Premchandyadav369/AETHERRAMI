@@ -1,0 +1,116 @@
+To:
+The Editorial Team
+Nature Communications
+Springer Nature, London, United Kingdom
+
+Subject: Resubmission of Manuscript ID: NCOMMS-26-098541-T v1.0
+Title: "De novo mixture of experts overcomes targeted drug resistance"
+
+Dear Editors,
+
+We thank the editorial office for completing the Technical Check of our manuscript. In strict accordance with the instructions for Double-Anonymous Peer Review, we provide all eight mandatory author and institutional details, ethical statements, and data disclosures below. All identifying author names, institutional affiliations, personal repository usernames, and self-identifying statements have been removed from the main manuscript and supplementary files.
+
+======================================================================
+1. FULL AUTHOR NAMES AND AFFILIATIONS
+======================================================================
+
+1. V. C. Premchand Yadav (Lead Author, Student Researcher)
+   School of Computer Science and Engineering (SCOPE),
+   VIT-AP University, Beside AP Secretariat, Near Vijayawada,
+   Amaravati, Andhra Pradesh 522237, India.
+   Email: premchand.23bce7167@vitapstudent.ac.in
+
+2. Dr. Madala Guru Brahmam (Corresponding Author, Project Guide)
+   Assistant Professor (Senior Grade 1),
+   School of Computer Science and Engineering (SCOPE),
+   VIT-AP University, Beside AP Secretariat, Near Vijayawada,
+   Amaravati, Andhra Pradesh 522237, India.
+   Email: gurubrahmam.m@vitap.ac.in
+
+3. Dr. S. Bharath Bhushan (Faculty Mentor & Co-Author)
+   Associate Professor (Grade 1), Department of Networking and Security,
+   School of Computer Science and Engineering (SCOPE),
+   VIT-AP University, Beside AP Secretariat, Near Vijayawada,
+   Amaravati, Andhra Pradesh 522237, India.
+   Email: bharathbhushan.s@vitap.ac.in
+
+4. Dr. Pranjal Kumar (Faculty Mentor & Co-Author)
+   Assistant Professor (Senior Grade 2),
+   School of Bio Sciences and Technology (SBST),
+   VIT-AP University, Beside AP Secretariat, Near Vijayawada,
+   Amaravati, Andhra Pradesh 522237, India.
+   Email: pranjal.k@vitap.ac.in
+
+5. K. SriHarsha Vardhan (Co-Author)
+   School of Computer Science and Engineering (SCOPE),
+   VIT-AP University, Beside AP Secretariat, Near Vijayawada,
+   Amaravati, Andhra Pradesh 522237, India.
+   Email: harsha.23bce8747@vitapstudent.ac.in
+
+6. Edupulapati Sai Praneeth (Co-Author)
+   School of Computer Science and Engineering (SCOPE),
+   VIT-AP University, Beside AP Secretariat, Near Vijayawada,
+   Amaravati, Andhra Pradesh 522237, India.
+   Email: praneeth.23bce8762@vitapstudent.ac.in
+
+7. Yamala Liel Stephen (Co-Author)
+   School of Computer Science and Engineering (SCOPE),
+   VIT-AP University, Beside AP Secretariat, Near Vijayawada,
+   Amaravati, Andhra Pradesh 522237, India.
+   Email: stephen.23bce20073@vitapstudent.ac.in
+
+8. P. R. Kiran Kumar Reddy (Co-Author)
+   School of Computer Science and Engineering (SCOPE),
+   VIT-AP University, Beside AP Secretariat, Near Vijayawada,
+   Amaravati, Andhra Pradesh 522237, India.
+   Email: kiran.23mic7224@vitapstudent.ac.in
+
+======================================================================
+2. CORRESPONDING AUTHOR EMAIL ADDRESS
+======================================================================
+Dr. Madala Guru Brahmam
+Email: gurubrahmam.m@vitap.ac.in
+Institutional Address: School of Computer Science and Engineering (SCOPE),
+VIT-AP University, Amaravati, Andhra Pradesh 522237, India.
+
+======================================================================
+3. AUTHOR CONTRIBUTIONS STATEMENT
+======================================================================
+V.C.P.Y. conceived the study, formulated the continuous-time SE(3) Riemannian flow-matching framework, designed the 8-expert sparse mixture-of-experts (MoE) architecture, developed the model training pipeline, and wrote the initial manuscript. M.G.B. supervised the research, verified computational methodologies, reviewed mathematical proofs, and coordinated manuscript submission as corresponding author. S.B.B. provided mentorship on distributed neural network training and high-performance computing infrastructure. P.K. provided biological mentorship on oncogenic resistance mutations (EGFR C797S, KRAS G12C/Y96D, BCR-ABL1 T315I), target engagement, and safety counter-screening. K.S.V. implemented the PoseBusters physical chemistry audit suite, stereochemical verification, and MMFF94s energy minimization. E.S.P. curated and benchmarked datasets across DUD-E, LIT-PCBA, BindingDTA, and TDC ADMET. Y.L.S. formulated the reaction-SMARTS retrosynthesis pipeline (AETHER-SynthonSpace) and mapped leads to commercial building-block catalogs. P.R.K.K.R. conducted virtual screening benchmarks, hyperparameter optimization, and statistical validation. All authors reviewed and approved the final manuscript.
+
+======================================================================
+4. COMPETING INTERESTS STATEMENT
+======================================================================
+The authors declare no competing financial or non-financial interests.
+
+======================================================================
+5. FUNDING STATEMENT
+======================================================================
+This research was conducted within the School of Computer Science and Engineering (SCOPE) and the School of Bio Sciences and Technology (SBST) at VIT-AP University, Amaravati, Andhra Pradesh, India. Computational GPU resources were provided by internal institutional computing facilities. The authors declare that no external commercial or direct grant funding influenced the study design, data collection, analysis, or decision to publish.
+
+======================================================================
+6. ETHICS STATEMENT
+======================================================================
+This computational study did not involve human participants, living human subjects, human tissue sampling, or experimental vertebrate animals. All crystallographic structures, bioactivity assays, and transcriptomic profiles were obtained from public scientific repositories (Protein Data Bank, ChEMBL, Therapeutics Data Commons, and NCBI GEO). No ethical review board approval was required.
+
+======================================================================
+7. ACKNOWLEDGEMENT
+======================================================================
+The authors express their gratitude to VIT-AP University, Amaravati, Andhra Pradesh, India, for providing academic infrastructure, high-performance computing facilities, and research mentorship through the School of Computer Science and Engineering (SCOPE) and the School of Bio Sciences and Technology (SBST). The authors also acknowledge the open-source scientific software communities for RDKit, PyTorch, PyMOL, and Mol*.
+
+======================================================================
+8. DATA AVAILABILITY STATEMENT
+======================================================================
+All primary datasets supporting the findings of this study are available from public scientific repositories: Protein Data Bank (https://www.rcsb.org), ChEMBL 33 (https://www.ebi.ac.uk/chembl/), Therapeutics Data Commons (https://tdcommons.ai/), and DUD-E (http://dude.docking.org/). Curated benchmarking splits, coordinates, and trained model weights (117.81 MB SafeTensors) are deposited on the Hugging Face Hub at https://huggingface.co/Premchan369/aether-rami-esm2-diffsbdd under the Apache-2.0 License.
+
+======================================================================
+CODE AVAILABILITY STATEMENT
+======================================================================
+The complete Python and PyTorch codebase for AETHER-RAMI, including SE(3) flow-matching generators, calibrated ADMET scoring modules, retrosynthetic planners, and reproduction scripts, is openly hosted on GitHub at https://github.com/Premchandyadav369/AETHERRAMI under the Apache-2.0 License.
+
+Sincerely on behalf of all authors,
+
+Dr. Madala Guru Brahmam (Corresponding Author)
+Assistant Professor (Senior Grade 1), School of Computer Science and Engineering (SCOPE),
+VIT-AP University, Amaravati, Andhra Pradesh 522237, India.
+Email: gurubrahmam.m@vitap.ac.in
